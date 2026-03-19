@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment (contains API keys)
+.env
+.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Generated content (large, regenerated each run)
+content.json
+
+# Claude Code settings (contain API keys)
+**/settings.json
+**/settings.local.json
+
+# Preview output
+preview.html

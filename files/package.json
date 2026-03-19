@@ -1,0 +1,28 @@
+{
+  "name": "social-content-machine",
+  "version": "6.0.0",
+  "type": "module",
+  "scripts": {
+    "generate": "tsx index.ts",
+    "generate:from-db": "tsx index.ts --from-db",
+    "generate:from-db:preview": "tsx index.ts --from-db --preview-only",
+    "preview": "tsx index.ts --preview-only",
+    "preview:fast": "tsx index.ts --preview-only",
+    "generate:7": "tsx index.ts --count 7",
+    "generate:linkedin-only": "tsx index.ts --platforms linkedin",
+    "generate:voice": "tsx index.ts --pillar voice_ai",
+    "generate:automation": "tsx index.ts --pillar ai_automation",
+    "generate:growth": "tsx index.ts --pillar growth_digital",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "pg": "^8.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/pg": "^8.11.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
