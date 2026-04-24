@@ -47,6 +47,7 @@ Custom Claude Code commands in `.claude/commands/`. Each command file contains t
 | `/shorts` | Shorts: RSS → 6-slide script → TTS → Puppeteer frames → FFmpeg MP4 → R2 → Blotato schedule |
 | `/podcast` | Podcast: RSS → script → Fish Audio TTS → FFmpeg → R2 → RSS.com (distribution) → Ghost embed → YouTube video |
 | `/cards` | Cards: RSS → extract content → Puppeteer PNGs in 3 sizes (no Blotato dependency) |
+| `/personal` | Personal: sitemap scan → personal LinkedIn + X + FB + IG text posts → Reels via shorts pipeline |
 
 ## Architecture
 
@@ -70,6 +71,9 @@ After preview approval, Claude Code creates media + schedules posts via Blotato 
 | `load-briefs.ts` | PostgreSQL: load approved briefs, infer pillar, rotate categories |
 | `preview.ts` | HTML preview: platform tabs, char count colour coding, template badges |
 | `types.ts` | Core interfaces: ContentIdea, Pillar, Platform, ContentCategory, PlatformPost |
+| `sitemap-scanner.ts` | Fetches + parses `sitemap-posts.xml` → sorted URL list, filters parse-error drafts |
+| `personal-types.ts` | PersonalContentIdea, PersonalVariant interfaces |
+| `personal-cli.ts` | Reads `personal-content.json`, applies scheduling, opens `personal-preview.html` |
 | `generate-gbp.ts` / `gbp-*.ts` | GBP pipeline: post generation, image rendering (Sharp), R2 upload, DB queue |
 | `generate-shorts.ts` / `shorts-*.ts` | Shorts pipeline: script gen, TTS, Puppeteer frames, FFmpeg stitch, R2, Blotato scheduling |
 | `generate-podcast.ts` / `podcast-*.ts` | Podcast pipeline: script gen, section-by-section TTS, R2 + RSS.com upload, Ghost embed, YouTube video |
@@ -143,6 +147,16 @@ Registered in `.claude/settings.json` (HTTP transport). Never call Blotato REST 
 2. `blotato_create_visual` per idea using template ID + content
 3. Poll `blotato_get_visual_status` → capture `mediaUrl`/`imageUrls`
 4. `blotato_create_post` per idea x platform with media URLs + scheduled time
+
+### Personal vs company posting
+
+Same account ID (14687) for both LinkedIn targets:
+- **No `pageId`** → posts to Andy's personal LinkedIn feed
+- **`pageId: "110656388"`** → posts to Antek Automation company page
+
+Same applies to Facebook (22303):
+- **No `pageId`** → Andy's personal Facebook
+- **`pageId: "999920689867882"`** → Antek Automation Facebook page
 
 ## Brand Palette
 

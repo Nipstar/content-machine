@@ -17,7 +17,9 @@
     "start": "node dist/index.js",
     "gbp": "tsx gbp-cli.ts",
     "gbp:preview": "tsx gbp-cli.ts --preview-only",
-    "shorts": "tsx shorts-cli.ts"
+    "shorts": "tsx shorts-cli.ts",
+    "personal": "tsx personal-cli.ts",
+    "personal:preview": "tsx personal-cli.ts --preview-only"
   },
   "dependencies": {
     "dotenv": "^17.3.1",

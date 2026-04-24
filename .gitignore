@@ -14,6 +14,7 @@ Thumbs.db
 
 # Generated content (large, regenerated each run)
 content.json
+personal-content.json
 
 # Claude Code settings (contain API keys)
 **/settings.json
@@ -21,6 +22,7 @@ content.json
 
 # Preview output
 preview.html
+personal-preview.html
 
 # Queue/state files (regenerated each run)
 files/gbp-queue.json
