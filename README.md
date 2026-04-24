@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="images/banner.svg" alt="Social Content Machine v6" width="100%"/>
+  <img src="images/banner.png" alt="Social Content Machine v6" width="100%"/>
 </div>
 
 <br/>

@@ -36,6 +36,6 @@ node-compile-cache/
 puppeteer_dev_chrome_profile-*/
 tsx-*/
 
-# Generated images (not source assets)
-images/*.png
-images/*.jpg
+# Generated images (not source assets) — banner.png is tracked
+images/Podcast*.png
+images/screencapture*.png
