@@ -18,6 +18,7 @@
     "gbp": "tsx gbp-cli.ts",
     "gbp:preview": "tsx gbp-cli.ts --preview-only",
     "shorts": "tsx shorts-cli.ts",
+    "cards": "tsx cards-cli.ts",
     "personal": "tsx personal-cli.ts",
     "personal:preview": "tsx personal-cli.ts --preview-only"
   },

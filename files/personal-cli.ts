@@ -14,7 +14,15 @@ import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { join } from 'path';
 import { parseArgs } from 'util';
 import { exec } from 'child_process';
-import type { PersonalContentIdea } from './personal-types.js';
+import type { PersonalContentIdea, ContentFormat } from './personal-types.js';
+
+const FORMAT_ROTATION: ContentFormat[] = ['text', 'reel', 'carousel', 'youtube_video'];
+const FORMAT_LABELS: Record<ContentFormat, string> = {
+  text:          '📝 Text Post',
+  reel:          '🎬 Reel',
+  carousel:      '🖼️  Carousel',
+  youtube_video: '📺 YouTube Video',
+};
 
 const PERSONAL_FILE = join(process.cwd(), 'personal-content.json');
 const PREVIEW_FILE  = join(process.cwd(), 'personal-preview.html');
@@ -66,6 +74,8 @@ function loadAndSchedule(): PersonalContentIdea[] {
 
   return raw.map((idea, i) => {
     const slot = slots[i] ?? slots[slots.length - 1];
+    // Assign format from 4-day rotation (text/reel/carousel/youtube_video)
+    idea.content_format = idea.content_format ?? FORMAT_ROTATION[i % 4];
     idea.scheduled_at = slot.iso;
     idea.scheduled_display = slot.display;
     for (const p of platforms) {
@@ -118,7 +128,10 @@ function buildPreview(ideas: PersonalContentIdea[]): string {
         <div class="card">
           <div class="card-header">
             <strong>${i + 1}. ${idea.topic}</strong>
-            <span class="scheduled">${v?.scheduled_display ?? ''}</span>
+            <span style="display:flex;gap:8px;align-items:center">
+              <span style="font-size:11px;background:#2C2C2C;color:#E8DCC8;padding:3px 8px;font-weight:700">${FORMAT_LABELS[idea.content_format ?? 'text']}</span>
+              <span class="scheduled">${v?.scheduled_display ?? ''}</span>
+            </span>
           </div>
           <div class="source"><a href="${idea.source_url}" target="_blank">${idea.source_url}</a></div>
           <div class="body">${(v?.body ?? '').replace(/\n/g, '<br>')}</div>

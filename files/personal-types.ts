@@ -5,6 +5,9 @@
 
 import type { Pillar, ContentCategory } from './types.js';
 
+/** 4-format rotation used across the 28-day personal calendar */
+export type ContentFormat = "text" | "reel" | "carousel" | "youtube_video";
+
 export interface PersonalVariant {
   body: string;
   first_comment?: string;  // blog URL for linkedin; hashtags for instagram
@@ -30,6 +33,8 @@ export interface PersonalContentIdea {
   hook: string;
   pillar: Pillar;
   content_category: ContentCategory;
+  /** Assigned by personal-cli.ts based on 4-day rotation */
+  content_format: ContentFormat;
   /** Populated by personal-cli.ts — leave empty when generating */
   scheduled_at?: string;
   scheduled_display?: string;
