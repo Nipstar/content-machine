@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;900&amp;display=swap');
+      text { font-family: 'Inter', 'Arial Black', 'Helvetica Neue', sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="#E8DCC8"/>
+
+  <!-- Geometric decorations — top-right corner blocks -->
+  <rect x="900" y="0" width="380" height="8" fill="#CD5C3C"/>
+  <rect x="1180" y="0" width="100" height="120" fill="#C8D8D0" opacity="0.5"/>
+  <rect x="1220" y="0" width="60" height="60" fill="#CD5C3C" opacity="0.4"/>
+
+  <!-- Bottom-left stripe -->
+  <rect x="0" y="600" width="1280" height="40" fill="#2C2C2C"/>
+  <rect x="0" y="585" width="420" height="15" fill="#CD5C3C"/>
+  <rect x="0" y="570" width="180" height="15" fill="#C8D8D0"/>
+
+  <!-- ===== MAIN TITLE CARD ===== -->
+  <!-- Shadow -->
+  <rect x="38" y="58" width="800" height="210" fill="#2C2C2C"/>
+  <!-- Card -->
+  <rect x="28" y="48" width="800" height="210" fill="#CD5C3C" stroke="#2C2C2C" stroke-width="4"/>
+
+  <!-- Title text -->
+  <text x="64" y="135" font-size="74" font-weight="900" fill="#E8DCC8" letter-spacing="-2">SOCIAL CONTENT</text>
+  <text x="64" y="215" font-size="74" font-weight="900" fill="#E8DCC8" letter-spacing="-2">MACHINE</text>
+
+  <!-- Subtitle bar inside card -->
+  <rect x="28" y="224" width="800" height="34" fill="#2C2C2C"/>
+  <text x="64" y="247" font-size="13" font-weight="600" fill="#E8DCC8" letter-spacing="3">ANTEK AUTOMATION  ·  CLAUDE CODE PIPELINE  ·  v6</text>
+
+  <!-- ===== V6 BADGE ===== -->
+  <rect x="844" y="58" width="56" height="56" fill="#E8DCC8" stroke="#2C2C2C" stroke-width="4"/>
+  <text x="872" y="97" font-size="16" font-weight="900" fill="#2C2C2C" text-anchor="middle" letter-spacing="0">V6</text>
+
+  <!-- ===== SLASH COMMAND PILLS (row) ===== -->
+  <!-- /run -->
+  <rect x="36" y="310" width="70" height="36" fill="#2C2C2C"/>
+  <rect x="28" y="302" width="70" height="36" fill="#E8DCC8" stroke="#2C2C2C" stroke-width="3"/>
+  <text x="63" y="325" font-size="13" font-weight="900" fill="#2C2C2C" text-anchor="middle" letter-spacing="0.5">/run</text>
+
+  <!-- /content -->
+  <rect x="116" y="310" width="90" height="36" fill="#2C2C2C"/>
+  <rect x="108" y="302" width="90" height="36" fill="#C8D8D0" stroke="#2C2C2C" stroke-width="3"/>
+  <text x="153" y="325" font-size="13" font-weight="900" fill="#2C2C2C" text-anchor="middle" letter-spacing="0.5">/content</text>
+
+  <!-- /gbp -->
+  <rect x="216" y="310" width="66" height="36" fill="#2C2C2C"/>
+  <rect x="208" y="302" width="66" height="36" fill="#E8DCC8" stroke="#2C2C2C" stroke-width="3"/>
+  <text x="241" y="325" font-size="13" font-weight="900" fill="#2C2C2C" text-anchor="middle" letter-spacing="0.5">/gbp</text>
+
+  <!-- /shorts -->
+  <rect x="292" y="310" width="80" height="36" fill="#2C2C2C"/>
+  <rect x="284" y="302" width="80" height="36" fill="#C8D8D0" stroke="#2C2C2C" stroke-width="3"/>
+  <text x="324" y="325" font-size="13" font-weight="900" fill="#2C2C2C" text-anchor="middle" letter-spacing="0.5">/shorts</text>
+
+  <!-- /podcast -->
+  <rect x="382" y="310" width="90" height="36" fill="#2C2C2C"/>
+  <rect x="374" y="302" width="90" height="36" fill="#E8DCC8" stroke="#2C2C2C" stroke-width="3"/>
+  <text x="419" y="325" font-size="13" font-weight="900" fill="#2C2C2C" text-anchor="middle" letter-spacing="0.5">/podcast</text>
+
+  <!-- /cards -->
+  <rect x="482" y="310" width="76" height="36" fill="#2C2C2C"/>
+  <rect x="474" y="302" width="76" height="36" fill="#C8D8D0" stroke="#2C2C2C" stroke-width="3"/>
+  <text x="512" y="325" font-size="13" font-weight="900" fill="#2C2C2C" text-anchor="middle" letter-spacing="0.5">/cards</text>
+
+  <!-- /schedule -->
+  <rect x="568" y="310" width="96" height="36" fill="#2C2C2C"/>
+  <rect x="560" y="302" width="96" height="36" fill="#E8DCC8" stroke="#2C2C2C" stroke-width="3"/>
+  <text x="608" y="325" font-size="13" font-weight="900" fill="#2C2C2C" text-anchor="middle" letter-spacing="0.5">/schedule</text>
+
+  <!-- ===== FLOW DIAGRAM ===== -->
+  <text x="28" y="390" font-size="12" font-weight="900" fill="#2C2C2C" letter-spacing="2" opacity="0.5">PIPELINE</text>
+  <!-- Flow items -->
+  <rect x="28" y="400" width="90" height="30" fill="#CD5C3C" stroke="#2C2C2C" stroke-width="2"/>
+  <text x="73" y="420" font-size="11" font-weight="900" fill="#E8DCC8" text-anchor="middle">RSS FEED</text>
+
+  <text x="124" y="420" font-size="14" font-weight="900" fill="#2C2C2C">→</text>
+
+  <rect x="142" y="400" width="110" height="30" fill="#2C2C2C" stroke="#2C2C2C" stroke-width="2"/>
+  <text x="197" y="420" font-size="11" font-weight="900" fill="#E8DCC8" text-anchor="middle">AI GENERATION</text>
+
+  <text x="258" y="420" font-size="14" font-weight="900" fill="#2C2C2C">→</text>
+
+  <rect x="276" y="400" width="110" height="30" fill="#C8D8D0" stroke="#2C2C2C" stroke-width="2"/>
+  <text x="331" y="420" font-size="11" font-weight="900" fill="#2C2C2C" text-anchor="middle">BLOTATO MCP</text>
+
+  <text x="392" y="420" font-size="14" font-weight="900" fill="#2C2C2C">→</text>
+
+  <rect x="410" y="400" width="120" height="30" fill="#CD5C3C" stroke="#2C2C2C" stroke-width="2"/>
+  <text x="470" y="420" font-size="11" font-weight="900" fill="#E8DCC8" text-anchor="middle">SCHEDULED POSTS</text>
+
+  <!-- ===== RIGHT PANEL ===== -->
+  <!-- Panel shadow -->
+  <rect x="918" y="48" width="340" height="500" fill="#2C2C2C"/>
+  <!-- Panel -->
+  <rect x="908" y="38" width="340" height="500" fill="#C8D8D0" stroke="#2C2C2C" stroke-width="4"/>
+
+  <!-- Panel header -->
+  <rect x="908" y="38" width="340" height="44" fill="#2C2C2C"/>
+  <text x="928" y="66" font-size="11" font-weight="900" fill="#E8DCC8" letter-spacing="3">CONTENT PIPELINES</text>
+
+  <!-- Pipeline 01 -->
+  <text x="928" y="110" font-size="36" font-weight="900" fill="#CD5C3C" opacity="0.8">01</text>
+  <text x="980" y="102" font-size="14" font-weight="900" fill="#2C2C2C">SOCIAL POSTS</text>
+  <text x="980" y="120" font-size="11" font-weight="600" fill="#4a5568">LinkedIn · X · Facebook · Instagram</text>
+  <line x1="928" y1="132" x2="1228" y2="132" stroke="#2C2C2C" stroke-width="1.5" opacity="0.25"/>
+
+  <!-- Pipeline 02 -->
+  <text x="928" y="166" font-size="36" font-weight="900" fill="#CD5C3C" opacity="0.8">02</text>
+  <text x="980" y="158" font-size="14" font-weight="900" fill="#2C2C2C">GBP POSTS</text>
+  <text x="980" y="176" font-size="11" font-weight="600" fill="#4a5568">Branded images · R2 · PostgreSQL queue</text>
+  <line x1="928" y1="188" x2="1228" y2="188" stroke="#2C2C2C" stroke-width="1.5" opacity="0.25"/>
+
+  <!-- Pipeline 03 -->
+  <text x="928" y="222" font-size="36" font-weight="900" fill="#CD5C3C" opacity="0.8">03</text>
+  <text x="980" y="214" font-size="14" font-weight="900" fill="#2C2C2C">YOUTUBE SHORTS</text>
+  <text x="980" y="232" font-size="11" font-weight="600" fill="#4a5568">6 slides · TTS voice · Ken Burns · MP4</text>
+  <line x1="928" y1="244" x2="1228" y2="244" stroke="#2C2C2C" stroke-width="1.5" opacity="0.25"/>
+
+  <!-- Pipeline 04 -->
+  <text x="928" y="278" font-size="36" font-weight="900" fill="#CD5C3C" opacity="0.8">04</text>
+  <text x="980" y="270" font-size="14" font-weight="900" fill="#2C2C2C">PODCAST EPISODES</text>
+  <text x="980" y="288" font-size="11" font-weight="600" fill="#4a5568">Fish Audio TTS · RSS.com · Ghost embed</text>
+  <line x1="928" y1="300" x2="1228" y2="300" stroke="#2C2C2C" stroke-width="1.5" opacity="0.25"/>
+
+  <!-- Pipeline 05 -->
+  <text x="928" y="334" font-size="36" font-weight="900" fill="#CD5C3C" opacity="0.8">05</text>
+  <text x="980" y="326" font-size="14" font-weight="900" fill="#2C2C2C">SOCIAL CARDS</text>
+  <text x="980" y="344" font-size="11" font-weight="600" fill="#4a5568">Puppeteer PNGs · 3 sizes · 5 card types</text>
+  <line x1="928" y1="356" x2="1228" y2="356" stroke="#2C2C2C" stroke-width="1.5" opacity="0.25"/>
+
+  <!-- Tech stack tags -->
+  <text x="928" y="390" font-size="10" font-weight="900" fill="#2C2C2C" letter-spacing="2" opacity="0.5">BUILT WITH</text>
+  <rect x="928" y="398" width="56" height="20" fill="#2C2C2C"/>
+  <text x="956" y="413" font-size="10" font-weight="900" fill="#E8DCC8" text-anchor="middle">TypeScript</text>
+  <rect x="992" y="398" width="52" height="20" fill="#2C2C2C"/>
+  <text x="1018" y="413" font-size="10" font-weight="900" fill="#E8DCC8" text-anchor="middle">Puppeteer</text>
+  <rect x="1052" y="398" width="44" height="20" fill="#2C2C2C"/>
+  <text x="1074" y="413" font-size="10" font-weight="900" fill="#E8DCC8" text-anchor="middle">FFmpeg</text>
+  <rect x="1104" y="398" width="52" height="20" fill="#2C2C2C"/>
+  <text x="1130" y="413" font-size="10" font-weight="900" fill="#E8DCC8" text-anchor="middle">Blotato</text>
+  <rect x="1164" y="398" width="60" height="20" fill="#2C2C2C"/>
+  <text x="1194" y="413" font-size="10" font-weight="900" fill="#E8DCC8" text-anchor="middle">Fish Audio</text>
+
+  <!-- Bottom info in panel -->
+  <rect x="908" y="460" width="340" height="78" fill="#2C2C2C" opacity="0.08"/>
+  <text x="928" y="482" font-size="11" font-weight="900" fill="#2C2C2C" letter-spacing="1">RSS → Claude Code → Blotato MCP → Scheduled</text>
+  <text x="928" y="500" font-size="11" font-weight="600" fill="#4a5568">No manual posting. One command, 56 posts.</text>
+  <text x="928" y="524" font-size="11" font-weight="900" fill="#CD5C3C">antekautomation.com</text>
+
+  <!-- ===== BOTTOM BAR TEXT ===== -->
+  <text x="20" y="626" font-size="11" font-weight="900" fill="#E8DCC8" letter-spacing="2">RSS</text>
+  <text x="52" y="626" font-size="11" font-weight="900" fill="#CD5C3C" letter-spacing="2">→</text>
+  <text x="68" y="626" font-size="11" font-weight="900" fill="#E8DCC8" letter-spacing="2">AI GENERATION</text>
+  <text x="190" y="626" font-size="11" font-weight="900" fill="#CD5C3C" letter-spacing="2">→</text>
+  <text x="206" y="626" font-size="11" font-weight="900" fill="#E8DCC8" letter-spacing="2">BLOTATO MCP</text>
+  <text x="318" y="626" font-size="11" font-weight="900" fill="#CD5C3C" letter-spacing="2">→</text>
+  <text x="334" y="626" font-size="11" font-weight="900" fill="#E8DCC8" letter-spacing="2">SCHEDULED POSTS</text>
+</svg>

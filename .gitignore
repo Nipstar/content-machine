@@ -21,3 +21,21 @@ content.json
 
 # Preview output
 preview.html
+
+# Queue/state files (regenerated each run)
+files/gbp-queue.json
+files/podcast-schedule.json
+files/shorts-processed.json
+
+# Generated scripts and rendered output
+files/podcast-scripts/
+files/output/
+
+# Puppeteer/tsx temp directories
+node-compile-cache/
+puppeteer_dev_chrome_profile-*/
+tsx-*/
+
+# Generated images (not source assets)
+images/*.png
+images/*.jpg
