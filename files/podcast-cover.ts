@@ -20,10 +20,10 @@ import { fileURLToPath } from "url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Brand colours
-const CORAL = "#CD5C3C";
-const CREAM = "#E8DCC8";
-const SAGE = "#C8D8D0";
-const CHARCOAL = "#2C2C2C";
+const CORAL = "#FF5C3A";
+const CREAM = "#F0EBE0";
+const SAGE = "#97958F";
+const CHARCOAL = "#2B2B2B";
 
 /** Path to the default cover art (used when Puppeteer fails or as base layer) */
 export const DEFAULT_COVER_PATH = join(

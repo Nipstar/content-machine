@@ -95,11 +95,13 @@ function assembleIdeas(
 
     const platforms: Platform[] = ["linkedin", "twitter", "facebook", "instagram"];
 
-    // Inject scheduling times
+    // Inject scheduling times (preserve pre-filled values)
     for (const p of platforms) {
       if (item.variants?.[p]) {
-        item.variants[p].scheduled_at = slot.iso;
-        item.variants[p].scheduled_display = slot.display;
+        if (!item.variants[p].scheduled_at) {
+          item.variants[p].scheduled_at = slot.iso;
+          item.variants[p].scheduled_display = slot.display;
+        }
       }
     }
 

@@ -1,0 +1,15 @@
+{
+  "slides": [
+    { "type": "hook", "text": "Three questions before any vendor touches client data", "voiceover_text": "Three questions every owner should ask any vendor before they touch your client data. Skip these and you're handing them the keys." },
+    { "type": "tip", "tipNumber": 1, "text": "Where is the data stored and who can access it?", "voiceover_text": "One. Where is the data stored and who can access it? Country. Servers. Staff. Sub-processors. All of it in writing." },
+    { "type": "tip", "tipNumber": 2, "text": "Is it used to train any model? Get a yes or no", "voiceover_text": "Two. Is my client data used to train any model? Get a clear yes or no in writing. Vague answer means yes." },
+    { "type": "tip", "tipNumber": 3, "text": "How fast can you cancel and pull your data out?", "voiceover_text": "Three. How fast can I cancel? How do I get every piece of my data back? If the answer is complicated, that's your answer." },
+    { "type": "summary", "text": "Storage. Training use. Exit. All in writing.", "voiceover_text": "Storage. Training use. Clean exit. Get those three in writing before you sign anything." },
+    { "type": "cta", "text": "", "voiceover_text": "Follow Antek Automation for more tips like this. Visit antek automation dot com or call oh three three three, oh three eight, nine nine six oh." }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/claude-security-for-uk-businesses-what-smes-need-to-know/",
+  "sourceBlogTitle": "Three Questions Before Any Vendor Touches Client Data",
+  "youtubeTitle": "3 Questions Before Any Vendor Touches Client Data",
+  "youtubeDescription": "The three questions every small firm owner should get answered in writing before signing. Full guide: https://blog.antekautomation.com/claude-security-for-uk-businesses-what-smes-need-to-know/",
+  "youtubeTags": ["#Shorts", "#SmallBusinessTips", "#DataPrivacy", "#BusinessOwner", "#VendorRisk"]
+}

@@ -25,10 +25,10 @@ import type {
 } from "./gbp-types.js";
 
 // ── Brand colours ────────────────────────────────────────────
-const CORAL = "#CD5C3C";
-const CREAM = "#E8DCC8";
-const SAGE = "#C8D8D0";
-const CHARCOAL = "#2C2C2C";
+const CORAL = "#FF5C3A";
+const CREAM = "#F0EBE0";
+const SAGE = "#97958F";
+const CHARCOAL = "#2B2B2B";
 
 function escapeHtml(text: string): string {
   return text

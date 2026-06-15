@@ -129,7 +129,7 @@ function buildPreview(ideas: PersonalContentIdea[]): string {
           <div class="card-header">
             <strong>${i + 1}. ${idea.topic}</strong>
             <span style="display:flex;gap:8px;align-items:center">
-              <span style="font-size:11px;background:#2C2C2C;color:#E8DCC8;padding:3px 8px;font-weight:700">${FORMAT_LABELS[idea.content_format ?? 'text']}</span>
+              <span style="font-size:11px;background:#2B2B2B;color:#F0EBE0;padding:3px 8px;font-weight:700">${FORMAT_LABELS[idea.content_format ?? 'text']}</span>
               <span class="scheduled">${v?.scheduled_display ?? ''}</span>
             </span>
           </div>
@@ -150,17 +150,17 @@ function buildPreview(ideas: PersonalContentIdea[]): string {
 <meta charset="UTF-8">
 <title>Personal Content Preview</title>
 <style>
-  body { font-family: system-ui, sans-serif; margin: 0; background: #E8DCC8; color: #2C2C2C; }
-  h1   { background: #CD5C3C; color: #E8DCC8; margin: 0; padding: 16px 24px; font-size: 20px; }
-  .tabs { display: flex; gap: 4px; padding: 12px 24px 0; background: #2C2C2C; }
+  body { font-family: system-ui, sans-serif; margin: 0; background: #F0EBE0; color: #2B2B2B; }
+  h1   { background: #FF5C3A; color: #F0EBE0; margin: 0; padding: 16px 24px; font-size: 20px; }
+  .tabs { display: flex; gap: 4px; padding: 12px 24px 0; background: #2B2B2B; }
   .tab  { padding: 8px 16px; border: none; cursor: pointer; font-weight: 700; font-size: 13px;
           background: #444; color: #ccc; border-radius: 4px 4px 0 0; }
-  .tab.active { background: #E8DCC8; color: #2C2C2C; }
+  .tab.active { background: #F0EBE0; color: #2B2B2B; }
   .content { padding: 24px; }
-  .card { background: white; border: 3px solid #2C2C2C; margin-bottom: 16px; padding: 16px;
-          box-shadow: 4px 4px 0 #2C2C2C; }
+  .card { background: white; border: 3px solid #2B2B2B; margin-bottom: 16px; padding: 16px;
+          box-shadow: 4px 4px 0 #2B2B2B; }
   .card-header { display: flex; justify-content: space-between; margin-bottom: 8px; }
-  .scheduled { font-size: 12px; color: #CD5C3C; font-weight: 700; }
+  .scheduled { font-size: 12px; color: #FF5C3A; font-weight: 700; }
   .source { font-size: 11px; color: #888; margin-bottom: 8px; }
   .body { white-space: pre-wrap; line-height: 1.6; }
   .comment { margin-top: 8px; font-size: 13px; color: #555; background: #f5f5f5; padding: 8px; }

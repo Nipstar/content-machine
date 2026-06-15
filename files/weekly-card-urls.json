@@ -1,0 +1,37 @@
+{
+  "idea_0": {
+    "landscape": "https://pub-22b846848612446da578c84b810477f6.r2.dev/weekly/law-firms-dont-need-code_quote_landscape.png",
+    "square": "https://pub-22b846848612446da578c84b810477f6.r2.dev/weekly/law-firms-dont-need-code_quote_square.png",
+    "portrait": "https://pub-22b846848612446da578c84b810477f6.r2.dev/weekly/law-firms-dont-need-code_quote_portrait.png"
+  },
+  "idea_1": {
+    "landscape": "https://pub-22b846848612446da578c84b810477f6.r2.dev/weekly/agentic-seo-for-law-firms_tip_landscape.png",
+    "square": "https://pub-22b846848612446da578c84b810477f6.r2.dev/weekly/agentic-seo-for-law-firms_tip_square.png",
+    "portrait": "https://pub-22b846848612446da578c84b810477f6.r2.dev/weekly/agentic-seo-for-law-firms_tip_portrait.png"
+  },
+  "idea_2": {
+    "landscape": "https://pub-22b846848612446da578c84b810477f6.r2.dev/weekly/legal-ai-vs-missed-calls_stat_landscape.png",
+    "square": "https://pub-22b846848612446da578c84b810477f6.r2.dev/weekly/legal-ai-vs-missed-calls_stat_square.png",
+    "portrait": "https://pub-22b846848612446da578c84b810477f6.r2.dev/weekly/legal-ai-vs-missed-calls_stat_portrait.png"
+  },
+  "idea_3": {
+    "landscape": "https://pub-22b846848612446da578c84b810477f6.r2.dev/weekly/content-engineering-law-firms_listicle_landscape.png",
+    "square": "https://pub-22b846848612446da578c84b810477f6.r2.dev/weekly/content-engineering-law-firms_listicle_square.png",
+    "portrait": "https://pub-22b846848612446da578c84b810477f6.r2.dev/weekly/content-engineering-law-firms_listicle_portrait.png"
+  },
+  "idea_4": {
+    "landscape": "https://pub-22b846848612446da578c84b810477f6.r2.dev/weekly/answering-as-infrastructure_quote_landscape.png",
+    "square": "https://pub-22b846848612446da578c84b810477f6.r2.dev/weekly/answering-as-infrastructure_quote_square.png",
+    "portrait": "https://pub-22b846848612446da578c84b810477f6.r2.dev/weekly/answering-as-infrastructure_quote_portrait.png"
+  },
+  "idea_5": {
+    "landscape": "https://pub-22b846848612446da578c84b810477f6.r2.dev/weekly/knowledge-graph-problem_stat_landscape.png",
+    "square": "https://pub-22b846848612446da578c84b810477f6.r2.dev/weekly/knowledge-graph-problem_stat_square.png",
+    "portrait": "https://pub-22b846848612446da578c84b810477f6.r2.dev/weekly/knowledge-graph-problem_stat_portrait.png"
+  },
+  "idea_6": {
+    "landscape": "https://pub-22b846848612446da578c84b810477f6.r2.dev/weekly/quote-fix-rule-feedback_tip_landscape.png",
+    "square": "https://pub-22b846848612446da578c84b810477f6.r2.dev/weekly/quote-fix-rule-feedback_tip_square.png",
+    "portrait": "https://pub-22b846848612446da578c84b810477f6.r2.dev/weekly/quote-fix-rule-feedback_tip_portrait.png"
+  }
+}

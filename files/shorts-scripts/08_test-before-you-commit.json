@@ -1,0 +1,15 @@
+{
+  "slides": [
+    { "type": "hook", "text": "GM just spent two years testing one rollout. You should too.", "voiceover_text": "General Motors took two years to roll out one piece of tech across the company. Small firms sign annual contracts after a thirty minute demo. Here's the test to do instead." },
+    { "type": "tip", "tipNumber": 1, "text": "Define success in hours saved on a real task", "voiceover_text": "One. Define success before you start. Not does it work. Does it save X hours a week on Y task. Specific number. Specific job." },
+    { "type": "tip", "tipNumber": 2, "text": "Test with real work, not the polished demo", "voiceover_text": "Two. Test with real work. Actual enquiries. Actual data. Edge cases. Demos are built to win. Real work tells the truth." },
+    { "type": "tip", "tipNumber": 3, "text": "Smallest contract possible. Month-to-month wins", "voiceover_text": "Three. Smallest contract possible. Month to month beats annual until you've got ninety days of real data. Commit fast, regret slowly." },
+    { "type": "summary", "text": "Define success. Test real. Stay short.", "voiceover_text": "Define success. Test on real work. Stay on a short contract. That's how the big firms decide. Small firms should too." },
+    { "type": "cta", "text": "", "voiceover_text": "Follow Antek Automation for more tips like this. Visit antek automation dot com or call oh three three three, oh three eight, nine nine six oh." }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/what-gms-ai-rollout-teaches-uk-service-businesses-about-adoption/",
+  "sourceBlogTitle": "What GM's Adoption Story Teaches Small Firms",
+  "youtubeTitle": "How Small Firms Should Test Tools Before Signing",
+  "youtubeDescription": "GM took 2 years to test. Small firms sign annual after 30 mins. 3-step fix: https://blog.antekautomation.com/what-gms-ai-rollout-teaches-uk-service-businesses-about-adoption/",
+  "youtubeTags": ["#Shorts", "#SmallBusinessTips", "#BusinessDecisions", "#UKBusiness", "#ServiceBusiness"]
+}

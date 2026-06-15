@@ -12,6 +12,7 @@
  *   npm run gbp -- --preview-only            # Write gbp-queue.json without DB/images
  */
 
+import "dotenv/config";
 import { loadGBPQueue } from "./generate-gbp.js";
 import { generateAndUploadAll } from "./gbp-image-gen.js";
 import { ensureGBPTable, insertGBPPosts, getQueueSummary } from "./gbp-db.js";

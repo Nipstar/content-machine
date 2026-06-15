@@ -44,7 +44,7 @@ function buildBackgroundHtml(script: PodcastScript, durationSeconds: number): st
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     width: 1920px; height: 1080px; overflow: hidden;
-    background: #E8DCC8;
+    background: #F0EBE0;
     font-family: 'Inter', sans-serif;
     position: relative;
   }
@@ -54,15 +54,15 @@ function buildBackgroundHtml(script: PodcastScript, durationSeconds: number): st
     position: absolute;
     left: 0; top: 0;
     width: 680px; height: 1080px;
-    background: #CD5C3C;
-    border-right: 4px solid #2C2C2C;
+    background: #FF5C3A;
+    border-right: 4px solid #2B2B2B;
   }
 
   /* Brand mark */
   .brand {
     position: absolute;
     top: 60px; left: 60px;
-    color: #E8DCC8;
+    color: #F0EBE0;
     font-size: 22px; font-weight: 900;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -73,8 +73,8 @@ function buildBackgroundHtml(script: PodcastScript, durationSeconds: number): st
   .series-label {
     position: absolute;
     top: 160px; left: 60px;
-    background: #2C2C2C;
-    color: #E8DCC8;
+    background: #2B2B2B;
+    color: #F0EBE0;
     font-size: 18px; font-weight: 700;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -99,7 +99,7 @@ function buildBackgroundHtml(script: PodcastScript, durationSeconds: number): st
   .duration {
     position: absolute;
     bottom: 60px; left: 60px;
-    color: #E8DCC8;
+    color: #F0EBE0;
     font-size: 18px; font-weight: 600;
     letter-spacing: 0.08em;
   }
@@ -117,7 +117,7 @@ function buildBackgroundHtml(script: PodcastScript, durationSeconds: number): st
 
   .episode-tag {
     font-size: 16px; font-weight: 700;
-    color: #CD5C3C;
+    color: #FF5C3A;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     margin-bottom: 28px;
@@ -125,11 +125,11 @@ function buildBackgroundHtml(script: PodcastScript, durationSeconds: number): st
 
   .episode-title {
     font-size: 64px; font-weight: 900;
-    color: #2C2C2C;
+    color: #2B2B2B;
     line-height: 1.1;
     letter-spacing: -0.01em;
     margin-bottom: 40px;
-    border-left: 8px solid #CD5C3C;
+    border-left: 8px solid #FF5C3A;
     padding-left: 28px;
   }
 
@@ -146,20 +146,20 @@ function buildBackgroundHtml(script: PodcastScript, durationSeconds: number): st
     position: absolute;
     bottom: 0; left: 684px; right: 0;
     height: 100px;
-    background: #2C2C2C;
-    border-top: 4px solid #2C2C2C;
+    background: #2B2B2B;
+    border-top: 4px solid #2B2B2B;
     display: flex;
     align-items: center;
     padding: 0 80px;
     justify-content: space-between;
   }
   .bottom-url {
-    color: #E8DCC8;
+    color: #F0EBE0;
     font-size: 22px; font-weight: 700;
     letter-spacing: 0.05em;
   }
   .bottom-phone {
-    color: #C8D8D0;
+    color: #97958F;
     font-size: 20px; font-weight: 600;
     letter-spacing: 0.05em;
   }
@@ -169,15 +169,15 @@ function buildBackgroundHtml(script: PodcastScript, durationSeconds: number): st
     position: absolute;
     top: 0; right: 0;
     width: 220px; height: 220px;
-    background: #C8D8D0;
-    border-left: 4px solid #2C2C2C;
-    border-bottom: 4px solid #2C2C2C;
+    background: #97958F;
+    border-left: 4px solid #2B2B2B;
+    border-bottom: 4px solid #2B2B2B;
   }
   .accent-inner {
     position: absolute;
     bottom: 16px; left: 16px;
     font-size: 15px; font-weight: 900;
-    color: #2C2C2C;
+    color: #2B2B2B;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     line-height: 1.4;

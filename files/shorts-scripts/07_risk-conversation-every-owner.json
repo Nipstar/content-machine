@@ -1,0 +1,15 @@
+{
+  "slides": [
+    { "type": "hook", "text": "Five questions before any tool talks to your clients", "voiceover_text": "Five questions every owner should ask before letting any tool speak to clients. Skip these, regret them later." },
+    { "type": "tip", "tipNumber": 1, "text": "Where does client data go? Get it in writing", "voiceover_text": "One. Where does client data go? Where's it stored? Who has access? Get the answer in writing. If the vendor's vague, walk away." },
+    { "type": "tip", "tipNumber": 2, "text": "What can't it say? Write the no-go list", "voiceover_text": "Two. What's it never allowed to say? Prices it doesn't know. Promises about outcomes. Deadlines you haven't approved. Write the list. Test it." },
+    { "type": "tip", "tipNumber": 3, "text": "Where's the kill switch and who flips it?", "voiceover_text": "Three. Where's the kill switch? Who in your firm can take it offline in five minutes if something goes wrong? Pick the person. Test it once." },
+    { "type": "summary", "text": "Data. Boundaries. Kill switch. In writing.", "voiceover_text": "Data path. Hard boundaries. A kill switch. Get all three in writing before anything goes live." },
+    { "type": "cta", "text": "", "voiceover_text": "Follow Antek Automation for more tips like this. Visit antek automation dot com or call oh three three three, oh three eight, nine nine six oh." }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/how-to-deploy-ai-agents-safely-in-your-service-business/",
+  "sourceBlogTitle": "The Risk Conversation Every Firm Owner Should Have",
+  "youtubeTitle": "Five Risk Questions Every Firm Owner Should Ask",
+  "youtubeDescription": "Before any tool speaks to clients on your behalf. Three questions you must ask. Full guide: https://blog.antekautomation.com/how-to-deploy-ai-agents-safely-in-your-service-business/",
+  "youtubeTags": ["#Shorts", "#SmallBusinessTips", "#RiskManagement", "#ServiceBusiness", "#BusinessOwner"]
+}

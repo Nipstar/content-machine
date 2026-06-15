@@ -158,6 +158,13 @@ Pain points: missed callers, after-hours leads going to competitors, intake dela
 
 ## VOICE & TONE
 
+### Voice & tone profile
+
+- **Formality:** Highly conversational and informal. Andy writes the way he talks — contractions, short sentences, everyday language. No corporate jargon, buzzwords, or marketing-department phrasing. Reads like a real person writing for real people.
+- **Energy:** High energy and punchy. Grabs attention fast, moves at pace, keeps posts tight. Bold, provocative, or blunt when the content calls for it. Enthusiasm for AI and automation is genuine and infectious, never over the top.
+- **Personality:** Grounded and authentic, not performatively personal. No oversharing or vulnerability-for-engagement. Knowledge, opinions, and results do the talking. Personality shows through wit, directness, and the occasional well-placed challenge to conventional thinking.
+- **Overall:** Direct, energetic, down-to-earth. Speaks like a knowledgeable mate who happens to be an AI expert — never a corporate vendor. Content feels like a conversation, not a pitch. Earns trust through honesty, clarity, and a genuine desire to help founders win.
+
 ### Outcome-led, not tech-led (top rule)
 
 Outreach and social copy sells the **outcome**, not the tech. Never name the mechanism — name what the firm / business **gets**: caller answered, lead captured, intake booked, after-hours coverage, time back, fewer missed cases.
@@ -203,6 +210,47 @@ Pillar keys (`ai_automation`, `voice_ai`, `growth_digital`) are **internal code 
 | ai_automation | Missed enquiries recovered, follow-ups that actually happen, admin time clawed back, faster quote turnaround | "30 years watching service businesses lose work to slow follow-up. The fix is finally affordable for small firms." |
 | voice_ai | After-hours answering, every caller answered, intake booked while you're in court, 24/7 cover, never miss a case | "Most PI / DUI / criminal / immigration calls come after hours. If you don't answer, the next firm does. We answer." |
 | growth_digital | Local rankings, more inbound enquiries, website that converts, getting found by the right clients | "Built these systems for real firms — seen the before / after on caseload, not just traffic." |
+
+### Content themes (rotate as topic seeds)
+
+Five recurring themes drive idea generation. Rotate across them when building `content.json` — each is a content angle, not a pillar key (themes still map to the three pillar keys above for templating).
+
+**1. AI Automation Wins** — concrete real-world results + ROI stories from professional-services deployments. Lead with numbers, outcomes, before/after. *Why:* social proof for sceptical founders; makes value tangible not theoretical.
+- £12k recovered in missed enquiries (UK solicitors)
+- Before/after: accountancy practice automated appointment booking
+- 3 real results from firms live in under 2 weeks
+- ROI breakdown: chatbot admin-hours saved for a consulting firm
+- Recruitment agency stopped losing candidates to voicemail
+
+**2. Founder Pain Points** — speak empathetically to daily frustrations of UK professional-services founders. Make them feel seen before any solution. Relatability over promotion. *Why:* emotional resonance + trust; understood founders engage and enquire.
+- Lost that client because nobody answered at 5:31pm
+- Receptionist spends 3 hrs/day on tasks a bot does in seconds
+- Hidden cost of admin overload
+- Missed calls = silent revenue killer
+- How many leads fell through the cracks last month from slow follow-up?
+
+**3. AI Myths Busted** — challenge fears/misconceptions blocking adoption. Confident, clear, occasionally irreverent. Data + logic, never condescending. *Why:* removes psychological barriers; hesitation → curiosity.
+- Voice agents don't sound like robots anymore
+- Myth: AI only for big budgets
+- Truth about AI "replacing" staff
+- Myth: setup takes months — reality, live in days
+- 5 things UK founders get wrong about chatbots
+
+**4. Automation 101** — educate founder buyers on how tools/systems work. Plain English, zero jargon. *Why:* positions Andy as accessible expert not salesperson; understanding → next step.
+- What happens when a client calls your voice agent (step-by-step)
+- Chatbot vs voice agent, plain English
+- How workflow automation connects phone, CRM, calendar without IT
+- What is an AI agent? no-nonsense explainer
+- 3 types of automation every professional-services firm should know
+
+**5. Fast-ROI Playbooks** — repeatable step-by-step strategies for quick wins. Actionable, results-focused, low technical/investment barrier. *Why:* low-risk path to start; expertise + generosity build trust → clients.
+- 48-hour voice agent launch playbook
+- Automate client intake this week (no IT team)
+- Quick-win automation stack under £500/mo
+- 5 automation moves that pay for themselves within 30 days
+- Your first AI workflow: plain-English getting-started guide
+
+**Theme vs outcome-led tension:** these theme titles name "AI", "automation", "voice agent", "chatbot" openly. The outcome-led ban (above) governs pure outreach/sales copy. For educational/social content — especially themes 3 (Myths) and 4 (101) — naming the mechanism is the point and is allowed. For Wins / Pain / Playbooks, keep the theme intent but lead the platform `body`/`hook` with outcomes (answered, captured, booked, £ recovered, hours back, after-hours cover).
 
 ---
 
@@ -291,7 +339,7 @@ Do NOT populate `scheduled_at`, `scheduled_display`, or `blotato_template` — t
         "scheduled_display": ""
       }
     },
-    "image_prompt_landscape": "Flat vector illustration of a ringing phone going unanswered on a desk, warm cream background #E8DCC8, coral red accent #CD5C3C, sage green elements #C8D8D0, charcoal details #2C2C2C, no text, no faces, clean minimal style",
+    "image_prompt_landscape": "Flat vector illustration of a ringing phone going unanswered on a desk, warm cream background #F0EBE0, coral accent #FF5C3A, charcoal details #2B2B2B, muted grey #97958F, no text, no faces, clean minimal style",
     "image_prompt_square": "Same scene as landscape but composed for square 1:1 format",
     "video_motion_prompt": "Casual podcast clip: Andy explains why small businesses lose enquiries without realising, with real numbers"
   }
@@ -305,16 +353,39 @@ Do NOT populate `scheduled_at`, `scheduled_display`, or `blotato_template` — t
 - Each platform variant is NATIVE to that platform, not copy-paste resized
 
 ### 4. Image prompt rules
-Always include: "Flat vector illustration, minimal and clean, professional business graphic, colour palette coral red #CD5C3C warm cream #E8DCC8 sage green #C8D8D0 dark charcoal #2C2C2C, no text overlaid, no faces or people, no photography, modern UK business aesthetic."
+Always include: "Flat vector illustration, minimal and clean, professional business graphic, colour palette coral #FF5C3A warm cream #F0EBE0 dark charcoal #2B2B2B muted grey #97958F, no text overlaid, no faces or people, no photography, modern UK business aesthetic."
 
 ---
 
 ## BRAND PALETTE
 
-- Coral/rust: #CD5C3C (primary)
-- Cream: #E8DCC8 (background)
-- Sage green: #C8D8D0 (secondary)
-- Charcoal: #2C2C2C (text/elements)
+Canonical palette lives in `brand.ts` (`import { BRAND, BG } from "./brand.js"`). Prefer those constants over hardcoded hex in new renderers. Sampled from the quote-card reference set in `assets/brand-examples/` (2026-06-15).
+
+| Token | Hex | Use |
+|-------|-----|-----|
+| coral | `#FF5C3A` | Primary accent: emphasis headline lines, quote mark, rules, bullet separators |
+| cream | `#F0EBE0` | Light backgrounds; primary text on dark |
+| charcoal | `#2B2B2B` | Dark backgrounds; primary text on light |
+| ink | `#1C1C1C` | Crisp text on cream backgrounds |
+| grey | `#97958F` | Kicker/eyebrow text, faint grid lines |
+
+**Retired (2026-06-15):** old coral `#CD5C3C`, cream `#E8DCC8`, charcoal `#2C2C2C`, and sage `#C8D8D0`. Sage is dropped entirely — accents are coral + grey only. All renderer `.ts` files were repointed to the new hexes; only colours changed, layouts unchanged.
+
+### Image dimensions (reference set)
+- Ghost / landscape header: **2400×1260** (~1.9:1)
+- Square card: **1080×1080**
+
+### Quote-card design system
+
+The reference cards in `assets/brand-examples/` define the target look. Structure (top to bottom):
+
+1. **Kicker** top-left — `ANTEK / AUTOMATION`, uppercase, wide letter-spacing, grey `#97958F`, medium weight.
+2. **Quote mark** — large coral `#FF5C3A` opening double-quote (“) below the kicker, left-aligned.
+3. **Headline** — massive ultra-bold (≈900) grotesk caps, tight leading, edge-to-edge. Two-tone: lead lines in cream (on dark) or ink (on light); the punchline line(s) in coral.
+4. **Attribution** bottom-left — short coral underline rule, then `ANDY NORMAN` uppercase, wide-tracked.
+5. **Meta** bottom-right — `BESPOKE AUTOMATION • SMBs • ANDOVER` uppercase tracked, coral bullet separators.
+
+Two background modes: **dark** (`#2B2B2B`) or **light** (`#F0EBE0`), each with a faint grid overlay (one step off the background). Flat — no rounded corners, no drop/offset shadows.
 
 ---
 
@@ -391,7 +462,7 @@ Flags: `--count N` (default 14), `--frequency daily|alternate` (default alternat
 ### GBP image specs
 
 - 1200x900px PNG (Google minimum 720x540)
-- Brand colours: coral #CD5C3C, cream #E8DCC8, sage #C8D8D0, charcoal #2C2C2C
+- Brand colours: coral #FF5C3A, cream #F0EBE0, charcoal #2B2B2B, grey #97958F (see `brand.ts`)
 - 4 template variants (rotate): stat card, tip card, quote card, question card
 - All include "antekautomation.com | 0333 038 9960" footer
 - Neo-brutalist style: no gradients, no rounded corners, bold geometric shapes
