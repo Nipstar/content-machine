@@ -1,0 +1,15 @@
+{
+  "slides": [
+    { "type": "hook", "text": "Why nobody local is finding your firm", "voiceover_text": "Here's why local customers aren't finding your firm. Three boring fixes most owners ignore." },
+    { "type": "tip", "tipNumber": 1, "text": "Complete every field on your Google profile", "voiceover_text": "One. Complete every field on your Google profile. Hours, services, areas, photos. The half-done profile is invisible to half your searchers." },
+    { "type": "tip", "tipNumber": 2, "text": "Ask clients to mention the town in reviews", "voiceover_text": "Two. Ask clients to mention the town in reviews. A review that names the place beats fifty generic five-stars." },
+    { "type": "tip", "tipNumber": 3, "text": "Same name, address, phone everywhere online", "voiceover_text": "Three. Same name, address and phone everywhere. One mismatch confuses search engines and quietly hides you from results." },
+    { "type": "summary", "text": "Three boring fixes. More inbound calls.", "voiceover_text": "Boring beats clever. Three fixes. More inbound calls every week." },
+    { "type": "cta", "text": "", "voiceover_text": "Follow Antek Automation for more tips like this. Visit antek automation dot com or call oh three three three, oh three eight, nine nine six oh." }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/schema-markup-for-uk-service-businesses-a-practical-guide/",
+  "sourceBlogTitle": "How Local Customers Actually Find You On Google",
+  "youtubeTitle": "Why Local Customers Can't Find Your Firm Online",
+  "youtubeDescription": "Three boring fixes to your Google profile that pull more inbound calls every week. Full guide: https://blog.antekautomation.com/schema-markup-for-uk-service-businesses-a-practical-guide/",
+  "youtubeTags": ["#Shorts", "#LocalSearch", "#SmallBusinessTips", "#ServiceBusiness", "#GoogleBusinessProfile"]
+}

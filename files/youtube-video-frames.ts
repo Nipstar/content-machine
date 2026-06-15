@@ -4,7 +4,7 @@
  * Neo-brutalist branded slides for ~2-minute YouTube videos.
  * 9 slide types: intro, context, point (×5), takeaway, cta.
  *
- * Same brand system as Shorts: CORAL #CD5C3C, CREAM #E8DCC8, SAGE #C8D8D0, CHARCOAL #2C2C2C
+ * Same brand system as Shorts: CORAL #FF5C3A, CREAM #F0EBE0, SAGE #97958F, CHARCOAL #2B2B2B
  * No rounded corners, no gradients, thick borders, offset shadows, Inter 900-weight.
  */
 
@@ -15,10 +15,10 @@ import { tmpdir } from "os";
 import { randomUUID } from "crypto";
 import type { YTVideoScript, YTSlide } from "./youtube-video-types.js";
 
-const CORAL    = "#CD5C3C";
-const CREAM    = "#E8DCC8";
-const SAGE     = "#C8D8D0";
-const CHARCOAL = "#2C2C2C";
+const CORAL    = "#FF5C3A";
+const CREAM    = "#F0EBE0";
+const SAGE     = "#97958F";
+const CHARCOAL = "#2B2B2B";
 
 function esc(t: string): string {
   return t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");

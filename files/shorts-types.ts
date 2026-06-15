@@ -6,7 +6,7 @@ export type SlideType = "hook" | "tip" | "summary" | "cta";
 
 export type ShortStatus = "queued" | "scheduled" | "failed";
 
-export type ShortsPlatform = "youtube" | "instagram" | "facebook";
+export type ShortsPlatform = "youtube" | "instagram" | "facebook" | "linkedin" | "twitter";
 
 export interface ShortSlide {
   type: SlideType;

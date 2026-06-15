@@ -1,0 +1,42 @@
+{
+  "slides": [
+    {
+      "type": "hook",
+      "text": "Choosing the right AI model is the wrong priority",
+      "voiceover_text": "Here's what most businesses get wrong about AI: they spend weeks choosing the right model. Claude versus GPT versus Gemini. That's the wrong priority entirely."
+    },
+    {
+      "type": "tip",
+      "text": "Build human checkpoints into every customer-facing AI workflow",
+      "tipNumber": 1,
+      "voiceover_text": "Tip one: build human checkpoints into every customer-facing AI workflow. Until reliability is proven over ninety days of real use, have a human review AI outputs before they reach customers."
+    },
+    {
+      "type": "tip",
+      "text": "Log every AI decision so you can audit what went wrong",
+      "tipNumber": 2,
+      "voiceover_text": "Tip two: log every AI decision so you can audit what went wrong. If the AI sends the wrong email or books the wrong appointment, you need to know exactly what happened and why."
+    },
+    {
+      "type": "tip",
+      "text": "Define AI scope clearly — what it can do without asking",
+      "tipNumber": 3,
+      "voiceover_text": "Tip three: define the AI's scope clearly. Exactly what can it do without asking a human first? Anything outside that boundary should flag for review. Clear limits make AI more trustworthy, not less useful."
+    },
+    {
+      "type": "summary",
+      "text": "Control architecture matters more than which AI model you pick",
+      "voiceover_text": "So remember: your control architecture matters more than your model choice. Human checkpoints, audit logs, defined scope — build that first. Then optimise the model."
+    },
+    {
+      "type": "cta",
+      "text": "",
+      "voiceover_text": "Follow Antek Automation for more tips like this. Visit antek automation dot com or call oh three three three, oh three eight, nine nine six oh."
+    }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/ai-control-matters-more-than-ai-models-for-uk-businesses/",
+  "sourceBlogTitle": "AI Control Matters More Than AI Models for UK Businesses",
+  "youtubeTitle": "AI Control Matters More Than Which Model You Pick",
+  "youtubeDescription": "Build human checkpoints and audit logs before optimising your AI model. Full guide: https://blog.antekautomation.com/ai-control-matters-more-than-ai-models-for-uk-businesses/",
+  "youtubeTags": ["#Shorts", "#AIAutomation", "#UKSmallBusiness", "#AIGovernance", "#BusinessAI"]
+}

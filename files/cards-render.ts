@@ -8,7 +8,7 @@
  *
  * Design system (matches Shorts frames and GBP images exactly):
  *   - No rounded corners, no gradients, no soft shadows
- *   - Brand colours: coral #CD5C3C, cream #E8DCC8, sage #C8D8D0, charcoal #2C2C2C
+ *   - Brand colours: coral #FF5C3A, cream #F0EBE0, sage #97958F, charcoal #2B2B2B
  *   - Thick borders (3-4px), offset drop shadows via overlapping rectangles
  *   - 900-weight Inter headings, 600-weight body
  *   - Asymmetric layouts, overlapping geometric blocks that bleed to edges
@@ -33,10 +33,10 @@ import type {
 } from "./cards-types.js";
 
 // ── Brand colours ─────────────────────────────────────────────
-const CORAL = "#CD5C3C";
-const CREAM = "#E8DCC8";
-const SAGE = "#C8D8D0";
-const CHARCOAL = "#2C2C2C";
+const CORAL = "#FF5C3A";
+const CREAM = "#F0EBE0";
+const SAGE = "#97958F";
+const CHARCOAL = "#2B2B2B";
 
 // ── Viewport dimensions ───────────────────────────────────────
 const DIMS: Record<CardSize, { w: number; h: number }> = {

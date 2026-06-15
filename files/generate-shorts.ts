@@ -209,24 +209,13 @@ export function generatePlatformMeta(script: ShortScript, platform: ShortsPlatfo
   }
 
   if (platform === "instagram") {
+    // Instagram caps at 5 hashtags per Blotato — keep the strongest outcome-led set
     const hashtags = [
-      "#AntekAutomation",
-      "#AIAutomation",
-      "#UKSmallBusiness",
-      "#BusinessAutomation",
-      "#AIReceptionist",
-      "#VoiceAI",
-      "#SmallBusiness",
+      "#SmallBusinessTips",
       "#ServiceBusiness",
-      "#WorkflowAutomation",
-      "#AIForBusiness",
-      "#UKBusiness",
+      "#LocalBusiness",
       "#BusinessOwner",
-      "#AutomationTools",
-      "#n8n",
-      "#RetellAI",
-      "#AITools",
-      "#Shorts",
+      "#Reels",
     ];
     const tipLines = [tip1, tip2, tip3].filter(Boolean).map((t) => `→ ${t}`);
     const bodyLines: string[] = [
@@ -235,7 +224,7 @@ export function generatePlatformMeta(script: ShortScript, platform: ShortsPlatfo
       ...tipLines,
       ...(summaryText ? ["", summaryText] : []),
       "",
-      "Follow @AntekAutomation for AI automation tips built for UK small businesses.",
+      "Follow @AntekAutomation for practical tips built for small service firms and small law practices.",
       "More at antekautomation.com",
     ];
     const caption = bodyLines.join("\n") + "\n\n" + hashtags.join(" ");
@@ -248,8 +237,44 @@ export function generatePlatformMeta(script: ShortScript, platform: ShortsPlatfo
     };
   }
 
-  // facebook — conversational, question-based, 3–5 hashtags only
-  const hashtags = ["#AIAutomation", "#SmallBusiness", "#UKBusiness", "#BusinessTips"];
+  if (platform === "linkedin") {
+    const hashtags = ["#SmallBusiness", "#ServiceBusiness", "#BusinessOwner", "#Productivity"];
+    const tipLines = [tip1, tip2, tip3].filter(Boolean).map((t, i) => `${i + 1}. ${t}.`);
+    const liLines: string[] = [
+      hookText,
+      "",
+      ...tipLines,
+      ...(summaryText ? ["", summaryText] : []),
+      "",
+      "More practical guides for small service firms and small law practices at antekautomation.com.",
+      "",
+      hashtags.join(" "),
+    ];
+    return {
+      platform: "linkedin",
+      title: "",
+      description: "",
+      hashtags,
+      caption: liLines.join("\n"),
+    };
+  }
+
+  if (platform === "twitter") {
+    // X / Twitter: 280 char cap. Hook line only, no hashtags noise, link to blog
+    let body = hookText;
+    if (body.length > 240) body = body.slice(0, 237) + "...";
+    const caption = `${body}\n\n${script.sourceBlogUrl}`;
+    return {
+      platform: "twitter",
+      title: "",
+      description: "",
+      hashtags: [],
+      caption,
+    };
+  }
+
+  // facebook — conversational, question ending, 3-5 hashtags inline
+  const hashtags = ["#SmallBusiness", "#ServiceBusiness", "#UKBusiness", "#BusinessTips"];
   const intro = hookText.endsWith("?") ? hookText : `${hookText} — sound familiar?`;
   const fbTipLines = [tip1, tip2].filter(Boolean).map((t) => `${t}.`);
   const captionLines: string[] = [
@@ -258,9 +283,9 @@ export function generatePlatformMeta(script: ShortScript, platform: ShortsPlatfo
     ...fbTipLines,
     ...(summaryText ? [summaryText] : []),
     "",
-    "See how we fix this for UK service businesses at antekautomation.com or follow @AntekAutomation.",
+    "We help small service firms and small law practices catch what they're missing. antekautomation.com",
     "",
-    "What's the biggest admin headache in your business right now?",
+    "What's costing your firm the most time right now?",
     "",
     hashtags.join(" "),
   ];

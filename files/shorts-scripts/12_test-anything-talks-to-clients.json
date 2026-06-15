@@ -1,0 +1,15 @@
+{
+  "slides": [
+    { "type": "hook", "text": "Never let anything talk to clients without this test", "voiceover_text": "Never let any new tool talk to your clients without running this test first. Twenty minutes that save embarrassments." },
+    { "type": "tip", "tipNumber": 1, "text": "Write twenty real questions clients actually ask", "voiceover_text": "One. Write down twenty real questions clients actually ask. Pricing. Service area. Availability. Edge cases. Your real questions, not the polished ones." },
+    { "type": "tip", "tipNumber": 2, "text": "Ask each one three different ways. Look for drift", "voiceover_text": "Two. Ask each question three different ways. Same answer every time? Good. Different answers? That's the problem you'd otherwise discover on a real customer." },
+    { "type": "tip", "tipNumber": 3, "text": "Throw in the ambiguous and incomplete ones", "voiceover_text": "Three. Throw in vague and incomplete questions. A good tool admits when it doesn't know. A dangerous one confidently invents an answer." },
+    { "type": "summary", "text": "Real questions. Three ways. Edge cases.", "voiceover_text": "Real questions. Three different ways. Plus the edge cases. Twenty minutes that protect your reputation." },
+    { "type": "cta", "text": "", "voiceover_text": "Follow Antek Automation for more tips like this. Visit antek automation dot com or call oh three three three, oh three eight, nine nine six oh." }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/chatgpts-new-model-cuts-errors-by-half-what-uk-smes-need-to-know/",
+  "sourceBlogTitle": "Never Let Anything Talk To Clients Without This Test",
+  "youtubeTitle": "The 20-Minute Test Before Any Tool Faces Clients",
+  "youtubeDescription": "How to spot a tool that'll embarrass you in front of clients — before it goes live. Full guide: https://blog.antekautomation.com/chatgpts-new-model-cuts-errors-by-half-what-uk-smes-need-to-know/",
+  "youtubeTags": ["#Shorts", "#SmallBusinessTips", "#BusinessDecisions", "#ServiceBusiness", "#QualityControl"]
+}

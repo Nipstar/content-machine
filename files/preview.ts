@@ -90,22 +90,22 @@ export function generatePreview(ideas: ContentIdea[], outputPath: string): void 
 <title>Social Content Machine - Preview</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#f5f5f5;padding:24px;color:#2C2C2C}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#f5f5f5;padding:24px;color:#2B2B2B}
 h1{text-align:center;margin-bottom:6px}
 .sub{text-align:center;color:#666;margin-bottom:32px}
 .card{background:#fff;border-radius:12px;margin-bottom:24px;box-shadow:0 2px 8px rgba(0,0,0,.1);overflow:hidden}
 .hdr{padding:16px 20px;border-bottom:1px solid #eee}
 .topic{margin-top:8px;font-size:15px;font-weight:600}
-.num{font-weight:700;color:#CD5C3C;margin-right:8px}
+.num{font-weight:700;color:#FF5C3A;margin-right:8px}
 .pill{display:inline-block;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;margin-right:6px}
-.p-ai_automation{background:#E8DCC8;color:#2C2C2C}
-.p-voice_ai{background:#C8D8D0;color:#2C2C2C}
-.p-growth_digital{background:#CD5C3C;color:#fff}
+.p-ai_automation{background:#F0EBE0;color:#2B2B2B}
+.p-voice_ai{background:#97958F;color:#2B2B2B}
+.p-growth_digital{background:#FF5C3A;color:#fff}
 .fmt{font-size:12px;color:#888;margin-right:6px}
 .tmpl{display:inline-block;padding:2px 10px;border-radius:12px;font-size:11px;font-weight:600;background:#e3f2fd;color:#1565c0}
 .tabs{display:flex;border-bottom:2px solid #eee}
 .tab-btn{flex:1;padding:10px;border:none;background:none;cursor:pointer;font-weight:600;color:#888;font-size:13px;transition:.2s}
-.tab-btn.active{color:#CD5C3C;border-bottom:2px solid #CD5C3C;margin-bottom:-2px}
+.tab-btn.active{color:#FF5C3A;border-bottom:2px solid #FF5C3A;margin-bottom:-2px}
 .panel{padding:20px}
 .body{white-space:pre-wrap;line-height:1.6;font-size:14px;margin-bottom:12px;font-family:inherit;background:none;border:none}
 .fc{background:#f9f9f9;padding:12px;border-radius:8px;font-size:13px;margin-bottom:12px;color:#555}

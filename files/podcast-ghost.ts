@@ -88,8 +88,8 @@ function buildAudioCardNode(audioUrl: string, episodeTitle: string, durationSeco
   const durationLabel = durationFormatted ? ` (${durationFormatted})` : "";
   const safeTitle = episodeTitle.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
-  const html = `<div style="background:#E8DCC8;border:3px solid #2C2C2C;padding:20px;margin-bottom:24px;">
-  <p style="font-weight:900;font-size:16px;color:#2C2C2C;margin:0 0 4px 0;">
+  const html = `<div style="background:#F0EBE0;border:3px solid #2B2B2B;padding:20px;margin-bottom:24px;">
+  <p style="font-weight:900;font-size:16px;color:#2B2B2B;margin:0 0 4px 0;">
     🎧 PREFER TO LISTEN?${durationLabel}
   </p>
   <p style="font-size:13px;color:#555;margin:0 0 12px 0;">${safeTitle}</p>

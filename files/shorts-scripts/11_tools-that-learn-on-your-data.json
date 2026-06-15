@@ -1,0 +1,15 @@
+{
+  "slides": [
+    { "type": "hook", "text": "Tools that learn on your data — useful or a liability?", "voiceover_text": "More tools now promise to learn on your firm's data. Useful or a liability? Three checks before you say yes." },
+    { "type": "tip", "tipNumber": 1, "text": "Does the learning stay inside your firm?", "voiceover_text": "One. Does the learning stay inside your firm? Or does it improve the vendor's general model? Two completely different things. Get it in writing." },
+    { "type": "tip", "tipNumber": 2, "text": "Can you delete what it learned, on demand?", "voiceover_text": "Two. Can you wipe what it learned at any point? If the answer involves a support ticket and three weeks, that's not a real delete." },
+    { "type": "tip", "tipNumber": 3, "text": "Audit log of every decision it makes", "voiceover_text": "Three. Insist on a full log of every decision. You need to be able to look back and check exactly what it did in your firm's name." },
+    { "type": "summary", "text": "Private. Deletable. Auditable.", "voiceover_text": "Learning stays private. Stays deletable. Stays auditable. All three. Or it's a no." },
+    { "type": "cta", "text": "", "voiceover_text": "Follow Antek Automation for more tips like this. Visit antek automation dot com or call oh three three three, oh three eight, nine nine six oh." }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/self-learning-ai-agents-what-uk-service-businesses-need-to-know/",
+  "sourceBlogTitle": "Tools That Learn On Your Data — Useful Or A Liability?",
+  "youtubeTitle": "When 'Learns On Your Data' Is A Liability",
+  "youtubeDescription": "Three checks before letting any tool learn from your firm's data. Full guide: https://blog.antekautomation.com/self-learning-ai-agents-what-uk-service-businesses-need-to-know/",
+  "youtubeTags": ["#Shorts", "#SmallBusinessTips", "#DataPrivacy", "#BusinessRisk", "#ServiceBusiness"]
+}

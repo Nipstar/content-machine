@@ -1,0 +1,15 @@
+{
+  "slides": [
+    { "type": "hook", "text": "Pick the tool by the job. Not the buzzword.", "voiceover_text": "Owners keep asking me which tool to buy. Wrong question. Pick by the job, not by the buzzword on the sales page." },
+    { "type": "tip", "tipNumber": 1, "text": "Name the exact task. The hour you want back", "voiceover_text": "One. Name the exact task. Not we want to be more efficient. The actual job. Drafting intake replies. Summarising calls. Booking consultations." },
+    { "type": "tip", "tipNumber": 2, "text": "Test it on your real cases, not a demo", "voiceover_text": "Two. Test it on your real cases. Not the polished demo. Throw your messiest enquiry at it. See what comes back." },
+    { "type": "tip", "tipNumber": 3, "text": "Measure whether your team will actually use it", "voiceover_text": "Three. Measure adoption. The clever tool your team won't use is worse than the boring tool they will." },
+    { "type": "summary", "text": "Job first. Test second. Adoption third.", "voiceover_text": "Job first. Real test second. Adoption third. The buzzword on the box doesn't matter." },
+    { "type": "cta", "text": "", "voiceover_text": "Follow Antek Automation for more tips like this. Visit antek automation dot com or call oh three three three, oh three eight, nine nine six oh." }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/agentic-ai-vs-generative-ai-what-uk-smes-need-to-know/",
+  "sourceBlogTitle": "Pick The Tool By The Job, Not The Buzzword",
+  "youtubeTitle": "Stop Picking Tools By The Buzzword",
+  "youtubeDescription": "Three questions before buying any tool. Skip the buzzword. Full guide: https://blog.antekautomation.com/agentic-ai-vs-generative-ai-what-uk-smes-need-to-know/",
+  "youtubeTags": ["#Shorts", "#SmallBusinessTips", "#BusinessDecisions", "#ToolSelection", "#ServiceBusiness"]
+}
