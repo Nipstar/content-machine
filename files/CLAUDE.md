@@ -16,17 +16,31 @@ Source files live in the project root (no `src/` directory). TypeScript ESM — 
 
 ```bash
 npm install
-npm run build                         # compile TypeScript → dist/
-npm run preview:fast                  # fastest test: content-only preview
+npm run build                         # compile TypeScript → dist/ (tsc)
+npm run preview:fast                  # fastest test: content-only preview (alias of preview)
 npm run generate                      # load content.json, assign templates, preview
-npm run generate:from-db              # pull approved briefs from PostgreSQL
-npm run generate -- --count 7         # custom idea count
-npm run generate -- --platforms linkedin,facebook
-npm run generate -- --pillar voice_ai
-npm run generate -- --category tip    # force content category
-npm run generate -- --start 2026-03-20  # custom start date
-npm run generate -- --preview-only    # preview without template assignment
+npm run generate:from-db             # pull approved briefs from PostgreSQL
+npm run generate:from-db:preview     # briefs → preview only (no template step)
+npm run generate:7                    # 7 ideas
+npm run generate:linkedin-only        # linkedin platform only
+npm run generate:voice               # pillar voice_ai (also :automation, :growth)
+npm run gbp                          # GBP pipeline (gbp-cli.ts)
+npm run gbp:preview                   # GBP preview only
+npm run shorts                       # shorts-cli.ts
+npm run cards                        # cards-cli.ts
+npm run personal                      # personal-cli.ts → personal-preview.html
+npm run personal:preview              # personal preview only (no template step)
+npm start                            # run compiled dist/index.js
 ```
+
+**Ad-hoc flags** (pass with `--` after the script): `--count N`, `--platforms linkedin,facebook`,
+`--pillar voice_ai`, `--category tip`, `--start 2026-03-20`, `--preview-only`.
+
+**One-off scripts (no npm alias):**
+- `npx tsx generate-banner.ts` — generate `images/banner.png` (1280×640 GitHub repo banner)
+- `npx tsx generate-youtube-video.ts` — landscape YouTube video script generator (used by `/personal`)
+- `npx tsx personal-images-run.ts` — render + upload all 28 personal post hook cards to R2
+- `npx tsx podcast-batch-run.ts [--dry-run] [--skip-to N]` — process every script in `podcast-scripts/` (audio + R2 + RSS.com + DB)
 
 ---
 
@@ -39,8 +53,9 @@ npm run generate -- --preview-only    # preview without template assignment
 | `/schedule` | Visuals + scheduling only: create media from templates, schedule posts via Blotato MCP |
 | `/gbp` | GBP posts: fetch RSS, generate posts, create branded images, upload to R2, queue in PostgreSQL |
 | `/shorts` | Shorts/Reels: fetch RSS, generate 6-slide script, render 1080×1920 frames, stitch MP4 (once), upload to R2, schedule to each target platform via Blotato MCP |
-| `/podcast` | Podcast episodes: fetch RSS, generate 2-3 min script, produce MP3 via Fish Audio TTS, upload to R2, queue in PostgreSQL |
+| `/podcast` | Podcast episodes: fetch RSS, generate 6-7 min script, produce MP3 via Fish Audio TTS, upload to R2 + RSS.com, embed in Ghost, render YouTube video, queue in PostgreSQL |
 | `/cards` | Social cards: fetch RSS, extract stats/quotes/tips, render branded PNG cards in 3 sizes via Puppeteer (no Blotato dependency) |
+| `/personal` | 28-day personal calendar: sitemap scan → rotates 4 formats (LinkedIn/X/FB/IG text, hook-card image post, Reel, landscape YouTube video) → personal LinkedIn + Andy's other personal accounts |
 
 ---
 
@@ -87,7 +102,7 @@ Phase 3 (Preview)   → HTML preview with platform tabs, template badges, char c
 2. Fetch full article content from each blog URL using WebFetch
 3. Repurpose real article insights into value-first social posts (NOT salesy)
 4. Include `source_url` field linking back to the blog post
-5. LinkedIn `first_comment` includes the full blog URL
+5. LinkedIn `body` ends with the full blog URL (Andy's directive 2026-05-22 — overrides old "links in first_comment only" rule). `first_comment` may be empty or hashtags only.
 
 ### Mode 2: Database briefs (`npm run generate:from-db`)
 Pulls from PostgreSQL `articles` table where `status = 'approved'`.
@@ -120,9 +135,15 @@ Not a tech bro. A practical operator who lived the frustrations of running servi
 
 ## TARGET AUDIENCE
 
-Primary: UK service-based businesses, 1-50 staff, owner-operated or founder-led, aged 30-60.
+**Primary (current focus): US law firms** — solo / small partnership, after-hours intake pain:
+- Personal Injury (PI)
+- DUI / DWI defence
+- Criminal Defence
+- Immigration
 
-Verticals (rotate across content — trades are ONE vertical, not the whole focus):
+**Secondary: UK service-based businesses**, 1-50 staff, owner-operated or founder-led, 30-60.
+
+Verticals (rotate — trades are ONE vertical, not the whole focus):
 - Professional services: accountants, solicitors, surveyors, consultants, IFAs
 - Property and facilities: letting agents, property managers
 - Health and wellness: physio clinics, dental practices, vets, beauty salons
@@ -131,37 +152,57 @@ Verticals (rotate across content — trades are ONE vertical, not the whole focu
 - Hospitality: restaurants, hotels, catering, coffee shops
 - Care and education: nurseries, care homes, tutoring centres
 
-Pain points: time-poor, sceptical of AI, missing enquiries, admin overload, staff costs.
+Pain points: missed callers, after-hours leads going to competitors, intake delays, admin overload, staff costs. **Frame as outcomes, never as "AI" or "automation" problems.**
 
 ---
 
 ## VOICE & TONE
 
+### Outcome-led, not tech-led (top rule)
+
+Outreach and social copy sells the **outcome**, not the tech. Never name the mechanism — name what the firm / business **gets**: caller answered, lead captured, intake booked, after-hours coverage, time back, fewer missed cases.
+
+**Banned in outreach copy** (these reveal the mechanism, not the outcome):
+- "AI", "artificial intelligence"
+- "automation", "automated"
+- "voice agent", "voice AI", "AI receptionist", "AI answering"
+- "chatbot", "bot"
+- "n8n", "workflow", "Retell", any vendor / platform name
+- "agent" used in the technical sense
+
+**Say instead:** "24/7 answering service", "after-hours intake", "we catch the callers your firm misses", "answers every call, books the consultation", "covers the calls you can't take", "your firm never misses an after-hours caller again".
+
+Internal docs, code, DB columns, pillar keys → tech terms fine. **Outreach / social / GBP / shorts captions → outcome language only.**
+
 ### Non-negotiables
-- **UK English always**: colour, organise, whilst, realise, licence, programme, maths, practise, enquiry
+- **UK English always** (even for US law firm copy): colour, organise, whilst, realise, licence, programme, maths, practise, enquiry
 - Contractions fine: "I've", "it's", "you're", "won't"
-- No em-dashes — LinkedIn/mobile renders them poorly
+- No em-dashes — LinkedIn / mobile renders them poorly
 - Never: "game-changing", "revolutionary", "leverage", "synergy", "empower", "unleash"
 - Never: "In today's fast-paced world", "I'm excited to share", "Let that sink in."
 - Never: "utilise" (use "use"), "solution" when you can name the actual thing
 - Never: American spellings
+- Never: any banned term in the outcome-led list above (in outreach copy)
 
 ### Words that work
-- "miss", "missed", "gone to a competitor"
+- "miss", "missed", "gone to a competitor", "the case walked"
+- "answered", "covered", "caught", "captured", "booked"
 - "saves you", "gets you back", "means you can"
-- Specific numbers: "3 missed enquiries", "4 hours a week", "£200 in lost jobs"
-- "small business", "service business", "your team", "your clients"
-- "after hours", "while you're with a client", "when you're busy"
+- Specific numbers: "3 missed callers a week", "4 hours back", "£200 in lost jobs", "one PI case pays for it for a year"
+- "small firm", "service business", "your team", "your clients"
+- "after hours", "while you're in court", "while you're with a client", "when the office is closed"
 
 ---
 
 ## CONTENT PILLARS
 
-| Pillar | Topics | Andy's angle |
-|--------|--------|-------------|
-| ai_automation | Missed enquiries, follow-up automation, admin reduction, CRM, quote automation | "30 years watching service businesses struggle with the same problems. AI is finally the affordable fix." |
-| voice_ai | AI receptionist, call handling, 24/7 availability, never miss a lead, chatbots | Certified Retell AI Partner — builds these for real businesses, not demos. |
-| growth_digital | Local SEO, Google rankings, website conversion, GEO, AI content | Built these systems for clients and seen the before/after firsthand. |
+Pillar keys (`ai_automation`, `voice_ai`, `growth_digital`) are **internal code identifiers** — they route templates and DB rows. The **outreach copy** under each pillar must follow the outcome-led rule above (no AI / automation / voice agent / bot vocabulary).
+
+| Pillar key | Topics (outcome framing) | Andy's angle (outcome-led) |
+|------------|--------------------------|----------------------------|
+| ai_automation | Missed enquiries recovered, follow-ups that actually happen, admin time clawed back, faster quote turnaround | "30 years watching service businesses lose work to slow follow-up. The fix is finally affordable for small firms." |
+| voice_ai | After-hours answering, every caller answered, intake booked while you're in court, 24/7 cover, never miss a case | "Most PI / DUI / criminal / immigration calls come after hours. If you don't answer, the next firm does. We answer." |
+| growth_digital | Local rankings, more inbound enquiries, website that converts, getting found by the right clients | "Built these systems for real firms — seen the before / after on caseload, not just traffic." |
 
 ---
 
@@ -169,10 +210,10 @@ Pain points: time-poor, sceptical of AI, missing enquiries, admin overload, staf
 
 | Platform | Limit | Style | Links | Hashtags |
 |----------|-------|-------|-------|----------|
-| LinkedIn | 1,300 chars | Professional but human. Short paragraphs. Hook must compel "see more" click. | NO links in body (kills reach). Links in `first_comment` only. | Max 5 at end |
+| LinkedIn | 1,300 chars | Professional but human. Short paragraphs. Hook must compel "see more" click. | Blog URL goes IN BODY at the end (per Andy's direction 2026-05-22). Do not bury link in first_comment. | Max 5 at end |
 | X (Twitter) | 280 chars HARD | Single idea. Punchy. First 5 words must land. | Fine in body | 1-2 max or none |
 | Facebook | ~40-100 words | Warm, conversational. Direct question at end. 1-2 emojis max. | Fine in body | 1-3 or none |
-| Instagram | 150-300 visible | Visual-first. Caption supports image. 2-3 emojis natural. | N/A | 5-10 in `first_comment` |
+| Instagram | 150-300 visible | Visual-first. Caption supports image. 2-3 emojis natural. | N/A | Max **5 in body** — Blotato MCP rejects more (no separate first_comment field). Keep best 5. |
 
 ---
 
@@ -570,7 +611,7 @@ Blotato MCP is the handoff mechanism — the `/shorts` slash command calls `blot
 
 ### /podcast slash command
 
-Generates 2-3 minute "Quick Tips" audio episodes from blog posts. Andy's voice via Fish Audio TTS. Section-by-section generation for prosody control and to avoid Fish Audio's ~8s output cap. Optional background music bed. Distributed via RSS.com (podcast hosting), Ghost (blog embed), and YouTube (branded video). Status tracked in PostgreSQL.
+Generates 6-7 minute "Quick Tips" audio episodes from blog posts. Andy's voice via Fish Audio TTS. Section-by-section generation for prosody control and to avoid Fish Audio's ~8s output cap. Optional background music bed. Distributed via RSS.com (podcast hosting), Ghost (blog embed), and YouTube (branded video). Status tracked in PostgreSQL.
 
 **Flags:**
 - `--url <url>` — process a specific blog post URL (default: latest unprocessed RSS post)
@@ -777,6 +818,54 @@ To use: upload card PNG to R2, then pass the CDN URL as `mediaUrls` in `blotato_
 
 **File naming convention:** `[blog-slug]_[type]_[size].png`
 Example: `missed-calls-guide_stat_landscape.png`
+
+---
+
+## PERSONAL PIPELINE
+
+### /personal slash command
+
+28-day personal social calendar for Andy's **personal** LinkedIn / X / Facebook / Instagram (not company pages). Reads `https://blog.antekautomation.com/sitemap-posts.xml`, rotates four content formats across 28 days, produces a unified preview, and hands off media + scheduling to Blotato MCP.
+
+**Four-format rotation (one per day, cycles):**
+1. **Text post** — LinkedIn / X / Facebook / Instagram caption (no media)
+2. **Image post** — same caption + branded hook card (landscape 1200×628 LinkedIn, square 1080×1080 IG/FB/X)
+3. **Reel / Short** — vertical 1080×1920 video via the existing shorts pipeline
+4. **Landscape YouTube video** — ~2-minute 1920×1080 video via `generate-youtube-video.ts` + `youtube-video-frames.ts`
+
+**Posting target:** Andy's personal accounts via Blotato — same `accountId` as company (14687 LI, 22303 FB) but **NO `pageId`** → posts hit personal feed instead of company page. Twitter/Instagram have no page split.
+
+**Key files:**
+| File | Purpose |
+|------|---------|
+| `personal-types.ts` | `PersonalContentIdea`, `PersonalVariant`, `content_format` enum |
+| `personal-cli.ts` | Reads `personal-content.json`, applies scheduling (08:00 UK, 28 days), opens `personal-preview.html` |
+| `sitemap-scanner.ts` | Fetches + parses `sitemap-posts.xml`, returns sorted URL list, filters drafts |
+| `personal-image-gen.ts` | Puppeteer rendering of landscape + square hook cards, R2 upload |
+| `personal-images-run.ts` | Standalone runner: reads `personal-content.json` → generates + uploads all 28 hook cards → writes `personal-image-urls.json` |
+| `youtube-video-types.ts` | `YTVideoScript`, `YTSlide`, `YTSlideType` |
+| `generate-youtube-video.ts` | Prompt + `parseYTVideoScript()` validator + hardcoded `YT_CTA_VOICEOVER` |
+| `youtube-video-frames.ts` | Puppeteer renderer for 1920×1080 landscape slide PNGs |
+
+**Workflow:**
+1. `/personal` (slash command) scans sitemap, generates 28 ideas in 4-format rotation → writes `personal-content.json`
+2. `npx tsx personal-images-run.ts` generates + uploads all hook cards → `personal-image-urls.json`
+3. `npm run personal` opens `personal-preview.html` for review
+4. For Reels / YouTube videos: invoke shorts pipeline + `generate-youtube-video.ts` per applicable idea
+5. Blotato MCP `blotato_create_post` per idea × platform — **omit `pageId`** to post to personal accounts
+
+---
+
+## ONE-OFF UTILITIES
+
+| Script | Output |
+|--------|--------|
+| `generate-banner.ts` | `images/banner.png` — 1280×640 neo-brutalist GitHub repo banner |
+| `podcast-batch-run.ts` | Batch-processes every JSON in `podcast-scripts/`: validate → Fish Audio → R2 → RSS.com → DB. Flags: `--dry-run`, `--skip-to N` |
+| `content-images-run.ts` | Reads `content.json`, renders landscape + square hook cards per idea via `personal-image-gen.ts`, uploads to R2 → `content-image-urls.json` keyed by `idea_id` |
+| `weekly-cards-run.ts` | Reads `content.json` (7 ideas), renders 3 sizes per idea via `cards-render.ts`, uploads to R2 → `weekly-card-urls.json` keyed by `idea_id` |
+| `personal-images-run.ts` | Renders + uploads all 28 personal hook cards → `personal-image-urls.json` |
+| `shorts-batch-run.ts` | Batch-processes every script in `shorts-scripts/` |
 
 ---
 
