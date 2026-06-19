@@ -640,6 +640,21 @@ Generates ~30-second short-form videos from blog RSS for YouTube Shorts, Instagr
 
 **System dependencies:** `brew install ffmpeg` (includes ffprobe)
 
+### Render layer: legacy vs HyperFrames (`--renderer`)
+
+The `/shorts` command takes `--renderer <legacy|hyperframes>` (default **`legacy`** — opt in to HyperFrames per run).
+
+- **`legacy`** — the original path: `shorts-frames.ts` (Puppeteer 1080×1920 PNG slides) + `shorts-video.ts` (FFmpeg zoompan Ken Burns + crossfade + audio mux). Unchanged.
+- **`hyperframes`** — `shorts-hyperframes.ts` renders animated motion graphics instead of static slides. HyperFrames (by HeyGen, CLI v0.6.x — "write HTML, render video") renders an HTML composition: a `#root` with `data-duration`, `class="clip"` children carrying `data-start` / `data-duration` / `data-track-index`, and one paused GSAP timeline registered at `window.__timelines["main"]`, built synchronously. CLI: `hyperframes render <dir> -o out.mp4 --fps 30` (invoked via `HYPERFRAMES_BIN`, default `npx --yes hyperframes@0.6.106`).
+
+**Audio stays in FFmpeg.** HyperFrames renders the SILENT 1080×1920 visual only; `shorts-hyperframes.ts` then muxes the existing Fish Audio voiceover + music bed (-22dB) via the same FFmpeg graph as the legacy stitcher. Audio is never moved into HyperFrames.
+
+**Timing sync.** Each scene's on-screen duration is the **measured** duration of its matching voiceover clip (ffprobe on the real MP3, not the 3–8s clamp the legacy timeline reports), with `data-start` cumulative. Scenes are hard snap cuts (no crossfade), so the concatenated voiceover aligns 1:1 with the sequential clips; any sub-frame mismatch is absorbed by the final scene. Silent mode (`--no-voice` / no API key) falls back to 5s/scene. Scene content + any rotation are seeded off the blog URL, so reruns are deterministic.
+
+**Brand + motion.** Colours from `brand.ts` (coral `#FF5C3A`, cream `#F0EBE0`, charcoal `#2B2B2B`, ink `#1C1C1C`, grey `#97958F` — sage is retired; the brief's `#CD5C3C`/sage list is the old palette and was NOT used). Fonts: Outfit (display), DM Sans (body), JetBrains Mono (data), loaded in the composition. Neo-brutalist: hard edges, no rounded corners, faint grid, two-tone headlines. Motion: kinetic type animating in per line, stat count-ups, coral bar/badge reveals, snap transitions — purposeful, on-brand. Same single MP4 reused across YouTube/Instagram/Facebook (no per-platform re-render).
+
+**Install note.** HyperFrames must be installed wherever the render step runs (currently local). If rendering ever moves to Contabo, install it there (or point `HYPERFRAMES_BIN` at the install) — the legacy renderer has no such dependency.
+
 **Slide structure (6 slides, voice-driven duration, ~40–50s total with CTA):**
 1. **hook** — Bold question or stat pulled from the blog post
 2. **tip** (×3) — Numbered actionable tips (max 12 words each)

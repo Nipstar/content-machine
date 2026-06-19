@@ -28,6 +28,7 @@ import { parseShortScript, generatePlatformMeta } from "./generate-shorts.js";
 import { generateAllVoiceovers } from "./shorts-voice.js";
 import { renderFrames } from "./shorts-frames.js";
 import { stitchVideo, uploadVideoToR2 } from "./shorts-video.js";
+import { renderShortHyperframes } from "./shorts-hyperframes.js";
 import { initShortsTable, queueShort } from "./shorts-db.js";
 import type { ShortsPlatform, PlatformMeta } from "./shorts-types.js";
 import { computeLocalPlan, AssetDedup } from "./local-seo.js";
@@ -43,6 +44,14 @@ const fromIdx = args.indexOf("--from");
 const toIdx = args.indexOf("--to");
 const FROM = fromIdx !== -1 ? parseInt(args[fromIdx + 1], 10) : 1;
 const TO = toIdx !== -1 ? parseInt(args[toIdx + 1], 10) : 9999;
+// Visual renderer: "legacy" (Puppeteer slides + zoompan) or "hyperframes"
+// (animated motion graphics). Default legacy until opted in per run.
+const rendererIdx = args.indexOf("--renderer");
+const RENDERER = rendererIdx !== -1 ? args[rendererIdx + 1] : "legacy";
+if (RENDERER !== "legacy" && RENDERER !== "hyperframes") {
+  console.error(`Invalid --renderer "${RENDERER}" (expected: legacy | hyperframes)`);
+  process.exit(1);
+}
 
 interface ScheduleReel {
   reel: number;
@@ -72,7 +81,7 @@ const scheduleRaw = JSON.parse(readFileSync(schedulePath, "utf-8"));
 const allReels: ScheduleReel[] = scheduleRaw.reels;
 const reelsToProcess = allReels.filter((r) => r.reel >= FROM && r.reel <= TO);
 
-console.log(`\nProcessing reels ${FROM}-${Math.min(TO, allReels.length)} (${reelsToProcess.length} reels) ${DRY_RUN ? "[DRY RUN]" : ""}\n`);
+console.log(`\nProcessing reels ${FROM}-${Math.min(TO, allReels.length)} (${reelsToProcess.length} reels) [renderer: ${RENDERER}] ${DRY_RUN ? "[DRY RUN]" : ""}\n`);
 
 const manifest: ManifestEntry[] = [];
 const failures: { reel: number; error: string }[] = [];
@@ -129,13 +138,20 @@ async function main() {
       const hasVoiceover = slideAudios !== null;
       console.log(`  ${hasVoiceover ? "✅" : "⚠️"}  Voiceover: ${hasVoiceover ? `${slideAudios!.length} clips` : "skipped (silent fallback)"}`);
 
-      console.log(`  🖼   Rendering 6 frames...`);
-      const framePaths = await renderFrames(script, reelTmpDir);
-      console.log(`  ✅  Frames: ${framePaths.length}`);
-
-      console.log(`  🎬  Stitching video...`);
       const videoOutPath = join(outputDir, `reel-${String(reel.reel).padStart(2, "0")}.mp4`);
-      await stitchVideo(framePaths, videoOutPath, slideAudios ?? undefined);
+      if (RENDERER === "hyperframes") {
+        // Animated motion graphics. HyperFrames renders the SILENT visual; the
+        // module muxes the same Fish Audio voiceover + music via FFmpeg after.
+        console.log(`  🎞   Rendering via HyperFrames...`);
+        await renderShortHyperframes(script, videoOutPath, slideAudios ?? undefined);
+      } else {
+        console.log(`  🖼   Rendering 6 frames...`);
+        const framePaths = await renderFrames(script, reelTmpDir);
+        console.log(`  ✅  Frames: ${framePaths.length}`);
+
+        console.log(`  🎬  Stitching video...`);
+        await stitchVideo(framePaths, videoOutPath, slideAudios ?? undefined);
+      }
       console.log(`  ✅  Video: ${videoOutPath}`);
 
       console.log(`  ☁️   Uploading to R2...`);

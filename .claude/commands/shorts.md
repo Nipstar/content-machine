@@ -13,6 +13,9 @@ The video file is rendered **once** and reused across all target platforms. Plat
   - Shorthand: `--platforms all` → `youtube,instagram,facebook`
   - Shorthand: `--platforms reels` → `instagram,facebook`
   - Examples: `--platforms youtube,instagram`, `--platforms all`
+- **`--renderer <legacy|hyperframes>`** — visual render layer (default: `legacy`)
+  - `legacy` — Puppeteer slides + FFmpeg zoompan/crossfade (Phases 4-5 below)
+  - `hyperframes` — animated motion graphics via `shorts-hyperframes.ts` (HyperFrames CLI). Renders the SILENT 1080×1920 visual, then the SAME FFmpeg step muxes Fish Audio voiceover + music. Requires HyperFrames installed on the render machine. With this flag, replace Phases 4-5 with a single runner that calls `renderShortHyperframes(script, outputPath, slideAudios)` — scene timing comes from the measured voiceover clip durations.
 
 ## Steps
 
