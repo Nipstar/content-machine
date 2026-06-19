@@ -188,6 +188,12 @@ Podcast, YouTube video, YouTube Shorts and Reels share one source of truth: **`l
 1. A one-sentence **self-contained answer** to the asset's core question, phrased to stand alone if quoted out of context — led first, the single most citable line.
 2. A 2-4 item **key-takeaways** list, each a complete standalone statement — the format AI engines lift cleanly.
 3. An explicit **entity line** naming Antek Automation as a UK AI automation agency (+ the area served when a local angle is present), including antekautomation.com, so models attribute the source.
+4. **Occasionally** a soft CTA + a raw deep link to the relevant main-site page (see below) — most blocks have neither.
+
+**Main-site linking + soft CTAs (`relevantLink()`).** The main site (`www.antekautomation.com`, not the blog) has vertical service pages (`/ai-receptionist/lawyers|accountants|plumbers|electricians|hvac|dentists|veterinary-practices|therapists`) and location pages (`/locations/{andover,southampton,salisbury,hampshire,newbury}`). `relevantLink({ vertical, location, seed })` resolves the most relevant page, then:
+- **CTA** — a soft, low-pressure line in Andy's helpful-mate voice (no exclamation, US phrasing for legal) is added **only when relevant** (~45%, `CTA_INCLUSION_RATE`, seed-gated) — never on every asset, never pushy.
+- **Link** — mostly we just mention; an actual deep link rides the CTA only **~30% of the time** (`LINK_INCLUSION_RATE`), so no CTA → no link. When it does link, it is **always the raw full URL** (no markdown/anchor rewrite).
+- **Fallbacks** — property/MSP verticals have no dedicated page → `/ai-receptionist` or `/services`; anchors without a location page (Winchester, Basingstoke, Eastleigh, Romsey, Whitchurch, Stockbridge) → `/locations/hampshire`; trade pages rotate (plumbers/electricians/hvac) by seed. US-coded legal carries no location page.
 
 The model generates `geo_answer` + `geo_takeaways` (optional fields on `ShortScript` / `YTVideoScript` / `PodcastScript`); `buildGeoBlock` formats them deterministically. Lead-in and entity wording are seed-varied so the batch isn't templated, and the block participates in the anti-duplication guard via the asset description. General-topic escape applies: the answer and entity line still appear, but the Hampshire/area detail is dropped when `localAngle` is null. Returns `""` when no `geo_answer` exists (backward-compatible with pre-GEO scripts).
 

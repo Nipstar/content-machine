@@ -500,6 +500,120 @@ export function localBriefForPrompt(plan: LocalPlan): string {
   return lines.join("\n");
 }
 
+// ── Main-site deep links (antekautomation.com) ──────────────
+//
+// The main site (NOT the blog) has vertical service pages and location pages.
+// We mostly just MENTION the relevant page in copy; an actual deep link is
+// dropped only now and again (seed-gated), so outputs don't read as link spam.
+
+const MAIN_SITE = "https://www.antekautomation.com";
+
+/** Probability (out of 100) that an asset includes an actual deep link. */
+export const LINK_INCLUSION_RATE = 30;
+
+/** Probability (out of 100) that an asset adds a soft CTA at all. */
+export const CTA_INCLUSION_RATE = 45;
+
+/** Vertical → main-site service page path. null = no dedicated page (fall back). */
+const VERTICAL_PAGES: Record<VerticalId, string | null> = {
+  legal: "/ai-receptionist/lawyers",
+  professional: "/ai-receptionist/accountants",
+  trades: "/ai-receptionist/plumbers", // trades rotates across the trade pages below
+  property: null, // no estate/letting-agent page yet → fall back to /ai-receptionist
+  msp: null, // no MSP/IT page yet → fall back to /services
+  general: null,
+};
+
+/** Trade service pages to rotate across for the trades vertical. */
+const TRADE_PAGES = ["/ai-receptionist/plumbers", "/ai-receptionist/electricians", "/ai-receptionist/hvac"];
+
+/** Location anchors that have a real main-site page. Others fall back to Hampshire. */
+const LOCATION_PAGES: Record<string, string> = {
+  andover: "/locations/andover",
+  southampton: "/locations/southampton",
+  salisbury: "/locations/salisbury",
+  hampshire: "/locations/hampshire",
+};
+
+export interface RelevantLinkArgs {
+  vertical: Vertical;
+  location: string | null;
+  seed: string;
+}
+
+export interface RelevantLink {
+  /** Natural-language mention of the relevant page topic — ALWAYS present. */
+  mention: string;
+  /** A SOFT CTA line, or null when no CTA is added (only added when relevant). */
+  cta: string | null;
+  /** A deep link URL, or null when this asset should just mention (the default). */
+  url: string | null;
+  /** Resolved service-page path for the vertical (with fallback). */
+  servicePath: string;
+  /** Resolved location-page path, or null when no anchor. */
+  locationPath: string | null;
+}
+
+/**
+ * SOFT CTA phrases — low-pressure, not pushy, Andy's helpful-mate voice.
+ * Seed-rotated. UK English, no exclamation marks. (US variant for legal.)
+ */
+const CTA_PHRASES_UK = [
+  "More on the site if it's useful.",
+  "Worth a look if this is on your radar.",
+  "Happy to walk through how it works.",
+  "There's a free GEO audit if you want a benchmark.",
+];
+const CTA_PHRASES_US = [
+  "More on the site if it's useful.",
+  "Worth a look if this is on your radar.",
+  "Happy to walk a firm through how it works.",
+  "There's a free intake review if you want a benchmark.",
+];
+
+/**
+ * Resolves the most relevant main-site page(s) for an asset and decides whether
+ * to actually link or just mention. Mention is always returned; `url` is set
+ * only ~30% of the time (seed-gated) — "link now and again, otherwise mention".
+ * When linking, a location page (if the anchor has one) is preferred ~1/3 of the
+ * time over the vertical service page, else the service page.
+ */
+export function relevantLink({ vertical, location, seed }: RelevantLinkArgs): RelevantLink {
+  // Service path with fallbacks.
+  let servicePath: string;
+  if (vertical.id === "trades") {
+    servicePath = TRADE_PAGES[subHash(seed, "trade-page") % TRADE_PAGES.length];
+  } else {
+    servicePath = VERTICAL_PAGES[vertical.id] ?? "/ai-receptionist";
+  }
+
+  // Location path — only when an anchor exists and isn't US-coded territory.
+  let locationPath: string | null = null;
+  if (location) {
+    const key = location.toLowerCase().replace(/^(across|around|the)\s+/, "").trim();
+    locationPath = LOCATION_PAGES[key] ?? "/locations/hampshire";
+  }
+
+  const mention = vertical.usCoded
+    ? "our AI receptionist built for law firms"
+    : `our AI receptionist for ${vertical.reader}`;
+
+  // A soft CTA is added only when relevant (~45%, seed-gated) — never on every
+  // asset, never pushy. The deep link rides the CTA, so no CTA → no link.
+  const ctaShown = subHash(seed, "cta-include") % 100 < CTA_INCLUSION_RATE;
+  const ctaPool = vertical.usCoded ? CTA_PHRASES_US : CTA_PHRASES_UK;
+  const cta = ctaShown ? ctaPool[subHash(seed, "cta-phrase") % ctaPool.length] : null;
+
+  let url: string | null = null;
+  if (ctaShown && subHash(seed, "link-include") % 100 < LINK_INCLUSION_RATE) {
+    // Prefer the location page ~1/3 of the time when one exists, else service.
+    const useLocation = locationPath !== null && subHash(seed, "link-target") % 3 === 0;
+    url = MAIN_SITE + (useLocation ? (locationPath as string) : servicePath);
+  }
+
+  return { mention, cta, url, servicePath, locationPath };
+}
+
 // ── GEO / AI-search block ───────────────────────────────────
 //
 // Makes podcast show notes and YouTube descriptions citable by AI engines
@@ -571,12 +685,25 @@ export function buildGeoBlock({ post, vertical, localAngle, format = "text" }: B
   const area = localAngle ?? null;
   const entity = GEO_ENTITY_TEMPLATES[subHash(seed, "geo-entity") % GEO_ENTITY_TEMPLATES.length](area);
 
+  // A soft CTA is added only when relevant (not every block). Mostly we just
+  // mention; an actual deep link rides the CTA only now and again (~30% of the
+  // CTAs). When we do link, it is ALWAYS the raw full URL (no markdown/anchor
+  // rewrite) so it reads plainly and copies cleanly.
+  const link = relevantLink({ vertical, location: localAngle, seed });
+  const ctaText = link.cta ? (link.url ? `${link.cta} ${link.url}` : link.cta) : null;
+
   if (format === "html") {
     const items = takeaways.map((t) => `  <li>${t}</li>`).join("\n");
+    const ctaHtml = link.cta
+      ? link.url
+        ? `<p>${link.cta} <a href="${link.url}">${link.url}</a></p>`
+        : `<p>${link.cta}</p>`
+      : "";
     const parts = [
       `<p><strong>${lead}</strong> ${answer}</p>`,
       takeaways.length ? `<h3>Key Takeaways</h3>\n<ul>\n${items}\n</ul>` : "",
       `<p>${entity}</p>`,
+      ctaHtml,
     ].filter(Boolean);
     return parts.join("\n\n");
   }
@@ -586,6 +713,7 @@ export function buildGeoBlock({ post, vertical, localAngle, format = "text" }: B
     lines.push("", "Key takeaways:", ...takeaways.map((t) => `- ${t}`));
   }
   lines.push("", entity);
+  if (ctaText) lines.push(ctaText);
   return lines.join("\n");
 }
 
