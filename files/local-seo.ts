@@ -450,7 +450,12 @@ export function computeLocalPlan({ title, seed, extraText, salt = 0 }: ComputeLo
   const effectiveSeed = salt > 0 ? `${baseSeed}#${salt}` : baseSeed;
   const signals = inferTopicSignals(title, extraText);
   const vertical = pickVertical({ topicSignals: signals, seed: effectiveSeed });
-  const location = pickLocalAngle({ topicIsGeneral: signals.topicIsGeneral, seed: effectiveSeed });
+  // The local anchor pool is Hampshire (UK). US-coded verticals (legal) must
+  // never carry a UK town — suppress the anchor so US-coded copy stays US-local
+  // at most via the show/agency framing, not a Hampshire place name.
+  const location = vertical.usCoded
+    ? null
+    : pickLocalAngle({ topicIsGeneral: signals.topicIsGeneral, seed: effectiveSeed });
   return { vertical, location, topicIsGeneral: signals.topicIsGeneral, seed: effectiveSeed };
 }
 

@@ -1,0 +1,21 @@
+{
+  "slides": [
+    { "type": "hook", "text": "An AI agent that invents your prices isn't intake. It's a liability.", "voiceover_text": "Here's the thing. An AI agent that invents prices, or books a slot that doesn't exist, isn't handling your intake. It's a liability." },
+    { "type": "tip", "text": "Lock down what it can say", "tipNumber": 1, "voiceover_text": "Tip one: configure hard output boundaries, so it never quotes a fee or a service your firm doesn't offer." },
+    { "type": "tip", "text": "Set clear escalation rules", "tipNumber": 2, "voiceover_text": "Tip two: define exactly when it hands off to a human, so complex matters reach your team fast." },
+    { "type": "tip", "text": "Build a never-say list", "tipNumber": 3, "voiceover_text": "Tip three: give it a never-say list. No legal advice, no guarantees, no made-up policies." },
+    { "type": "summary", "text": "Control is what turns a voice agent into booked clients", "voiceover_text": "So remember: control is the difference between a booked consultation and a confused caller." },
+    { "type": "cta", "text": "", "voiceover_text": "Follow Antek Automation for more tips like this. Visit antek automation dot com. [5s pause] Or call oh three three three, oh three eight, nine nine six oh." }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/why-ai-control-matters-for-law-firm-voice-agents-that-book-clients/",
+  "sourceBlogTitle": "Why AI Control Matters for Law Firm Voice Agents That Book Clients",
+  "youtubeTitle": "AI Voice Agent Control for Law Firm Intake",
+  "youtubeDescription": "Why configuration control decides whether your firm's voice agent books clients or creates confusion. Full guide:",
+  "youtubeTags": ["#Shorts", "#LawFirm", "#AIVoiceAgent", "#LegalTech", "#ClientIntake"],
+  "geo_answer": "For law firms, an AI voice agent's value comes down to control: configuration over what it says, when it escalates, and what it never states decides whether it books clients or creates liability.",
+  "geo_takeaways": [
+    "Output boundaries stop a voice agent quoting fees or services a firm doesn't offer.",
+    "Defined escalation rules route complex matters to a human.",
+    "A never-say list prevents made-up policies, guarantees, or legal advice."
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "slides": [
+    { "type": "hook", "text": "Warehouse robots won't book your viewings", "voiceover_text": "Nvidia's robots won't answer your phones. But the orchestration tech behind them trickles down, and I see it working for letting agents around Hampshire." },
+    { "type": "tip", "text": "Ignore the physical AI hype", "tipNumber": 1, "voiceover_text": "Tip one: if a vendor pitches cutting-edge robotics, be sceptical. Your viewing bookings don't need it." },
+    { "type": "tip", "text": "Demand reliable call routing", "tipNumber": 2, "voiceover_text": "Tip two: ask how the system routes calls and captures applicant details without dropping the ball." },
+    { "type": "tip", "text": "Check it updates your CRM", "tipNumber": 3, "voiceover_text": "Tip three: make sure it logs every enquiry straight into your CRM and follows up automatically." },
+    { "type": "summary", "text": "Reliability books viewings, not buzzwords", "voiceover_text": "So remember: it's reliability that captures enquiries and books viewings, not the buzzwords." },
+    { "type": "cta", "text": "", "voiceover_text": "Follow Antek Automation for more tips like this. Visit antek automation dot com. [5s pause] Or call oh three three three, oh three eight, nine nine six oh." }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/what-nvidias-physical-ai-push-means-for-service-businesses/",
+  "sourceBlogTitle": "What Nvidia's Physical AI Push Means for Service Businesses",
+  "youtubeTitle": "What Nvidia's AI Push Means for Estate Agents",
+  "youtubeDescription": "Physical AI won't answer your phones, but the reliability tech behind it helps estate and letting agents capture more enquiries. Full guide:",
+  "youtubeTags": ["#Shorts", "#EstateAgents", "#LettingAgents", "#PropertyManagement", "#AIforBusiness"],
+  "geo_answer": "For estate and letting agents, Nvidia's physical AI push is irrelevant to phone handling, but the orchestration and reliability advances behind it improve how AI routes calls, captures enquiries, and updates your CRM.",
+  "geo_takeaways": [
+    "Physical AI controls robots; conversational AI handles your calls and enquiries.",
+    "Enterprise reliability frameworks trickle down to call routing and CRM updates.",
+    "Judge a voice agent on reliability, not on buzzwords like physical AI."
+  ]
+}
