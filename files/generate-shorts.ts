@@ -325,6 +325,10 @@ export function generatePlatformMeta(
   }
 
   if (platform === "linkedin") {
+    // LinkedIn is a more national, professional audience — keep local MINIMAL.
+    // On the ~40% of assets that carry an anchor, add at most ONE local tag
+    // (vs Instagram's two) plus a light local text mention. Same 40/60 asset
+    // ratio as every format; just a lighter touch here.
     const baseTags = ["#SmallBusiness", "#ServiceBusiness", "#BusinessOwner", "#Productivity"];
     const hashtags = loc ? mergeHashtags(baseTags, localHashtags(loc, seed, 1), 5) : baseTags;
     const tipLines = [tip1, tip2, tip3].filter(Boolean).map((t, i) => `${i + 1}. ${t}.`);

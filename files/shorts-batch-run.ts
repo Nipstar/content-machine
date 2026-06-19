@@ -33,7 +33,7 @@ import { initShortsTable, queueShort } from "./shorts-db.js";
 import type { ShortsPlatform, PlatformMeta } from "./shorts-types.js";
 import { computeLocalPlan, AssetDedup } from "./local-seo.js";
 
-const PLATFORMS: ShortsPlatform[] = ["youtube", "instagram", "facebook", "linkedin", "twitter"];
+const ALL_PLATFORMS: ShortsPlatform[] = ["youtube", "instagram", "facebook", "linkedin", "twitter"];
 
 /** Max anti-duplication re-rolls before accepting a reel's metadata as-is. */
 const MAX_DEDUP_SALT = 6;
@@ -52,6 +52,9 @@ if (RENDERER !== "legacy" && RENDERER !== "hyperframes") {
   console.error(`Invalid --renderer "${RENDERER}" (expected: legacy | hyperframes)`);
   process.exit(1);
 }
+// Schedule file: default shorts-schedule.json, override with --schedule <file>.
+const scheduleIdx = args.indexOf("--schedule");
+const SCHEDULE_FILE = scheduleIdx !== -1 ? args[scheduleIdx + 1] : "shorts-schedule.json";
 
 interface ScheduleReel {
   reel: number;
@@ -76,12 +79,19 @@ interface ManifestEntry {
   platform_meta: Record<string, unknown>;
 }
 
-const schedulePath = join(process.cwd(), "shorts-schedule.json");
+const schedulePath = join(process.cwd(), SCHEDULE_FILE);
 const scheduleRaw = JSON.parse(readFileSync(schedulePath, "utf-8"));
 const allReels: ScheduleReel[] = scheduleRaw.reels;
 const reelsToProcess = allReels.filter((r) => r.reel >= FROM && r.reel <= TO);
 
-console.log(`\nProcessing reels ${FROM}-${Math.min(TO, allReels.length)} (${reelsToProcess.length} reels) [renderer: ${RENDERER}] ${DRY_RUN ? "[DRY RUN]" : ""}\n`);
+// Target platforms come from the schedule's "platforms" list when present
+// (e.g. ["youtube","instagram"]), else all five. Metadata is generated only
+// for these — the same MP4 is still reused across them.
+const PLATFORMS: ShortsPlatform[] = Array.isArray(scheduleRaw.platforms) && scheduleRaw.platforms.length > 0
+  ? ALL_PLATFORMS.filter((p) => (scheduleRaw.platforms as string[]).includes(p))
+  : ALL_PLATFORMS;
+
+console.log(`\nProcessing reels ${FROM}-${Math.min(TO, allReels.length)} (${reelsToProcess.length} reels) [renderer: ${RENDERER}] [platforms: ${PLATFORMS.join(",")}] [schedule: ${SCHEDULE_FILE}] ${DRY_RUN ? "[DRY RUN]" : ""}\n`);
 
 const manifest: ManifestEntry[] = [];
 const failures: { reel: number; error: string }[] = [];

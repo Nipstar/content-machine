@@ -198,8 +198,13 @@ export const REGIONS = [
   "the Test Valley",
 ];
 
-/** Probability (out of 100) that a non-general asset gets a local anchor. */
-export const LOCAL_INCLUSION_RATE = 45;
+/**
+ * Probability (out of 100) that a non-general asset gets a local anchor.
+ * 40 → a 40 local / 60 not-local split across the batch. Kept deliberately
+ * below half so most assets stay non-local (LinkedIn especially — see
+ * generatePlatformMeta, which never adds hyperlocal hashtags on LinkedIn).
+ */
+export const LOCAL_INCLUSION_RATE = 40;
 
 // ── Seed hashing ────────────────────────────────────────────
 
@@ -321,7 +326,7 @@ export interface PickLocalAngleArgs {
 /**
  * Returns a chosen local anchor string, or null.
  *   - General topic → always null (never localise a general topic).
- *   - Otherwise include an anchor ~45% of the time, decided from the seed.
+ *   - Otherwise include an anchor ~40% of the time, decided from the seed.
  *   - When included, rotate the place by seed and bias ~2:1 towards towns
  *     over region-level phrases.
  */

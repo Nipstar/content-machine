@@ -1,0 +1,24 @@
+{
+  "note": "Dedicated 2-reel HyperFrames test schedule. Scoped to YouTube + Instagram. Run: npx tsx shorts-batch-run.ts --schedule shorts-schedule.test.json --renderer hyperframes",
+  "platforms": ["youtube", "instagram"],
+  "reels": [
+    {
+      "reel": 1,
+      "script_file": "reel-01.json",
+      "date": "Sat 20 Jun",
+      "time_uk": "08:00",
+      "utc": "2026-06-20T07:00:00.000Z",
+      "status": "pending",
+      "source_url": "https://blog.antekautomation.com/why-ai-control-matters-for-law-firm-voice-agents-that-book-clients/"
+    },
+    {
+      "reel": 2,
+      "script_file": "reel-02.json",
+      "date": "Sun 21 Jun",
+      "time_uk": "08:00",
+      "utc": "2026-06-21T07:00:00.000Z",
+      "status": "pending",
+      "source_url": "https://blog.antekautomation.com/what-nvidias-physical-ai-push-means-for-service-businesses/"
+    }
+  ]
+}
