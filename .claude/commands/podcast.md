@@ -61,7 +61,7 @@ The narrator is Andy Norman (Antek Automation). British English throughout. Conv
    import { buildPodcastPrompt, parsePodcastScript } from "./generate-podcast.js";
    ```
 
-4. Call `buildPodcastPrompt(blogTitle, blogContent)` to get the generation prompt.
+4. Call `buildPodcastPrompt(blogTitle, blogContent, url)` to get the generation prompt. Pass the blog URL as the third argument — it seeds the deterministic vertical + local-SEO choice (see `local-seo.ts`). The prompt tells you which vertical to write for and whether this episode gets one local reference; follow it. When it says no local angle, keep the episode general — the show already carries the Hampshire identity.
 
 5. **Reason through the blog post yourself** — do NOT call an external AI API. You are the content generator. Following the prompt as your brief:
    - Write the intro (20-30 seconds, starts with "Hey, it's Andy from Antek Automation." and includes a hook)

@@ -68,7 +68,7 @@ Process each article in sequence. For **each article**, run Phases 2–6 below, 
    import { buildPrompt, parseShortScript } from "./generate-shorts.js";
    ```
 
-6. Call `buildPrompt(title, content)` to get the extraction prompt.
+6. Call `buildPrompt(title, content, url)` to get the extraction prompt. Pass the blog URL as the third argument — it seeds the deterministic vertical + local-SEO choice (see `local-seo.ts`). The prompt now tells you which vertical to write for and whether to include one local aside; follow it.
 
 7. **Reason through the blog post yourself** — do NOT call an external AI API. As Claude Code (Max plan), you are the content generator. Using the prompt as your brief:
    - Pull the single most surprising stat or the sharpest question for the hook (≤15 words)
@@ -189,13 +189,17 @@ In either case, write `null` to `files/shorts-voice-output.json` and proceed to 
 
 ### Phase 6: Generate platform metadata (per article)
 
-23. Call `generatePlatformMeta(script, platform)` for each platform in `targetPlatforms`:
+23. Compute the local plan once for this asset, then call `generatePlatformMeta(script, platform, { plan })` for each platform in `targetPlatforms` so every platform shares the same vertical + local anchor:
 
     ```typescript
     import { generatePlatformMeta } from "./generate-shorts.js";
+    import { computeLocalPlan } from "./local-seo.js";
+
+    const plan = computeLocalPlan({ title: script.sourceBlogTitle, seed: script.sourceBlogUrl });
+    const platformMetas = targetPlatforms.map((p) => generatePlatformMeta(script, p, { plan }));
     ```
 
-    Collect results into `platformMetas: PlatformMeta[]`. This is a synchronous call — no runner script needed.
+    Collect results into `platformMetas: PlatformMeta[]`. This is a synchronous call — no runner script needed. (The `shorts-batch-run.ts` runner additionally re-rolls `plan` with an incremented `salt` if a reel's metadata collides with an earlier reel in the batch — the anti-duplication guard.)
 
     Platform metadata overview:
     - **YouTube** — `title` (from youtubeTitle), `description` (blog URL first line + youtubeDescription), `hashtags` (youtubeTags), `caption` (empty)

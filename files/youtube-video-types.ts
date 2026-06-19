@@ -19,6 +19,9 @@ export interface YTVideoScript {
   youtubeTitle: string;          // max 80 chars (longer format, not #Shorts)
   youtubeDescription: string;    // max 500 chars + blog URL
   youtubeTags: string[];         // 8-12 hashtags, NO #Shorts
+  // GEO / AI-search fields (optional — appended to the YouTube description)
+  geo_answer?: string;           // self-contained one-sentence answer to the core question
+  geo_takeaways?: string[];      // 2-4 standalone, declarative key takeaways
 }
 
 export interface YTVideoOutput {

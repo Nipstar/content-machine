@@ -156,6 +156,47 @@ Pain points: missed callers, after-hours leads going to competitors, intake dela
 
 ---
 
+## LOCAL SEO + VERTICAL ROTATION
+
+Podcast, YouTube video, YouTube Shorts and Reels share one source of truth: **`local-seo.ts`**. Everything imports from it so audience framing and local-place logic can't drift per format. Consistent with the blog system (property/estate agents as a first-class vertical, a rotating lead vertical, Hampshire-and-surrounding-areas as the local anchor, and a `none` escape for general topics).
+
+### The module (`local-seo.ts`)
+
+- **`VERTICALS`** — rotating set, each with `id`, `label`, `reader`, example pain points, and keyword stems:
+  `property` (letting/estate agents), `trades` (home services), `msp` (MSPs & IT), `professional` (high-ticket professional services), `legal` (US law firms — **SECONDARY, US-coded, only when the topic clearly supports legal intake**), `general` (UK business owners — fallback).
+- **`LOCATIONS`** — towns (Andover, Winchester, Basingstoke, Southampton, Salisbury, Eastleigh, Romsey, Whitchurch, Stockbridge) + region phrases (Hampshire, across Hampshire, around Hampshire, the Test Valley).
+- **`pickVertical({ topicSignals, seed })`** — prefers a vertical the title genuinely supports (keyword match); rotates by seed when several or none fit; returns `legal` only on a clear legal signal; falls back to `general`.
+- **`pickLocalAngle({ topicIsGeneral, seed })`** — returns a local anchor string or `null`. General topics → **always null**. Otherwise an anchor appears **~45% of the time** (`LOCAL_INCLUSION_RATE`), decided deterministically from the seed; towns are biased **~2:1** over region phrases; the town rotates by seed.
+- **`computeLocalPlan({ title, seed, salt })`** — the single entry point. Both the prompt builders and the per-platform metadata call it with the same seed (hash of the blog URL), so the spoken script and the captions/titles agree on vertical + place. Deterministic across reruns; `salt` re-rolls the choices for anti-duplication.
+- **Phrasing templates** — several variants each for YouTube title suffix, description opener, caption mention, and one spoken aside; the generator picks by seed so localised copy varies in wording.
+- **`AssetDedup`** — batch-level guard (see below).
+
+### Per-format rules
+
+- **Shorts/Reels** (`generate-shorts.ts`): `buildPrompt(title, content, sourceUrl)` injects the vertical + local brief so the on-screen text and voiceover speak to the chosen vertical's reader (not generic "service businesses"), with **at most one** spoken local aside when an anchor is present. `generatePlatformMeta(script, platform, { plan, salt })` then localises deterministically: YouTube weaves the town into the title (only if it still fits 60 chars) + a description location line; Instagram/Facebook/LinkedIn captions get a local mention and a **small rotating local hashtag set** (IG stays within its 5-tag cap). No anchor → clean copy, no place names, no local tags.
+- **YouTube video** (`generate-youtube-video.ts`): `buildYTVideoPrompt(title, content, sourceUrl)` injects the same brief; the longer title format lets the model weave the town in directly when an anchor is present.
+- **Podcast** (`generate-podcast.ts`): `buildPodcastPrompt(blogTitle, blogContent, sourceUrl)` rotates verticals the same way. When an anchor is present, **one** natural local reference is allowed in the script and optionally a light local framing in the title/description. When null, the episode stays general — the show-level positioning already carries the Andover/Hampshire identity, so most episodes do **not** force a town in.
+
+### Anti-duplication guard
+
+`AssetDedup` tracks titles, descriptions, and hashtag sets across a single batch run. In `shorts-batch-run.ts`, if any of a reel's platform metas collide with an earlier reel, the local plan is re-rolled with an incremented `salt` (up to `MAX_DEDUP_SALT`) until unique, then recorded. Repetitive metadata gets suppressed by the platforms, so variety here is a ranking safeguard. `podcast-batch-run.ts` detects collisions and logs a loud warning (episode prose is generated upstream, so it can't auto-rewrite — edit before publishing).
+
+### GEO / AI-search block (podcast show notes + YouTube descriptions ONLY)
+
+`buildGeoBlock({ post, vertical, localAngle, format })` (in `local-seo.ts`) makes content citable by AI engines (ChatGPT, Perplexity, Gemini, Google AI Overviews), not just rankable by platform algorithms. It produces a short, quotable block:
+
+1. A one-sentence **self-contained answer** to the asset's core question, phrased to stand alone if quoted out of context — led first, the single most citable line.
+2. A 2-4 item **key-takeaways** list, each a complete standalone statement — the format AI engines lift cleanly.
+3. An explicit **entity line** naming Antek Automation as a UK AI automation agency (+ the area served when a local angle is present), including antekautomation.com, so models attribute the source.
+
+The model generates `geo_answer` + `geo_takeaways` (optional fields on `ShortScript` / `YTVideoScript` / `PodcastScript`); `buildGeoBlock` formats them deterministically. Lead-in and entity wording are seed-varied so the batch isn't templated, and the block participates in the anti-duplication guard via the asset description. General-topic escape applies: the answer and entity line still appear, but the Hampshire/area detail is dropped when `localAngle` is null. Returns `""` when no `geo_answer` exists (backward-compatible with pre-GEO scripts).
+
+**Applies to:** podcast show notes (RSS.com HTML notes via `podcast-upload.ts`, with the full episode **transcript** from `buildEpisodeTranscript()` appended below the block — transcript text is the primary thing AI engines index from audio) and YouTube descriptions — Shorts (`generatePlatformMeta`, youtube only) and the landscape video (`buildYTVideoDescription()`).
+
+**Excluded:** Instagram/Facebook/LinkedIn/X captions and the spoken script. Short-form social captions are scroll-stopping conversational copy, not reference text AI engines cite — a GEO block there would read as robotic and hurt engagement for no citability gain.
+
+---
+
 ## VOICE & TONE
 
 ### Voice & tone profile

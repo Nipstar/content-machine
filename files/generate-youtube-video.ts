@@ -8,6 +8,7 @@
  */
 
 import type { YTVideoScript, YTSlide, YTSlideType } from "./youtube-video-types.js";
+import { computeLocalPlan, localBriefForPrompt, buildGeoBlock } from "./local-seo.js";
 
 // Hardcoded CTA voiceover (never generated)
 export const YT_CTA_VOICEOVER =
@@ -21,13 +22,19 @@ export const EXPECTED_SLIDE_TYPES: YTSlideType[] = [
   "cta",
 ];
 
-export function buildYTVideoPrompt(title: string, content: string): string {
+export function buildYTVideoPrompt(title: string, content: string, sourceUrl?: string): string {
+  const plan = computeLocalPlan({ title, seed: sourceUrl, extraText: content });
+  const localMetaRule = plan.location
+    ? `Local angle is "${plan.location}". Weave it naturally into youtubeTitle (keep the keyword first), add one location line to youtubeDescription, and include exactly one local hashtag (e.g. #${plan.location.replace(/[^a-zA-Z]/g, "")} or #Hampshire). Name the town only once across the whole script.`
+    : `No local angle for this video — do NOT put any town or county in youtubeTitle, youtubeDescription, youtubeTags, or the spoken script.`;
   return `You are generating a ~2-minute YouTube video script from a blog post. Output a single valid JSON object matching the YTVideoScript type. No markdown, no fences — just the JSON.
 
 ## Blog post
 Title: ${title}
 
 ${content}
+
+${localBriefForPrompt(plan)}
 
 ## Instructions
 
@@ -77,6 +84,15 @@ Voiceover style:
 - **youtubeDescription**: 300-500 chars. First line = hook sentence. Include 2-3 keywords naturally. End with "Full article: [blog URL]"
 - **youtubeTags**: 8-12 tags. NO #Shorts. Include: #UKSmallBusiness, #AIAutomation, plus topic-specific tags.
 
+**Local SEO:** ${localMetaRule}
+
+### GEO / AI-search fields (for the description)
+
+Make the description citable by AI engines. Natural, useful English — not keyword-stuffed.
+
+- **geo_answer**: ONE self-contained sentence answering the video's core question. Must stand alone if quoted out of context.
+- **geo_takeaways**: 2-4 short, declarative, standalone statements — each a complete fact on its own.
+
 ### Output format
 
 {
@@ -95,7 +111,9 @@ Voiceover style:
   "sourceBlogTitle": "...",
   "youtubeTitle": "...",
   "youtubeDescription": "...",
-  "youtubeTags": ["#UKSmallBusiness", "#AIAutomation", "..."]
+  "youtubeTags": ["#UKSmallBusiness", "#AIAutomation", "..."],
+  "geo_answer": "One self-contained sentence answering the core question.",
+  "geo_takeaways": ["Standalone fact one.", "Standalone fact two.", "Standalone fact three."]
 }`;
 }
 
@@ -124,6 +142,11 @@ export function parseYTVideoScript(jsonStr: string): YTVideoScript {
   if (typeof obj.sourceBlogUrl !== "string" || typeof obj.sourceBlogTitle !== "string")
     throw new Error("YTVideoScript: sourceBlogUrl and sourceBlogTitle required");
 
+  if (obj.geo_answer !== undefined && typeof obj.geo_answer !== "string")
+    throw new Error("YTVideoScript: geo_answer must be a string when present");
+  if (obj.geo_takeaways !== undefined && !Array.isArray(obj.geo_takeaways))
+    throw new Error("YTVideoScript: geo_takeaways must be an array when present");
+
   // Always enforce hardcoded CTA voiceover
   const slides = obj.slides as YTSlide[];
   slides[8].voiceover_text = YT_CTA_VOICEOVER;
@@ -135,5 +158,29 @@ export function parseYTVideoScript(jsonStr: string): YTVideoScript {
     youtubeTitle: obj.youtubeTitle as string,
     youtubeDescription: obj.youtubeDescription as string,
     youtubeTags: obj.youtubeTags as string[],
+    geo_answer: obj.geo_answer as string | undefined,
+    geo_takeaways: obj.geo_takeaways as string[] | undefined,
   };
+}
+
+/**
+ * Composes the full YouTube description for a landscape video: blog URL, the
+ * model-written description, then the GEO / AI-search block (when present).
+ * Use this where the description is handed to Blotato so the long-form video
+ * gets the same citable block as Shorts. Vertical + local angle are derived
+ * from the same seed (the blog URL) as the script's prompt.
+ */
+export function buildYTVideoDescription(script: YTVideoScript, sourceUrl?: string): string {
+  const plan = computeLocalPlan({
+    title: script.sourceBlogTitle,
+    seed: sourceUrl ?? script.sourceBlogUrl,
+  });
+  const base = `${script.sourceBlogUrl}\n\n${script.youtubeDescription}`;
+  const geoBlock = buildGeoBlock({
+    post: { answer: script.geo_answer ?? "", takeaways: script.geo_takeaways ?? [], seed: plan.seed },
+    vertical: plan.vertical,
+    localAngle: plan.location,
+    format: "text",
+  });
+  return geoBlock ? `${base}\n\n${geoBlock}` : base;
 }

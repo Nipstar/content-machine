@@ -25,6 +25,8 @@
 
 import { existsSync, readFileSync, statSync } from "fs";
 import type { PodcastScript, RSSComEpisodeResult } from "./podcast-types.js";
+import { computeLocalPlan, buildGeoBlock } from "./local-seo.js";
+import { buildEpisodeTranscript } from "./generate-podcast.js";
 
 const RSSCOM_BASE = "https://api.rss.com";
 
@@ -338,13 +340,38 @@ export async function uploadToRSSCom(
     console.log(`  [rss.com] Location set: Andover, Hampshire (${creatorLocation})`);
   }
 
-  // Step 5: Build SEO-rich HTML episode notes
-  // RSS.com episode description supports HTML — use it for structured notes
+  // Step 5: Build SEO-rich + GEO HTML episode notes
+  // RSS.com episode description supports HTML — use it for structured notes.
   const tipsSummary = script.tips
     .map((t) => `<li>${t.text.split(".")[0]}.</li>`)
     .join("\n      ");
 
+  // GEO / AI-search block — same vertical + local angle the script was built
+  // with (seeded off the blog URL). Leads the notes with the citable answer.
+  const geoPlan = computeLocalPlan({
+    title: script.source_blog_title,
+    seed: script.source_blog_url,
+  });
+  const geoBlock = buildGeoBlock({
+    post: {
+      answer: script.geo_answer ?? "",
+      takeaways: script.geo_takeaways ?? [],
+      seed: geoPlan.seed,
+    },
+    vertical: geoPlan.vertical,
+    localAngle: geoPlan.location,
+    format: "html",
+  });
+
+  // Full transcript — the primary thing AI engines index from audio.
+  const transcriptHtml = buildEpisodeTranscript(script)
+    .split("\n\n")
+    .map((p) => `<p>${p}</p>`)
+    .join("\n");
+
   const htmlDescription = `<p>${script.episode_description}</p>
+
+${geoBlock}
 
 <h3>In This Episode</h3>
 <p>Andy Norman from Antek Automation shares practical tips sourced from the blog post: <a href="${script.source_blog_url}">${script.source_blog_title}</a>.</p>
@@ -361,7 +388,10 @@ export async function uploadToRSSCom(
   <li>Call us: 0333 038 9960</li>
 </ul>
 
-<p><em>Produced by Antek Automation — AI automation for UK small businesses.</em></p>`.substring(0, 4000);
+<h3>Transcript</h3>
+${transcriptHtml}
+
+<p><em>Produced by Antek Automation — AI automation for UK small businesses.</em></p>`.substring(0, 20000);
 
   // Step 6: Create the episode
   console.log("  [rss.com] Creating episode with full metadata...");

@@ -29,9 +29,13 @@ import { generateAllVoiceovers } from "./shorts-voice.js";
 import { renderFrames } from "./shorts-frames.js";
 import { stitchVideo, uploadVideoToR2 } from "./shorts-video.js";
 import { initShortsTable, queueShort } from "./shorts-db.js";
-import type { ShortsPlatform } from "./shorts-types.js";
+import type { ShortsPlatform, PlatformMeta } from "./shorts-types.js";
+import { computeLocalPlan, AssetDedup } from "./local-seo.js";
 
 const PLATFORMS: ShortsPlatform[] = ["youtube", "instagram", "facebook", "linkedin", "twitter"];
+
+/** Max anti-duplication re-rolls before accepting a reel's metadata as-is. */
+const MAX_DEDUP_SALT = 6;
 
 const args = process.argv.slice(2);
 const DRY_RUN = args.includes("--dry-run");
@@ -79,6 +83,11 @@ if (!existsSync(outputDir)) mkdirSync(outputDir, { recursive: true });
 async function main() {
   if (!DRY_RUN) await initShortsTable();
 
+  // Anti-duplication: no two reels in this batch may share an identical title,
+  // description, or hashtag set. On collision we re-roll the seed-driven local
+  // choices (salt) for the later reel until its metadata is unique.
+  const dedup = new AssetDedup();
+
   for (const reel of reelsToProcess) {
     const scriptPath = join(process.cwd(), "shorts-scripts", reel.script_file);
     console.log(`\n${"═".repeat(64)}`);
@@ -91,8 +100,21 @@ async function main() {
       const script = parseShortScript(raw);
       console.log(`  ✅  Script valid: "${script.sourceBlogTitle}"`);
 
-      const platformMetas = PLATFORMS.map((p) => generatePlatformMeta(script, p));
-      console.log(`  📝  Platform metas: ${platformMetas.map((m) => m.platform).join(", ")}`);
+      // Share one local plan across the reel's platforms; re-roll on collision.
+      let platformMetas: PlatformMeta[] = [];
+      let salt = 0;
+      for (; salt <= MAX_DEDUP_SALT; salt++) {
+        const plan = computeLocalPlan({
+          title: script.sourceBlogTitle,
+          seed: script.sourceBlogUrl,
+          salt,
+        });
+        platformMetas = PLATFORMS.map((p) => generatePlatformMeta(script, p, { plan }));
+        if (!dedup.collidesAny(platformMetas)) break;
+      }
+      dedup.recordAll(platformMetas);
+      const dedupNote = salt > 0 ? ` (re-rolled ${salt}× for uniqueness)` : "";
+      console.log(`  📝  Platform metas: ${platformMetas.map((m) => m.platform).join(", ")}${dedupNote}`);
 
       if (DRY_RUN) {
         console.log(`  [dry-run] skipping audio/render/upload`);

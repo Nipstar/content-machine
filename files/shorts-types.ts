@@ -28,6 +28,9 @@ export interface ShortScript {
   youtubeTitle: string;        // max 60 chars
   youtubeDescription: string;  // max 200 chars
   youtubeTags: string[];       // exactly 5, must include #Shorts
+  // GEO / AI-search fields (optional — appended to the YouTube description only)
+  geo_answer?: string;         // self-contained one-sentence answer to the core question
+  geo_takeaways?: string[];    // 2-4 standalone, declarative key takeaways
 }
 
 export interface PlatformMeta {

@@ -26,6 +26,7 @@ import {
   queueEpisode,
   markRsscomPublished,
 } from "./podcast-db.js";
+import { AssetDedup } from "./local-seo.js";
 
 // ── CLI args ────────────────────────────────────────────────
 const args = process.argv.slice(2);
@@ -56,6 +57,11 @@ async function main() {
   if (!DRY_RUN) {
     await initPodcastTable();
   }
+
+  // Anti-duplication: episodes are generated upstream, so we can't re-roll their
+  // prose here — but identical titles/descriptions across the batch get
+  // suppressed by podcast directories, so flag any collision loudly.
+  const dedup = new AssetDedup();
 
   const results: Array<{
     file: string;
@@ -105,6 +111,15 @@ async function main() {
 
       console.log(`  ✅  Script valid: "${script.episode_title}"`);
       console.log(`      ${script.tips.length} tips, ${words} words, ${script.seo_keywords.length} keywords`);
+
+      const dupMeta = {
+        title: script.episode_title,
+        description: script.episode_description,
+      };
+      if (dedup.collides(dupMeta)) {
+        console.log(`  ⚠️  DUPLICATE title/description vs an earlier episode this batch — edit before publishing`);
+      }
+      dedup.record(dupMeta);
 
       if (DRY_RUN) {
         results.push({ file, title: script.episode_title, status: "validated" });

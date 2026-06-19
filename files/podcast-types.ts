@@ -37,6 +37,9 @@ export interface PodcastScript {
   outro: string;               // Always the hardcoded PODCAST_OUTRO constant
   // SEO/GEO metadata for RSS.com
   seo_keywords: string[];      // 5-8 keywords for RSS.com episode keywords + Apple Podcasts discovery
+  // GEO / AI-search fields (optional — appended to show notes for AI citability)
+  geo_answer?: string;         // self-contained one-sentence answer to the episode's core question
+  geo_takeaways?: string[];    // 2-4 standalone, declarative key takeaways
 }
 
 export interface PodcastEpisode {
