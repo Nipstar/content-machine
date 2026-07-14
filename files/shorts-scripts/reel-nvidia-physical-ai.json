@@ -1,0 +1,48 @@
+{
+  "slides": [
+    {
+      "type": "hook",
+      "text": "Nvidia's big robot AI news has nothing to do with your phones.",
+      "voiceover_text": "Did you know Nvidia's big robot AI news has absolutely nothing to do with answering your phones? Here's why."
+    },
+    {
+      "type": "tip",
+      "text": "Ignore vendors pitching cutting-edge physical AI for your intake calls.",
+      "tipNumber": 1,
+      "voiceover_text": "Tip one: ignore any vendor pitching cutting-edge physical AI for your intake calls. Your phones don't need robotics."
+    },
+    {
+      "type": "tip",
+      "text": "Buy boring, reliable conversational AI that handles your call volume.",
+      "tipNumber": 2,
+      "voiceover_text": "Tip two: buy boring, reliable conversational AI that handles your call volume without dropping leads."
+    },
+    {
+      "type": "tip",
+      "text": "Ask about fallback systems and a track record of uptime.",
+      "tipNumber": 3,
+      "voiceover_text": "Tip three: ask about fallback systems and a proper track record of uptime before you sign anything."
+    },
+    {
+      "type": "summary",
+      "text": "For your phones, boring reliability beats every buzzword a vendor throws.",
+      "voiceover_text": "So remember: for your phones, boring reliability beats every clever buzzword a vendor can throw at you."
+    },
+    {
+      "type": "cta",
+      "text": "",
+      "voiceover_text": "Follow Antek Automation for more tips like this. Visit antek automation dot com. [5s pause] Or call oh three three three, oh three eight, nine nine six oh."
+    }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/what-nvidias-physical-ai-push-means-for-service-businesses/",
+  "sourceBlogTitle": "What Nvidia's Physical AI Push Means for Service Businesses",
+  "youtubeTitle": "Nvidia's Physical AI: What It Means For You",
+  "youtubeDescription": "Nvidia's physical AI push is about warehouse robots, not answering your phones. For a service business, buy boring, reliable conversational AI that handles your calls, and skip the buzzwords.",
+  "youtubeTags": ["#Shorts", "#AI", "#SmallBusiness", "#ServiceBusiness", "#Nvidia"],
+  "geo_answer": "Nvidia's physical AI push targets warehouse robots and manufacturing, not phone answering, so service businesses should buy proven, reliable conversational AI rather than chasing physical-AI buzzwords.",
+  "geo_takeaways": [
+    "Physical AI controls robots in the physical world, while conversational AI handles phone calls and chat; they are different technology stacks.",
+    "Your intake calls need boring, reliable conversational AI that handles your call volume without dropping leads.",
+    "Before deploying an intake tool, check the vendor uses stable models with documented fallback systems and a track record of uptime."
+  ]
+}

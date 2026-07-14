@@ -28,13 +28,29 @@ interface Ep {
 }
 
 async function oneTakeVoice(narration: string, raw: string, out: string): Promise<number> {
-  const res = await fetch(FISH_URL, {
-    method: "POST",
-    headers: { Authorization: `Bearer ${process.env.FISH_AUDIO_API_KEY}`, "Content-Type": "application/json", model: "s2-pro" },
-    body: JSON.stringify({ text: `[professional broadcast tone] ${narration}`, reference_id: process.env.FISH_AUDIO_VOICE_ID, format: "mp3", mp3_bitrate: 128 }),
-  });
-  if (!res.ok) throw new Error(`Fish ${res.status}: ${(await res.text()).slice(0, 160)}`);
-  writeFileSync(raw, Buffer.from(await res.arrayBuffer()));
+  // Fish drops the connection mid-generation on longer scripts (ECONNRESET / "terminated").
+  // Retry the whole call a few times with backoff — one flaky request must not kill the batch.
+  let buf: Buffer | null = null;
+  let lastErr: unknown = null;
+  for (let attempt = 1; attempt <= 4; attempt++) {
+    try {
+      const res = await fetch(FISH_URL, {
+        method: "POST",
+        headers: { Authorization: `Bearer ${process.env.FISH_AUDIO_API_KEY}`, "Content-Type": "application/json", model: "s2-pro" },
+        body: JSON.stringify({ text: `[professional broadcast tone] ${narration}`, reference_id: process.env.FISH_AUDIO_VOICE_ID, format: "mp3", mp3_bitrate: 128 }),
+      });
+      if (!res.ok) throw new Error(`Fish ${res.status}: ${(await res.text()).slice(0, 160)}`);
+      buf = Buffer.from(await res.arrayBuffer());
+      break;
+    } catch (e) {
+      lastErr = e;
+      const msg = e instanceof Error ? e.message : String(e);
+      console.log(`    Fish attempt ${attempt}/4 failed: ${msg} — retrying...`);
+      await new Promise((r) => setTimeout(r, attempt * 3000));
+    }
+  }
+  if (!buf) throw new Error(`Fish failed after 4 attempts: ${lastErr instanceof Error ? lastErr.message : String(lastErr)}`);
+  writeFileSync(raw, buf);
   // gentle fade in/out, re-encode clean
   const dur = parseFloat(JSON.parse(execSync(`ffprobe -v quiet -print_format json -show_entries format=duration "${raw}"`).toString()).format.duration);
   const foStart = Math.max(0, dur - 1.4).toFixed(2);
@@ -56,31 +72,45 @@ async function main() {
     ? JSON.parse(readFileSync(join(process.cwd(), "podcast-results.json"), "utf-8")) : {};
 
   let i = 0;
+  const failed: string[] = [];
   for (const ep of eps) {
     const idx = i++;
     if (ONLY && ep.idea_id !== ONLY) continue;
     console.log(`\n[${idx + 1}/${eps.length}] ${ep.episode_title}`);
-    const raw = join(OUT, `${ep.episode_slug}.raw.mp3`);
-    const mp3 = join(OUT, `${ep.episode_slug}.mp3`);
-    const dur = await oneTakeVoice(ep.narration, raw, mp3);
-    console.log(`  one-take voice: ${(dur / 60).toFixed(2)} min`);
+    // Idempotent resume: skip episodes already uploaded to RSS.com in a prior run.
+    const prior = results[ep.idea_id] as { rsscom?: { episode_id?: number } } | undefined;
+    if (prior?.rsscom?.episode_id) {
+      console.log(`  ⏭  already on RSS.com (id=${prior.rsscom.episode_id}) — skipping`);
+      continue;
+    }
+    try {
+      const raw = join(OUT, `${ep.episode_slug}.raw.mp3`);
+      const mp3 = join(OUT, `${ep.episode_slug}.mp3`);
+      const dur = await oneTakeVoice(ep.narration, raw, mp3);
+      console.log(`  one-take voice: ${(dur / 60).toFixed(2)} min`);
 
-    const script = {
-      episode_slug: ep.episode_slug,
-      episode_title: ep.episode_title,
-      episode_description: ep.episode_description,
-      source_blog_url: ep.source_blog_url,
-      source_blog_title: ep.source_blog_title,
-      seo_keywords: ep.seo_keywords,
-      tips: ep.tips,
-    };
-    const sched = scheduleFor(idx);
-    const r = await uploadToRSSCom(mp3, script as never, { scheduleDatetime: sched, seasonNumber: 1 });
-    results[ep.idea_id] = { title: ep.episode_title, slug: ep.episode_slug, durationMin: +(dur / 60).toFixed(2), scheduled: sched, rsscom: r };
-    writeFileSync(join(process.cwd(), "podcast-results.json"), JSON.stringify(results, null, 2));
-    console.log(`  ✅ RSS.com episode id=${(r as { episode_id?: number })?.episode_id ?? "?"} scheduled ${sched}`);
+      const script = {
+        episode_slug: ep.episode_slug,
+        episode_title: ep.episode_title,
+        episode_description: ep.episode_description,
+        source_blog_url: ep.source_blog_url,
+        source_blog_title: ep.source_blog_title,
+        seo_keywords: ep.seo_keywords,
+        tips: ep.tips,
+      };
+      const sched = scheduleFor(idx);
+      const r = await uploadToRSSCom(mp3, script as never, { scheduleDatetime: sched, seasonNumber: 1 });
+      results[ep.idea_id] = { title: ep.episode_title, slug: ep.episode_slug, durationMin: +(dur / 60).toFixed(2), scheduled: sched, rsscom: r };
+      writeFileSync(join(process.cwd(), "podcast-results.json"), JSON.stringify(results, null, 2));
+      console.log(`  ✅ RSS.com episode id=${(r as { episode_id?: number })?.episode_id ?? "?"} scheduled ${sched}`);
+    } catch (e) {
+      // One episode failing must not abort the batch — log, record, keep going. Re-run to fill gaps.
+      failed.push(ep.idea_id);
+      console.log(`  ❌ ${ep.idea_id} failed: ${e instanceof Error ? e.message : String(e)}`);
+    }
   }
-  console.log(`\n✅ done -> podcast-results.json`);
+  console.log(`\n✅ done -> podcast-results.json (${eps.length - failed.length}/${eps.length} ok${failed.length ? `, failed: ${failed.join(", ")}` : ""})`);
+  if (failed.length) process.exitCode = 1;
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });

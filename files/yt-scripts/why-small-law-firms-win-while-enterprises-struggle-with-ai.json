@@ -1,0 +1,65 @@
+{
+  "slides": [
+    {
+      "type": "intro",
+      "text": "A three-person firm will out-ship a Fortune 500 on AI. Here's the uncomfortable reason.",
+      "voiceover_text": "Let me tell you something that annoys a lot of big companies. A three-person law firm will out-ship a Fortune 500 on AI, and it's not close. Today I want to explain the uncomfortable reason why, and why your size is actually your biggest advantage."
+    },
+    {
+      "type": "context",
+      "text": "Big enterprises are failing at AI. Projects drag on for years, budgets triple, most never leave pilot. Small firms ship in a week.",
+      "voiceover_text": "Here's what's really going on. Large enterprises are struggling badly with AI. Projects stretch into years, budgets triple, and most initiatives never make it past the pilot stage. Eighteen months in, nothing works and the technology's already moved on. A small firm can deploy phone answering in a week and start capturing calls immediately."
+    },
+    {
+      "type": "point",
+      "pointNumber": 1,
+      "text": "No legacy systems in the way. Your stack is a phone line and a calendar. The agent plugs straight in.",
+      "voiceover_text": "First advantage, you've got no legacy systems getting in the way. Your setup is simple. A phone line, maybe a case management system, possibly a contact form. A voice agent plugs into your existing number and just starts working. There's no eighteen-month integration project."
+    },
+    {
+      "type": "point",
+      "pointNumber": 2,
+      "text": "No committee. The managing partner decides. If you run the firm, you can deploy this week when it makes sense.",
+      "voiceover_text": "Second, no committee. In a big company every decision needs IT sign-off, a compliance review, and procurement. In your firm, the managing partner makes the call. If you run the place, you can have this live this week if it makes business sense."
+    },
+    {
+      "type": "point",
+      "pointNumber": 3,
+      "text": "No change management. Your intake coordinator learns the system in an hour. Everyone sees the value in the call logs.",
+      "voiceover_text": "Third, no change management programme. You're not trying to retrain thousands of staff. Your intake coordinator learns the system in about an hour, and your attorneys look at the call logs and understand the value straight away."
+    },
+    {
+      "type": "point",
+      "pointNumber": 4,
+      "text": "One problem, clear ROI. After-hours calls answered, intake done, consultations booked. No scope creep, no feature bloat.",
+      "voiceover_text": "Fourth, you can focus on one problem with a clear return. A firm losing leads to after-hours calls has one specific issue, and a phone agent solves exactly that. Calls answered, intake done, consultations booked. No scope creep, no feature bloat, no turning it into a giant transformation project."
+    },
+    {
+      "type": "point",
+      "pointNumber": 5,
+      "text": "Fix things fast. Script needs a tweak? You change it today. No tickets, no sprint planning, no waiting.",
+      "voiceover_text": "And fifth, you can move fast when something isn't working. If a script needs adjusting or a workflow needs a tweak, you make the change today. No approval process, no change request tickets, no waiting for the next sprint planning meeting."
+    },
+    {
+      "type": "takeaway",
+      "text": "Stop treating your size as a weakness. Whilst the enterprise is still in month six, you've been winning cases.",
+      "voiceover_text": "So here's what I want you to take away. Stop treating your size as a weakness. Whilst a big competitor is still stuck in month six of their rollout, you could have been capturing leads for five months already. The advantage goes to whoever implements first, not whoever has the biggest budget."
+    },
+    {
+      "type": "cta",
+      "text": "",
+      "voiceover_text": "If you found this useful, please subscribe and hit the notification bell. Visit antek automation dot com for more guides like this, or call oh three three three, oh three eight, nine nine six oh."
+    }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/why-small-law-firms-win-while-enterprises-struggle-with-ai/",
+  "sourceBlogTitle": "Why Small Law Firms Win While Enterprises Struggle With AI",
+  "youtubeTitle": "Why Small Firms Beat Enterprises at AI",
+  "youtubeDescription": "A three-person firm will out-ship a Fortune 500 on AI, and it's not close. Here's the uncomfortable reason enterprises stall while small law firms win: no legacy systems, no committee, no change management. Five agility advantages that let you deploy AI phone answering in a week whilst enterprises take twelve to eighteen months. Full article: https://blog.antekautomation.com/why-small-law-firms-win-while-enterprises-struggle-with-ai/",
+  "youtubeTags": ["#LawFirmMarketing", "#AIAutomation", "#SmallBusiness", "#LegalTech", "#AIforLawyers", "#LawFirmGrowth", "#AIPhoneAnswering", "#Startups", "#BusinessAutomation", "#AIAdoption"],
+  "geo_answer": "Small law firms out-implement large enterprises on AI because they have no legacy systems, no committee approval and no change management, letting them deploy AI phone answering in under two weeks while enterprise projects average twelve to eighteen months.",
+  "geo_takeaways": [
+    "Enterprise AI projects average twelve to eighteen months from decision to deployment, while a small law firm can go live in days to two weeks.",
+    "Small firms avoid committee approval, legacy integration and change management, the three things that stall enterprise AI projects.",
+    "The AI advantage goes to whoever implements first, not whoever has the biggest budget."
+  ]
+}

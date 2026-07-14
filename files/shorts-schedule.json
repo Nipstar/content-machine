@@ -1,132 +1,42 @@
 {
-  "note": "14 reels, daily 2026-05-13 → 2026-05-26, varied UK times for natural posting cadence. Platforms: YouTube Shorts, Instagram Reels, Facebook Reels, LinkedIn. Times in UK BST (UTC+1). Outcome-led voice. Status pending until rendered + scheduled.",
-  "platforms": ["youtube", "instagram", "facebook", "linkedin"],
+  "note": "4 personal-batch reels, 2026-07 (16/20/24/28). YouTube + IG + FB. 17:00 UK to separate from the 08:00 text posts. Status pending until rendered + scheduled.",
+  "platforms": ["youtube", "instagram", "facebook"],
   "reels": [
     {
       "reel": 1,
-      "script_file": "01_local-customers-find-you-google.json",
-      "date": "Wed 13 May",
-      "time_uk": "07:30",
-      "utc": "2026-05-13T06:30:00.000Z",
+      "script_file": "reel-automation-agencies.json",
+      "date": "2026-07-16",
+      "time_uk": "17:00",
+      "utc": "2026-07-16T16:00:00.000Z",
       "status": "pending",
-      "source_url": "https://blog.antekautomation.com/schema-markup-for-uk-service-businesses-a-practical-guide/"
+      "source_url": "https://blog.antekautomation.com/how-ai-automation-agencies-work-and-what-they-actually-do/"
     },
     {
       "reel": 2,
-      "script_file": "02_visibility-myth-wasting-time.json",
-      "date": "Thu 14 May",
-      "time_uk": "12:30",
-      "utc": "2026-05-14T11:30:00.000Z",
+      "script_file": "reel-what-are-ai-agents.json",
+      "date": "2026-07-20",
+      "time_uk": "17:00",
+      "utc": "2026-07-20T16:00:00.000Z",
       "status": "pending",
-      "source_url": "https://blog.antekautomation.com/schema-markup-wont-boost-ai-citations-what-smes-should-know/"
+      "source_url": "https://blog.antekautomation.com/what-are-ai-agents-a-practical-guide-for-uk-businesses/"
     },
     {
       "reel": 3,
-      "script_file": "03_showing-up-when-people-ask-phone.json",
-      "date": "Fri 15 May",
+      "script_file": "reel-cheap-outsourcing.json",
+      "date": "2026-07-24",
       "time_uk": "17:00",
-      "utc": "2026-05-15T16:00:00.000Z",
+      "utc": "2026-07-24T16:00:00.000Z",
       "status": "pending",
-      "source_url": "https://blog.antekautomation.com/ai-search-optimisation-for-uk-service-businesses-4-frameworks/"
+      "source_url": "https://blog.antekautomation.com/why-most-ai-tools-feel-like-cheap-outsourcing-not-real-help/"
     },
     {
       "reel": 4,
-      "script_file": "04_four-hours-back-from-admin.json",
-      "date": "Sat 16 May",
-      "time_uk": "11:00",
-      "utc": "2026-05-16T10:00:00.000Z",
+      "script_file": "reel-nvidia-physical-ai.json",
+      "date": "2026-07-28",
+      "time_uk": "17:00",
+      "utc": "2026-07-28T16:00:00.000Z",
       "status": "pending",
-      "source_url": "https://blog.antekautomation.com/claude-skills-for-uk-service-businesses-a-practical-guide/"
-    },
-    {
-      "reel": 5,
-      "script_file": "05_why-some-firms-get-recommended.json",
-      "date": "Sun 17 May",
-      "time_uk": "19:30",
-      "utc": "2026-05-17T18:30:00.000Z",
-      "status": "pending",
-      "source_url": "https://blog.antekautomation.com/how-ai-gets-information-a-guide-for-uk-service-businesses/"
-    },
-    {
-      "reel": 6,
-      "script_file": "06_pick-tool-by-job-not-buzzword.json",
-      "date": "Mon 18 May",
-      "time_uk": "08:00",
-      "utc": "2026-05-18T07:00:00.000Z",
-      "status": "pending",
-      "source_url": "https://blog.antekautomation.com/agentic-ai-vs-generative-ai-what-uk-smes-need-to-know/"
-    },
-    {
-      "reel": 7,
-      "script_file": "07_risk-conversation-every-owner.json",
-      "date": "Tue 19 May",
-      "time_uk": "13:00",
-      "utc": "2026-05-19T12:00:00.000Z",
-      "status": "pending",
-      "source_url": "https://blog.antekautomation.com/how-to-deploy-ai-agents-safely-in-your-service-business/"
-    },
-    {
-      "reel": 8,
-      "script_file": "08_test-before-you-commit.json",
-      "date": "Wed 20 May",
-      "time_uk": "18:00",
-      "utc": "2026-05-20T17:00:00.000Z",
-      "status": "pending",
-      "source_url": "https://blog.antekautomation.com/what-gms-ai-rollout-teaches-uk-service-businesses-about-adoption/"
-    },
-    {
-      "reel": 9,
-      "script_file": "09_calls-competitors-already-catching.json",
-      "date": "Thu 21 May",
-      "time_uk": "09:15",
-      "utc": "2026-05-21T08:15:00.000Z",
-      "status": "pending",
-      "source_url": "https://blog.antekautomation.com/ai-agents-are-coming-for-service-businesses-what-uk-smes-need/"
-    },
-    {
-      "reel": 10,
-      "script_file": "10_client-data-five-questions.json",
-      "date": "Fri 22 May",
-      "time_uk": "12:30",
-      "utc": "2026-05-22T11:30:00.000Z",
-      "status": "pending",
-      "source_url": "https://blog.antekautomation.com/claude-security-for-uk-businesses-what-smes-need-to-know/"
-    },
-    {
-      "reel": 11,
-      "script_file": "11_tools-that-learn-on-your-data.json",
-      "date": "Sat 23 May",
-      "time_uk": "17:30",
-      "utc": "2026-05-23T16:30:00.000Z",
-      "status": "pending",
-      "source_url": "https://blog.antekautomation.com/self-learning-ai-agents-what-uk-service-businesses-need-to-know/"
-    },
-    {
-      "reel": 12,
-      "script_file": "12_test-anything-talks-to-clients.json",
-      "date": "Sun 24 May",
-      "time_uk": "11:00",
-      "utc": "2026-05-24T10:00:00.000Z",
-      "status": "pending",
-      "source_url": "https://blog.antekautomation.com/chatgpts-new-model-cuts-errors-by-half-what-uk-smes-need-to-know/"
-    },
-    {
-      "reel": 13,
-      "script_file": "13_substance-beats-shiny-tools.json",
-      "date": "Mon 25 May",
-      "time_uk": "08:00",
-      "utc": "2026-05-25T07:00:00.000Z",
-      "status": "pending",
-      "source_url": "https://blog.antekautomation.com/ai-for-small-businesses-why-infrastructure-matters-more-than-hype/"
-    },
-    {
-      "reel": 14,
-      "script_file": "14_marketing-runs-while-with-clients.json",
-      "date": "Tue 26 May",
-      "time_uk": "19:00",
-      "utc": "2026-05-26T18:00:00.000Z",
-      "status": "pending",
-      "source_url": "https://blog.antekautomation.com/ai-content-creation-for-uk-service-businesses-a-practical-guide/"
+      "source_url": "https://blog.antekautomation.com/what-nvidias-physical-ai-push-means-for-service-businesses/"
     }
   ]
 }

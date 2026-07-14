@@ -375,7 +375,7 @@ function listicleTemplate(c: ListicleContent, size: CardSize): string {
   }
 
   if (size === "square") {
-    const items = c.items.map((item, i) => itemHtml(item, i, 38, 24)).join("");
+    const items = c.items.map((item, i) => itemHtml(item, i, 52, 32)).join("");
     return `<div style="width:${w}px;height:${h}px;background:${CHARCOAL};position:relative;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
   <!-- CORAL header top -->
   <div style="position:absolute;top:0;left:0;right:0;height:180px;background:${CORAL};display:flex;align-items:center;padding:0 80px">
@@ -384,7 +384,7 @@ function listicleTemplate(c: ListicleContent, size: CardSize): string {
   <!-- CREAM card for items, with CHARCOAL offset shadow -->
   <div style="position:absolute;top:220px;left:96px;right:64px;bottom:120px;background:${CHARCOAL};border:3px solid ${CORAL}"></div>
   <div style="position:absolute;top:204px;left:80px;right:80px;bottom:136px;background:${CREAM};border:3px solid ${CHARCOAL}">
-    <div style="padding:40px 48px">
+    <div style="padding:48px 56px;height:100%;display:flex;flex-direction:column;justify-content:center;box-sizing:border-box">
       ${items}
     </div>
   </div>

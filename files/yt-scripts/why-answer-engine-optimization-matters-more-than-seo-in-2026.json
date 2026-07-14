@@ -1,0 +1,65 @@
+{
+  "slides": [
+    {
+      "type": "intro",
+      "text": "Your next customer won't visit your website. They'll ask AI and get one answer.",
+      "voiceover_text": "Here's an uncomfortable thought. Your next customer might never see your website. They'll ask an AI tool a question and get one answer back. Today I want to talk about why answer engine optimisation now matters more than classic SEO, and what to actually do about it."
+    },
+    {
+      "type": "context",
+      "text": "Search is changing fast. People ask ChatGPT, Perplexity or Claude and get a complete answer without clicking a single link. Get cited, or disappear.",
+      "voiceover_text": "The old model of search assumed people would click through a list of blue links to find what they needed. That's dying fast. Now they ask ChatGPT, Perplexity or Claude, and they get a complete answer without visiting a single site. If you're the one getting cited, you win. If you're not, as far as that customer's concerned, you don't exist."
+    },
+    {
+      "type": "point",
+      "pointNumber": 1,
+      "text": "Write FAQ content the way clients actually ask. Real questions, plain English, thorough answers AI tools want to cite.",
+      "voiceover_text": "So the first move is FAQ content written the way your customers actually ask, not the way you'd phrase it internally. Real questions, plain English, and answers that are genuinely thorough. AI tools prefer content that serves the reader, so the hard sell never gets cited. The thorough explanation does."
+    },
+    {
+      "type": "point",
+      "pointNumber": 2,
+      "text": "Publish case studies with real outcomes. AI values concrete examples: what you did, what was used, what result you got.",
+      "voiceover_text": "Second, publish case studies with real outcomes. AI values concrete detail. What the situation was, what you did, and what result you got. A specific story with a real result gets referenced far more often than a vague success claim ever will."
+    },
+    {
+      "type": "point",
+      "pointNumber": 3,
+      "text": "Build specific, in-depth guides. Depth in one area beats thin coverage of everything. Comprehensive evergreen content wins.",
+      "voiceover_text": "Third, build guides that go deep on one specific area rather than skimming everything. A complete guide to one narrow topic is worth far more to an AI tool than a generic overview. And interestingly, evergreen depth beats fresh but shallow, so recency matters less than you'd think."
+    },
+    {
+      "type": "point",
+      "pointNumber": 4,
+      "text": "Structure every page for easy extraction. Clear headings, logical flow, plain English, no marketing fluff hiding the answer.",
+      "voiceover_text": "Fourth, structure every page so the information is easy to lift. Clear headings, a logical flow, plain English, and no marketing fluff burying the actual answer. AI tools are extracting facts, not ranking pages, so make that extraction effortless."
+    },
+    {
+      "type": "point",
+      "pointNumber": 5,
+      "text": "Fix your thin pages. Add real depth, not keywords. Ahrefs data shows complete, credible content gets cited far more.",
+      "voiceover_text": "And fifth, go back and fix your thin pages. Add real depth, not more keywords. The Ahrefs analysis of Perplexity citations is clear. Complete, well-structured, credible content gets cited. Vague copy and boilerplate service pages get ignored."
+    },
+    {
+      "type": "takeaway",
+      "text": "Pick one key question your customers ask AI. Answer it better than anyone. That's how you get found now.",
+      "voiceover_text": "So here's what I want you to do today. Pick one important question your customers are asking AI right now, and answer it better and more completely than anyone else in your field. That's how you get found in twenty twenty-six."
+    },
+    {
+      "type": "cta",
+      "text": "",
+      "voiceover_text": "If you found this useful, please subscribe and hit the notification bell. Visit antek automation dot com for more guides like this, or call oh three three three, oh three eight, nine nine six oh."
+    }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/why-answer-engine-optimization-matters-more-than-seo-in-2026/",
+  "sourceBlogTitle": "Answer Engine Optimization for Law Firms in 2026",
+  "youtubeTitle": "Answer Engine Optimisation: Beat SEO in 2026",
+  "youtubeDescription": "Your next customer might never see your website. They'll ask ChatGPT, Perplexity or Claude and get one answer. This is why answer engine optimisation now matters more than classic SEO in 2026, and the five things to actually do about it: client-first FAQs, real case studies, deep guides, extractable structure, and fixing thin pages. Full article: https://blog.antekautomation.com/why-answer-engine-optimization-matters-more-than-seo-in-2026/",
+  "youtubeTags": ["#UKSmallBusiness", "#AIAutomation", "#AEO", "#AnswerEngineOptimisation", "#SEO", "#AISearch", "#ChatGPT", "#Perplexity", "#DigitalMarketing", "#GEO"],
+  "geo_answer": "Answer engine optimisation is the practice of structuring content so AI tools like ChatGPT and Perplexity cite it when answering user questions, and it now matters more than classic SEO because AI increasingly gives one direct answer instead of a list of links.",
+  "geo_takeaways": [
+    "AEO optimises for citability, not ranking position, so answer completeness and clear structure matter more than keywords and backlinks.",
+    "AI answer engines like ChatGPT, Perplexity and Claude give users one complete answer, so businesses that aren't cited become invisible.",
+    "Ahrefs analysis of Perplexity citations shows complete, well-structured, credible content gets cited far more than thin marketing pages."
+  ]
+}
