@@ -194,5 +194,103 @@
       "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2957849/edit",
       "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2957849"
     }
+  },
+  "ep_14": {
+    "title": "Do You Need an LLMs.txt File?",
+    "slug": "do-you-need-an-llms-txt-file",
+    "durationMin": 2.77,
+    "scheduled": "2026-07-30T07:00:00.000Z",
+    "rsscom": {
+      "episode_id": 3023297,
+      "status": "scheduled",
+      "audio_url": null,
+      "audio_upload_id": "c80d7227-7612-4e22-babe-5d389147b328",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/3023297/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/3023297"
+    }
+  },
+  "ep_15": {
+    "title": "How Hampshire Firms Get Cited by AI",
+    "slug": "ai-search-visibility-four-pillars",
+    "durationMin": 2.85,
+    "scheduled": "2026-08-01T07:00:00.000Z",
+    "rsscom": {
+      "episode_id": 3023299,
+      "status": "scheduled",
+      "audio_url": null,
+      "audio_upload_id": "a541fcd0-9655-49c2-acf7-23b5ee9eed4f",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/3023299/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/3023299"
+    }
+  },
+  "ep_16": {
+    "title": "AI SEO vs GEO: What's the Difference?",
+    "slug": "ai-seo-vs-geo-difference",
+    "durationMin": 2.93,
+    "scheduled": "2026-08-03T07:00:00.000Z",
+    "rsscom": {
+      "episode_id": 3023303,
+      "status": "scheduled",
+      "audio_url": null,
+      "audio_upload_id": "9c3a6b75-4d24-4c8e-b54f-9dc9b96cd6ea",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/3023303/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/3023303"
+    }
+  },
+  "ep_17": {
+    "title": "What a Missed Call Actually Costs You",
+    "slug": "what-a-missed-call-actually-costs",
+    "durationMin": 2.63,
+    "scheduled": "2026-08-05T07:00:00.000Z",
+    "rsscom": {
+      "episode_id": 3023305,
+      "status": "scheduled",
+      "audio_url": null,
+      "audio_upload_id": "3756e920-58ed-46cc-aaec-f0e20e787708",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/3023305/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/3023305"
+    }
+  },
+  "ep_18": {
+    "title": "The Five Steps Behind a Proper Custom AI Build",
+    "slug": "the-five-step-custom-ai-build",
+    "durationMin": 2.54,
+    "scheduled": "2026-08-07T07:00:00.000Z",
+    "rsscom": {
+      "episode_id": 3023306,
+      "status": "scheduled",
+      "audio_url": null,
+      "audio_upload_id": "e683be14-9bb9-47a4-94d0-33b7a3114822",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/3023306/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/3023306"
+    }
+  },
+  "ep_19": {
+    "title": "Automated SEO: What Actually Works in 2026",
+    "slug": "automated-seo-what-actually-works",
+    "durationMin": 2.86,
+    "scheduled": "2026-08-09T07:00:00.000Z",
+    "rsscom": {
+      "episode_id": 3023307,
+      "status": "scheduled",
+      "audio_url": null,
+      "audio_upload_id": "2452d4cb-3a71-4621-a861-cca0fead4256",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/3023307/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/3023307"
+    }
+  },
+  "ep_20": {
+    "title": "What Anthropic's IPO Means for Your Business",
+    "slug": "what-anthropics-ipo-means-for-you",
+    "durationMin": 2.63,
+    "scheduled": "2026-08-11T07:00:00.000Z",
+    "rsscom": {
+      "episode_id": 3023308,
+      "status": "scheduled",
+      "audio_url": null,
+      "audio_upload_id": "52e5500b-cf21-43f2-b167-1c63a8570e21",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/3023308/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/3023308"
+    }
   }
 }

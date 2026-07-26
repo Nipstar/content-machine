@@ -2,29 +2,29 @@
   "reels": [
     {
       "reel": 1,
-      "date": "2026-07-16",
-      "utc": "2026-07-16T16:00:00.000Z",
-      "source_url": "https://blog.antekautomation.com/how-ai-automation-agencies-work-and-what-they-actually-do/",
-      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-01-1784057923621.mp4",
+      "date": "2026-07-30",
+      "utc": "2026-07-30T16:00:00.000Z",
+      "source_url": "https://blog.antekautomation.com/ai-search-visibility-how-hampshire-firms-get-cited-by-ai/",
+      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-01-1785080611117.mp4",
       "video_local_path": "/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/GEO/Claude Content Machine/files/output/shorts-batch/reel-01.mp4",
       "duration_seconds": 0,
       "has_voiceover": true,
       "db_ids": [
-        "6fc197d4-1108-446d-8e7c-4cf64d4ddb07",
-        "a6b2966d-f707-45e7-9a61-169ebdf8f8fd",
-        "e296518a-89ca-464b-82b5-130b65833f54"
+        "22c7846b-1f7a-45a9-8a60-d5467e1db9ac",
+        "6e5d2226-928c-4dd2-8de0-e471edfac0d6",
+        "896b3a17-0ad7-4a30-8c46-b86ed792a283"
       ],
       "platform_meta": {
         "youtube": {
           "platform": "youtube",
-          "title": "What An AI Automation Agency Actually Does",
-          "description": "https://blog.antekautomation.com/how-ai-automation-agencies-work-and-what-they-actually-do/\n\nAn AI automation agency isn't a black box or an upsell. The three real jobs: 24/7 voice answering, chatbots that qualify leads, and workflow automation tying your systems together.\n\nThe quick version: An AI automation agency designs and builds custom AI tools such as voice assistants, chatbots and workflow automation to capture and convert more enquiries for small and medium businesses.\n\nKey takeaways:\n- AI voice assistants answer inbound calls out of hours and book appointments straight into your calendar.\n- AI chatbots qualify website enquiries before they reach your team, cutting admin and speeding up response times.\n- Workflow automation moves data between your CRM, calendar and email without any manual copying and pasting.\n\nAntek Automation — a UK AI automation agency — produced this. antekautomation.com.",
+          "title": "4 Pillars of AI Search Visibility",
+          "description": "https://blog.antekautomation.com/ai-search-visibility-how-hampshire-firms-get-cited-by-ai/\n\nRank top 10 on Google and still be invisible to ChatGPT. Four pillars decide whether AI names your business: discoverability, credibility, relevance, structure.\n\nThe quick version: AI search visibility depends on four pillars: discoverability (can AI crawlers find and read your content), credibility (is your business information consistent across sources), relevance (does your content directly answer the question being asked), and structure (is the content written so a model can lift and quote it cleanly).\n\nKey takeaways:\n- Ranking well on Google does not guarantee a mention in an AI-generated answer, because AI models read different signals than traditional search rankings.\n- Content hidden behind heavy JavaScript or missing from a sitemap may never be indexed by AI crawlers, regardless of how it looks to a human visitor.\n- AI answer engines quote content that gives a direct, standalone answer rather than content that requires a human to read the whole page for context.\n\nAntek Automation — a UK AI automation agency — produced this. antekautomation.com.",
           "hashtags": [
             "#Shorts",
-            "#AIAutomation",
+            "#GEO",
+            "#AISearch",
             "#SmallBusiness",
-            "#AIAgency",
-            "#BusinessAutomation"
+            "#AIVisibility"
           ],
           "caption": ""
         },
@@ -39,7 +39,7 @@
             "#Reels",
             "#LocalBusiness"
           ],
-          "caption": "An AI automation agency isn't a black box or magic. Here's what they actually do.\n\n→ Build voice assistants that answer calls 24/7 and book jobs.\n→ Add website chatbots that qualify leads before they reach you.\n→ Connect your CRM, calendar and email so nothing gets rekeyed.\n\nA good agency builds the tools around your business, not the reverse.\n\nFollow @AntekAutomation for practical tips built for letting and estate agents.\nMore at antekautomation.com\n\n#SmallBusinessTips #ServiceBusiness #BusinessOwner #Reels #LocalBusiness"
+          "caption": "You can rank top 10 on Google and still be invisible to ChatGPT.\n\n→ Discoverability: can AI crawlers actually read your key pages?\n→ Credibility: is your info consistent everywhere AI can see it?\n→ Structure: is your content written to be lifted and quoted?\n\nMiss any of the four pillars and you're invisible to AI search, no matter how good your website looks.\n\nFollow @AntekAutomation for practical tips built for small business owners.\nMore at antekautomation.com\n\n#SmallBusinessTips #ServiceBusiness #BusinessOwner #Reels #LocalBusiness"
         },
         "facebook": {
           "platform": "facebook",
@@ -51,33 +51,145 @@
             "#UKBusiness",
             "#BusinessTips"
           ],
-          "caption": "An AI automation agency isn't a black box or magic. Here's what they actually do. — sound familiar?\n\nBuild voice assistants that answer calls 24/7 and book jobs..\nAdd website chatbots that qualify leads before they reach you..\nA good agency builds the tools around your business, not the reverse.\n\nWe help letting and estate agents catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
+          "caption": "You can rank top 10 on Google and still be invisible to ChatGPT. — sound familiar?\n\nDiscoverability: can AI crawlers actually read your key pages?.\nCredibility: is your info consistent everywhere AI can see it?.\nMiss any of the four pillars and you're invisible to AI search, no matter how good your website looks.\n\nWe help small business owners catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
         }
       }
     },
     {
       "reel": 2,
-      "date": "2026-07-20",
-      "utc": "2026-07-20T16:00:00.000Z",
-      "source_url": "https://blog.antekautomation.com/what-are-ai-agents-a-practical-guide-for-uk-businesses/",
-      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-02-1784058021323.mp4",
+      "date": "2026-08-03",
+      "utc": "2026-08-03T16:00:00.000Z",
+      "source_url": "https://blog.antekautomation.com/how-ai-voice-agents-are-transforming-business-communication/",
+      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-02-1785080665798.mp4",
       "video_local_path": "/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/GEO/Claude Content Machine/files/output/shorts-batch/reel-02.mp4",
       "duration_seconds": 0,
       "has_voiceover": true,
       "db_ids": [
-        "c2266002-1038-4550-9f60-e6cc3bb875f7",
-        "22d2a092-8447-46de-a1d5-442a681e85f8",
-        "6e5e180f-7dde-4d7d-afdc-4697eea9c7fd"
+        "592a1462-6a1f-4873-b7eb-d1089da6c4ff",
+        "ff31e046-2f32-446b-b217-c8b69d2fb13a",
+        "6fb22e8f-d7a0-4963-9b15-5cc0b99ac236"
       ],
       "platform_meta": {
         "youtube": {
           "platform": "youtube",
-          "title": "Chatbot Vs AI Agent: What Makes An Agent",
-          "description": "https://blog.antekautomation.com/what-are-ai-agents-a-practical-guide-for-uk-businesses/\n\nA chatbot reacts to a script. An AI agent acts on its own. The difference is autonomy: it understands language, decides using your rules and live data, then completes the job.\n\nIn one line: An AI agent is software that perceives information, makes decisions and acts autonomously to complete tasks, whereas a chatbot simply follows a fixed script.\n\nKey takeaways:\n- The key difference between a chatbot and an AI agent is autonomy: a chatbot reacts, an AI agent acts.\n- AI agents understand natural language, so they handle accents, slang and incomplete sentences far better than older tools.\n- Without integration to your calendar and CRM, an AI agent is just a clever answering machine.\n\nAntek Automation is a UK AI automation agency. More at antekautomation.com.",
+          "title": "How an AI Voice Agent Actually Works | Stockbridge",
+          "description": "https://blog.antekautomation.com/how-ai-voice-agents-are-transforming-business-communication/\n\nIf you run a business in Stockbridge, this one's for you.\nSpeech recognition, natural language processing, integration logic. Three linked systems, not a script reader or an IVR menu.\n\nShort answer: An AI voice agent works using three linked systems: speech recognition to convert spoken words into text, natural language processing to determine the caller's intent, and integration logic that connects to a calendar, CRM or job management system to act on the request in real time.\n\nKey takeaways:\n- AI voice agents differ from traditional answering services and IVR menus because they interpret intent rather than routing calls or matching pre-recorded options.\n- Integration into a business's actual calendar and CRM is what allows an AI voice agent to book appointments and log enquiries without human involvement.\n- A call handled by an AI voice agent is transcribed and actioned in real time, so a caller can get a booking confirmed in the same conversation rather than waiting for a callback.\n\nThis comes from Antek Automation, a UK AI automation agency based in Stockbridge — antekautomation.com.",
           "hashtags": [
             "#Shorts",
-            "#AIAgents",
+            "#TestValley",
+            "#VoiceAI",
             "#AIAutomation",
+            "#UKBusiness"
+          ],
+          "caption": ""
+        },
+        "instagram": {
+          "platform": "instagram",
+          "title": "",
+          "description": "",
+          "hashtags": [
+            "#TestValley",
+            "#Hampshire",
+            "#SmallBusinessTips",
+            "#ServiceBusiness",
+            "#BusinessOwner"
+          ],
+          "caption": "Ever wondered what's actually happening when an AI voice agent answers your call?\n\n→ Speech recognition turns the caller's words into text.\n→ Natural language processing works out what they actually want.\n→ Integration logic checks your calendar or CRM and acts on it.\n\nNot a script reader. Not an IVR menu. Real understanding, acting in real time.\n\nTalked this through with a few Stockbridge owners lately.\n\nFollow @AntekAutomation for practical tips built for letting and estate agents.\nMore at antekautomation.com\n\n#TestValley #Hampshire #SmallBusinessTips #ServiceBusiness #BusinessOwner"
+        },
+        "facebook": {
+          "platform": "facebook",
+          "title": "",
+          "description": "",
+          "hashtags": [
+            "#TestValley",
+            "#SmallBusiness",
+            "#ServiceBusiness",
+            "#UKBusiness",
+            "#BusinessTips"
+          ],
+          "caption": "Ever wondered what's actually happening when an AI voice agent answers your call?\n\nSpeech recognition turns the caller's words into text..\nNatural language processing works out what they actually want..\nNot a script reader. Not an IVR menu. Real understanding, acting in real time.\n\nTalked this through with a few Stockbridge owners lately.\n\nWe help letting and estate agents catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#TestValley #SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
+        }
+      }
+    },
+    {
+      "reel": 3,
+      "date": "2026-08-07",
+      "utc": "2026-08-07T16:00:00.000Z",
+      "source_url": "https://blog.antekautomation.com/how-ai-voice-agents-handle-after-hours-calls-for-uk-businesses/",
+      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-03-1785080719350.mp4",
+      "video_local_path": "/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/GEO/Claude Content Machine/files/output/shorts-batch/reel-03.mp4",
+      "duration_seconds": 0,
+      "has_voiceover": true,
+      "db_ids": [
+        "75b00b52-4b00-4abf-9b2d-c716c9dad72d",
+        "8346f14b-f22c-4200-b77c-e2744dc55df9",
+        "472a85f8-414c-4fee-8606-7c0dadc9f118"
+      ],
+      "platform_meta": {
+        "youtube": {
+          "platform": "youtube",
+          "title": "Most Businesses Close At 5. Enquiries Don't",
+          "description": "https://blog.antekautomation.com/how-ai-voice-agents-handle-after-hours-calls-for-uk-businesses/\n\nBuilt with Southampton businesses in mind.\nProperty viewings at 7pm. Emergencies outside 9 to 5. High-ticket enquiries on weekends. The gap between demand and availability is where revenue leaks.\n\nThe quick version: UK businesses lose revenue outside office hours because customer demand does not follow a 9-to-5 schedule: property viewing requests peak in the evening, trade emergency callouts happen at any hour, and high-ticket professional services enquiries commonly arrive on weekends when prospects have time to research.\n\nKey takeaways:\n- Saturday afternoon and Sunday morning generate the highest volume of property viewing requests, so missed weekend calls directly cost agents instructions.\n- Emergency trade callouts outside 9 to 5 often convert at higher margins because urgency overrides price comparison for the caller.\n- A missed call outside office hours signals poor responsiveness to a prospect before a business has even had the chance to quote.\n\nAntek Automation — a UK AI automation agency serving Southampton — produced this. antekautomation.com.",
+          "hashtags": [
+            "#Shorts",
+            "#Southampton",
+            "#VoiceAI",
+            "#AfterHours",
+            "#SmallBusiness"
+          ],
+          "caption": ""
+        },
+        "instagram": {
+          "platform": "instagram",
+          "title": "",
+          "description": "",
+          "hashtags": [
+            "#Southampton",
+            "#Basingstoke",
+            "#SmallBusinessTips",
+            "#ServiceBusiness",
+            "#BusinessOwner"
+          ],
+          "caption": "Most UK businesses close at five. Most enquiries don't.\n\n→ Property viewings get requested at seven in the evening.\n→ Emergency callouts spike outside nine to five, every trade.\n→ High-ticket enquiries come in on weekends, when people finally have time.\n\nThe gap between demand and availability is where the money leaks.\n\nCommon one for Southampton businesses right now.\n\nFollow @AntekAutomation for practical tips built for MSPs and IT support firms.\nMore at antekautomation.com\n\n#Southampton #Basingstoke #SmallBusinessTips #ServiceBusiness #BusinessOwner"
+        },
+        "facebook": {
+          "platform": "facebook",
+          "title": "",
+          "description": "",
+          "hashtags": [
+            "#Southampton",
+            "#SmallBusiness",
+            "#ServiceBusiness",
+            "#UKBusiness",
+            "#BusinessTips"
+          ],
+          "caption": "Most UK businesses close at five. Most enquiries don't. — sound familiar?\n\nProperty viewings get requested at seven in the evening..\nEmergency callouts spike outside nine to five, every trade..\nThe gap between demand and availability is where the money leaks.\n\nCommon one for Southampton businesses right now.\n\nWe help MSPs and IT support firms catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#Southampton #SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
+        }
+      }
+    },
+    {
+      "reel": 4,
+      "date": "2026-08-11",
+      "utc": "2026-08-11T16:00:00.000Z",
+      "source_url": "https://blog.antekautomation.com/why-ai-model-updates-matter-for-your-client-intake-system/",
+      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-04-1785080772416.mp4",
+      "video_local_path": "/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/GEO/Claude Content Machine/files/output/shorts-batch/reel-04.mp4",
+      "duration_seconds": 0,
+      "has_voiceover": true,
+      "db_ids": [
+        "e3985661-0a44-4cde-89a1-2eef7bf3c911",
+        "021e6d68-01ef-4d04-a04a-67efc99b8204",
+        "b77e0ecb-9ae0-40e6-af82-7d117e1e212a"
+      ],
+      "platform_meta": {
+        "youtube": {
+          "platform": "youtube",
+          "title": "The Hidden Risk in AI Intake Systems",
+          "description": "https://blog.antekautomation.com/why-ai-model-updates-matter-for-your-client-intake-system/\n\nYour AI intake works great for months, then an update changes it overnight. The right question isn't which model, it's how your vendor handles updates.\n\nIn one line: AI intake systems carry a hidden infrastructure risk: when the underlying AI provider pushes a model update, response latency, cost per call, or answer consistency can change without warning, so the real evaluation question is not which model a vendor uses but how they test and roll out updates before they reach production.\n\nKey takeaways:\n- The AI model behind an intake system is infrastructure, so the vendor's update-testing process matters more than which model brand is used.\n- A reliable vendor tests provider updates against real call scenarios before pushing them live and gives advance warning of changes that could affect a business's workflow.\n- Businesses should ask any AI vendor whether they maintain rollback options if a model update degrades performance or increases per-call cost.\n\nAntek Automation is a UK AI automation agency. More at antekautomation.com.",
+          "hashtags": [
+            "#Shorts",
+            "#AIAutomation",
+            "#VoiceAI",
             "#SmallBusiness",
             "#UKBusiness"
           ],
@@ -94,7 +206,7 @@
             "#Reels",
             "#LocalBusiness"
           ],
-          "caption": "A chatbot reacts. An AI agent acts. The word that matters is autonomy.\n\n→ Understands natural language, not a rigid click-through decision tree.\n→ Decides what to do using your rules and live data.\n→ Acts on it: books the job, updates your CRM.\n\nA chatbot follows a script. An agent handles the whole job.\n\nFollow @AntekAutomation for practical tips built for letting and estate agents.\nMore at antekautomation.com\n\n#SmallBusinessTips #ServiceBusiness #BusinessOwner #Reels #LocalBusiness"
+          "caption": "Your AI intake system works great for months. Then the provider pushes an update.\n\n→ Wrong question: which AI model powers your system?\n→ Right question: how do you test updates before they go live?\n→ Ask if you can roll back if an update breaks something.\n\nA good vendor treats AI as infrastructure to protect, not a feature to chase.\n\nFollow @AntekAutomation for practical tips built for criminal defense, DUI, immigration and PI firms.\nMore at antekautomation.com\n\n#SmallBusinessTips #ServiceBusiness #BusinessOwner #Reels #LocalBusiness"
         },
         "facebook": {
           "platform": "facebook",
@@ -106,118 +218,7 @@
             "#UKBusiness",
             "#BusinessTips"
           ],
-          "caption": "A chatbot reacts. An AI agent acts. The word that matters is autonomy. — sound familiar?\n\nUnderstands natural language, not a rigid click-through decision tree..\nDecides what to do using your rules and live data..\nA chatbot follows a script. An agent handles the whole job.\n\nWe help letting and estate agents catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
-        }
-      }
-    },
-    {
-      "reel": 3,
-      "date": "2026-07-24",
-      "utc": "2026-07-24T16:00:00.000Z",
-      "source_url": "https://blog.antekautomation.com/why-most-ai-tools-feel-like-cheap-outsourcing-not-real-help/",
-      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-03-1784058092350.mp4",
-      "video_local_path": "/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/GEO/Claude Content Machine/files/output/shorts-batch/reel-03.mp4",
-      "duration_seconds": 0,
-      "has_voiceover": true,
-      "db_ids": [
-        "78689776-4a38-4f68-9dd1-880b4f42abf7",
-        "f09bc62e-8f03-4488-8355-612aa88b80ed",
-        "dba0f123-e2e2-403a-b905-fb022485bbe4"
-      ],
-      "platform_meta": {
-        "youtube": {
-          "platform": "youtube",
-          "title": "Why Most AI Tools Feel Like Cheap Outsourcing",
-          "description": "https://blog.antekautomation.com/why-most-ai-tools-feel-like-cheap-outsourcing-not-real-help/\n\nMost AI tools feel like a mediocre contractor who doesn't get your work. Output generators add to your task list. Process partners understand your workflow and actually reduce it.\n\nShort answer: Most AI tools disappoint because they are output generators that produce results from prompts, whereas genuinely useful tools are process partners that understand and integrate into your actual workflow.\n\nKey takeaways:\n- An output generator gives you something to check, fix and manage, so it adds to your workload rather than reducing it.\n- A process partner understands the steps, decision points and exceptions of your workflow, like a trained team member.\n- Generic chatbots built for e-commerce give service-business callers a poor experience, so prospects hang up and call a competitor.\n\nThis comes from Antek Automation, a UK AI automation agency — antekautomation.com.",
-          "hashtags": [
-            "#Shorts",
-            "#AITools",
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#AIAutomation"
-          ],
-          "caption": ""
-        },
-        "instagram": {
-          "platform": "instagram",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusinessTips",
-            "#ServiceBusiness",
-            "#BusinessOwner",
-            "#Reels",
-            "#LocalBusiness"
-          ],
-          "caption": "Most AI tools feel like a mediocre contractor who doesn't get your work.\n\n→ Check it fits your process, not a generic FAQ script.\n→ Ask if it handles exceptions like a trained team member.\n→ Pick tools that reduce your task list, not add to it.\n\nReal help is a process partner, not another output generator to manage.\n\nFollow @AntekAutomation for practical tips built for trades and home-services firms.\nMore at antekautomation.com\n\n#SmallBusinessTips #ServiceBusiness #BusinessOwner #Reels #LocalBusiness"
-        },
-        "facebook": {
-          "platform": "facebook",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#UKBusiness",
-            "#BusinessTips"
-          ],
-          "caption": "Most AI tools feel like a mediocre contractor who doesn't get your work. — sound familiar?\n\nCheck it fits your process, not a generic FAQ script..\nAsk if it handles exceptions like a trained team member..\nReal help is a process partner, not another output generator to manage.\n\nWe help trades and home-services firms catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
-        }
-      }
-    },
-    {
-      "reel": 4,
-      "date": "2026-07-28",
-      "utc": "2026-07-28T16:00:00.000Z",
-      "source_url": "https://blog.antekautomation.com/what-nvidias-physical-ai-push-means-for-service-businesses/",
-      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-04-1784058169871.mp4",
-      "video_local_path": "/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/GEO/Claude Content Machine/files/output/shorts-batch/reel-04.mp4",
-      "duration_seconds": 0,
-      "has_voiceover": true,
-      "db_ids": [
-        "f2beda85-da1d-4b0a-b006-cf898ed299ab",
-        "0b39c890-0d6b-4646-85d9-30bd7cc526b6",
-        "2358ab5c-865f-4d0e-a4f1-aa46c4b33420"
-      ],
-      "platform_meta": {
-        "youtube": {
-          "platform": "youtube",
-          "title": "Nvidia's Physical AI: What It Means For You",
-          "description": "https://blog.antekautomation.com/what-nvidias-physical-ai-push-means-for-service-businesses/\n\nBuilt with around Hampshire businesses in mind.\nNvidia's physical AI push is about warehouse robots, not answering your phones. For a service business, buy boring, reliable conversational AI that handles your calls, and skip the buzzwords.\n\nThe quick version: Nvidia's physical AI push targets warehouse robots and manufacturing, not phone answering, so service businesses should buy proven, reliable conversational AI rather than chasing physical-AI buzzwords.\n\nKey takeaways:\n- Physical AI controls robots in the physical world, while conversational AI handles phone calls and chat; they are different technology stacks.\n- Your intake calls need boring, reliable conversational AI that handles your call volume without dropping leads.\n- Before deploying an intake tool, check the vendor uses stable models with documented fallback systems and a track record of uptime.\n\nAntek Automation — a UK AI automation agency serving around Hampshire — produced this. antekautomation.com.",
-          "hashtags": [
-            "#Shorts",
-            "#Hampshire",
-            "#AI",
-            "#SmallBusiness",
-            "#ServiceBusiness"
-          ],
-          "caption": ""
-        },
-        "instagram": {
-          "platform": "instagram",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#Hampshire",
-            "#Andover",
-            "#SmallBusinessTips",
-            "#ServiceBusiness",
-            "#BusinessOwner"
-          ],
-          "caption": "Nvidia's big robot AI news has nothing to do with your phones.\n\n→ Ignore vendors pitching cutting-edge physical AI for your intake calls.\n→ Buy boring, reliable conversational AI that handles your call volume.\n→ Ask about fallback systems and a track record of uptime.\n\nFor your phones, boring reliability beats every buzzword a vendor throws.\n\nCommon one for around Hampshire businesses right now.\n\nFollow @AntekAutomation for practical tips built for letting and estate agents.\nMore at antekautomation.com\n\n#Hampshire #Andover #SmallBusinessTips #ServiceBusiness #BusinessOwner"
-        },
-        "facebook": {
-          "platform": "facebook",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#Hampshire",
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#UKBusiness",
-            "#BusinessTips"
-          ],
-          "caption": "Nvidia's big robot AI news has nothing to do with your phones. — sound familiar?\n\nIgnore vendors pitching cutting-edge physical AI for your intake calls..\nBuy boring, reliable conversational AI that handles your call volume..\nFor your phones, boring reliability beats every buzzword a vendor throws.\n\nCommon one for around Hampshire businesses right now.\n\nWe help letting and estate agents catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#Hampshire #SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
+          "caption": "Your AI intake system works great for months. Then the provider pushes an update. — sound familiar?\n\nWrong question: which AI model powers your system?.\nRight question: how do you test updates before they go live?.\nA good vendor treats AI as infrastructure to protect, not a feature to chase.\n\nWe help criminal defense, DUI, immigration and PI firms catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
         }
       }
     }

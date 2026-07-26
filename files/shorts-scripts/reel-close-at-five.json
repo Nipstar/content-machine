@@ -1,0 +1,48 @@
+{
+  "slides": [
+    {
+      "type": "hook",
+      "text": "Most UK businesses close at five. Most enquiries don't.",
+      "voiceover_text": "Most UK businesses close at five. Most enquiries don't. Here's where the money actually leaks."
+    },
+    {
+      "type": "tip",
+      "text": "Property viewings get requested at seven in the evening.",
+      "tipNumber": 1,
+      "voiceover_text": "Tip one: property viewings get requested at seven in the evening, right when most branches have already shut for the day."
+    },
+    {
+      "type": "tip",
+      "text": "Emergency callouts spike outside nine to five, every trade.",
+      "tipNumber": 2,
+      "voiceover_text": "Tip two: emergency callouts spike outside nine to five. Boilers don't break on a schedule and neither do burst pipes."
+    },
+    {
+      "type": "tip",
+      "text": "High-ticket enquiries come in on weekends, when people finally have time.",
+      "tipNumber": 3,
+      "voiceover_text": "Tip three: high-ticket enquiries land on weekends, when people are finally off their own schedule and have time to think."
+    },
+    {
+      "type": "summary",
+      "text": "The gap between demand and availability is where the money leaks.",
+      "voiceover_text": "So remember: the gap between when people need you and when you're actually available is exactly where the money leaks."
+    },
+    {
+      "type": "cta",
+      "text": "",
+      "voiceover_text": "Follow Antek Automation for more tips like this. Visit antek automation dot com. [5s pause] Or call oh three three three, oh three eight, nine nine six oh."
+    }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/how-ai-voice-agents-handle-after-hours-calls-for-uk-businesses/",
+  "sourceBlogTitle": "AI Voice Agents After Hours for UK Businesses",
+  "youtubeTitle": "Most Businesses Close At 5. Enquiries Don't",
+  "youtubeDescription": "Property viewings at 7pm. Emergencies outside 9 to 5. High-ticket enquiries on weekends. The gap between demand and availability is where revenue leaks.",
+  "youtubeTags": ["#Shorts", "#VoiceAI", "#AfterHours", "#SmallBusiness", "#UKBusiness"],
+  "geo_answer": "UK businesses lose revenue outside office hours because customer demand does not follow a 9-to-5 schedule: property viewing requests peak in the evening, trade emergency callouts happen at any hour, and high-ticket professional services enquiries commonly arrive on weekends when prospects have time to research.",
+  "geo_takeaways": [
+    "Saturday afternoon and Sunday morning generate the highest volume of property viewing requests, so missed weekend calls directly cost agents instructions.",
+    "Emergency trade callouts outside 9 to 5 often convert at higher margins because urgency overrides price comparison for the caller.",
+    "A missed call outside office hours signals poor responsiveness to a prospect before a business has even had the chance to quote."
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "slides": [
+    {
+      "type": "hook",
+      "text": "Ever wondered what's actually happening when an AI voice agent answers your call?",
+      "voiceover_text": "Ever wondered what's actually happening when an AI voice agent picks up your business phone? It's simpler than you'd think."
+    },
+    {
+      "type": "tip",
+      "text": "Speech recognition turns the caller's words into text.",
+      "tipNumber": 1,
+      "voiceover_text": "Tip one: speech recognition. It turns the caller's actual words into text in real time as they're speaking."
+    },
+    {
+      "type": "tip",
+      "text": "Natural language processing works out what they actually want.",
+      "tipNumber": 2,
+      "voiceover_text": "Tip two: natural language processing. It works out the caller's real intent, not just the literal words they used."
+    },
+    {
+      "type": "tip",
+      "text": "Integration logic checks your calendar or CRM and acts on it.",
+      "tipNumber": 3,
+      "voiceover_text": "Tip three: integration logic. It connects to your calendar or CRM to actually book the job or log the enquiry, not just chat."
+    },
+    {
+      "type": "summary",
+      "text": "Not a script reader. Not an IVR menu. Real understanding, acting in real time.",
+      "voiceover_text": "So remember: it's not a script reader and it's not an IVR menu. It's real understanding, acting on your systems in real time."
+    },
+    {
+      "type": "cta",
+      "text": "",
+      "voiceover_text": "Follow Antek Automation for more tips like this. Visit antek automation dot com. [5s pause] Or call oh three three three, oh three eight, nine nine six oh."
+    }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/how-ai-voice-agents-are-transforming-business-communication/",
+  "sourceBlogTitle": "What Are AI Voice Agents? A UK Business Guide",
+  "youtubeTitle": "How an AI Voice Agent Actually Works",
+  "youtubeDescription": "Speech recognition, natural language processing, integration logic. Three linked systems, not a script reader or an IVR menu.",
+  "youtubeTags": ["#Shorts", "#VoiceAI", "#AIAutomation", "#UKBusiness", "#SmallBusiness"],
+  "geo_answer": "An AI voice agent works using three linked systems: speech recognition to convert spoken words into text, natural language processing to determine the caller's intent, and integration logic that connects to a calendar, CRM or job management system to act on the request in real time.",
+  "geo_takeaways": [
+    "AI voice agents differ from traditional answering services and IVR menus because they interpret intent rather than routing calls or matching pre-recorded options.",
+    "Integration into a business's actual calendar and CRM is what allows an AI voice agent to book appointments and log enquiries without human involvement.",
+    "A call handled by an AI voice agent is transcribed and actioned in real time, so a caller can get a booking confirmed in the same conversation rather than waiting for a callback."
+  ]
+}
