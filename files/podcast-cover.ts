@@ -38,157 +38,107 @@ function escapeHtml(text: string): string {
     .replace(/>/g, "&gt;");
 }
 
-function buildCoverHtml(episodeTitle: string, episodeNumber?: number): string {
-  const epLabel = episodeNumber ? `EPISODE ${episodeNumber}` : "NEW EPISODE";
-  // Truncate title for display
+function buildCoverHtml(episodeTitle: string, _episodeNumber?: number): string {
+  // Dark minimalist "QUICK TIPS" layout (Andy's preferred style):
+  // charcoal card, coral quote mark, QUICK (cream) TIPS (coral), title in cream,
+  // ANDY NORMAN + coral dash bottom-left, antekautomation.com bottom-right.
   const title =
-    episodeTitle.length > 60
-      ? episodeTitle.slice(0, 57) + "..."
-      : episodeTitle;
+    episodeTitle.length > 70 ? episodeTitle.slice(0, 67) + "..." : episodeTitle;
 
   return `<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@700&display=swap');
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     width: 3000px; height: 3000px; overflow: hidden;
-    background: ${CREAM};
-    font-family: 'Inter', sans-serif;
-    position: relative;
+    background: #171614;
+    font-family: 'DM Sans', sans-serif;
   }
-
-  /* Coral left column */
-  .col-left {
-    position: absolute;
-    left: 0; top: 0;
-    width: 1200px; height: 3000px;
-    background: ${CORAL};
-    border-right: 8px solid ${CHARCOAL};
-  }
-
-  /* Brand name */
-  .brand {
-    position: absolute;
-    top: 160px; left: 120px;
-    font-size: 72px; font-weight: 900;
-    color: ${CREAM};
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    line-height: 1.2;
-  }
-
-  /* Series label */
-  .series {
-    position: absolute;
-    top: 420px; left: 120px;
+  .card {
+    position: absolute; inset: 60px;
     background: ${CHARCOAL};
-    padding: 20px 40px;
-    font-size: 48px; font-weight: 700;
-    color: ${CREAM};
-    letter-spacing: 0.12em;
+    border-radius: 72px;
+    padding: 220px 200px;
+    display: flex;
+    flex-direction: column;
+  }
+  .kicker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 60px; font-weight: 700;
+    color: ${SAGE};
+    letter-spacing: 0.30em;
     text-transform: uppercase;
   }
-
-  /* Large decorative "A" */
-  .deco-a {
-    position: absolute;
-    bottom: 200px; left: 100px;
-    font-size: 800px; font-weight: 900;
-    color: rgba(232,220,200,0.15);
-    line-height: 1;
-  }
-
-  /* Episode label */
-  .ep-label {
-    position: absolute;
-    top: 160px; left: 1360px;
-    font-size: 40px; font-weight: 700;
+  .quote {
     color: ${CORAL};
+    font-family: 'Outfit', sans-serif;
+    font-size: 300px; font-weight: 900;
+    line-height: 0.7;
+    margin-top: 90px; margin-bottom: 10px;
+    height: 150px;
+  }
+  .qt {
+    font-family: 'Outfit', sans-serif;
+    font-size: 176px; font-weight: 900;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    color: ${CREAM};
+  }
+  .qt .tips { color: ${CORAL}; }
+  .title {
+    font-family: 'Outfit', sans-serif;
+    margin-top: 150px;
+    font-size: 150px; font-weight: 900;
+    line-height: 1.04;
+    letter-spacing: -0.005em;
+    text-transform: uppercase;
+    color: ${CREAM};
+    max-width: 2200px;
+  }
+  .spacer { flex: 1; }
+  .footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .sig-dash {
+    width: 120px; height: 14px;
+    background: ${CORAL};
+    margin-bottom: 34px;
+  }
+  .sig-name {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 54px; font-weight: 700;
+    color: ${CREAM};
     letter-spacing: 0.18em;
     text-transform: uppercase;
   }
-
-  /* Episode title */
-  .ep-title {
-    position: absolute;
-    top: 320px; left: 1360px; right: 160px;
-    font-size: 120px; font-weight: 900;
-    color: ${CHARCOAL};
-    line-height: 1.1;
-    letter-spacing: -0.01em;
-    border-left: 16px solid ${CORAL};
-    padding-left: 48px;
-  }
-
-  /* Sage accent block */
-  .sage-block {
-    position: absolute;
-    top: 0; right: 0;
-    width: 400px; height: 400px;
-    background: ${SAGE};
-    border-left: 8px solid ${CHARCOAL};
-    border-bottom: 8px solid ${CHARCOAL};
-  }
-
-  /* Bottom bar */
-  .bottom-bar {
-    position: absolute;
-    bottom: 0; left: 1208px; right: 0;
-    height: 240px;
-    background: ${CHARCOAL};
-    border-top: 8px solid ${CHARCOAL};
-    display: flex;
-    align-items: center;
-    padding: 0 120px;
-    justify-content: space-between;
-  }
-  .bottom-url {
-    color: ${CREAM};
-    font-size: 52px; font-weight: 700;
-    letter-spacing: 0.04em;
-  }
-  .bottom-phone {
+  .site {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 48px; font-weight: 700;
     color: ${SAGE};
-    font-size: 44px; font-weight: 600;
-  }
-
-  /* Waveform bars (decorative) */
-  .wave {
-    position: absolute;
-    bottom: 400px; left: 1360px;
-    display: flex;
-    gap: 14px;
-    align-items: flex-end;
-  }
-  .wave-bar {
-    background: ${CORAL}; opacity: 0.3;
-    width: 18px;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
   }
 </style>
 </head>
 <body>
-  <div class="col-left">
-    <div class="brand">Antek<br>Automation</div>
-    <div class="series">Quick Tips Podcast</div>
-    <div class="deco-a">A</div>
-  </div>
-
-  <div class="sage-block"></div>
-
-  <div class="ep-label">${epLabel}</div>
-  <div class="ep-title">${escapeHtml(title)}</div>
-
-  <div class="wave">
-    ${[40,65,90,55,110,70,95,50,80,100,60,85,45,75,105,55,90,65,80,50,70,95,60,85,45,110,75,90]
-      .map(h => `<div class="wave-bar" style="height:${h * 3}px"></div>`).join("")}
-  </div>
-
-  <div class="bottom-bar">
-    <span class="bottom-url">antekautomation.com</span>
-    <span class="bottom-phone">0333 038 9960</span>
+  <div class="card">
+    <div class="kicker">Antek&nbsp;&nbsp;/&nbsp;&nbsp;Automation</div>
+    <div class="quote">&ldquo;</div>
+    <div class="qt">Quick <span class="tips">Tips</span></div>
+    <div class="title">${escapeHtml(title)}</div>
+    <div class="spacer"></div>
+    <div class="footer">
+      <div>
+        <div class="sig-dash"></div>
+        <div class="sig-name">Andy Norman</div>
+      </div>
+      <div class="site">antekautomation.com</div>
+    </div>
   </div>
 </body>
 </html>`;

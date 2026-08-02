@@ -1,0 +1,121 @@
+{
+  "ep_21": {
+    "title": "Why AI Costs Balloon, and How to Avoid It",
+    "slug": "why-ai-costs-balloon",
+    "episodeNumber": 29,
+    "durationMin": 2.85,
+    "scheduled": "2026-08-13T07:00:00.000Z",
+    "cover": "/data/tools/content-machine/files/output/podcast/covers/why-ai-costs-balloon-cover.png",
+    "rsscom": {
+      "episode_id": 3041086,
+      "status": "scheduled",
+      "audio_url": null,
+      "audio_upload_id": "9f60948b-53b7-4fd8-b251-01eb43d7ed5a",
+      "cover_upload_id": "9bcfa633-ca1c-4f88-ad95-7303924e13b3",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/3041086/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/3041086"
+    }
+  },
+  "ep_22": {
+    "title": "If Lloyds Trusts AI, Should You?",
+    "slug": "if-lloyds-trusts-ai",
+    "episodeNumber": 30,
+    "durationMin": 3.05,
+    "scheduled": "2026-08-15T07:00:00.000Z",
+    "cover": "/data/tools/content-machine/files/output/podcast/covers/if-lloyds-trusts-ai-cover.png",
+    "rsscom": {
+      "episode_id": 3041089,
+      "status": "scheduled",
+      "audio_url": null,
+      "audio_upload_id": "b13723bc-3af5-4ce2-b657-67e1499dfe11",
+      "cover_upload_id": "f2035ddc-4da3-493f-b38d-6fee905a1e0c",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/3041089/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/3041089"
+    }
+  },
+  "ep_23": {
+    "title": "Does the AI Model Brand Even Matter?",
+    "slug": "does-the-ai-model-brand-matter",
+    "episodeNumber": 31,
+    "durationMin": 2.92,
+    "scheduled": "2026-08-17T07:00:00.000Z",
+    "cover": "/data/tools/content-machine/files/output/podcast/covers/does-the-ai-model-brand-matter-cover.png",
+    "rsscom": {
+      "episode_id": 3041092,
+      "status": "scheduled",
+      "audio_url": null,
+      "audio_upload_id": "1043aaec-4470-45b1-97b0-c7525de7ad74",
+      "cover_upload_id": "84543210-2a1b-48e8-a9ea-74497cd93085",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/3041092/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/3041092"
+    }
+  },
+  "ep_24": {
+    "title": "When Your Customer's AI Calls You",
+    "slug": "when-your-customers-ai-calls-you",
+    "episodeNumber": 32,
+    "durationMin": 3.07,
+    "scheduled": "2026-08-19T07:00:00.000Z",
+    "cover": "/data/tools/content-machine/files/output/podcast/covers/when-your-customers-ai-calls-you-cover.png",
+    "rsscom": {
+      "episode_id": 3041095,
+      "status": "scheduled",
+      "audio_url": null,
+      "audio_upload_id": "8260c210-9220-4b93-83bb-39d4ed8cc7bd",
+      "cover_upload_id": "3e7089ce-e195-4921-8f6f-2e43664a6c5a",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/3041095/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/3041095"
+    }
+  },
+  "ep_25": {
+    "title": "How Voice Agents Verify Who's Calling",
+    "slug": "how-voice-agents-verify-callers",
+    "episodeNumber": 33,
+    "durationMin": 2.85,
+    "scheduled": "2026-08-21T07:00:00.000Z",
+    "cover": "/data/tools/content-machine/files/output/podcast/covers/how-voice-agents-verify-callers-cover.png",
+    "rsscom": {
+      "episode_id": 3041109,
+      "status": "scheduled",
+      "audio_url": null,
+      "audio_upload_id": "b261a41e-d1ca-4713-b960-0b83f511a8b3",
+      "cover_upload_id": "70215170-4526-4994-baa1-6d69e6397d52",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/3041109/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/3041109"
+    }
+  },
+  "ep_26": {
+    "title": "Do You Need New Gadgets for AI?",
+    "slug": "do-you-need-new-gadgets-for-ai",
+    "episodeNumber": 34,
+    "durationMin": 2.64,
+    "scheduled": "2026-08-23T07:00:00.000Z",
+    "cover": "/data/tools/content-machine/files/output/podcast/covers/do-you-need-new-gadgets-for-ai-cover.png",
+    "rsscom": {
+      "episode_id": 3041125,
+      "status": "scheduled",
+      "audio_url": null,
+      "audio_upload_id": "e7acdbae-a063-4ebe-bc4d-38a7abd990b7",
+      "cover_upload_id": "c1e32c4c-e4bf-49b9-b0c6-93f3ece251ed",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/3041125/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/3041125"
+    }
+  },
+  "ep_27": {
+    "title": "AI Safety, What It Means for Your Business",
+    "slug": "ai-safety-for-your-business",
+    "episodeNumber": 35,
+    "durationMin": 2.77,
+    "scheduled": "2026-08-25T07:00:00.000Z",
+    "cover": "/data/tools/content-machine/files/output/podcast/covers/ai-safety-for-your-business-cover.png",
+    "rsscom": {
+      "episode_id": 3041128,
+      "status": "scheduled",
+      "audio_url": null,
+      "audio_upload_id": "ff914bee-a872-4d66-aee3-e5242cc14900",
+      "cover_upload_id": "b4f6b4dd-27a9-4b86-9ed8-5ba867c57538",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/3041128/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/3041128"
+    }
+  }
+}
