@@ -42,7 +42,7 @@ function escapeHtml(text: string): string {
 
 // ── Template 1: STAT CARD ────────────────────────────────────
 function statCardHtml(data: StatImageData): string {
-  return `<div style="width:1200px;height:900px;background:${SAGE};position:relative;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+  return `<div style="width:1200px;height:900px;background:${SAGE};position:relative;font-family:'DM Sans',sans-serif;overflow:hidden">
   <!-- Offset shadow -->
   <div style="position:absolute;left:88px;top:88px;width:1040px;height:700px;background:${CHARCOAL}"></div>
   <!-- Main card -->
@@ -51,8 +51,8 @@ function statCardHtml(data: StatImageData): string {
     <div style="height:12px;background:${CORAL}"></div>
     <!-- Content -->
     <div style="padding:56px 64px">
-      <div style="font-size:180px;font-weight:900;color:${CORAL};letter-spacing:-8px;line-height:0.95">${escapeHtml(data.stat_number)}</div>
-      <div style="font-size:52px;font-weight:800;color:${CHARCOAL};margin-top:20px;line-height:1.15">${escapeHtml(data.stat_context)}</div>
+      <div style="font-family:'Outfit',sans-serif;font-size:180px;font-weight:900;color:${CORAL};letter-spacing:-8px;line-height:0.95">${escapeHtml(data.stat_number)}</div>
+      <div style="font-family:'Outfit',sans-serif;font-size:52px;font-weight:800;color:${CHARCOAL};margin-top:20px;line-height:1.15">${escapeHtml(data.stat_context)}</div>
       <div style="width:440px;height:6px;background:${CORAL};margin:38px 0"></div>
       <div style="font-size:38px;font-weight:600;color:${CHARCOAL};line-height:1.25">${escapeHtml(data.supporting_line_1)}</div>
       <div style="font-size:38px;font-weight:600;color:${CHARCOAL};margin-top:10px;line-height:1.25">${escapeHtml(data.supporting_line_2)}</div>
@@ -62,25 +62,25 @@ function statCardHtml(data: StatImageData): string {
   </div>
   <!-- Footer bar -->
   <div style="position:absolute;bottom:0;left:0;right:0;height:110px;background:${CHARCOAL};display:flex;align-items:center;justify-content:space-between;padding:0 72px">
-    <div style="font-size:24px;font-weight:700;color:${CREAM}">antekautomation.com</div>
-    <div style="font-size:22px;font-weight:500;color:${SAGE}">0333 038 9960</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:24px;font-weight:700;color:${CREAM}">antekautomation.com</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:700;color:${SAGE}">0333 038 9960</div>
   </div>
 </div>`;
 }
 
 // ── Template 2: TIP CARD ─────────────────────────────────────
 function tipCardHtml(data: TipImageData): string {
-  return `<div style="width:1200px;height:900px;background:${CHARCOAL};position:relative;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+  return `<div style="width:1200px;height:900px;background:${CHARCOAL};position:relative;font-family:'DM Sans',sans-serif;overflow:hidden">
   <!-- Coral block top-left -->
   <div style="position:absolute;top:0;left:0;width:300px;height:180px;background:${CORAL};display:flex;align-items:center;justify-content:center">
-    <div style="font-size:56px;font-weight:900;color:${CREAM};letter-spacing:10px">TIP</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:56px;font-weight:700;color:${CREAM};letter-spacing:10px">TIP</div>
   </div>
   <!-- Card offset shadow -->
   <div style="position:absolute;left:88px;top:228px;width:1040px;height:540px;background:${CHARCOAL};border:4px solid ${CORAL}"></div>
   <!-- Main card -->
   <div style="position:absolute;left:72px;top:212px;width:1040px;height:540px;background:${CREAM};border:4px solid ${CORAL}">
     <div style="padding:56px 72px">
-      <div style="font-size:62px;font-weight:900;color:${CHARCOAL};line-height:1.15">${escapeHtml(data.tip_headline)}</div>
+      <div style="font-family:'Outfit',sans-serif;font-size:62px;font-weight:900;color:${CHARCOAL};line-height:1.15">${escapeHtml(data.tip_headline)}</div>
       <div style="font-size:36px;font-weight:600;color:${CHARCOAL};opacity:0.75;margin-top:40px;line-height:1.3">${escapeHtml(data.tip_detail_1)}</div>
       <div style="font-size:36px;font-weight:600;color:${CHARCOAL};opacity:0.75;margin-top:12px;line-height:1.3">${escapeHtml(data.tip_detail_2)}</div>
       <div style="width:360px;height:6px;background:${CORAL};margin-top:40px"></div>
@@ -91,15 +91,15 @@ function tipCardHtml(data: TipImageData): string {
   <div style="position:absolute;bottom:90px;right:0;width:200px;height:110px;background:${SAGE};opacity:0.6"></div>
   <!-- Footer bar (coral) -->
   <div style="position:absolute;bottom:0;left:0;width:840px;height:110px;background:${CORAL};display:flex;align-items:center;justify-content:space-between;padding:0 72px">
-    <div style="font-size:24px;font-weight:700;color:${CREAM}">antekautomation.com</div>
-    <div style="font-size:20px;font-weight:500;color:${CREAM};opacity:0.8">0333 038 9960</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:24px;font-weight:700;color:${CREAM}">antekautomation.com</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:700;color:${CREAM};opacity:0.8">0333 038 9960</div>
   </div>
 </div>`;
 }
 
 // ── Template 3: QUOTE CARD ───────────────────────────────────
 function quoteCardHtml(data: QuoteImageData): string {
-  return `<div style="width:1200px;height:900px;background:${CREAM};position:relative;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+  return `<div style="width:1200px;height:900px;background:${CREAM};position:relative;font-family:'DM Sans',sans-serif;overflow:hidden">
   <!-- Coral left strip -->
   <div style="position:absolute;left:0;top:0;width:36px;height:900px;background:${CORAL}"></div>
   <!-- Charcoal header bar -->
@@ -108,9 +108,9 @@ function quoteCardHtml(data: QuoteImageData): string {
   <div style="position:absolute;left:90px;top:70px;font-family:Georgia,serif;font-size:360px;font-weight:700;color:${CORAL};opacity:0.15;line-height:1">&ldquo;</div>
   <!-- Quote text -->
   <div style="position:absolute;left:140px;top:210px;right:160px">
-    <div style="font-size:60px;font-weight:900;color:${CHARCOAL};line-height:1.18">${escapeHtml(data.quote_line_1)}</div>
-    <div style="font-size:60px;font-weight:900;color:${CHARCOAL};line-height:1.18">${escapeHtml(data.quote_line_2)}</div>
-    <div style="font-size:60px;font-weight:900;color:${CORAL};line-height:1.18">${escapeHtml(data.quote_line_3)}</div>
+    <div style="font-family:'Outfit',sans-serif;font-size:60px;font-weight:900;color:${CHARCOAL};line-height:1.18">${escapeHtml(data.quote_line_1)}</div>
+    <div style="font-family:'Outfit',sans-serif;font-size:60px;font-weight:900;color:${CHARCOAL};line-height:1.18">${escapeHtml(data.quote_line_2)}</div>
+    <div style="font-family:'Outfit',sans-serif;font-size:60px;font-weight:900;color:${CORAL};line-height:1.18">${escapeHtml(data.quote_line_3)}</div>
     <div style="width:120px;height:6px;background:${CORAL};margin:36px 0"></div>
     <div style="font-size:36px;font-weight:600;color:${CHARCOAL};opacity:0.75;line-height:1.3">${escapeHtml(data.continuation_1)}</div>
     <div style="font-size:36px;font-weight:600;color:${CHARCOAL};opacity:0.75;margin-top:10px;line-height:1.3">${escapeHtml(data.continuation_2)}</div>
@@ -122,24 +122,24 @@ function quoteCardHtml(data: QuoteImageData): string {
   <!-- Geometric blocks bottom-right -->
   <div style="position:absolute;bottom:0;right:0;width:300px;height:200px;background:${SAGE}"></div>
   <div style="position:absolute;bottom:0;right:0;width:240px;height:150px;background:${CHARCOAL};display:flex;flex-direction:column;align-items:center;justify-content:center">
-    <div style="font-size:18px;font-weight:600;color:${CREAM}">antekautomation.com</div>
-    <div style="font-size:16px;font-weight:400;color:${SAGE};margin-top:6px">0333 038 9960</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:${CREAM}">antekautomation.com</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;color:${SAGE};margin-top:6px">0333 038 9960</div>
   </div>
 </div>`;
 }
 
 // ── Template 4: QUESTION CARD ────────────────────────────────
 function questionCardHtml(data: QuestionImageData): string {
-  return `<div style="width:1200px;height:900px;background:${CHARCOAL};position:relative;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+  return `<div style="width:1200px;height:900px;background:${CHARCOAL};position:relative;font-family:'DM Sans',sans-serif;overflow:hidden">
   <!-- Coral block top-right -->
   <div style="position:absolute;top:0;right:0;width:340px;height:280px;background:${CORAL};overflow:hidden">
     <div style="position:absolute;top:10px;right:30px;font-family:Georgia,serif;font-size:260px;font-weight:700;color:${CREAM};opacity:0.25;line-height:1">?</div>
   </div>
   <!-- Question text -->
   <div style="position:absolute;left:90px;top:230px;right:90px">
-    <div style="font-size:78px;font-weight:900;color:${CREAM};line-height:1.12">${escapeHtml(data.question_line_1)}</div>
-    <div style="font-size:78px;font-weight:900;color:${CREAM};line-height:1.12">${escapeHtml(data.question_line_2)}</div>
-    <div style="font-size:78px;font-weight:900;color:${CORAL};line-height:1.12">${escapeHtml(data.question_line_3)}</div>
+    <div style="font-family:'Outfit',sans-serif;font-size:78px;font-weight:900;color:${CREAM};line-height:1.12">${escapeHtml(data.question_line_1)}</div>
+    <div style="font-family:'Outfit',sans-serif;font-size:78px;font-weight:900;color:${CREAM};line-height:1.12">${escapeHtml(data.question_line_2)}</div>
+    <div style="font-family:'Outfit',sans-serif;font-size:78px;font-weight:900;color:${CORAL};line-height:1.12">${escapeHtml(data.question_line_3)}</div>
     <div style="width:460px;height:6px;background:${CORAL};margin:34px 0"></div>
     <div style="font-size:36px;font-weight:500;color:${CREAM};opacity:0.85;margin-top:18px;line-height:1.25">${escapeHtml(data.supporting_line_1)}</div>
     <div style="font-size:36px;font-weight:500;color:${CREAM};opacity:0.85;margin-top:10px;line-height:1.25">${escapeHtml(data.supporting_line_2)}</div>
@@ -148,10 +148,10 @@ function questionCardHtml(data: QuestionImageData): string {
   <div style="position:absolute;bottom:0;left:0;right:0;height:130px;background:${SAGE}"></div>
   <!-- Charcoal overlap block bottom-left -->
   <div style="position:absolute;bottom:0;left:0;width:780px;height:130px;background:${CHARCOAL};display:flex;align-items:center;padding:0 90px">
-    <div style="font-size:24px;font-weight:700;color:${CREAM}">antekautomation.com</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:24px;font-weight:700;color:${CREAM}">antekautomation.com</div>
   </div>
   <!-- Phone on sage section -->
-  <div style="position:absolute;bottom:45px;right:60px;font-size:22px;font-weight:600;color:${CHARCOAL}">0333 038 9960</div>
+  <div style="position:absolute;bottom:45px;right:60px;font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:700;color:${CHARCOAL}">0333 038 9960</div>
   <!-- Geometric square accents -->
   <div style="position:absolute;bottom:130px;left:740px;width:32px;height:32px;background:${CORAL}"></div>
   <div style="position:absolute;bottom:130px;left:780px;width:32px;height:32px;background:${CORAL};opacity:0.5"></div>
@@ -164,7 +164,7 @@ function questionCardHtml(data: QuestionImageData): string {
 const FULL_HTML_WRAPPER = (body: string) => `<!DOCTYPE html>
 <html>
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
   <style>* { margin: 0; padding: 0; box-sizing: border-box; }</style>
 </head>
 <body>${body}</body>

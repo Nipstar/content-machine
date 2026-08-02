@@ -46,16 +46,16 @@ function frameHTML(text: string, dark: boolean, attribution: boolean) {
   const fg = dark ? BRAND.cream : BRAND.ink;
   const grid = dark ? "rgba(255,255,255,0.035)" : "rgba(0,0,0,0.04)";
   return `<!doctype html><html><head><meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet"></head>
-<body style="margin:0"><div style="width:${W}px;height:${H}px;background:${bg};position:relative;overflow:hidden;font-family:'Inter',system-ui,sans-serif;
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet"></head>
+<body style="margin:0"><div style="width:${W}px;height:${H}px;background:${bg};position:relative;overflow:hidden;font-family:'DM Sans',sans-serif;
   background-image:linear-gradient(${grid} 1px,transparent 1px),linear-gradient(90deg,${grid} 1px,transparent 1px);background-size:120px 120px">
-  <div style="position:absolute;top:72px;left:120px;font-size:30px;font-weight:600;letter-spacing:8px;color:${BRAND.grey};text-transform:uppercase">ANTEK / AUTOMATION</div>
+  <div style="position:absolute;top:72px;left:120px;font-family:'JetBrains Mono',monospace;font-size:30px;font-weight:700;letter-spacing:8px;color:${BRAND.grey};text-transform:uppercase">ANTEK / AUTOMATION</div>
   <div style="position:absolute;top:150px;left:112px;font-size:200px;font-weight:900;color:${BRAND.coral};line-height:1;font-family:Georgia,serif">&ldquo;</div>
   <div style="position:absolute;left:120px;right:120px;top:320px;bottom:170px;display:flex;flex-direction:column;justify-content:center">
-    <div style="font-weight:900;font-size:${fontSize(text)}px;line-height:${attribution ? "1.05" : "1.0"};letter-spacing:-1px;text-transform:uppercase">${headline(text, fg)}</div>
+    <div style="font-family:'Outfit',sans-serif;font-weight:900;font-size:${fontSize(text)}px;line-height:${attribution ? "1.05" : "1.0"};letter-spacing:-1px;text-transform:uppercase">${headline(text, fg)}</div>
   </div>
   ${attribution ? `<div style="position:absolute;bottom:96px;left:120px;width:90px;height:12px;background:${BRAND.coral}"></div>` : ""}
-  <div style="position:absolute;bottom:72px;right:120px;font-size:26px;font-weight:600;letter-spacing:4px;color:${fg};text-transform:uppercase">BESPOKE AUTOMATION <span style="color:${BRAND.coral}">&bull;</span> SMBs <span style="color:${BRAND.coral}">&bull;</span> ANDOVER</div>
+  <div style="position:absolute;bottom:72px;right:120px;font-family:'JetBrains Mono',monospace;font-size:26px;font-weight:700;letter-spacing:4px;color:${fg};text-transform:uppercase">BESPOKE AUTOMATION <span style="color:${BRAND.coral}">&bull;</span> SMBs <span style="color:${BRAND.coral}">&bull;</span> ANDOVER</div>
 </div></body></html>`;
 }
 

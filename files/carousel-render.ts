@@ -97,15 +97,15 @@ function slideHTML(text: string, dark: boolean, isAttribution: boolean): string 
   const grid = dark ? "rgba(255,255,255,0.035)" : "rgba(0,0,0,0.04)";
   const fs = fontSize(plain(text));
   const lh = isAttribution ? "1.0" : "0.98";
-  const headline = `<div style="font-weight:900;font-size:${fs}px;line-height:${lh};letter-spacing:-0.5px;text-transform:uppercase">${headlineHTML(text, fg)}</div>`;
+  const headline = `<div style="font-family:'Outfit',sans-serif;font-weight:900;font-size:${fs}px;line-height:${lh};letter-spacing:-0.5px;text-transform:uppercase">${headlineHTML(text, fg)}</div>`;
 
   return `<!doctype html><html><head><meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
 </head><body style="margin:0">
-<div style="width:${SIZE}px;height:${SIZE}px;background:${bg};position:relative;font-family:'Inter',system-ui,sans-serif;overflow:hidden;
+<div style="width:${SIZE}px;height:${SIZE}px;background:${bg};position:relative;font-family:'DM Sans',system-ui,sans-serif;overflow:hidden;
   background-image:linear-gradient(${grid} 1px,transparent 1px),linear-gradient(90deg,${grid} 1px,transparent 1px);background-size:90px 90px">
 
-  <div style="position:absolute;top:64px;left:80px;font-size:26px;font-weight:600;letter-spacing:6px;color:${BRAND.grey};text-transform:uppercase">ANTEK / AUTOMATION</div>
+  <div style="position:absolute;top:64px;left:80px;font-family:'JetBrains Mono',monospace;font-size:26px;font-weight:700;letter-spacing:6px;color:${BRAND.grey};text-transform:uppercase">ANTEK / AUTOMATION</div>
 
   <div style="position:absolute;top:150px;left:74px;font-size:150px;font-weight:900;color:${BRAND.coral};line-height:1;font-family:Georgia,serif">&ldquo;</div>
 
@@ -117,7 +117,7 @@ function slideHTML(text: string, dark: boolean, isAttribution: boolean): string 
     ? `<div style="position:absolute;bottom:80px;left:80px"><div style="width:70px;height:10px;background:${BRAND.coral};margin-bottom:18px"></div></div>`
     : ""}
 
-  <div style="position:absolute;bottom:64px;right:80px;font-size:22px;font-weight:600;letter-spacing:3px;color:${dark ? BRAND.cream : BRAND.ink};text-transform:uppercase">BESPOKE AUTOMATION <span style="color:${BRAND.coral}">&bull;</span> SMBs <span style="color:${BRAND.coral}">&bull;</span> ANDOVER</div>
+  <div style="position:absolute;bottom:64px;right:80px;font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:700;letter-spacing:3px;color:${dark ? BRAND.cream : BRAND.ink};text-transform:uppercase">BESPOKE AUTOMATION <span style="color:${BRAND.coral}">&bull;</span> SMBs <span style="color:${BRAND.coral}">&bull;</span> ANDOVER</div>
 </div>
 </body></html>`;
 }

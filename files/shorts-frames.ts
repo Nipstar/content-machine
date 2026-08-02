@@ -11,7 +11,7 @@
  *   4. CTA    — Hardcoded Antek branding, CHARCOAL/CORAL split
  *
  * All templates: no rounded corners, no gradients, 4px borders minimum,
- * offset shadows via overlapping rectangles, 900-weight Inter, asymmetric layouts.
+ * offset shadows via overlapping rectangles, 900-weight Outfit, asymmetric layouts.
  */
 
 import puppeteer, { type Browser } from "puppeteer";
@@ -41,28 +41,28 @@ function escapeHtml(text: string): string {
 // Full-bleed CORAL background. Oversized bold question or stat in CREAM.
 // CHARCOAL geometric block bleeds off the right edge. "@AntekAutomation" at bottom.
 function hookTemplate(slide: ShortSlide): string {
-  return `<div style="width:1080px;height:1920px;background:${CORAL};position:relative;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+  return `<div style="width:1080px;height:1920px;background:${CORAL};position:relative;font-family:'DM Sans',sans-serif;overflow:hidden">
   <!-- CHARCOAL offset block bleeds right edge (asymmetric) -->
   <div style="position:absolute;top:0;right:-40px;width:380px;height:520px;background:${CHARCOAL}"></div>
   <!-- CREAM thin vertical strip left -->
   <div style="position:absolute;top:0;left:0;width:20px;height:1920px;background:${CREAM}"></div>
   <!-- HOOK label block top-left (on CREAM strip side) -->
   <div style="position:absolute;top:120px;left:60px;background:${CHARCOAL};padding:16px 36px">
-    <div style="font-size:28px;font-weight:900;color:${CREAM};letter-spacing:8px">QUICK TIPS</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:700;color:${CREAM};letter-spacing:8px">QUICK TIPS</div>
   </div>
   <!-- Main hook text — large, 900-weight, asymmetric placement -->
   <div style="position:absolute;top:340px;left:60px;right:80px">
-    <div style="font-size:96px;font-weight:900;color:${CREAM};line-height:1.05;letter-spacing:-3px">${escapeHtml(slide.text)}</div>
+    <div style="font-family:'Outfit',sans-serif;font-size:96px;font-weight:900;color:${CREAM};line-height:1.05;letter-spacing:-3px">${escapeHtml(slide.text)}</div>
   </div>
   <!-- CREAM accent bar -->
   <div style="position:absolute;bottom:320px;left:60px;width:280px;height:8px;background:${CREAM}"></div>
   <!-- Source label -->
-  <div style="position:absolute;bottom:240px;left:60px;font-size:26px;font-weight:600;color:${CREAM};opacity:0.7">antekautomation.com</div>
+  <div style="position:absolute;bottom:240px;left:60px;font-family:'JetBrains Mono',monospace;font-size:26px;font-weight:700;color:${CREAM};opacity:0.7">antekautomation.com</div>
   <!-- Bottom CHARCOAL footer bar -->
   <div style="position:absolute;bottom:0;left:0;right:0;height:160px;background:${CHARCOAL}">
     <!-- Coral accent square inside footer -->
     <div style="position:absolute;top:0;right:0;width:160px;height:160px;background:${CORAL}"></div>
-    <div style="position:absolute;top:48px;left:60px;font-size:36px;font-weight:900;color:${CREAM}">@AntekAutomation</div>
+    <div style="position:absolute;top:48px;left:60px;font-family:'JetBrains Mono',monospace;font-size:36px;font-weight:700;color:${CREAM}">@AntekAutomation</div>
   </div>
 </div>`;
 }
@@ -73,28 +73,28 @@ function hookTemplate(slide: ShortSlide): string {
 // CHARCOAL footer bar.
 function tipTemplate(slide: ShortSlide): string {
   const num = slide.tipNumber ?? 1;
-  return `<div style="width:1080px;height:1920px;background:${CREAM};position:relative;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+  return `<div style="width:1080px;height:1920px;background:${CREAM};position:relative;font-family:'DM Sans',sans-serif;overflow:hidden">
   <!-- SAGE left strip bleeding to edge -->
   <div style="position:absolute;top:0;left:0;width:56px;height:1920px;background:${SAGE}"></div>
   <!-- CORAL offset block behind number -->
   <div style="position:absolute;top:248px;left:40px;width:500px;height:440px;background:${CORAL};opacity:0.12"></div>
   <!-- Oversized tip number (partially off-left, anchored to SAGE strip) -->
-  <div style="position:absolute;top:180px;left:-20px;font-size:420px;font-weight:900;color:${CORAL};line-height:1;opacity:0.18">${num}</div>
+  <div style="position:absolute;top:180px;left:-20px;font-family:'Outfit',sans-serif;font-size:420px;font-weight:900;color:${CORAL};line-height:1;opacity:0.18">${num}</div>
   <!-- TIP NUMBER label -->
   <div style="position:absolute;top:220px;left:80px;background:${CORAL};padding:12px 28px">
-    <div style="font-size:28px;font-weight:900;color:${CREAM};letter-spacing:4px">TIP ${num}</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:700;color:${CREAM};letter-spacing:4px">TIP ${num}</div>
   </div>
   <!-- Tip text — strong, punchy, left-anchored past SAGE strip -->
   <div style="position:absolute;top:560px;left:80px;right:60px">
-    <div style="font-size:80px;font-weight:900;color:${CHARCOAL};line-height:1.1;letter-spacing:-2px">${escapeHtml(slide.text)}</div>
+    <div style="font-family:'Outfit',sans-serif;font-size:80px;font-weight:900;color:${CHARCOAL};line-height:1.1;letter-spacing:-2px">${escapeHtml(slide.text)}</div>
   </div>
   <!-- CORAL rule line -->
   <div style="position:absolute;bottom:280px;left:80px;width:320px;height:6px;background:${CORAL}"></div>
   <!-- CHARCOAL footer bar -->
   <div style="position:absolute;bottom:0;left:0;right:0;height:160px;background:${CHARCOAL};display:flex;align-items:center;padding:0 80px;justify-content:space-between">
-    <div style="font-size:30px;font-weight:700;color:${CREAM}">@AntekAutomation</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:30px;font-weight:700;color:${CREAM}">@AntekAutomation</div>
     <div style="width:12px;height:12px;background:${CORAL}"></div>
-    <div style="font-size:24px;font-weight:500;color:${SAGE}">antekautomation.com</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:24px;font-weight:700;color:${SAGE}">antekautomation.com</div>
   </div>
 </div>`;
 }
@@ -103,10 +103,10 @@ function tipTemplate(slide: ShortSlide): string {
 // CHARCOAL background. CORAL "THE TAKEAWAY" header block (asymmetric, top-left).
 // CREAM summary text, large. Coral geometric accents bottom-right.
 function summaryTemplate(slide: ShortSlide): string {
-  return `<div style="width:1080px;height:1920px;background:${CHARCOAL};position:relative;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+  return `<div style="width:1080px;height:1920px;background:${CHARCOAL};position:relative;font-family:'DM Sans',sans-serif;overflow:hidden">
   <!-- CORAL header block top, bleeds left -->
   <div style="position:absolute;top:120px;left:0;width:760px;height:120px;background:${CORAL};display:flex;align-items:center;padding:0 60px">
-    <div style="font-size:36px;font-weight:900;color:${CREAM};letter-spacing:10px">THE TAKEAWAY</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:36px;font-weight:700;color:${CREAM};letter-spacing:10px">THE TAKEAWAY</div>
   </div>
   <!-- CREAM offset block behind header (shadow) -->
   <div style="position:absolute;top:136px;left:16px;width:760px;height:120px;background:${CREAM};opacity:0.06"></div>
@@ -114,7 +114,7 @@ function summaryTemplate(slide: ShortSlide): string {
   <div style="position:absolute;top:0;right:0;width:20px;height:1920px;background:${SAGE};opacity:0.4"></div>
   <!-- Summary text — large, CREAM, slightly inset from SAGE strip -->
   <div style="position:absolute;top:440px;left:60px;right:80px">
-    <div style="font-size:86px;font-weight:900;color:${CREAM};line-height:1.1;letter-spacing:-2px">${escapeHtml(slide.text)}</div>
+    <div style="font-family:'Outfit',sans-serif;font-size:86px;font-weight:900;color:${CREAM};line-height:1.1;letter-spacing:-2px">${escapeHtml(slide.text)}</div>
   </div>
   <!-- Geometric coral accent squares bottom-right -->
   <div style="position:absolute;bottom:240px;right:60px;width:80px;height:80px;background:${CORAL}"></div>
@@ -122,7 +122,7 @@ function summaryTemplate(slide: ShortSlide): string {
   <div style="position:absolute;bottom:160px;right:60px;width:80px;height:80px;background:${CORAL};opacity:0.25"></div>
   <!-- Bottom footer -->
   <div style="position:absolute;bottom:0;left:0;right:0;height:160px;background:${CORAL};display:flex;align-items:center;padding:0 60px">
-    <div style="font-size:34px;font-weight:900;color:${CREAM}">@AntekAutomation</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:34px;font-weight:700;color:${CREAM}">@AntekAutomation</div>
   </div>
 </div>`;
 }
@@ -131,7 +131,7 @@ function summaryTemplate(slide: ShortSlide): string {
 // Hardcoded Antek branding. CHARCOAL top, CORAL bottom split.
 // "@AntekAutomation" dominates. URL + phone below.
 function ctaTemplate(): string {
-  return `<div style="width:1080px;height:1920px;background:${CHARCOAL};position:relative;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+  return `<div style="width:1080px;height:1920px;background:${CHARCOAL};position:relative;font-family:'DM Sans',sans-serif;overflow:hidden">
   <!-- CREAM thin top strip -->
   <div style="position:absolute;top:0;left:0;right:0;height:16px;background:${CREAM}"></div>
   <!-- CORAL large block bottom half -->
@@ -143,19 +143,19 @@ function ctaTemplate(): string {
   <div style="position:absolute;top:60px;right:100px;width:200px;height:200px;background:${SAGE};opacity:0.1"></div>
   <!-- "FOLLOW US" label top -->
   <div style="position:absolute;top:160px;left:60px;background:${CORAL};padding:14px 32px">
-    <div style="font-size:28px;font-weight:900;color:${CREAM};letter-spacing:6px">FOLLOW US</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:700;color:${CREAM};letter-spacing:6px">FOLLOW US</div>
   </div>
   <!-- Main handle — massive -->
   <div style="position:absolute;top:360px;left:60px;right:60px">
-    <div style="font-size:110px;font-weight:900;color:${CREAM};line-height:1;letter-spacing:-4px">@Antek<br>Automation</div>
+    <div style="font-family:'Outfit',sans-serif;font-size:110px;font-weight:900;color:${CREAM};line-height:1;letter-spacing:-4px">@Antek<br>Automation</div>
   </div>
   <!-- URL on CORAL section -->
   <div style="position:absolute;bottom:540px;left:60px;right:60px">
-    <div style="font-size:44px;font-weight:700;color:${CREAM}">antekautomation.com</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:44px;font-weight:700;color:${CREAM}">antekautomation.com</div>
   </div>
   <!-- Phone number -->
   <div style="position:absolute;bottom:440px;left:60px">
-    <div style="font-size:36px;font-weight:500;color:${CREAM};opacity:0.85">0333 038 9960</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:36px;font-weight:700;color:${CREAM};opacity:0.85">0333 038 9960</div>
   </div>
   <!-- Bottom CHARCOAL bar -->
   <div style="position:absolute;bottom:0;left:0;right:0;height:180px;background:${CHARCOAL};display:flex;align-items:center;padding:0 60px">
@@ -168,6 +168,7 @@ function ctaTemplate(): string {
 const FULL_HTML_WRAPPER = (body: string) => `<!DOCTYPE html>
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
   <style>* { margin: 0; padding: 0; box-sizing: border-box; }</style>
 </head>
 <body style="background:#000">${body}</body>
@@ -191,7 +192,7 @@ async function renderTemplate(html: string): Promise<Buffer> {
   const page = await browser.newPage();
   // 1080×1920 at 1x — CSS px = output px
   await page.setViewport({ width: 1080, height: 1920, deviceScaleFactor: 1 });
-  await page.setContent(FULL_HTML_WRAPPER(html), { waitUntil: "domcontentloaded" });
+  await page.setContent(FULL_HTML_WRAPPER(html), { waitUntil: "networkidle0" });
   const screenshot = await page.screenshot({ type: "png" });
   await page.close();
   return Buffer.from(screenshot);

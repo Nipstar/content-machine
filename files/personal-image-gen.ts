@@ -8,7 +8,7 @@
  *
  * Design: neo-brutalist, same system as Shorts frames and GBP images.
  * Coral/cream/sage/charcoal. No rounded corners. No gradients.
- * Thick borders, offset shadows, 900-weight Inter, asymmetric blocks.
+ * Thick borders, offset shadows, 900-weight Outfit, asymmetric blocks.
  *
  * Upload: Cloudflare R2 via REST API (same as GBP images).
  */
@@ -32,7 +32,7 @@ function esc(t: string): string {
 }
 
 const FONT = `<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;900&display=swap" rel="stylesheet">`;
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">`;
 
 // ── LANDSCAPE 1200×628 ─────────────────────────────────────────────────────
 // CORAL left panel (60%), CHARCOAL right panel (40%).
@@ -43,7 +43,7 @@ function landscapeHtml(hook: string, topic: string): string {
   const fontSize = len < 60 ? 68 : len < 100 ? 54 : len < 140 ? 44 : 36;
 
   return `<!DOCTYPE html><html><head><meta charset="UTF-8">${FONT}
-<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter','Arial Black',sans-serif}</style>
+<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'DM Sans','Arial Black',sans-serif}</style>
 </head><body>
 <div style="width:1200px;height:628px;background:${CORAL};position:relative;overflow:hidden;display:flex">
   <!-- Shadow offset block -->
@@ -52,10 +52,10 @@ function landscapeHtml(hook: string, topic: string): string {
   <div style="width:720px;height:628px;position:relative;display:flex;flex-direction:column;justify-content:center;padding:52px 56px;z-index:2">
     <!-- Top label -->
     <div style="background:${CHARCOAL};display:inline-block;padding:8px 18px;margin-bottom:28px;align-self:flex-start">
-      <span style="font-size:12px;font-weight:900;color:${CREAM};letter-spacing:5px">ANDY NORMAN</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:${CREAM};letter-spacing:5px">ANDY NORMAN</span>
     </div>
     <!-- Hook text -->
-    <div style="font-size:${fontSize}px;font-weight:900;color:${CREAM};line-height:1.1;letter-spacing:-1px">${esc(hook)}</div>
+    <div style="font-family:'Outfit',sans-serif;font-size:${fontSize}px;font-weight:900;color:${CREAM};line-height:1.1;letter-spacing:-1px">${esc(hook)}</div>
     <!-- Rule -->
     <div style="width:80px;height:4px;background:${CREAM};margin-top:28px;opacity:0.6"></div>
   </div>
@@ -70,12 +70,12 @@ function landscapeHtml(hook: string, topic: string): string {
     <div style="width:48px;height:48px;background:${CORAL};opacity:0.4;margin-top:8px;margin-left:16px"></div>
     <!-- Bottom: site -->
     <div style="position:absolute;bottom:40px;left:44px">
-      <div style="font-size:14px;font-weight:900;color:${CREAM};opacity:0.7">antekautomation.com</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;color:${CREAM};opacity:0.7">antekautomation.com</div>
     </div>
   </div>
   <!-- Bottom bar across full width -->
   <div style="position:absolute;bottom:0;left:0;width:720px;height:52px;background:${CHARCOAL};display:flex;align-items:center;padding:0 56px">
-    <span style="font-size:14px;font-weight:900;color:${CREAM};letter-spacing:1px">Antek Automation · AI for UK Service Businesses</span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;color:${CREAM};letter-spacing:1px">Antek Automation · AI for UK Service Businesses</span>
   </div>
 </div>
 </body></html>`;
@@ -88,7 +88,7 @@ function squareHtml(hook: string, topic: string): string {
   const fontSize = len < 60 ? 80 : len < 100 ? 64 : len < 140 ? 52 : 42;
 
   return `<!DOCTYPE html><html><head><meta charset="UTF-8">${FONT}
-<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter','Arial Black',sans-serif}</style>
+<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'DM Sans','Arial Black',sans-serif}</style>
 </head><body>
 <div style="width:1080px;height:1080px;background:${CREAM};position:relative;overflow:hidden">
   <!-- CORAL top strip -->
@@ -98,15 +98,15 @@ function squareHtml(hook: string, topic: string): string {
   <!-- Top label in coral strip -->
   <div style="position:absolute;top:0;left:0;right:0;height:120px;display:flex;align-items:center;padding:0 60px;z-index:2">
     <div style="background:${CHARCOAL};padding:10px 20px">
-      <span style="font-size:13px;font-weight:900;color:${CREAM};letter-spacing:6px">ANDY NORMAN</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;color:${CREAM};letter-spacing:6px">ANDY NORMAN</span>
     </div>
-    <div style="margin-left:auto;font-size:13px;font-weight:600;color:${CREAM};opacity:0.7;letter-spacing:2px">ANTEK AUTOMATION</div>
+    <div style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;color:${CREAM};opacity:0.7;letter-spacing:2px">ANTEK AUTOMATION</div>
   </div>
   <!-- SAGE thin left strip -->
   <div style="position:absolute;top:120px;left:0;width:20px;bottom:100px;background:${SAGE}"></div>
   <!-- Main hook text -->
   <div style="position:absolute;top:160px;left:60px;right:60px;bottom:160px;display:flex;align-items:center">
-    <div style="font-size:${fontSize}px;font-weight:900;color:${CHARCOAL};line-height:1.15;letter-spacing:-2px">${esc(hook)}</div>
+    <div style="font-family:'Outfit',sans-serif;font-size:${fontSize}px;font-weight:900;color:${CHARCOAL};line-height:1.15;letter-spacing:-2px">${esc(hook)}</div>
   </div>
   <!-- Coral geometric accent bottom-right -->
   <div style="position:absolute;bottom:140px;right:60px;width:60px;height:60px;background:${CORAL}"></div>
@@ -114,7 +114,7 @@ function squareHtml(hook: string, topic: string): string {
   <!-- CHARCOAL footer bar -->
   <div style="position:absolute;bottom:0;left:0;right:0;height:100px;background:${CHARCOAL};display:flex;align-items:center;padding:0 60px;justify-content:space-between">
     <div style="font-size:16px;font-weight:900;color:${CREAM}">${esc(topic.substring(0, 55))}${topic.length > 55 ? '...' : ''}</div>
-    <div style="font-size:14px;font-weight:600;color:${SAGE}">antekautomation.com</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;color:${SAGE}">antekautomation.com</div>
   </div>
 </div>
 </body></html>`;

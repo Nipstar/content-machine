@@ -10,7 +10,7 @@
  *   - No rounded corners, no gradients, no soft shadows
  *   - Brand colours: coral #FF5C3A, cream #F0EBE0, sage #97958F, charcoal #2B2B2B
  *   - Thick borders (3-4px), offset drop shadows via overlapping rectangles
- *   - 900-weight Inter headings, 600-weight body
+ *   - 900-weight Outfit headings, DM Sans body, JetBrains Mono labels
  *   - Asymmetric layouts, overlapping geometric blocks that bleed to edges
  *
  * Output: PNG files in output/cards/ named [slug]_[type]_[size].png
@@ -58,11 +58,11 @@ function escapeHtml(text: string): string {
     .replace(/'/g, "&#39;");
 }
 
-// ── HTML wrapper (loads Inter from Google Fonts) ──────────────
+// ── HTML wrapper (loads Antek brand fonts from Google Fonts) ──────────────
 const htmlWrap = (body: string) => `<!DOCTYPE html>
 <html>
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
   <style>* { margin: 0; padding: 0; box-sizing: border-box; }</style>
 </head>
 <body style="background:#000">${body}</body>
@@ -80,8 +80,8 @@ function brandingBlock(
   const textColour = onDark ? CREAM : CHARCOAL;
   const barColour = CORAL;
   return `<div style="position:absolute;top:${top}px;right:${right}px;width:${width}px;text-align:right">
-  <div style="font-size:${Math.round(width * 0.115)}px;font-weight:900;color:${textColour};letter-spacing:1px;line-height:1.1">ANTEK</div>
-  <div style="font-size:${Math.round(width * 0.115)}px;font-weight:900;color:${textColour};letter-spacing:1px;line-height:1.1">AUTOMATION</div>
+  <div style="font-size:${Math.round(width * 0.115)}px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${textColour};letter-spacing:1px;line-height:1.1">ANTEK</div>
+  <div style="font-size:${Math.round(width * 0.115)}px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${textColour};letter-spacing:1px;line-height:1.1">AUTOMATION</div>
   <div style="margin-top:8px;height:4px;background:${barColour}"></div>
 </div>`;
 }
@@ -89,8 +89,8 @@ function brandingBlock(
 // ── Footer bar (used by most templates) ──────────────────────
 function footerBar(height: number, url = "antekautomation.com", phone = "0333 038 9960"): string {
   return `<div style="position:absolute;bottom:0;left:0;right:0;height:${height}px;background:${CHARCOAL};display:flex;align-items:center;justify-content:space-between;padding:0 ${height}px">
-  <div style="font-size:${Math.round(height * 0.28)}px;font-weight:700;color:${CREAM}">${url}</div>
-  <div style="font-size:${Math.round(height * 0.25)}px;font-weight:500;color:${SAGE}">${phone}</div>
+  <div style="font-size:${Math.round(height * 0.28)}px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CREAM}">${url}</div>
+  <div style="font-size:${Math.round(height * 0.25)}px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${SAGE}">${phone}</div>
 </div>`;
 }
 
@@ -104,17 +104,17 @@ function statTemplate(c: StatContent, size: CardSize): string {
 
   if (size === "landscape") {
     // Horizontal: huge stat left, supporting text centre-left, branding right on CHARCOAL strip
-    return `<div style="width:${w}px;height:${h}px;background:${CREAM};position:relative;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+    return `<div style="width:${w}px;height:${h}px;background:${CREAM};position:relative;font-family:'DM Sans',system-ui,sans-serif;overflow:hidden">
   <!-- CHARCOAL right strip, bleeds off edge -->
   <div style="position:absolute;top:0;right:0;width:320px;height:${h}px;background:${CHARCOAL}"></div>
   <!-- CORAL top accent bar -->
   <div style="position:absolute;top:0;left:0;right:320px;height:14px;background:${CORAL}"></div>
   <!-- Stat number -->
-  <div style="position:absolute;top:70px;left:80px;font-size:210px;font-weight:900;color:${CORAL};line-height:1;letter-spacing:-8px">${esc(c.number)}</div>
+  <div style="position:absolute;top:70px;left:80px;font-size:210px;font-family:'Outfit',sans-serif;font-weight:900;color:${CORAL};line-height:1;letter-spacing:-8px">${esc(c.number)}</div>
   <!-- Supporting text -->
-  <div style="position:absolute;bottom:130px;left:80px;right:360px;font-size:40px;font-weight:900;color:${CHARCOAL};line-height:1.2">${esc(c.supporting_text)}</div>
+  <div style="position:absolute;bottom:130px;left:80px;right:360px;font-size:40px;font-family:'Outfit',sans-serif;font-weight:800;color:${CHARCOAL};line-height:1.2">${esc(c.supporting_text)}</div>
   <!-- Source -->
-  <div style="position:absolute;bottom:88px;left:80px;font-size:20px;font-weight:500;color:${CHARCOAL};opacity:0.45">${esc(c.source)}</div>
+  <div style="position:absolute;bottom:88px;left:80px;font-size:20px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CHARCOAL};opacity:0.45">${esc(c.source)}</div>
   <!-- Branding on CHARCOAL strip -->
   ${brandingBlock(80, 30, 260, true)}
   <!-- CORAL accent square bottom-right on CHARCOAL -->
@@ -125,43 +125,43 @@ function statTemplate(c: StatContent, size: CardSize): string {
 
   if (size === "square") {
     // Full-bleed CORAL background, CREAM stat number, centred
-    return `<div style="width:${w}px;height:${h}px;background:${CORAL};position:relative;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+    return `<div style="width:${w}px;height:${h}px;background:${CORAL};position:relative;font-family:'DM Sans',system-ui,sans-serif;overflow:hidden">
   <!-- CHARCOAL left strip -->
   <div style="position:absolute;top:0;left:0;width:20px;height:${h}px;background:${CHARCOAL}"></div>
   <!-- CREAM offset block top-right (geometric accent) -->
   <div style="position:absolute;top:-40px;right:-40px;width:320px;height:320px;background:${CREAM};opacity:0.12"></div>
   <!-- Stat number: massive CREAM -->
-  <div style="position:absolute;top:160px;left:0;right:0;text-align:center;font-size:320px;font-weight:900;color:${CREAM};line-height:1;letter-spacing:-12px">${esc(c.number)}</div>
+  <div style="position:absolute;top:160px;left:0;right:0;text-align:center;font-size:320px;font-family:'Outfit',sans-serif;font-weight:900;color:${CREAM};line-height:1;letter-spacing:-12px">${esc(c.number)}</div>
   <!-- Rule -->
   <div style="position:absolute;top:540px;left:80px;right:80px;height:6px;background:${CHARCOAL}"></div>
   <!-- Supporting text -->
-  <div style="position:absolute;top:570px;left:80px;right:80px;text-align:center;font-size:46px;font-weight:900;color:${CHARCOAL};line-height:1.2">${esc(c.supporting_text)}</div>
+  <div style="position:absolute;top:570px;left:80px;right:80px;text-align:center;font-size:46px;font-family:'Outfit',sans-serif;font-weight:800;color:${CHARCOAL};line-height:1.2">${esc(c.supporting_text)}</div>
   <!-- Source -->
-  <div style="position:absolute;bottom:130px;left:0;right:0;text-align:center;font-size:22px;font-weight:500;color:${CHARCOAL};opacity:0.55">${esc(c.source)}</div>
+  <div style="position:absolute;bottom:130px;left:0;right:0;text-align:center;font-size:22px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CHARCOAL};opacity:0.55">${esc(c.source)}</div>
   <!-- Footer -->
   <div style="position:absolute;bottom:0;left:0;right:0;height:100px;background:${CHARCOAL};display:flex;align-items:center;padding:0 80px;justify-content:space-between">
-    <div style="font-size:28px;font-weight:900;color:${CREAM}">ANTEK AUTOMATION</div>
-    <div style="font-size:22px;font-weight:500;color:${SAGE}">antekautomation.com</div>
+    <div style="font-size:28px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CREAM}">ANTEK AUTOMATION</div>
+    <div style="font-size:22px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${SAGE}">antekautomation.com</div>
   </div>
 </div>`;
   }
 
   // portrait
-  return `<div style="width:${w}px;height:${h}px;background:${CHARCOAL};position:relative;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+  return `<div style="width:${w}px;height:${h}px;background:${CHARCOAL};position:relative;font-family:'DM Sans',system-ui,sans-serif;overflow:hidden">
   <!-- CORAL header block top -->
   <div style="position:absolute;top:0;left:0;right:0;height:200px;background:${CORAL}">
-    <div style="position:absolute;bottom:20px;left:80px;font-size:26px;font-weight:900;color:${CREAM};letter-spacing:8px">QUICK STAT</div>
+    <div style="position:absolute;bottom:20px;left:80px;font-size:26px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CREAM};letter-spacing:8px">QUICK STAT</div>
   </div>
   <!-- Oversized ghost number behind main stat (decorative) -->
-  <div style="position:absolute;top:120px;right:-20px;font-size:560px;font-weight:900;color:${CORAL};opacity:0.07;line-height:1;letter-spacing:-20px">${esc(c.number)}</div>
+  <div style="position:absolute;top:120px;right:-20px;font-size:560px;font-family:'Outfit',sans-serif;font-weight:900;color:${CORAL};opacity:0.07;line-height:1;letter-spacing:-20px">${esc(c.number)}</div>
   <!-- Stat number: CORAL, bold -->
-  <div style="position:absolute;top:240px;left:80px;font-size:260px;font-weight:900;color:${CORAL};line-height:1;letter-spacing:-10px">${esc(c.number)}</div>
+  <div style="position:absolute;top:240px;left:80px;font-size:260px;font-family:'Outfit',sans-serif;font-weight:900;color:${CORAL};line-height:1;letter-spacing:-10px">${esc(c.number)}</div>
   <!-- Rule -->
   <div style="position:absolute;top:600px;left:80px;width:400px;height:6px;background:${CREAM}"></div>
   <!-- Supporting text -->
-  <div style="position:absolute;top:640px;left:80px;right:80px;font-size:58px;font-weight:900;color:${CREAM};line-height:1.2">${esc(c.supporting_text)}</div>
+  <div style="position:absolute;top:640px;left:80px;right:80px;font-size:58px;font-family:'Outfit',sans-serif;font-weight:800;color:${CREAM};line-height:1.2">${esc(c.supporting_text)}</div>
   <!-- Source -->
-  <div style="position:absolute;bottom:160px;left:80px;font-size:24px;font-weight:500;color:${CREAM};opacity:0.45">${esc(c.source)}</div>
+  <div style="position:absolute;bottom:160px;left:80px;font-size:24px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CREAM};opacity:0.45">${esc(c.source)}</div>
   <!-- SAGE accent square -->
   <div style="position:absolute;bottom:100px;right:80px;width:100px;height:100px;background:${SAGE};opacity:0.4"></div>
   ${footerBar(100)}
@@ -177,7 +177,7 @@ function quoteTemplate(c: QuoteContent, size: CardSize): string {
   const esc = escapeHtml;
 
   if (size === "landscape") {
-    return `<div style="width:${w}px;height:${h}px;background:${CREAM};position:relative;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+    return `<div style="width:${w}px;height:${h}px;background:${CREAM};position:relative;font-family:'DM Sans',system-ui,sans-serif;overflow:hidden">
   <!-- CORAL left strip, thick -->
   <div style="position:absolute;top:0;left:0;width:36px;height:${h}px;background:${CORAL}"></div>
   <!-- CHARCOAL header bar -->
@@ -185,22 +185,22 @@ function quoteTemplate(c: QuoteContent, size: CardSize): string {
   <!-- Ghost quote mark -->
   <div style="position:absolute;top:60px;left:80px;font-family:Georgia,serif;font-size:320px;font-weight:700;color:${CORAL};opacity:0.1;line-height:1">&ldquo;</div>
   <!-- Quote text -->
-  <div style="position:absolute;top:130px;left:100px;right:80px;font-size:58px;font-weight:900;color:${CHARCOAL};line-height:1.18;letter-spacing:-1px">${esc(c.quote_text)}</div>
+  <div style="position:absolute;top:130px;left:100px;right:80px;font-size:58px;font-family:'DM Sans',sans-serif;font-weight:900;color:${CHARCOAL};line-height:1.18;letter-spacing:-1px">${esc(c.quote_text)}</div>
   <!-- CORAL rule -->
   <div style="position:absolute;bottom:140px;left:100px;width:120px;height:5px;background:${CORAL}"></div>
   <!-- Attribution -->
-  <div style="position:absolute;bottom:94px;left:100px;font-size:24px;font-weight:700;color:${CORAL}">&mdash; ${esc(c.attribution)}</div>
+  <div style="position:absolute;bottom:94px;left:100px;font-size:24px;font-family:'DM Sans',sans-serif;font-weight:700;color:${CORAL}">&mdash; ${esc(c.attribution)}</div>
   <!-- SAGE block bottom-right -->
   <div style="position:absolute;bottom:0;right:0;width:260px;height:180px;background:${SAGE}"></div>
   <div style="position:absolute;bottom:0;right:0;width:200px;height:130px;background:${CHARCOAL};display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px">
-    <div style="font-size:18px;font-weight:700;color:${CREAM}">ANTEK AUTOMATION</div>
-    <div style="font-size:16px;font-weight:500;color:${SAGE}">antekautomation.com</div>
+    <div style="font-size:18px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CREAM}">ANTEK AUTOMATION</div>
+    <div style="font-size:16px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${SAGE}">antekautomation.com</div>
   </div>
 </div>`;
   }
 
   if (size === "square") {
-    return `<div style="width:${w}px;height:${h}px;background:${CHARCOAL};position:relative;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+    return `<div style="width:${w}px;height:${h}px;background:${CHARCOAL};position:relative;font-family:'DM Sans',system-ui,sans-serif;overflow:hidden">
   <!-- CORAL left strip -->
   <div style="position:absolute;top:0;left:0;width:28px;height:${h}px;background:${CORAL}"></div>
   <!-- SAGE geometric block top-right (accent) -->
@@ -209,19 +209,19 @@ function quoteTemplate(c: QuoteContent, size: CardSize): string {
   <div style="position:absolute;top:40px;left:60px;font-family:Georgia,serif;font-size:400px;font-weight:700;color:${CORAL};opacity:0.08;line-height:1">&ldquo;</div>
   <!-- CORAL accent quote label -->
   <div style="position:absolute;top:100px;left:80px;background:${CORAL};padding:10px 24px">
-    <div style="font-size:22px;font-weight:900;color:${CREAM};letter-spacing:6px">QUOTE</div>
+    <div style="font-size:22px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CREAM};letter-spacing:6px">QUOTE</div>
   </div>
   <!-- Quote text -->
-  <div style="position:absolute;top:220px;left:80px;right:80px;font-size:62px;font-weight:900;color:${CREAM};line-height:1.15;letter-spacing:-1px">${esc(c.quote_text)}</div>
+  <div style="position:absolute;top:220px;left:80px;right:80px;font-size:62px;font-family:'DM Sans',sans-serif;font-weight:900;color:${CREAM};line-height:1.15;letter-spacing:-1px">${esc(c.quote_text)}</div>
   <!-- CORAL rule + attribution -->
   <div style="position:absolute;bottom:180px;left:80px;width:100px;height:5px;background:${CORAL}"></div>
-  <div style="position:absolute;bottom:130px;left:80px;font-size:26px;font-weight:700;color:${CORAL}">&mdash; ${esc(c.attribution)}</div>
+  <div style="position:absolute;bottom:130px;left:80px;font-size:26px;font-family:'DM Sans',sans-serif;font-weight:700;color:${CORAL}">&mdash; ${esc(c.attribution)}</div>
   ${footerBar(100)}
 </div>`;
   }
 
   // portrait
-  return `<div style="width:${w}px;height:${h}px;background:${CREAM};position:relative;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+  return `<div style="width:${w}px;height:${h}px;background:${CREAM};position:relative;font-family:'DM Sans',system-ui,sans-serif;overflow:hidden">
   <!-- CORAL left strip -->
   <div style="position:absolute;top:0;left:0;width:28px;height:${h}px;background:${CORAL}"></div>
   <!-- CHARCOAL top header -->
@@ -230,18 +230,18 @@ function quoteTemplate(c: QuoteContent, size: CardSize): string {
   <div style="position:absolute;top:80px;left:60px;font-family:Georgia,serif;font-size:520px;font-weight:700;color:${CORAL};opacity:0.07;line-height:1">&ldquo;</div>
   <!-- CORAL accent label -->
   <div style="position:absolute;top:140px;left:80px;background:${CORAL};padding:14px 30px">
-    <div style="font-size:26px;font-weight:900;color:${CREAM};letter-spacing:8px">IN THEIR WORDS</div>
+    <div style="font-size:26px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CREAM};letter-spacing:8px">IN THEIR WORDS</div>
   </div>
   <!-- Quote text: large, centre of card -->
-  <div style="position:absolute;top:280px;left:80px;right:80px;font-size:70px;font-weight:900;color:${CHARCOAL};line-height:1.15;letter-spacing:-2px">${esc(c.quote_text)}</div>
+  <div style="position:absolute;top:280px;left:80px;right:80px;font-size:70px;font-family:'DM Sans',sans-serif;font-weight:900;color:${CHARCOAL};line-height:1.15;letter-spacing:-2px">${esc(c.quote_text)}</div>
   <!-- CHARCOAL bottom section -->
   <div style="position:absolute;bottom:0;left:0;right:0;height:260px;background:${CHARCOAL}"></div>
   <!-- CORAL rule -->
   <div style="position:absolute;bottom:205px;left:80px;width:120px;height:5px;background:${CORAL}"></div>
   <!-- Attribution -->
-  <div style="position:absolute;bottom:155px;left:80px;font-size:28px;font-weight:700;color:${CORAL}">&mdash; ${esc(c.attribution)}</div>
-  <div style="position:absolute;bottom:100px;left:80px;font-size:26px;font-weight:700;color:${CREAM}">ANTEK AUTOMATION</div>
-  <div style="position:absolute;bottom:60px;left:80px;font-size:22px;font-weight:500;color:${SAGE}">antekautomation.com</div>
+  <div style="position:absolute;bottom:155px;left:80px;font-size:28px;font-family:'DM Sans',sans-serif;font-weight:700;color:${CORAL}">&mdash; ${esc(c.attribution)}</div>
+  <div style="position:absolute;bottom:100px;left:80px;font-size:26px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CREAM}">ANTEK AUTOMATION</div>
+  <div style="position:absolute;bottom:60px;left:80px;font-size:22px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${SAGE}">antekautomation.com</div>
 </div>`;
 }
 
@@ -253,22 +253,22 @@ function tipTemplate(c: TipContent, size: CardSize): string {
   const { w, h } = DIMS[size];
   const esc = escapeHtml;
   const numLabel = c.tip_number
-    ? `<div style="font-size:28px;font-weight:900;color:${CREAM};letter-spacing:4px">${esc(c.tip_number)}</div>`
+    ? `<div style="font-size:28px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CREAM};letter-spacing:4px">${esc(c.tip_number)}</div>`
     : "";
 
   if (size === "landscape") {
-    return `<div style="width:${w}px;height:${h}px;background:${CHARCOAL};position:relative;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+    return `<div style="width:${w}px;height:${h}px;background:${CHARCOAL};position:relative;font-family:'DM Sans',system-ui,sans-serif;overflow:hidden">
   <!-- CORAL TIP block top-left -->
   <div style="position:absolute;top:0;left:0;background:${CORAL};padding:28px 50px 28px 80px;display:inline-flex;gap:24px;align-items:center">
-    <div style="font-size:44px;font-weight:900;color:${CREAM};letter-spacing:8px">TIP</div>
+    <div style="font-size:44px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CREAM};letter-spacing:8px">TIP</div>
     ${numLabel}
   </div>
   <!-- SAGE topic tag -->
   <div style="position:absolute;top:20px;right:80px;background:${SAGE};padding:10px 22px">
-    <div style="font-size:22px;font-weight:900;color:${CHARCOAL};letter-spacing:4px">${esc(c.topic_tag)}</div>
+    <div style="font-size:22px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CHARCOAL};letter-spacing:4px">${esc(c.topic_tag)}</div>
   </div>
   <!-- Tip text: large CREAM -->
-  <div style="position:absolute;top:160px;left:80px;right:100px;font-size:64px;font-weight:900;color:${CREAM};line-height:1.15;letter-spacing:-2px">${esc(c.tip_text)}</div>
+  <div style="position:absolute;top:160px;left:80px;right:100px;font-size:64px;font-family:'Outfit',sans-serif;font-weight:900;color:${CREAM};line-height:1.15;letter-spacing:-2px">${esc(c.tip_text)}</div>
   <!-- CORAL accent bar bottom -->
   <div style="position:absolute;bottom:90px;left:80px;width:280px;height:5px;background:${CORAL}"></div>
   <!-- SAGE geometric accent bottom-right -->
@@ -278,22 +278,22 @@ function tipTemplate(c: TipContent, size: CardSize): string {
   }
 
   if (size === "square") {
-    return `<div style="width:${w}px;height:${h}px;background:${CREAM};position:relative;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+    return `<div style="width:${w}px;height:${h}px;background:${CREAM};position:relative;font-family:'DM Sans',system-ui,sans-serif;overflow:hidden">
   <!-- SAGE left strip -->
   <div style="position:absolute;top:0;left:0;width:48px;height:${h}px;background:${SAGE}"></div>
   <!-- Oversized ghost tip number (decorative) -->
-  ${c.tip_number ? `<div style="position:absolute;top:60px;left:-30px;font-size:500px;font-weight:900;color:${CORAL};opacity:0.07;line-height:1">${esc(c.tip_number.split("/")[0])}</div>` : ""}
+  ${c.tip_number ? `<div style="position:absolute;top:60px;left:-30px;font-size:500px;font-family:'Outfit',sans-serif;font-weight:900;color:${CORAL};opacity:0.07;line-height:1">${esc(c.tip_number.split("/")[0])}</div>` : ""}
   <!-- CORAL + number label -->
   <div style="position:absolute;top:180px;left:80px;background:${CORAL};padding:16px 36px;display:inline-flex;gap:24px;align-items:center">
-    <div style="font-size:36px;font-weight:900;color:${CREAM};letter-spacing:6px">TIP</div>
-    ${c.tip_number ? `<div style="font-size:32px;font-weight:900;color:${CREAM}">${esc(c.tip_number)}</div>` : ""}
+    <div style="font-size:36px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CREAM};letter-spacing:6px">TIP</div>
+    ${c.tip_number ? `<div style="font-size:32px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CREAM}">${esc(c.tip_number)}</div>` : ""}
   </div>
   <!-- Topic tag -->
   <div style="position:absolute;top:186px;right:80px;background:${CHARCOAL};padding:12px 24px">
-    <div style="font-size:20px;font-weight:900;color:${SAGE};letter-spacing:4px">${esc(c.topic_tag)}</div>
+    <div style="font-size:20px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${SAGE};letter-spacing:4px">${esc(c.topic_tag)}</div>
   </div>
   <!-- Tip text -->
-  <div style="position:absolute;top:340px;left:80px;right:80px;font-size:72px;font-weight:900;color:${CHARCOAL};line-height:1.12;letter-spacing:-2px">${esc(c.tip_text)}</div>
+  <div style="position:absolute;top:340px;left:80px;right:80px;font-size:72px;font-family:'Outfit',sans-serif;font-weight:900;color:${CHARCOAL};line-height:1.12;letter-spacing:-2px">${esc(c.tip_text)}</div>
   <!-- CORAL rule -->
   <div style="position:absolute;bottom:160px;left:80px;width:300px;height:6px;background:${CORAL}"></div>
   ${footerBar(120)}
@@ -301,15 +301,15 @@ function tipTemplate(c: TipContent, size: CardSize): string {
   }
 
   // portrait
-  return `<div style="width:${w}px;height:${h}px;position:relative;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+  return `<div style="width:${w}px;height:${h}px;position:relative;font-family:'DM Sans',system-ui,sans-serif;overflow:hidden">
   <!-- CORAL top ~42% -->
   <div style="position:absolute;top:0;left:0;right:0;height:560px;background:${CORAL}"></div>
   <!-- CHARCOAL bottom -->
   <div style="position:absolute;top:560px;left:0;right:0;bottom:0;background:${CHARCOAL}"></div>
   <!-- TIP label + number in CREAM on CORAL top -->
   <div style="position:absolute;top:100px;left:80px">
-    <div style="font-size:44px;font-weight:900;color:${CREAM};letter-spacing:10px">TIP</div>
-    ${c.tip_number ? `<div style="font-size:200px;font-weight:900;color:${CREAM};line-height:1;opacity:0.9;margin-top:-20px;letter-spacing:-8px">${esc(c.tip_number.split("/")[0])}</div>` : ""}
+    <div style="font-size:44px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CREAM};letter-spacing:10px">TIP</div>
+    ${c.tip_number ? `<div style="font-size:200px;font-family:'Outfit',sans-serif;font-weight:900;color:${CREAM};line-height:1;opacity:0.9;margin-top:-20px;letter-spacing:-8px">${esc(c.tip_number.split("/")[0])}</div>` : ""}
   </div>
   <!-- CHARCOAL overlap card in the middle (spans the seam) -->
   <div style="position:absolute;top:420px;left:60px;right:60px;height:540px;background:${CREAM};border:4px solid ${CHARCOAL}">
@@ -317,13 +317,13 @@ function tipTemplate(c: TipContent, size: CardSize): string {
   </div>
   <div style="position:absolute;top:436px;left:76px;right:44px;height:540px;background:${CHARCOAL};border:4px solid ${CORAL};z-index:0"></div>
   <!-- Tip text on CREAM card -->
-  <div style="position:absolute;top:460px;left:100px;right:80px;z-index:1;font-size:66px;font-weight:900;color:${CHARCOAL};line-height:1.12;letter-spacing:-2px">${esc(c.tip_text)}</div>
+  <div style="position:absolute;top:460px;left:100px;right:80px;z-index:1;font-size:66px;font-family:'Outfit',sans-serif;font-weight:900;color:${CHARCOAL};line-height:1.12;letter-spacing:-2px">${esc(c.tip_text)}</div>
   <!-- Topic tag -->
   <div style="position:absolute;top:810px;left:100px;background:${CORAL};padding:10px 24px;z-index:1">
-    <div style="font-size:22px;font-weight:900;color:${CREAM};letter-spacing:4px">${esc(c.topic_tag)}</div>
+    <div style="font-size:22px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CREAM};letter-spacing:4px">${esc(c.topic_tag)}</div>
   </div>
   <!-- Fraction if tip_number has a total (e.g. "01/05") -->
-  ${c.tip_number?.includes("/") ? `<div style="position:absolute;top:100px;right:80px;font-size:36px;font-weight:900;color:${CREAM};opacity:0.7">${esc(c.tip_number)}</div>` : ""}
+  ${c.tip_number?.includes("/") ? `<div style="position:absolute;top:100px;right:80px;font-size:36px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CREAM};opacity:0.7">${esc(c.tip_number)}</div>` : ""}
   ${footerBar(100)}
 </div>`;
 }
@@ -339,9 +339,9 @@ function listicleTemplate(c: ListicleContent, size: CardSize): string {
   const itemHtml = (item: string, i: number, fontSize: number, gap: number) =>
     `<div style="display:flex;align-items:flex-start;gap:${gap}px;margin-bottom:${Math.round(gap * 0.8)}px">
       <div style="flex-shrink:0;width:${fontSize + 12}px;height:${fontSize + 12}px;background:${CORAL};display:flex;align-items:center;justify-content:center;margin-top:4px">
-        <span style="font-size:${Math.round(fontSize * 0.7)}px;font-weight:900;color:${CREAM}">${String(i + 1).padStart(2, "0")}</span>
+        <span style="font-size:${Math.round(fontSize * 0.7)}px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CREAM}">${String(i + 1).padStart(2, "0")}</span>
       </div>
-      <div style="font-size:${fontSize}px;font-weight:700;color:${CHARCOAL};line-height:1.2">${esc(item)}</div>
+      <div style="font-size:${fontSize}px;font-family:'DM Sans',sans-serif;font-weight:700;color:${CHARCOAL};line-height:1.2">${esc(item)}</div>
     </div>`;
 
   if (size === "landscape") {
@@ -352,13 +352,13 @@ function listicleTemplate(c: ListicleContent, size: CardSize): string {
     const col = (items: string[], start: number) =>
       items.map((item, i) => itemHtml(item, start + i, 32, 20)).join("");
 
-    return `<div style="width:${w}px;height:${h}px;background:${CREAM};position:relative;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+    return `<div style="width:${w}px;height:${h}px;background:${CREAM};position:relative;font-family:'DM Sans',system-ui,sans-serif;overflow:hidden">
   <!-- CHARCOAL header block (top, full width) -->
   <div style="position:absolute;top:0;left:0;right:0;height:130px;background:${CHARCOAL}">
     <!-- CORAL accent block inside header -->
     <div style="position:absolute;top:0;right:0;width:130px;height:130px;background:${CORAL}"></div>
     <div style="position:absolute;top:0;left:0;width:920px;height:130px;display:flex;align-items:center;padding:0 80px">
-      <div style="font-size:44px;font-weight:900;color:${CREAM};line-height:1.1">${esc(c.title)}</div>
+      <div style="font-size:44px;font-family:'Outfit',sans-serif;font-weight:900;color:${CREAM};line-height:1.1">${esc(c.title)}</div>
     </div>
   </div>
   <!-- Left column of items -->
@@ -377,10 +377,10 @@ function listicleTemplate(c: ListicleContent, size: CardSize): string {
 
   if (size === "square") {
     const items = c.items.map((item, i) => itemHtml(item, i, 52, 32)).join("");
-    return `<div style="width:${w}px;height:${h}px;background:${CHARCOAL};position:relative;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+    return `<div style="width:${w}px;height:${h}px;background:${CHARCOAL};position:relative;font-family:'DM Sans',system-ui,sans-serif;overflow:hidden">
   <!-- CORAL header top -->
   <div style="position:absolute;top:0;left:0;right:0;height:180px;background:${CORAL};display:flex;align-items:center;padding:0 80px">
-    <div style="font-size:50px;font-weight:900;color:${CREAM};line-height:1.1;max-width:860px">${esc(c.title)}</div>
+    <div style="font-size:50px;font-family:'Outfit',sans-serif;font-weight:900;color:${CREAM};line-height:1.1;max-width:860px">${esc(c.title)}</div>
   </div>
   <!-- CREAM card for items, with CHARCOAL offset shadow -->
   <div style="position:absolute;top:220px;left:96px;right:64px;bottom:120px;background:${CHARCOAL};border:3px solid ${CORAL}"></div>
@@ -397,7 +397,7 @@ function listicleTemplate(c: ListicleContent, size: CardSize): string {
 
   // portrait
   const items = c.items.map((item, i) => itemHtml(item, i, 44, 28)).join("");
-  return `<div style="width:${w}px;height:${h}px;background:${CREAM};position:relative;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+  return `<div style="width:${w}px;height:${h}px;background:${CREAM};position:relative;font-family:'DM Sans',system-ui,sans-serif;overflow:hidden">
   <!-- SAGE left strip -->
   <div style="position:absolute;top:0;left:0;width:28px;height:${h}px;background:${SAGE}"></div>
   <!-- CHARCOAL title block top -->
@@ -405,7 +405,7 @@ function listicleTemplate(c: ListicleContent, size: CardSize): string {
     <!-- CORAL accent block -->
     <div style="position:absolute;top:0;right:0;width:220px;height:220px;background:${CORAL};opacity:0.8"></div>
     <div style="position:absolute;top:0;left:0;right:220px;height:220px;display:flex;align-items:center;padding:0 60px">
-      <div style="font-size:54px;font-weight:900;color:${CREAM};line-height:1.1;max-width:760px">${esc(c.title)}</div>
+      <div style="font-size:54px;font-family:'Outfit',sans-serif;font-weight:900;color:${CREAM};line-height:1.1;max-width:760px">${esc(c.title)}</div>
     </div>
   </div>
   <!-- Items list -->
@@ -430,24 +430,24 @@ function ctaTemplate(size: CardSize): string {
   if (size === "landscape") {
     // Split: CHARCOAL left 55%, CORAL right 45%
     const split = Math.round(w * 0.55);
-    return `<div style="width:${w}px;height:${h}px;position:relative;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+    return `<div style="width:${w}px;height:${h}px;position:relative;font-family:'DM Sans',system-ui,sans-serif;overflow:hidden">
   <div style="position:absolute;top:0;left:0;width:${split}px;height:${h}px;background:${CHARCOAL}"></div>
   <div style="position:absolute;top:0;left:${split}px;right:0;height:${h}px;background:${CORAL}"></div>
   <!-- CREAM thin top strip -->
   <div style="position:absolute;top:0;left:0;right:0;height:12px;background:${CREAM}"></div>
   <!-- Headline: left on CHARCOAL -->
   <div style="position:absolute;top:100px;left:80px;width:${split - 120}px">
-    <div style="font-size:56px;font-weight:900;color:${CREAM};line-height:1.1;letter-spacing:-1px">Ready to stop<br>missing calls?</div>
+    <div style="font-size:56px;font-family:'Outfit',sans-serif;font-weight:900;color:${CREAM};line-height:1.1;letter-spacing:-1px">Ready to stop<br>missing calls?</div>
   </div>
   <!-- Sub-text -->
-  <div style="position:absolute;bottom:160px;left:80px;width:${split - 120}px;font-size:26px;font-weight:600;color:${CREAM};opacity:0.75;line-height:1.35">AI automation for UK<br>service businesses.</div>
+  <div style="position:absolute;bottom:160px;left:80px;width:${split - 120}px;font-size:26px;font-family:'DM Sans',sans-serif;font-weight:600;color:${CREAM};opacity:0.75;line-height:1.35">AI automation for UK<br>service businesses.</div>
   <!-- Right side: big handle + contact -->
   <div style="position:absolute;top:80px;left:${split + 60}px;right:60px">
-    <div style="font-size:80px;font-weight:900;color:${CREAM};line-height:1;letter-spacing:-3px">@Antek<br>Automation</div>
+    <div style="font-size:80px;font-family:'Outfit',sans-serif;font-weight:900;color:${CREAM};line-height:1;letter-spacing:-3px">@Antek<br>Automation</div>
   </div>
   <div style="position:absolute;bottom:160px;left:${split + 60}px;right:60px">
-    <div style="font-size:28px;font-weight:700;color:${CREAM}">antekautomation.com</div>
-    <div style="font-size:24px;font-weight:500;color:${CREAM};opacity:0.85;margin-top:8px">0333 038 9960</div>
+    <div style="font-size:28px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CREAM}">antekautomation.com</div>
+    <div style="font-size:24px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CREAM};opacity:0.85;margin-top:8px">0333 038 9960</div>
   </div>
   ${footerBar(80)}
 </div>`;
@@ -455,7 +455,7 @@ function ctaTemplate(size: CardSize): string {
 
   if (size === "square") {
     // Matches the CTA template from Shorts — CHARCOAL top, CORAL bottom split
-    return `<div style="width:${w}px;height:${h}px;background:${CHARCOAL};position:relative;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+    return `<div style="width:${w}px;height:${h}px;background:${CHARCOAL};position:relative;font-family:'DM Sans',system-ui,sans-serif;overflow:hidden">
   <!-- CREAM thin top strip -->
   <div style="position:absolute;top:0;left:0;right:0;height:16px;background:${CREAM}"></div>
   <!-- CORAL large block bottom half -->
@@ -466,25 +466,25 @@ function ctaTemplate(size: CardSize): string {
   <div style="position:absolute;top:80px;right:60px;width:220px;height:220px;background:${SAGE};opacity:0.15"></div>
   <!-- "FOLLOW US" label -->
   <div style="position:absolute;top:120px;left:80px;background:${CORAL};padding:14px 32px">
-    <div style="font-size:28px;font-weight:900;color:${CREAM};letter-spacing:6px">READY?</div>
+    <div style="font-size:28px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CREAM};letter-spacing:6px">READY?</div>
   </div>
   <!-- Headline on CHARCOAL -->
-  <div style="position:absolute;top:240px;left:80px;right:80px;font-size:72px;font-weight:900;color:${CREAM};line-height:1.1;letter-spacing:-2px">Stop missing calls today.</div>
+  <div style="position:absolute;top:240px;left:80px;right:80px;font-size:72px;font-family:'Outfit',sans-serif;font-weight:900;color:${CREAM};line-height:1.1;letter-spacing:-2px">Stop missing calls today.</div>
   <!-- Big handle on CORAL section -->
   <div style="position:absolute;bottom:280px;left:80px;right:60px">
-    <div style="font-size:80px;font-weight:900;color:${CREAM};line-height:1;letter-spacing:-3px">@Antek<br>Automation</div>
+    <div style="font-size:80px;font-family:'Outfit',sans-serif;font-weight:900;color:${CREAM};line-height:1;letter-spacing:-3px">@Antek<br>Automation</div>
   </div>
   <!-- URL + phone -->
   <div style="position:absolute;bottom:160px;left:80px">
-    <div style="font-size:30px;font-weight:700;color:${CREAM}">antekautomation.com</div>
-    <div style="font-size:26px;font-weight:500;color:${CREAM};opacity:0.85;margin-top:8px">0333 038 9960</div>
+    <div style="font-size:30px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CREAM}">antekautomation.com</div>
+    <div style="font-size:26px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CREAM};opacity:0.85;margin-top:8px">0333 038 9960</div>
   </div>
   ${footerBar(100)}
 </div>`;
   }
 
   // portrait — resembles the Shorts CTA slide closely
-  return `<div style="width:${w}px;height:${h}px;background:${CHARCOAL};position:relative;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
+  return `<div style="width:${w}px;height:${h}px;background:${CHARCOAL};position:relative;font-family:'DM Sans',system-ui,sans-serif;overflow:hidden">
   <!-- CREAM thin top strip -->
   <div style="position:absolute;top:0;left:0;right:0;height:16px;background:${CREAM}"></div>
   <!-- CORAL large block bottom section -->
@@ -495,26 +495,26 @@ function ctaTemplate(size: CardSize): string {
   <div style="position:absolute;top:80px;right:60px;width:240px;height:240px;background:${SAGE};opacity:0.12"></div>
   <!-- Headline top of card -->
   <div style="position:absolute;top:120px;left:80px;right:80px">
-    <div style="font-size:88px;font-weight:900;color:${CREAM};line-height:1.05;letter-spacing:-3px">Ready to stop<br>missing calls?</div>
+    <div style="font-size:88px;font-family:'Outfit',sans-serif;font-weight:900;color:${CREAM};line-height:1.05;letter-spacing:-3px">Ready to stop<br>missing calls?</div>
   </div>
   <!-- "FOLLOW US" label -->
   <div style="position:absolute;top:460px;left:80px;background:${CORAL};padding:14px 32px">
-    <div style="font-size:28px;font-weight:900;color:${CREAM};letter-spacing:6px">FOLLOW US</div>
+    <div style="font-size:28px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CREAM};letter-spacing:6px">FOLLOW US</div>
   </div>
   <!-- Big handle on CORAL section -->
   <div style="position:absolute;top:560px;left:80px;right:60px">
-    <div style="font-size:110px;font-weight:900;color:${CREAM};line-height:1;letter-spacing:-4px">@Antek<br>Automation</div>
+    <div style="font-size:110px;font-family:'Outfit',sans-serif;font-weight:900;color:${CREAM};line-height:1;letter-spacing:-4px">@Antek<br>Automation</div>
   </div>
   <!-- URL + phone -->
   <div style="position:absolute;bottom:490px;left:80px">
-    <div style="font-size:44px;font-weight:700;color:${CREAM}">antekautomation.com</div>
+    <div style="font-size:44px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CREAM}">antekautomation.com</div>
   </div>
   <div style="position:absolute;bottom:430px;left:80px">
-    <div style="font-size:36px;font-weight:500;color:${CREAM};opacity:0.85">0333 038 9960</div>
+    <div style="font-size:36px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${CREAM};opacity:0.85">0333 038 9960</div>
   </div>
   <!-- Bottom bar -->
   <div style="position:absolute;bottom:0;left:0;right:0;height:180px;background:${CHARCOAL};display:flex;align-items:center;padding:0 80px">
-    <div style="font-size:28px;font-weight:700;color:${SAGE}">AI Automation for UK Small Business</div>
+    <div style="font-size:28px;font-family:'JetBrains Mono',monospace;font-weight:700;color:${SAGE}">AI Automation for UK Small Business</div>
   </div>
 </div>`;
 }

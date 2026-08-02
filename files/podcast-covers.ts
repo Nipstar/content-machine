@@ -30,16 +30,16 @@ function titleSize(t: string) { const n = t.length; if (n <= 26) return 200; if 
 function coverHTML(title: string): string {
   const grid = "rgba(255,255,255,0.035)";
   return `<!doctype html><html><head><meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet"></head>
-<body style="margin:0"><div style="width:${S}px;height:${S}px;background:${BRAND.charcoal};position:relative;overflow:hidden;font-family:'Inter',system-ui,sans-serif;
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet"></head>
+<body style="margin:0"><div style="width:${S}px;height:${S}px;background:${BRAND.charcoal};position:relative;overflow:hidden;font-family:'DM Sans',system-ui,sans-serif;
   background-image:linear-gradient(${grid} 1px,transparent 1px),linear-gradient(90deg,${grid} 1px,transparent 1px);background-size:200px 200px">
-  <div style="position:absolute;top:180px;left:200px;font-size:64px;font-weight:600;letter-spacing:18px;color:${BRAND.grey};text-transform:uppercase">ANTEK / AUTOMATION</div>
+  <div style="position:absolute;top:180px;left:200px;font-family:'JetBrains Mono',monospace;font-size:64px;font-weight:700;letter-spacing:18px;color:${BRAND.grey};text-transform:uppercase">ANTEK / AUTOMATION</div>
   <div style="position:absolute;top:320px;left:188px;font-size:380px;font-weight:900;color:${BRAND.coral};line-height:1;font-family:Georgia,serif">&ldquo;</div>
-  <div style="position:absolute;top:560px;left:200px;font-size:150px;font-weight:900;letter-spacing:-2px;color:${BRAND.cream};text-transform:uppercase;line-height:0.95">QUICK <span style="color:${BRAND.coral}">TIPS</span></div>
-  <div style="position:absolute;left:200px;right:200px;top:980px;font-weight:900;font-size:${titleSize(title)}px;line-height:1.02;letter-spacing:-1px;color:${BRAND.cream};text-transform:uppercase">${esc(title)}</div>
+  <div style="position:absolute;top:560px;left:200px;font-family:'Outfit',sans-serif;font-size:150px;font-weight:900;letter-spacing:-2px;color:${BRAND.cream};text-transform:uppercase;line-height:0.95">QUICK <span style="color:${BRAND.coral}">TIPS</span></div>
+  <div style="position:absolute;left:200px;right:200px;top:980px;font-family:'Outfit',sans-serif;font-weight:900;font-size:${titleSize(title)}px;line-height:1.02;letter-spacing:-1px;color:${BRAND.cream};text-transform:uppercase">${esc(title)}</div>
   <div style="position:absolute;bottom:230px;left:200px;width:180px;height:24px;background:${BRAND.coral}"></div>
-  <div style="position:absolute;bottom:150px;left:200px;font-size:58px;font-weight:600;letter-spacing:10px;color:${BRAND.cream};text-transform:uppercase">ANDY NORMAN</div>
-  <div style="position:absolute;bottom:150px;right:200px;font-size:48px;font-weight:600;letter-spacing:6px;color:${BRAND.grey};text-transform:uppercase">ANTEKAUTOMATION.COM</div>
+  <div style="position:absolute;bottom:150px;left:200px;font-family:'JetBrains Mono',monospace;font-size:58px;font-weight:700;letter-spacing:10px;color:${BRAND.cream};text-transform:uppercase">ANDY NORMAN</div>
+  <div style="position:absolute;bottom:150px;right:200px;font-family:'JetBrains Mono',monospace;font-size:48px;font-weight:700;letter-spacing:6px;color:${BRAND.grey};text-transform:uppercase">ANTEKAUTOMATION.COM</div>
 </div></body></html>`;
 }
 

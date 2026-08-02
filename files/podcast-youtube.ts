@@ -47,12 +47,12 @@ function buildBackgroundHtml(script: PodcastScript, durationSeconds: number): st
 <head>
 <meta charset="utf-8">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@700&display=swap');
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     width: 1920px; height: 1080px; overflow: hidden;
     background: ${CREAM};
-    font-family: 'Inter', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     position: relative;
   }
 
@@ -70,7 +70,8 @@ function buildBackgroundHtml(script: PodcastScript, durationSeconds: number): st
     position: absolute;
     top: 60px; left: 60px;
     color: ${CREAM};
-    font-size: 22px; font-weight: 900;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 22px; font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     line-height: 1.3;
@@ -82,6 +83,7 @@ function buildBackgroundHtml(script: PodcastScript, durationSeconds: number): st
     top: 160px; left: 60px;
     background: ${CHARCOAL};
     color: ${CREAM};
+    font-family: 'JetBrains Mono', monospace;
     font-size: 18px; font-weight: 700;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -107,7 +109,8 @@ function buildBackgroundHtml(script: PodcastScript, durationSeconds: number): st
     position: absolute;
     bottom: 60px; left: 60px;
     color: ${CREAM};
-    font-size: 18px; font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px; font-weight: 700;
     letter-spacing: 0.08em;
   }
 
@@ -123,6 +126,7 @@ function buildBackgroundHtml(script: PodcastScript, durationSeconds: number): st
   }
 
   .episode-tag {
+    font-family: 'JetBrains Mono', monospace;
     font-size: 16px; font-weight: 700;
     color: ${CORAL};
     letter-spacing: 0.18em;
@@ -131,6 +135,7 @@ function buildBackgroundHtml(script: PodcastScript, durationSeconds: number): st
   }
 
   .episode-title {
+    font-family: 'Outfit', sans-serif;
     font-size: 64px; font-weight: 900;
     color: ${CHARCOAL};
     line-height: 1.1;
@@ -141,6 +146,7 @@ function buildBackgroundHtml(script: PodcastScript, durationSeconds: number): st
   }
 
   .episode-desc {
+    font-family: 'DM Sans', sans-serif;
     font-size: 24px; font-weight: 400;
     color: #444;
     line-height: 1.5;
@@ -162,12 +168,14 @@ function buildBackgroundHtml(script: PodcastScript, durationSeconds: number): st
   }
   .bottom-url {
     color: ${CREAM};
+    font-family: 'JetBrains Mono', monospace;
     font-size: 22px; font-weight: 700;
     letter-spacing: 0.05em;
   }
   .bottom-phone {
     color: ${SAGE};
-    font-size: 20px; font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 20px; font-weight: 700;
     letter-spacing: 0.05em;
   }
 
@@ -183,7 +191,8 @@ function buildBackgroundHtml(script: PodcastScript, durationSeconds: number): st
   .accent-inner {
     position: absolute;
     bottom: 16px; left: 16px;
-    font-size: 15px; font-weight: 900;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15px; font-weight: 700;
     color: ${CHARCOAL};
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -237,7 +246,7 @@ async function renderBackground(
     await page.setViewport({ width: 1920, height: 1080, deviceScaleFactor: 1 });
     const html = buildBackgroundHtml(script, durationSeconds);
     await page.setContent(html, { waitUntil: "networkidle0" });
-    // Wait for Inter font to load
+    // Wait for brand fonts to load
     await page.waitForFunction(
       () => document.fonts?.ready !== undefined ? document.fonts.ready.then(() => true) : true
     ).catch(() => {});

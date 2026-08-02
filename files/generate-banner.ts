@@ -21,13 +21,13 @@ const html = `<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@700&display=swap');
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     width: 1280px;
     height: 640px;
     background: ${CREAM};
-    font-family: 'Inter', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     overflow: hidden;
     position: relative;
   }
@@ -57,6 +57,7 @@ const html = `<!DOCTYPE html>
     padding: 0 40px;
   }
   .title {
+    font-family: 'Outfit', sans-serif;
     font-size: 72px;
     font-weight: 900;
     color: ${CREAM};
@@ -65,8 +66,9 @@ const html = `<!DOCTYPE html>
     text-transform: uppercase;
   }
   .subtitle {
+    font-family: 'JetBrains Mono', monospace;
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 700;
     color: ${CHARCOAL};
     margin-top: 12px;
     letter-spacing: 2px;
@@ -96,8 +98,9 @@ const html = `<!DOCTYPE html>
     background: ${CREAM};
     border: 3px solid ${CHARCOAL};
     padding: 10px 18px;
+    font-family: 'JetBrains Mono', monospace;
     font-size: 13px;
-    font-weight: 900;
+    font-weight: 700;
     color: ${CHARCOAL};
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -132,8 +135,9 @@ const html = `<!DOCTYPE html>
     gap: 0;
   }
   .right-panel-title {
+    font-family: 'JetBrains Mono', monospace;
     font-size: 11px;
-    font-weight: 900;
+    font-weight: 700;
     color: ${CHARCOAL};
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -150,6 +154,7 @@ const html = `<!DOCTYPE html>
   }
   .pipeline-item:last-child { border-bottom: none; }
   .pipeline-num {
+    font-family: 'Outfit', sans-serif;
     font-size: 28px;
     font-weight: 900;
     color: ${CORAL};
@@ -162,13 +167,15 @@ const html = `<!DOCTYPE html>
     gap: 2px;
   }
   .pipeline-name {
+    font-family: 'JetBrains Mono', monospace;
     font-size: 14px;
-    font-weight: 900;
+    font-weight: 700;
     color: ${CHARCOAL};
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
   .pipeline-desc {
+    font-family: 'DM Sans', sans-serif;
     font-size: 11px;
     font-weight: 600;
     color: #4a4a4a;
@@ -189,8 +196,9 @@ const html = `<!DOCTYPE html>
     gap: 40px;
   }
   .bottom-tag {
+    font-family: 'JetBrains Mono', monospace;
     font-size: 12px;
-    font-weight: 900;
+    font-weight: 700;
     color: ${CREAM};
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -229,8 +237,9 @@ const html = `<!DOCTYPE html>
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
     font-size: 16px;
-    font-weight: 900;
+    font-weight: 700;
     color: ${CHARCOAL};
     z-index: 5;
   }
@@ -331,7 +340,7 @@ const html = `<!DOCTYPE html>
 </html>`;
 
 async function generateBanner() {
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({ headless: true, args: ["--no-sandbox", "--disable-setuid-sandbox"] });
   const page = await browser.newPage();
   await page.setViewport({ width: 1280, height: 640 });
   await page.setContent(html, { waitUntil: 'networkidle0' });
