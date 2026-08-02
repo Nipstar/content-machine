@@ -20,7 +20,10 @@
     "shorts": "tsx shorts-cli.ts",
     "cards": "tsx cards-cli.ts",
     "personal": "tsx personal-cli.ts",
-    "personal:preview": "tsx personal-cli.ts --preview-only"
+    "personal:preview": "tsx personal-cli.ts --preview-only",
+    "post": "tsx blotato-post-cli.ts",
+    "post:dry": "tsx blotato-post-cli.ts --dry-run",
+    "post:check": "tsx blotato-post-cli.ts --check"
   },
   "dependencies": {
     "dotenv": "^17.3.1",

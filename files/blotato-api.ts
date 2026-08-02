@@ -1,0 +1,136 @@
+/**
+ * Blotato REST API client — direct HTTP, no MCP dependency.
+ *
+ * Base:   https://backend.blotato.com/v2
+ * Auth:   header `blotato-api-key: <BLOTATO_API_KEY>`
+ * Docs:   contract reverse-verified against the live API (2026-08).
+ *
+ * Post body shape (POST /v2/posts):
+ *   {
+ *     post: {
+ *       accountId: "<id>",
+ *       target:  { targetType, pageId?, mediaType?, title?, privacyStatus?, shouldNotifySubscribers? },
+ *       content: { text, platform, mediaUrls: [] }
+ *     },
+ *     scheduledTime?: "<ISO 8601>"   // OMIT = publish immediately
+ *   }
+ *
+ * ⚠️  A create call WITHOUT scheduledTime publishes instantly. Always pass a
+ *     future scheduledTime unless you truly mean "post now".
+ */
+import "dotenv/config";
+
+const BASE = "https://backend.blotato.com/v2";
+
+function apiKey(): string {
+  const k = process.env.BLOTATO_API_KEY;
+  if (!k) throw new Error("BLOTATO_API_KEY not set in environment");
+  return k;
+}
+
+function headers(hasBody: boolean): Record<string, string> {
+  const h: Record<string, string> = { "blotato-api-key": apiKey() };
+  // Only advertise a JSON body when one is actually sent — the API rejects
+  // GET/DELETE that carry Content-Type: application/json with no body.
+  if (hasBody) h["Content-Type"] = "application/json";
+  return h;
+}
+
+async function req(method: string, path: string, body?: unknown): Promise<any> {
+  const hasBody = body !== undefined;
+  const res = await fetch(`${BASE}${path}`, {
+    method,
+    headers: headers(hasBody),
+    body: hasBody ? JSON.stringify(body) : undefined,
+  });
+  const text = await res.text();
+  let json: any = null;
+  try {
+    json = text ? JSON.parse(text) : null;
+  } catch {
+    json = { raw: text };
+  }
+  if (!res.ok) {
+    throw new Error(`Blotato ${method} ${path} failed (${res.status}): ${text}`);
+  }
+  return json;
+}
+
+// ── Flat post params (as produced by plan-schedule / manifest) ──────────────
+export interface FlatPost {
+  accountId: string | number;
+  platform: string; // twitter | facebook | instagram | linkedin | youtube | tiktok | pinterest | threads | bluesky
+  text: string;
+  mediaUrls?: string[];
+  scheduledTime?: string; // ISO 8601; omit for immediate publish
+  // target-only extras (routed into `target`):
+  pageId?: string;
+  mediaType?: string; // instagram/facebook: reel | story
+  title?: string; // youtube/pinterest/tiktok
+  privacyStatus?: string; // youtube: public | private | unlisted
+  shouldNotifySubscribers?: boolean; // youtube
+  boardId?: string; // pinterest
+}
+
+// Keys that belong inside `target` (everything else platform-specific stays out of content).
+const TARGET_KEYS = [
+  "pageId",
+  "mediaType",
+  "title",
+  "privacyStatus",
+  "shouldNotifySubscribers",
+  "boardId",
+] as const;
+
+/** Build the nested REST body from flat params. */
+export function buildPostBody(p: FlatPost): Record<string, unknown> {
+  const target: Record<string, unknown> = { targetType: p.platform };
+  for (const k of TARGET_KEYS) {
+    if (p[k] !== undefined) target[k] = p[k];
+  }
+  const body: Record<string, unknown> = {
+    post: {
+      accountId: String(p.accountId),
+      target,
+      content: {
+        text: p.text,
+        platform: p.platform,
+        mediaUrls: p.mediaUrls ?? [],
+      },
+    },
+  };
+  if (p.scheduledTime) body.scheduledTime = p.scheduledTime;
+  return body;
+}
+
+/** Create (schedule or publish) a post. Returns { postSubmissionId }. */
+export async function createPost(p: FlatPost): Promise<{ postSubmissionId: string }> {
+  return req("POST", "/posts", buildPostBody(p));
+}
+
+/** Get publish/schedule status of a submission. */
+export async function getPostStatus(postSubmissionId: string): Promise<any> {
+  return req("GET", `/posts/${postSubmissionId}`);
+}
+
+/** List future scheduled posts (paginated). */
+export async function listSchedules(limit = 50, cursor?: string): Promise<{ items: any[]; nextCursor?: string }> {
+  const q = new URLSearchParams({ limit: String(limit) });
+  if (cursor) q.set("cursor", cursor);
+  return req("GET", `/schedules?${q.toString()}`);
+}
+
+/** Delete a scheduled post by schedule id (cancels the publish job). */
+export async function deleteSchedule(id: string): Promise<void> {
+  await req("DELETE", `/schedules/${id}`);
+}
+
+/** Remaining credits + account email. */
+export async function getCredits(): Promise<{ creditsRemaining: number; accountEmail: string }> {
+  return req("GET", "/credits");
+}
+
+/** Authenticated user profile. */
+export async function getUser(): Promise<any> {
+  return req("GET", "/users/me");
+}

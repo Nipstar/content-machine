@@ -87,8 +87,23 @@ cp .env.example .env
 | `DATABASE_URL` | PostgreSQL connection string | `--from-db` mode |
 | `DATABASE_SSL` | Set "false" to disable SSL | `--from-db` mode |
 
-### 4. Claude Code MCP
-The `.claude/settings.json` file registers the Blotato MCP server. Claude Code uses this for all media creation and post scheduling — no direct API calls needed.
+### 4. Posting to Blotato — direct REST API (no MCP required)
+`blotato-api.ts` is a standalone REST client for the Blotato API
+(`https://backend.blotato.com/v2`, auth header `blotato-api-key`). Post
+scheduling runs via `blotato-post-cli.ts` — **no MCP dependency**:
+
+```bash
+npm run post:check    # verify auth + show remaining credits
+npm run post:dry      # print what would be scheduled (no API calls)
+npm run post          # schedule everything in blotato-schedule-manifest.json
+# flags: --file <manifest.json>  --limit N  --allow-now (publish immediately)
+```
+
+Safety: entries without a **future** `scheduledTime` are skipped unless you pass
+`--allow-now`. A `/v2/posts` call with no `scheduledTime` publishes instantly.
+
+The `.claude/settings.json` MCP registration is optional — used only for
+interactive Claude Code sessions, not by the pipeline.
 
 ---
 
