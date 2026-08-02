@@ -110,8 +110,25 @@ export function buildPostBody(p: FlatPost): Record<string, unknown> {
   return body;
 }
 
-/** Create (schedule or publish) a post. Returns { postSubmissionId }. */
+/**
+ * Schedule a post. Returns { postSubmissionId }.
+ *
+ * SCHEDULE-ONLY by policy: a future `scheduledTime` is REQUIRED. A body without
+ * scheduledTime publishes instantly on Blotato's side, so this function refuses
+ * to send one — preventing accidental immediate posts. Missing or past times
+ * throw before any network call.
+ */
 export async function createPost(p: FlatPost): Promise<{ postSubmissionId: string }> {
+  if (!p.scheduledTime) {
+    throw new Error(`createPost: scheduledTime is required (schedule-only; direct publish is disabled)`);
+  }
+  const t = Date.parse(p.scheduledTime);
+  if (Number.isNaN(t)) {
+    throw new Error(`createPost: scheduledTime is not a valid ISO 8601 timestamp: ${p.scheduledTime}`);
+  }
+  if (t <= Date.now()) {
+    throw new Error(`createPost: scheduledTime must be in the future (got ${p.scheduledTime})`);
+  }
   return req("POST", "/posts", buildPostBody(p));
 }
 

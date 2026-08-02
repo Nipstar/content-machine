@@ -9,12 +9,14 @@
  *   tsx blotato-post-cli.ts --limit 3                 # only the first 3 entries
  *   tsx blotato-post-cli.ts --check                   # just print credits + user, exit
  *
+ * This tool ONLY schedules future posts. It cannot publish immediately.
+ *
  * Manifest format (array):
  *   [{ idea, platform, params: { accountId, platform, text, mediaUrls, scheduledTime, pageId? ... } }]
  *
- * SAFETY: every entry MUST carry a future `scheduledTime`. Entries without one,
- * or with a past time, are SKIPPED (never published immediately) unless you pass
- * --allow-now, which is intentionally verbose to avoid accidents.
+ * SCHEDULE-ONLY: every entry MUST carry a future `scheduledTime`. Entries
+ * without one, or with a past time, are SKIPPED. This tool never publishes
+ * immediately — direct/instant posting is disabled by design.
  */
 import "dotenv/config";
 import { readFileSync } from "fs";
@@ -36,7 +38,6 @@ function flag(name: string): boolean {
 
 async function main() {
   const dryRun = flag("dry-run");
-  const allowNow = flag("allow-now");
   const check = flag("check");
   const file = arg("file") || "blotato-schedule-manifest.json";
   const limit = arg("limit") ? parseInt(arg("limit")!, 10) : Infinity;
@@ -57,11 +58,15 @@ async function main() {
     const label = `${e.idea ?? "?"}:${e.platform}`;
     const t = p.scheduledTime ? Date.parse(p.scheduledTime) : NaN;
 
-    if (!p.scheduledTime && !allowNow) {
-      skipped.push(`${label} — no scheduledTime (use --allow-now to publish immediately)`);
+    if (!p.scheduledTime) {
+      skipped.push(`${label} — no scheduledTime (schedule-only; skipped)`);
       continue;
     }
-    if (p.scheduledTime && t <= now && !allowNow) {
+    if (Number.isNaN(t)) {
+      skipped.push(`${label} — invalid scheduledTime (${p.scheduledTime})`);
+      continue;
+    }
+    if (t <= now) {
       skipped.push(`${label} — scheduledTime in the past (${p.scheduledTime})`);
       continue;
     }
@@ -84,7 +89,7 @@ async function main() {
   for (let i = 0; i < toRun.length; i++) {
     const e = toRun[i];
     const label = `${e.idea ?? "?"}:${e.platform}`;
-    const when = e.params.scheduledTime ?? "NOW";
+    const when = e.params.scheduledTime;
     if (dryRun) {
       console.log(`  🧪 ${label} @ ${when} — ${(e.params.text || "").slice(0, 60).replace(/\n/g, " ")}...`);
       continue;

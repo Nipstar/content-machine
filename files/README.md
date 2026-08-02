@@ -96,11 +96,14 @@ scheduling runs via `blotato-post-cli.ts` — **no MCP dependency**:
 npm run post:check    # verify auth + show remaining credits
 npm run post:dry      # print what would be scheduled (no API calls)
 npm run post          # schedule everything in blotato-schedule-manifest.json
-# flags: --file <manifest.json>  --limit N  --allow-now (publish immediately)
+# flags: --file <manifest.json>  --limit N
 ```
 
-Safety: entries without a **future** `scheduledTime` are skipped unless you pass
-`--allow-now`. A `/v2/posts` call with no `scheduledTime` publishes instantly.
+**Schedule-only by design.** This tool never publishes immediately — it only
+adds posts to the Blotato scheduler. Entries must carry a **future**
+`scheduledTime`; those missing one, invalid, or in the past are skipped. The
+`createPost` client throws rather than send a body without a future
+`scheduledTime` (a bodyless-time `/v2/posts` call would publish instantly).
 
 The `.claude/settings.json` MCP registration is optional — used only for
 interactive Claude Code sessions, not by the pipeline.
