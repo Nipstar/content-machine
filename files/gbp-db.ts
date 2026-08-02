@@ -73,7 +73,7 @@ export async function insertGBPPosts(posts: GBPPost[]): Promise<number> {
         p.source_url,
         p.topic,
         p.pillar,
-        (p as any).template_variant || null,
+        p.template_variant || null,
         p.scheduled_date,
         p.status
       );
@@ -98,7 +98,7 @@ export async function getNextQueuedPost(): Promise<GBPPost | null> {
     await client.connect();
     const result = await client.query(
       `SELECT id, post_text, image_url, cta_type, cta_url, source_url,
-              scheduled_date, topic, pillar, status
+              scheduled_date, topic, pillar, template_variant, status
        FROM gbp_post_queue
        WHERE status = 'queued' AND scheduled_date <= now()
        ORDER BY scheduled_date ASC
@@ -120,6 +120,8 @@ export async function getNextQueuedPost(): Promise<GBPPost | null> {
       status: row.status,
       topic: row.topic || "",
       pillar: row.pillar || "ai_automation",
+      template_variant: row.template_variant || undefined,
+      // image_data is never persisted (only image_url is) — not populated on read-back.
     };
   } finally {
     await client.end();

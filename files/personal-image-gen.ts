@@ -19,11 +19,13 @@ import { join } from "path";
 import { tmpdir } from "os";
 import { randomUUID } from "crypto";
 import "dotenv/config";
+import { BRAND } from "./brand.js";
 
-const CORAL    = "#FF5C3A";
-const CREAM    = "#F0EBE0";
-const SAGE     = "#97958F";
-const CHARCOAL = "#2B2B2B";
+// Brand colours (canonical source: brand.ts)
+const CORAL    = BRAND.coral;
+const CREAM    = BRAND.cream;
+const SAGE     = BRAND.grey;
+const CHARCOAL = BRAND.charcoal;
 
 function esc(t: string): string {
   return t.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");
@@ -157,7 +159,7 @@ async function uploadToR2(buffer: Buffer, key: string): Promise<string> {
   const res = await fetch(endpoint, {
     method: "PUT",
     headers: { "Authorization": `Bearer ${apiToken}`, "Content-Type": "image/png" },
-    body: buffer,
+    body: new Uint8Array(buffer), // Buffer extends Uint8Array; DOM lib's BodyInit type doesn't know that
   });
   if (!res.ok) {
     const txt = await res.text();

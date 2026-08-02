@@ -6,8 +6,15 @@
 import puppeteer from 'puppeteer';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { BRAND } from './brand.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+
+// Brand colours (canonical source: brand.ts)
+const CORAL = BRAND.coral;
+const CREAM = BRAND.cream;
+const SAGE = BRAND.grey;
+const CHARCOAL = BRAND.charcoal;
 
 const html = `<!DOCTYPE html>
 <html>
@@ -19,7 +26,7 @@ const html = `<!DOCTYPE html>
   body {
     width: 1280px;
     height: 640px;
-    background: #F0EBE0;
+    background: ${CREAM};
     font-family: 'Inter', sans-serif;
     overflow: hidden;
     position: relative;
@@ -32,7 +39,7 @@ const html = `<!DOCTYPE html>
     left: 38px;
     width: 820px;
     height: 200px;
-    background: #2B2B2B;
+    background: ${CHARCOAL};
     z-index: 1;
   }
   .main-card {
@@ -41,8 +48,8 @@ const html = `<!DOCTYPE html>
     left: 28px;
     width: 820px;
     height: 200px;
-    background: #FF5C3A;
-    border: 4px solid #2B2B2B;
+    background: ${CORAL};
+    border: 4px solid ${CHARCOAL};
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -52,7 +59,7 @@ const html = `<!DOCTYPE html>
   .title {
     font-size: 72px;
     font-weight: 900;
-    color: #F0EBE0;
+    color: ${CREAM};
     line-height: 1;
     letter-spacing: -2px;
     text-transform: uppercase;
@@ -60,7 +67,7 @@ const html = `<!DOCTYPE html>
   .subtitle {
     font-size: 22px;
     font-weight: 600;
-    color: #2B2B2B;
+    color: ${CHARCOAL};
     margin-top: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -81,23 +88,23 @@ const html = `<!DOCTYPE html>
     left: 4px;
     width: 100%;
     height: 100%;
-    background: #2B2B2B;
+    background: ${CHARCOAL};
     z-index: -1;
   }
   .pill {
     position: relative;
-    background: #F0EBE0;
-    border: 3px solid #2B2B2B;
+    background: ${CREAM};
+    border: 3px solid ${CHARCOAL};
     padding: 10px 18px;
     font-size: 13px;
     font-weight: 900;
-    color: #2B2B2B;
+    color: ${CHARCOAL};
     text-transform: uppercase;
     letter-spacing: 1px;
     white-space: nowrap;
   }
   .pill.accent {
-    background: #97958F;
+    background: ${SAGE};
   }
 
   /* Right panel */
@@ -107,7 +114,7 @@ const html = `<!DOCTYPE html>
     right: 28px - 10px;
     width: 360px;
     height: 490px;
-    background: #2B2B2B;
+    background: ${CHARCOAL};
     z-index: 1;
   }
   .right-panel {
@@ -116,8 +123,8 @@ const html = `<!DOCTYPE html>
     right: 18px;
     width: 360px;
     height: 490px;
-    background: #97958F;
-    border: 4px solid #2B2B2B;
+    background: ${SAGE};
+    border: 4px solid ${CHARCOAL};
     z-index: 2;
     padding: 28px;
     display: flex;
@@ -127,12 +134,12 @@ const html = `<!DOCTYPE html>
   .right-panel-title {
     font-size: 11px;
     font-weight: 900;
-    color: #2B2B2B;
+    color: ${CHARCOAL};
     text-transform: uppercase;
     letter-spacing: 3px;
     margin-bottom: 20px;
     padding-bottom: 12px;
-    border-bottom: 3px solid #2B2B2B;
+    border-bottom: 3px solid ${CHARCOAL};
   }
   .pipeline-item {
     display: flex;
@@ -145,7 +152,7 @@ const html = `<!DOCTYPE html>
   .pipeline-num {
     font-size: 28px;
     font-weight: 900;
-    color: #FF5C3A;
+    color: ${CORAL};
     line-height: 1;
     min-width: 32px;
   }
@@ -157,7 +164,7 @@ const html = `<!DOCTYPE html>
   .pipeline-name {
     font-size: 14px;
     font-weight: 900;
-    color: #2B2B2B;
+    color: ${CHARCOAL};
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
@@ -174,7 +181,7 @@ const html = `<!DOCTYPE html>
     left: 0;
     width: 900px;
     height: 56px;
-    background: #2B2B2B;
+    background: ${CHARCOAL};
     z-index: 3;
     display: flex;
     align-items: center;
@@ -184,12 +191,12 @@ const html = `<!DOCTYPE html>
   .bottom-tag {
     font-size: 12px;
     font-weight: 900;
-    color: #F0EBE0;
+    color: ${CREAM};
     text-transform: uppercase;
     letter-spacing: 2px;
   }
   .bottom-tag span {
-    color: #FF5C3A;
+    color: ${CORAL};
   }
 
   /* Decorative corner element */
@@ -199,7 +206,7 @@ const html = `<!DOCTYPE html>
     left: 28px;
     width: 180px;
     height: 6px;
-    background: #FF5C3A;
+    background: ${CORAL};
     z-index: 4;
   }
   .corner-accent-2 {
@@ -208,15 +215,15 @@ const html = `<!DOCTYPE html>
     left: 28px;
     width: 80px;
     height: 6px;
-    background: #97958F;
+    background: ${SAGE};
     z-index: 4;
   }
   .v-badge {
     position: absolute;
     top: 48px;
     left: 868px;
-    background: #F0EBE0;
-    border: 4px solid #2B2B2B;
+    background: ${CREAM};
+    border: 4px solid ${CHARCOAL};
     width: 56px;
     height: 56px;
     display: flex;
@@ -224,7 +231,7 @@ const html = `<!DOCTYPE html>
     justify-content: center;
     font-size: 16px;
     font-weight: 900;
-    color: #2B2B2B;
+    color: ${CHARCOAL};
     z-index: 5;
   }
 </style>
@@ -270,7 +277,7 @@ const html = `<!DOCTYPE html>
   </div>
 
   <!-- Right panel -->
-  <div style="position:absolute;top:48px;right:8px;width:360px;height:490px;background:#2B2B2B;z-index:1;"></div>
+  <div style="position:absolute;top:48px;right:8px;width:360px;height:490px;background:${CHARCOAL};z-index:1;"></div>
   <div class="right-panel">
     <div class="right-panel-title">Content Pipelines</div>
     <div class="pipeline-item">
@@ -317,7 +324,7 @@ const html = `<!DOCTYPE html>
   <!-- Bottom bar -->
   <div class="bottom-bar">
     <div class="bottom-tag">RSS <span>→</span> AI Generation <span>→</span> Blotato MCP <span>→</span> Scheduled Posts</div>
-    <div class="bottom-tag" style="margin-left:auto;color:#97958F;">antekautomation.com</div>
+    <div class="bottom-tag" style="margin-left:auto;color:${SAGE};">antekautomation.com</div>
   </div>
 
 </body>

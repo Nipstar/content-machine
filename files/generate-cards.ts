@@ -118,7 +118,7 @@ export function parseCardContents(output: string): CardContent[] {
           throw new Error(`CardContent validation: stat card[${i}].supporting_text must be a string`);
         if (typeof item.source !== "string")
           throw new Error(`CardContent validation: stat card[${i}].source must be a string`);
-        cards.push(item as StatContent);
+        cards.push(item as unknown as StatContent);
         break;
       }
       case "quote": {
@@ -132,7 +132,7 @@ export function parseCardContents(output: string): CardContent[] {
             `CardContent validation: quote card[${i}].quote_text too long (${words} words, max 20)`
           );
         }
-        cards.push(item as QuoteContent);
+        cards.push(item as unknown as QuoteContent);
         break;
       }
       case "tip": {
@@ -140,7 +140,7 @@ export function parseCardContents(output: string): CardContent[] {
           throw new Error(`CardContent validation: tip card[${i}].tip_text must be a string`);
         if (typeof item.topic_tag !== "string")
           throw new Error(`CardContent validation: tip card[${i}].topic_tag must be a string`);
-        cards.push(item as TipContent);
+        cards.push(item as unknown as TipContent);
         break;
       }
       case "listicle": {
@@ -150,7 +150,7 @@ export function parseCardContents(output: string): CardContent[] {
           throw new Error(
             `CardContent validation: listicle card[${i}].items must be an array of 2-5 strings`
           );
-        cards.push(item as ListicleContent);
+        cards.push(item as unknown as ListicleContent);
         break;
       }
       case "cta": {

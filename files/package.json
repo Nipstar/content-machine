@@ -30,9 +30,9 @@
     "uuid": "^11.0.0"
   },
   "devDependencies": {
-    "@types/fluent-ffmpeg": "^2.1.27",
+    "@types/fluent-ffmpeg": "^2.1.28",
     "@types/node": "^22.0.0",
-    "@types/pg": "^8.11.0",
+    "@types/pg": "^8.20.3",
     "tsx": "^4.19.0",
     "typescript": "^5.7.0"
   }

@@ -53,6 +53,8 @@ export interface GBPPost {
   status: GBPPostStatus;
   topic: string;
   pillar: Pillar;
-  template_variant: GBPTemplateVariant;
-  image_data: GBPImageData;
+  // Both populated by Claude Code during /gbp execution, after the initial
+  // schedule skeleton is built — optional here, not at DB-insert time.
+  template_variant?: GBPTemplateVariant;
+  image_data?: GBPImageData;
 }

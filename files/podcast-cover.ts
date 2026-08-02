@@ -16,14 +16,15 @@ import puppeteer from "puppeteer";
 import { existsSync, mkdirSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
+import { BRAND } from "./brand.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-// Brand colours
-const CORAL = "#FF5C3A";
-const CREAM = "#F0EBE0";
-const SAGE = "#97958F";
-const CHARCOAL = "#2B2B2B";
+// Brand colours (canonical source: brand.ts)
+const CORAL = BRAND.coral;
+const CREAM = BRAND.cream;
+const SAGE = BRAND.grey;
+const CHARCOAL = BRAND.charcoal;
 
 /** Path to the default cover art (used when Puppeteer fails or as base layer) */
 export const DEFAULT_COVER_PATH = join(

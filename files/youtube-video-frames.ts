@@ -14,11 +14,13 @@ import { join } from "path";
 import { tmpdir } from "os";
 import { randomUUID } from "crypto";
 import type { YTVideoScript, YTSlide } from "./youtube-video-types.js";
+import { BRAND } from "./brand.js";
 
-const CORAL    = "#FF5C3A";
-const CREAM    = "#F0EBE0";
-const SAGE     = "#97958F";
-const CHARCOAL = "#2B2B2B";
+// Brand colours (canonical source: brand.ts)
+const CORAL    = BRAND.coral;
+const CREAM    = BRAND.cream;
+const SAGE     = BRAND.grey;
+const CHARCOAL = BRAND.charcoal;
 
 function esc(t: string): string {
   return t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");

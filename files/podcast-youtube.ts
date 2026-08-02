@@ -20,8 +20,15 @@ import { readFileSync, mkdirSync, existsSync, unlinkSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 import type { PodcastScript } from "./podcast-types.js";
+import { BRAND } from "./brand.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+
+// Brand colours (canonical source: brand.ts)
+const CORAL = BRAND.coral;
+const CREAM = BRAND.cream;
+const SAGE = BRAND.grey;
+const CHARCOAL = BRAND.charcoal;
 
 // ── Background frame renderer ────────────────────────────────
 
@@ -44,7 +51,7 @@ function buildBackgroundHtml(script: PodcastScript, durationSeconds: number): st
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     width: 1920px; height: 1080px; overflow: hidden;
-    background: #F0EBE0;
+    background: ${CREAM};
     font-family: 'Inter', sans-serif;
     position: relative;
   }
@@ -54,15 +61,15 @@ function buildBackgroundHtml(script: PodcastScript, durationSeconds: number): st
     position: absolute;
     left: 0; top: 0;
     width: 680px; height: 1080px;
-    background: #FF5C3A;
-    border-right: 4px solid #2B2B2B;
+    background: ${CORAL};
+    border-right: 4px solid ${CHARCOAL};
   }
 
   /* Brand mark */
   .brand {
     position: absolute;
     top: 60px; left: 60px;
-    color: #F0EBE0;
+    color: ${CREAM};
     font-size: 22px; font-weight: 900;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -73,8 +80,8 @@ function buildBackgroundHtml(script: PodcastScript, durationSeconds: number): st
   .series-label {
     position: absolute;
     top: 160px; left: 60px;
-    background: #2B2B2B;
-    color: #F0EBE0;
+    background: ${CHARCOAL};
+    color: ${CREAM};
     font-size: 18px; font-weight: 700;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -99,7 +106,7 @@ function buildBackgroundHtml(script: PodcastScript, durationSeconds: number): st
   .duration {
     position: absolute;
     bottom: 60px; left: 60px;
-    color: #F0EBE0;
+    color: ${CREAM};
     font-size: 18px; font-weight: 600;
     letter-spacing: 0.08em;
   }
@@ -117,7 +124,7 @@ function buildBackgroundHtml(script: PodcastScript, durationSeconds: number): st
 
   .episode-tag {
     font-size: 16px; font-weight: 700;
-    color: #FF5C3A;
+    color: ${CORAL};
     letter-spacing: 0.18em;
     text-transform: uppercase;
     margin-bottom: 28px;
@@ -125,11 +132,11 @@ function buildBackgroundHtml(script: PodcastScript, durationSeconds: number): st
 
   .episode-title {
     font-size: 64px; font-weight: 900;
-    color: #2B2B2B;
+    color: ${CHARCOAL};
     line-height: 1.1;
     letter-spacing: -0.01em;
     margin-bottom: 40px;
-    border-left: 8px solid #FF5C3A;
+    border-left: 8px solid ${CORAL};
     padding-left: 28px;
   }
 
@@ -146,20 +153,20 @@ function buildBackgroundHtml(script: PodcastScript, durationSeconds: number): st
     position: absolute;
     bottom: 0; left: 684px; right: 0;
     height: 100px;
-    background: #2B2B2B;
-    border-top: 4px solid #2B2B2B;
+    background: ${CHARCOAL};
+    border-top: 4px solid ${CHARCOAL};
     display: flex;
     align-items: center;
     padding: 0 80px;
     justify-content: space-between;
   }
   .bottom-url {
-    color: #F0EBE0;
+    color: ${CREAM};
     font-size: 22px; font-weight: 700;
     letter-spacing: 0.05em;
   }
   .bottom-phone {
-    color: #97958F;
+    color: ${SAGE};
     font-size: 20px; font-weight: 600;
     letter-spacing: 0.05em;
   }
@@ -169,15 +176,15 @@ function buildBackgroundHtml(script: PodcastScript, durationSeconds: number): st
     position: absolute;
     top: 0; right: 0;
     width: 220px; height: 220px;
-    background: #97958F;
-    border-left: 4px solid #2B2B2B;
-    border-bottom: 4px solid #2B2B2B;
+    background: ${SAGE};
+    border-left: 4px solid ${CHARCOAL};
+    border-bottom: 4px solid ${CHARCOAL};
   }
   .accent-inner {
     position: absolute;
     bottom: 16px; left: 16px;
     font-size: 15px; font-weight: 900;
-    color: #2B2B2B;
+    color: ${CHARCOAL};
     letter-spacing: 0.12em;
     text-transform: uppercase;
     line-height: 1.4;
