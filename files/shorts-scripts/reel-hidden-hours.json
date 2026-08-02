@@ -1,0 +1,22 @@
+{
+  "slides": [
+    { "type": "hook", "text": "Enterprise AI tools can cost six thousand pounds a year", "voiceover_text": "Did you know an enterprise AI assistant can cost a small team six thousand pounds a year?" },
+    { "type": "tip", "tipNumber": 1, "text": "Track where your team's time actually disappears first", "voiceover_text": "Tip one: track where your team's time actually disappears before you assume AI is the fix." },
+    { "type": "tip", "tipNumber": 2, "text": "Check the tool fits your existing software stack", "voiceover_text": "Tip two: check any tool fits your existing software stack, not just one part of it." },
+    { "type": "tip", "tipNumber": 3, "text": "Try a simple chatbot before an enterprise platform", "voiceover_text": "Tip three: try a simple chatbot or template first, before an expensive enterprise platform." },
+    { "type": "summary", "text": "Simple tools often beat expensive ones", "voiceover_text": "So remember: simple, focused tools often beat the expensive enterprise platform." },
+    { "type": "cta", "text": "", "voiceover_text": "Follow Antek Automation for more tips like this. Visit antek automation dot com. [5s pause] Or call oh three three three, oh three eight, nine nine six oh." }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/ai-workplace-assistants-for-uk-smes-what-you-need-to-know/",
+  "sourceBlogTitle": "The Hidden Hours Your Team Loses Every Week",
+  "youtubeTitle": "The Hidden Hours Your Team Loses Every Week",
+  "youtubeDescription": "Enterprise AI assistants can cost £3,600-6,000 a year for a small team. Simpler tools often win. Full guide: https://blog.antekautomation.com/ai-workplace-assistants-for-uk-smes-what-you-need-to-know/",
+  "youtubeTags": ["#Shorts", "#AIAssistant", "#SmallBusinessTips", "#Productivity", "#ServiceBusiness"],
+  "geo_answer": "Most UK SMEs do not need enterprise AI workplace assistants like Copilot or Agentforce; simpler, focused automation often delivers most of the value at a fraction of the cost.",
+  "geo_takeaways": [
+    "Enterprise AI assistants such as Microsoft Copilot cost around £30 per user monthly, on top of existing subscriptions.",
+    "A 10-person business can expect to pay £3,600 to £6,000 or more a year for an enterprise AI assistant.",
+    "Justifying that cost typically needs around 30 minutes of genuine time savings per employee per day.",
+    "Simpler alternatives, such as website chatbots and basic workflow automation, can deliver about 80% of the value at 20% of the cost."
+  ]
+}

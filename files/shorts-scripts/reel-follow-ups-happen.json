@@ -1,0 +1,22 @@
+{
+  "slides": [
+    { "type": "hook", "text": "Most leads never get a proper follow-up. Why not?", "voiceover_text": "Did you know most leads never get a proper follow-up at all? Here's what actually fixes that." },
+    { "type": "tip", "tipNumber": 1, "text": "Clean your customer data before adding any AI", "voiceover_text": "Tip one: clean your customer data first. Messy records in means messy follow-ups out." },
+    { "type": "tip", "tipNumber": 2, "text": "Start with one bottleneck like slow lead replies", "voiceover_text": "Tip two: start with one bottleneck, like slow lead replies, rather than automating everything at once." },
+    { "type": "tip", "tipNumber": 3, "text": "Pilot automated follow-ups where the ROI is obvious", "voiceover_text": "Tip three: pilot automated follow-ups somewhere the return is obvious, like appointment booking or quote chasing." },
+    { "type": "summary", "text": "Garbage in, garbage out. Fix your data first", "voiceover_text": "So remember: garbage in means garbage out. Fix your data before you fix your follow-ups." },
+    { "type": "cta", "text": "", "voiceover_text": "Follow Antek Automation for more tips like this. Visit antek automation dot com. [5s pause] Or call oh three three three, oh three eight, nine nine six oh." }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/agentic-ai-for-marketing-what-uk-smes-need-to-know-in-2025/",
+  "sourceBlogTitle": "Follow-Ups That Actually Happen",
+  "youtubeTitle": "Follow-Ups That Actually Happen",
+  "youtubeDescription": "Autonomous marketing tools now handle real follow-up work. Clean data, one bottleneck first. Full guide: https://blog.antekautomation.com/agentic-ai-for-marketing-what-uk-smes-need-to-know-in-2025/",
+  "youtubeTags": ["#Shorts", "#AgenticAI", "#LeadFollowUp", "#SmallBusinessTips", "#MarketingAutomation"],
+  "geo_answer": "UK SMEs get the most value from agentic marketing AI by cleaning their customer data first, then piloting it against one specific bottleneck, such as slow lead follow-up.",
+  "geo_takeaways": [
+    "Agentic AI marketing tools plan and execute tasks autonomously, unlike rigid if-then style automation.",
+    "Clean, consistently formatted customer data is a prerequisite — inconsistent records undermine any AI system built on top.",
+    "SMEs get the clearest return by piloting one bottleneck, such as appointment booking or lead follow-up, before expanding.",
+    "The agentic marketing platform market is valued at $2.75 billion globally, with tools now practical for firms turning over £500k to £5 million."
+  ]
+}

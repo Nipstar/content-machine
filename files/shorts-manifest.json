@@ -221,6 +221,424 @@
           "caption": "Your AI intake system works great for months. Then the provider pushes an update. — sound familiar?\n\nWrong question: which AI model powers your system?.\nRight question: how do you test updates before they go live?.\nA good vendor treats AI as infrastructure to protect, not a feature to chase.\n\nWe help criminal defense, DUI, immigration and PI firms catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
         }
       }
+    },
+    {
+      "reel": 101,
+      "date": "2026-08-12",
+      "utc": "2026-08-12T16:00:00.000Z",
+      "source_url": "https://blog.antekautomation.com/how-to-deploy-ai-agents-safely-in-your-service-business/",
+      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-101-1785696167653.mp4",
+      "video_local_path": "/data/tools/content-machine/files/output/shorts-batch/reel-101.mp4",
+      "duration_seconds": 0,
+      "has_voiceover": true,
+      "db_ids": [
+        "e24f923d-27fc-46f1-bb0e-639fc38fdb1b",
+        "2aa8f00e-c65a-4379-9c7f-8c72ffd26a3e",
+        "23819c9e-3d6a-400d-8a05-2eb28558a0e6",
+        "1fdbdcfa-e766-4f18-9698-4f867f468d18"
+      ],
+      "platform_meta": {
+        "youtube": {
+          "platform": "youtube",
+          "title": "The Risk Conversation Every Firm Owner Should Have",
+          "description": "https://blog.antekautomation.com/how-to-deploy-ai-agents-safely-in-your-service-business/\n\nFor business owners in Stockbridge:\nAI agents decide things on their own. Access limits and a two-week test keep that safe. Full guide: https://blog.antekautomation.com/how-to-deploy-ai-agents-safely-in-your-service-business/\n\nStraight answer: Service businesses can deploy AI agents safely by restricting their data access, defining clear human escalation triggers, and running a two-week parallel test before going live.\n\nKey takeaways:\n- AI agents should get read-only access to customer contact data, with payment and personal details kept separate.\n- Clear escalation triggers, such as quote thresholds and complaint flags, keep high-stakes decisions with a human.\n- A two-week parallel test alongside existing processes catches problems before an AI agent faces real customers.\n- Weekly monitoring for the first month, then monthly, keeps oversight proportionate as trust in the system grows.\n\nSource: Antek Automation, UK AI automation agency working with businesses across Stockbridge. antekautomation.com.",
+          "hashtags": [
+            "#Shorts",
+            "#TestValley",
+            "#AIAgents",
+            "#SmallBusinessTips",
+            "#ServiceBusiness"
+          ],
+          "caption": ""
+        },
+        "instagram": {
+          "platform": "instagram",
+          "title": "",
+          "description": "",
+          "hashtags": [
+            "#TestValley",
+            "#Hampshire",
+            "#SmallBusinessTips",
+            "#ServiceBusiness",
+            "#BusinessOwner"
+          ],
+          "caption": "Your AI agent just made a decision. Who approved it?\n\n→ Give AI agents read-only access to sensitive data\n→ Set clear rules for when AI must escalate\n→ Run it in parallel two weeks before going live\n\nNet gain: three hours saved a week, safely\n\nIf you're running things in Stockbridge, this matters.\n\nFollow @AntekAutomation for practical tips built for MSPs and IT support firms.\nMore at antekautomation.com\n\n#TestValley #Hampshire #SmallBusinessTips #ServiceBusiness #BusinessOwner"
+        },
+        "facebook": {
+          "platform": "facebook",
+          "title": "",
+          "description": "",
+          "hashtags": [
+            "#TestValley",
+            "#SmallBusiness",
+            "#ServiceBusiness",
+            "#UKBusiness",
+            "#BusinessTips"
+          ],
+          "caption": "Your AI agent just made a decision. Who approved it?\n\nGive AI agents read-only access to sensitive data.\nSet clear rules for when AI must escalate.\nNet gain: three hours saved a week, safely\n\nIf you're running things in Stockbridge, this matters.\n\nWe help MSPs and IT support firms catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#TestValley #SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
+        },
+        "linkedin": {
+          "platform": "linkedin",
+          "title": "",
+          "description": "",
+          "hashtags": [
+            "#TestValley",
+            "#SmallBusiness",
+            "#ServiceBusiness",
+            "#BusinessOwner",
+            "#Productivity"
+          ],
+          "caption": "Your AI agent just made a decision. Who approved it?\n\n1. Give AI agents read-only access to sensitive data.\n2. Set clear rules for when AI must escalate.\n3. Run it in parallel two weeks before going live.\n\nNet gain: three hours saved a week, safely\n\nIf you're running things in Stockbridge, this matters.\n\nMore practical guides for MSPs and IT support firms at antekautomation.com.\n\n#TestValley #SmallBusiness #ServiceBusiness #BusinessOwner #Productivity"
+        }
+      }
+    },
+    {
+      "reel": 102,
+      "date": "2026-08-15",
+      "utc": "2026-08-15T16:00:00.000Z",
+      "source_url": "https://blog.antekautomation.com/ai-powered-search-for-small-businesses-what-uk-smes-need-to-know/",
+      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-102-1785696268913.mp4",
+      "video_local_path": "/data/tools/content-machine/files/output/shorts-batch/reel-102.mp4",
+      "duration_seconds": 0,
+      "has_voiceover": true,
+      "db_ids": [
+        "2ad40205-ce64-4f67-8f1c-395ce1dd9ab5",
+        "50b3cbf5-b425-4c17-8cbd-42074dbb0d63",
+        "6a56cdc6-21e9-4b56-8c08-b6f9a92c0091",
+        "59462fd2-094a-4737-862e-d2fc1f32be99"
+      ],
+      "platform_meta": {
+        "youtube": {
+          "platform": "youtube",
+          "title": "Where The Next Generation Of Clients Will Find You",
+          "description": "https://blog.antekautomation.com/ai-powered-search-for-small-businesses-what-uk-smes-need-to-know/\n\nKnowledge workers lose 20% of the day searching. Fix that, replies to clients get faster. Full guide: https://blog.antekautomation.com/ai-powered-search-for-small-businesses-what-uk-smes-need-to-know/\n\nShort answer: UK service businesses lose significant productivity to poor internal search, and AI-powered search tools that understand context typically pay for themselves within two to four months.\n\nKey takeaways:\n- Knowledge workers spend close to 20% of their time searching for information or the right colleague.\n- For a 5-person team, that lost time equals roughly one full-time employee's productivity.\n- AI search tools that understand context, not just keywords, typically break even within 2-4 months.\n- Faster internal information retrieval translates directly into faster, better-informed replies to clients and prospects.\n\nThis comes from Antek Automation, a UK AI automation agency — antekautomation.com.",
+          "hashtags": [
+            "#Shorts",
+            "#AISearch",
+            "#SmallBusinessTips",
+            "#Productivity",
+            "#ServiceBusiness"
+          ],
+          "caption": ""
+        },
+        "instagram": {
+          "platform": "instagram",
+          "title": "",
+          "description": "",
+          "hashtags": [
+            "#SmallBusinessTips",
+            "#ServiceBusiness",
+            "#BusinessOwner",
+            "#Reels",
+            "#LocalBusiness"
+          ],
+          "caption": "Your team wastes a fifth of the day just searching\n\n→ Calculate what searching actually costs your team\n→ Trial one AI search tool free for two weeks\n→ Faster answers inside mean faster replies to clients\n\nSearch fixes usually pay for themselves in months\n\nFollow @AntekAutomation for practical tips built for letting and estate agents.\nMore at antekautomation.com\n\n#SmallBusinessTips #ServiceBusiness #BusinessOwner #Reels #LocalBusiness"
+        },
+        "facebook": {
+          "platform": "facebook",
+          "title": "",
+          "description": "",
+          "hashtags": [
+            "#SmallBusiness",
+            "#ServiceBusiness",
+            "#UKBusiness",
+            "#BusinessTips"
+          ],
+          "caption": "Your team wastes a fifth of the day just searching — sound familiar?\n\nCalculate what searching actually costs your team.\nTrial one AI search tool free for two weeks.\nSearch fixes usually pay for themselves in months\n\nWe help letting and estate agents catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
+        },
+        "linkedin": {
+          "platform": "linkedin",
+          "title": "",
+          "description": "",
+          "hashtags": [
+            "#SmallBusiness",
+            "#ServiceBusiness",
+            "#BusinessOwner",
+            "#Productivity"
+          ],
+          "caption": "Your team wastes a fifth of the day just searching\n\n1. Calculate what searching actually costs your team.\n2. Trial one AI search tool free for two weeks.\n3. Faster answers inside mean faster replies to clients.\n\nSearch fixes usually pay for themselves in months\n\nMore practical guides for letting and estate agents at antekautomation.com.\n\n#SmallBusiness #ServiceBusiness #BusinessOwner #Productivity"
+        }
+      }
+    },
+    {
+      "reel": 103,
+      "date": "2026-08-19",
+      "utc": "2026-08-19T16:00:00.000Z",
+      "source_url": "https://blog.antekautomation.com/agentic-ai-for-marketing-what-uk-smes-need-to-know-in-2025/",
+      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-103-1785696386772.mp4",
+      "video_local_path": "/data/tools/content-machine/files/output/shorts-batch/reel-103.mp4",
+      "duration_seconds": 0,
+      "has_voiceover": true,
+      "db_ids": [
+        "79c1d806-c640-4a8b-abb6-66655ba50dad",
+        "cf6d6127-248a-42b8-9e22-576e7a9c53b6",
+        "ffa3a7db-7adf-4a14-825d-098b6427e913",
+        "27cdfb28-c88d-4c91-8ccc-accb684c3616"
+      ],
+      "platform_meta": {
+        "youtube": {
+          "platform": "youtube",
+          "title": "Follow-Ups That Actually Happen — Eastleigh Businesses",
+          "description": "https://blog.antekautomation.com/agentic-ai-for-marketing-what-uk-smes-need-to-know-in-2025/\n\nBuilt with Eastleigh businesses in mind.\nAutonomous marketing tools now handle real follow-up work. Clean data, one bottleneck first. Full guide: https://blog.antekautomation.com/agentic-ai-for-marketing-what-uk-smes-need-to-know-in-2025/\n\nThe quick version: UK SMEs get the most value from agentic marketing AI by cleaning their customer data first, then piloting it against one specific bottleneck, such as slow lead follow-up.\n\nKey takeaways:\n- Agentic AI marketing tools plan and execute tasks autonomously, unlike rigid if-then style automation.\n- Clean, consistently formatted customer data is a prerequisite — inconsistent records undermine any AI system built on top.\n- SMEs get the clearest return by piloting one bottleneck, such as appointment booking or lead follow-up, before expanding.\n- The agentic marketing platform market is valued at $2.75 billion globally, with tools now practical for firms turning over £500k to £5 million.\n\nAntek Automation — a UK AI automation agency serving Eastleigh — produced this. antekautomation.com.",
+          "hashtags": [
+            "#Shorts",
+            "#Southampton",
+            "#AgenticAI",
+            "#LeadFollowUp",
+            "#SmallBusinessTips"
+          ],
+          "caption": ""
+        },
+        "instagram": {
+          "platform": "instagram",
+          "title": "",
+          "description": "",
+          "hashtags": [
+            "#Southampton",
+            "#HampshireBusiness",
+            "#SmallBusinessTips",
+            "#ServiceBusiness",
+            "#BusinessOwner"
+          ],
+          "caption": "Most leads never get a proper follow-up. Why not?\n\n→ Clean your customer data before adding any AI\n→ Start with one bottleneck like slow lead replies\n→ Pilot automated follow-ups where the ROI is obvious\n\nGarbage in, garbage out. Fix your data first\n\nCommon one for Eastleigh businesses right now.\n\nFollow @AntekAutomation for practical tips built for trades and home-services firms.\nMore at antekautomation.com\n\n#Southampton #HampshireBusiness #SmallBusinessTips #ServiceBusiness #BusinessOwner"
+        },
+        "facebook": {
+          "platform": "facebook",
+          "title": "",
+          "description": "",
+          "hashtags": [
+            "#Southampton",
+            "#SmallBusiness",
+            "#ServiceBusiness",
+            "#UKBusiness",
+            "#BusinessTips"
+          ],
+          "caption": "Most leads never get a proper follow-up. Why not?\n\nClean your customer data before adding any AI.\nStart with one bottleneck like slow lead replies.\nGarbage in, garbage out. Fix your data first\n\nCommon one for Eastleigh businesses right now.\n\nWe help trades and home-services firms catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#Southampton #SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
+        },
+        "linkedin": {
+          "platform": "linkedin",
+          "title": "",
+          "description": "",
+          "hashtags": [
+            "#Southampton",
+            "#SmallBusiness",
+            "#ServiceBusiness",
+            "#BusinessOwner",
+            "#Productivity"
+          ],
+          "caption": "Most leads never get a proper follow-up. Why not?\n\n1. Clean your customer data before adding any AI.\n2. Start with one bottleneck like slow lead replies.\n3. Pilot automated follow-ups where the ROI is obvious.\n\nGarbage in, garbage out. Fix your data first\n\nCommon one for Eastleigh businesses right now.\n\nMore practical guides for trades and home-services firms at antekautomation.com.\n\n#Southampton #SmallBusiness #ServiceBusiness #BusinessOwner #Productivity"
+        }
+      }
+    },
+    {
+      "reel": 104,
+      "date": "2026-08-22",
+      "utc": "2026-08-22T16:00:00.000Z",
+      "source_url": "https://blog.antekautomation.com/ai-agents-for-customer-service-what-uk-smes-need-to-know/",
+      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-104-1785696486339.mp4",
+      "video_local_path": "/data/tools/content-machine/files/output/shorts-batch/reel-104.mp4",
+      "duration_seconds": 0,
+      "has_voiceover": true,
+      "db_ids": [
+        "d9b5747f-24d4-499f-8b95-4a89d281f055",
+        "8d7c5b20-42a9-4593-9919-ee76dd60e090",
+        "efdb584d-0879-4813-b7bf-3b181a24a981",
+        "b6289970-771d-4a16-b1ec-6d35797b3507"
+      ],
+      "platform_meta": {
+        "youtube": {
+          "platform": "youtube",
+          "title": "Answering Every Caller Without Another Receptionist",
+          "description": "https://blog.antekautomation.com/ai-agents-for-customer-service-what-uk-smes-need-to-know/\n\nFor business owners in Winchester:\nAI agents now handle up to 80% of routine customer service tasks, on month-to-month pricing. Full guide: https://blog.antekautomation.com/ai-agents-for-customer-service-what-uk-smes-need-to-know/\n\nStraight answer: UK SMEs can answer every caller without hiring more staff by deploying an AI agent for one targeted task first, such as booking, since these tools can automate up to 80% of routine customer service work.\n\nKey takeaways:\n- AI agent platforms can automate up to 80% of routine customer service tasks, according to Adobe.\n- Modern SME-focused AI agents offer month-to-month pricing, unlike enterprise platforms with long contracts.\n- AI agents can run multi-step processes: checking a calendar, generating a quote, and booking an appointment in one flow.\n- The safest rollout starts with one application, such as enquiry qualification, with a clear escalation path to a human for anything complex.\n\nSource: Antek Automation, UK AI automation agency working with businesses across Winchester. antekautomation.com.\nWorth a look if this is on your radar.",
+          "hashtags": [
+            "#Shorts",
+            "#Winchester",
+            "#AIAgents",
+            "#CustomerService",
+            "#SmallBusinessTips"
+          ],
+          "caption": ""
+        },
+        "instagram": {
+          "platform": "instagram",
+          "title": "",
+          "description": "",
+          "hashtags": [
+            "#Winchester",
+            "#TestValley",
+            "#SmallBusinessTips",
+            "#ServiceBusiness",
+            "#BusinessOwner"
+          ],
+          "caption": "Up to eighty percent of routine calls could run themselves\n\n→ Start with one job, like booking appointments\n→ Check your calendar and CRM can actually connect\n→ Always leave an easy path to a real person\n\nAnswer every caller without adding headcount\n\nIf you're running things in Winchester, this matters.\n\nFollow @AntekAutomation for practical tips built for MSPs and IT support firms.\nMore at antekautomation.com\n\n#Winchester #TestValley #SmallBusinessTips #ServiceBusiness #BusinessOwner"
+        },
+        "facebook": {
+          "platform": "facebook",
+          "title": "",
+          "description": "",
+          "hashtags": [
+            "#Winchester",
+            "#SmallBusiness",
+            "#ServiceBusiness",
+            "#UKBusiness",
+            "#BusinessTips"
+          ],
+          "caption": "Up to eighty percent of routine calls could run themselves — sound familiar?\n\nStart with one job, like booking appointments.\nCheck your calendar and CRM can actually connect.\nAnswer every caller without adding headcount\n\nIf you're running things in Winchester, this matters.\n\nWe help MSPs and IT support firms catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#Winchester #SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
+        },
+        "linkedin": {
+          "platform": "linkedin",
+          "title": "",
+          "description": "",
+          "hashtags": [
+            "#Winchester",
+            "#SmallBusiness",
+            "#ServiceBusiness",
+            "#BusinessOwner",
+            "#Productivity"
+          ],
+          "caption": "Up to eighty percent of routine calls could run themselves\n\n1. Start with one job, like booking appointments.\n2. Check your calendar and CRM can actually connect.\n3. Always leave an easy path to a real person.\n\nAnswer every caller without adding headcount\n\nIf you're running things in Winchester, this matters.\n\nMore practical guides for MSPs and IT support firms at antekautomation.com.\n\n#Winchester #SmallBusiness #ServiceBusiness #BusinessOwner #Productivity"
+        }
+      }
+    },
+    {
+      "reel": 105,
+      "date": "2026-08-26",
+      "utc": "2026-08-26T16:00:00.000Z",
+      "source_url": "https://blog.antekautomation.com/schema-markup-wont-boost-ai-citations-what-smes-should-know/",
+      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-105-1785696579933.mp4",
+      "video_local_path": "/data/tools/content-machine/files/output/shorts-batch/reel-105.mp4",
+      "duration_seconds": 0,
+      "has_voiceover": true,
+      "db_ids": [
+        "e4dcda1b-7ff6-4867-a7a7-01568a5822cf",
+        "8d897bd7-5b88-4eee-8f3d-6893a3204a01",
+        "50fae786-d9ae-4d70-bf3e-63a69e85e771",
+        "7245fd82-b1a6-47b7-bac9-7ee3468a223a"
+      ],
+      "platform_meta": {
+        "youtube": {
+          "platform": "youtube",
+          "title": "The Visibility Myth That's Wasting Your Time",
+          "description": "https://blog.antekautomation.com/schema-markup-wont-boost-ai-citations-what-smes-should-know/\n\nPractical for across Hampshire firms specifically.\n1,885 pages analysed: schema markup barely affects AI citations. Here's what works instead. Full guide: https://blog.antekautomation.com/schema-markup-wont-boost-ai-citations-what-smes-should-know/\n\nIn one line: Schema markup has minimal effect on whether AI engines cite a business; consistent business information and genuinely useful content build AI visibility far more effectively.\n\nKey takeaways:\n- An analysis of 1,885 pages found schema markup had minimal correlation with AI citation rates.\n- AI engines extract meaning from natural language content much like a human reader, not from structured markup alone.\n- Schema still helps traditional search results, but it is not the lever that drives AI chatbot citations.\n- Consistent name, address, phone and service details across a website, Google Business Profile and directories matters more for AI discovery than technical markup.\n\nAntek Automation is a UK AI automation agency, serving across Hampshire and the surrounding area. More at antekautomation.com.\nThere's a free GEO audit if you want a benchmark. https://www.antekautomation.com/ai-receptionist",
+          "hashtags": [
+            "#Shorts",
+            "#HampshireBusiness",
+            "#AISearch",
+            "#SEO",
+            "#SmallBusinessTips"
+          ],
+          "caption": ""
+        },
+        "instagram": {
+          "platform": "instagram",
+          "title": "",
+          "description": "",
+          "hashtags": [
+            "#HampshireBusiness",
+            "#TestValley",
+            "#SmallBusinessTips",
+            "#ServiceBusiness",
+            "#BusinessOwner"
+          ],
+          "caption": "Schema markup won't get you cited by AI\n\n→ Write content that actually answers customer questions\n→ Get listed in directories and get real mentions\n→ Keep your name, address and phone identical everywhere\n\nSkip the code. Build real authority instead\n\nSeeing this a lot with firms in across Hampshire.\n\nFollow @AntekAutomation for practical tips built for small business owners.\nMore at antekautomation.com\n\n#HampshireBusiness #TestValley #SmallBusinessTips #ServiceBusiness #BusinessOwner"
+        },
+        "facebook": {
+          "platform": "facebook",
+          "title": "",
+          "description": "",
+          "hashtags": [
+            "#HampshireBusiness",
+            "#SmallBusiness",
+            "#ServiceBusiness",
+            "#UKBusiness",
+            "#BusinessTips"
+          ],
+          "caption": "Schema markup won't get you cited by AI — sound familiar?\n\nWrite content that actually answers customer questions.\nGet listed in directories and get real mentions.\nSkip the code. Build real authority instead\n\nSeeing this a lot with firms in across Hampshire.\n\nWe help small business owners catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#HampshireBusiness #SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
+        },
+        "linkedin": {
+          "platform": "linkedin",
+          "title": "",
+          "description": "",
+          "hashtags": [
+            "#HampshireBusiness",
+            "#SmallBusiness",
+            "#ServiceBusiness",
+            "#BusinessOwner",
+            "#Productivity"
+          ],
+          "caption": "Schema markup won't get you cited by AI\n\n1. Write content that actually answers customer questions.\n2. Get listed in directories and get real mentions.\n3. Keep your name, address and phone identical everywhere.\n\nSkip the code. Build real authority instead\n\nSeeing this a lot with firms in across Hampshire.\n\nMore practical guides for small business owners at antekautomation.com.\n\n#HampshireBusiness #SmallBusiness #ServiceBusiness #BusinessOwner #Productivity"
+        }
+      }
+    },
+    {
+      "reel": 106,
+      "date": "2026-08-29",
+      "utc": "2026-08-29T16:00:00.000Z",
+      "source_url": "https://blog.antekautomation.com/ai-workplace-assistants-for-uk-smes-what-you-need-to-know/",
+      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-106-1785696686637.mp4",
+      "video_local_path": "/data/tools/content-machine/files/output/shorts-batch/reel-106.mp4",
+      "duration_seconds": 0,
+      "has_voiceover": true,
+      "db_ids": [
+        "3eeb835c-a347-473e-a04b-36b5e4b57817",
+        "f93e3644-e8b9-4d02-b8ef-6c7d49901e5a",
+        "572abce6-bb5b-452d-a225-636bd81d4745",
+        "cb098bd5-94b6-4498-86ae-9ac4f9067a1d"
+      ],
+      "platform_meta": {
+        "youtube": {
+          "platform": "youtube",
+          "title": "The Hidden Hours Your Team Loses Every Week | Hampshire",
+          "description": "https://blog.antekautomation.com/ai-workplace-assistants-for-uk-smes-what-you-need-to-know/\n\nIf you run a business in Hampshire, this one's for you.\nEnterprise AI assistants can cost £3,600-6,000 a year for a small team. Simpler tools often win. Full guide: https://blog.antekautomation.com/ai-workplace-assistants-for-uk-smes-what-you-need-to-know/\n\nShort answer: Most UK SMEs do not need enterprise AI workplace assistants like Copilot or Agentforce; simpler, focused automation often delivers most of the value at a fraction of the cost.\n\nKey takeaways:\n- Enterprise AI assistants such as Microsoft Copilot cost around £30 per user monthly, on top of existing subscriptions.\n- A 10-person business can expect to pay £3,600 to £6,000 or more a year for an enterprise AI assistant.\n- Justifying that cost typically needs around 30 minutes of genuine time savings per employee per day.\n- Simpler alternatives, such as website chatbots and basic workflow automation, can deliver about 80% of the value at 20% of the cost.\n\nThis comes from Antek Automation, a UK AI automation agency based in Hampshire — antekautomation.com.",
+          "hashtags": [
+            "#Shorts",
+            "#Hampshire",
+            "#AIAssistant",
+            "#SmallBusinessTips",
+            "#Productivity"
+          ],
+          "caption": ""
+        },
+        "instagram": {
+          "platform": "instagram",
+          "title": "",
+          "description": "",
+          "hashtags": [
+            "#Hampshire",
+            "#HampshireBusiness",
+            "#SmallBusinessTips",
+            "#ServiceBusiness",
+            "#BusinessOwner"
+          ],
+          "caption": "Enterprise AI tools can cost six thousand pounds a year\n\n→ Track where your team's time actually disappears first\n→ Check the tool fits your existing software stack\n→ Try a simple chatbot before an enterprise platform\n\nSimple tools often beat expensive ones\n\nTalked this through with a few Hampshire owners lately.\n\nFollow @AntekAutomation for practical tips built for professional-services firms.\nMore at antekautomation.com\n\n#Hampshire #HampshireBusiness #SmallBusinessTips #ServiceBusiness #BusinessOwner"
+        },
+        "facebook": {
+          "platform": "facebook",
+          "title": "",
+          "description": "",
+          "hashtags": [
+            "#Hampshire",
+            "#SmallBusiness",
+            "#ServiceBusiness",
+            "#UKBusiness",
+            "#BusinessTips"
+          ],
+          "caption": "Enterprise AI tools can cost six thousand pounds a year — sound familiar?\n\nTrack where your team's time actually disappears first.\nCheck the tool fits your existing software stack.\nSimple tools often beat expensive ones\n\nTalked this through with a few Hampshire owners lately.\n\nWe help professional-services firms catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#Hampshire #SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
+        },
+        "linkedin": {
+          "platform": "linkedin",
+          "title": "",
+          "description": "",
+          "hashtags": [
+            "#Hampshire",
+            "#SmallBusiness",
+            "#ServiceBusiness",
+            "#BusinessOwner",
+            "#Productivity"
+          ],
+          "caption": "Enterprise AI tools can cost six thousand pounds a year\n\n1. Track where your team's time actually disappears first.\n2. Check the tool fits your existing software stack.\n3. Try a simple chatbot before an enterprise platform.\n\nSimple tools often beat expensive ones\n\nTalked this through with a few Hampshire owners lately.\n\nMore practical guides for professional-services firms at antekautomation.com.\n\n#Hampshire #SmallBusiness #ServiceBusiness #BusinessOwner #Productivity"
+        }
+      }
     }
   ]
 }

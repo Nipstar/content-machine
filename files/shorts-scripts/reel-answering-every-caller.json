@@ -1,0 +1,22 @@
+{
+  "slides": [
+    { "type": "hook", "text": "Up to eighty percent of routine calls could run themselves", "voiceover_text": "Did you know up to eighty percent of routine customer service tasks can now run themselves?" },
+    { "type": "tip", "tipNumber": 1, "text": "Start with one job, like booking appointments", "voiceover_text": "Tip one: start with one job, like booking appointments, before rolling AI out everywhere else." },
+    { "type": "tip", "tipNumber": 2, "text": "Check your calendar and CRM can actually connect", "voiceover_text": "Tip two: check your calendar, CRM and booking tools can actually connect before you commit." },
+    { "type": "tip", "tipNumber": 3, "text": "Always leave an easy path to a real person", "voiceover_text": "Tip three: always leave an easy, obvious path to a real member of staff." },
+    { "type": "summary", "text": "Answer every caller without adding headcount", "voiceover_text": "So remember: answer every caller, without adding another wage to the payroll." },
+    { "type": "cta", "text": "", "voiceover_text": "Follow Antek Automation for more tips like this. Visit antek automation dot com. [5s pause] Or call oh three three three, oh three eight, nine nine six oh." }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/ai-agents-for-customer-service-what-uk-smes-need-to-know/",
+  "sourceBlogTitle": "Answering Every Caller Without Hiring Another Receptionist",
+  "youtubeTitle": "Answering Every Caller Without Another Receptionist",
+  "youtubeDescription": "AI agents now handle up to 80% of routine customer service tasks, on month-to-month pricing. Full guide: https://blog.antekautomation.com/ai-agents-for-customer-service-what-uk-smes-need-to-know/",
+  "youtubeTags": ["#Shorts", "#AIAgents", "#CustomerService", "#SmallBusinessTips", "#ServiceBusiness"],
+  "geo_answer": "UK SMEs can answer every caller without hiring more staff by deploying an AI agent for one targeted task first, such as booking, since these tools can automate up to 80% of routine customer service work.",
+  "geo_takeaways": [
+    "AI agent platforms can automate up to 80% of routine customer service tasks, according to Adobe.",
+    "Modern SME-focused AI agents offer month-to-month pricing, unlike enterprise platforms with long contracts.",
+    "AI agents can run multi-step processes: checking a calendar, generating a quote, and booking an appointment in one flow.",
+    "The safest rollout starts with one application, such as enquiry qualification, with a clear escalation path to a human for anything complex."
+  ]
+}

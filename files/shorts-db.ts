@@ -51,9 +51,18 @@ export async function initShortsTable(): Promise<void> {
 /**
  * Inserts one row per platform for a single video.
  * Returns the UUIDs of all inserted rows in the same order as platformMetas.
+ *
+ * r2_url / scheduled_at are optional — the live DB schema carries these
+ * columns (plus blotato_post_id / error_message, written by markShortScheduled /
+ * markShortFailed below) even though older code didn't populate them.
  */
 export async function queueShort(
-  baseRecord: { video_path: string; blog_source_url: string },
+  baseRecord: {
+    video_path: string;
+    blog_source_url: string;
+    r2_url?: string;
+    scheduled_at?: string;
+  },
   platformMetas: PlatformMeta[]
 ): Promise<string[]> {
   const client = createClient();
@@ -63,8 +72,8 @@ export async function queueShort(
     for (const meta of platformMetas) {
       const result = await client.query(
         `INSERT INTO shorts_queue
-          (video_path, platform, title, description, caption, tags, blog_source_url)
-         VALUES ($1, $2, $3, $4, $5, $6, $7)
+          (video_path, platform, title, description, caption, tags, blog_source_url, r2_url, scheduled_at)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
          RETURNING id`,
         [
           baseRecord.video_path,
@@ -74,11 +83,41 @@ export async function queueShort(
           meta.caption || null,
           meta.hashtags,
           baseRecord.blog_source_url,
+          baseRecord.r2_url ?? null,
+          baseRecord.scheduled_at ?? null,
         ]
       );
       ids.push(result.rows[0].id as string);
     }
     return ids;
+  } finally {
+    await client.end();
+  }
+}
+
+/** Marks a row as scheduled with Blotato after a successful createPost() call. */
+export async function markShortScheduled(id: string, blotatoPostId: string): Promise<void> {
+  const client = createClient();
+  try {
+    await client.connect();
+    await client.query(
+      `UPDATE shorts_queue SET status = 'scheduled', blotato_post_id = $1 WHERE id = $2`,
+      [blotatoPostId, id]
+    );
+  } finally {
+    await client.end();
+  }
+}
+
+/** Marks a row as failed with an error message after a failed Blotato call. */
+export async function markShortErrored(id: string, error: string): Promise<void> {
+  const client = createClient();
+  try {
+    await client.connect();
+    await client.query(
+      `UPDATE shorts_queue SET status = 'failed', error_message = $1 WHERE id = $2`,
+      [error, id]
+    );
   } finally {
     await client.end();
   }

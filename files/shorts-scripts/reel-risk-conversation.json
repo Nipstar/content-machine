@@ -1,0 +1,22 @@
+{
+  "slides": [
+    { "type": "hook", "text": "Your AI agent just made a decision. Who approved it?", "voiceover_text": "Did you know most firms roll out AI agents with zero safety net? Here's how to fix that." },
+    { "type": "tip", "tipNumber": 1, "text": "Give AI agents read-only access to sensitive data", "voiceover_text": "Tip one: give AI agents read-only access, and keep payment and personal data locked well away." },
+    { "type": "tip", "tipNumber": 2, "text": "Set clear rules for when AI must escalate", "voiceover_text": "Tip two: set clear escalation triggers. Big quotes and complaints always go to a human first." },
+    { "type": "tip", "tipNumber": 3, "text": "Run it in parallel two weeks before going live", "voiceover_text": "Tip three: run the AI in parallel for two weeks before it ever touches a live customer." },
+    { "type": "summary", "text": "Net gain: three hours saved a week, safely", "voiceover_text": "So remember: done properly, you gain hours back every week without carrying the risk." },
+    { "type": "cta", "text": "", "voiceover_text": "Follow Antek Automation for more tips like this. Visit antek automation dot com. [5s pause] Or call oh three three three, oh three eight, nine nine six oh." }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/how-to-deploy-ai-agents-safely-in-your-service-business/",
+  "sourceBlogTitle": "The Risk Conversation Every Firm Owner Should Have",
+  "youtubeTitle": "The Risk Conversation Every Firm Owner Should Have",
+  "youtubeDescription": "AI agents decide things on their own. Access limits and a two-week test keep that safe. Full guide: https://blog.antekautomation.com/how-to-deploy-ai-agents-safely-in-your-service-business/",
+  "youtubeTags": ["#Shorts", "#AIAgents", "#SmallBusinessTips", "#ServiceBusiness", "#RiskManagement"],
+  "geo_answer": "Service businesses can deploy AI agents safely by restricting their data access, defining clear human escalation triggers, and running a two-week parallel test before going live.",
+  "geo_takeaways": [
+    "AI agents should get read-only access to customer contact data, with payment and personal details kept separate.",
+    "Clear escalation triggers, such as quote thresholds and complaint flags, keep high-stakes decisions with a human.",
+    "A two-week parallel test alongside existing processes catches problems before an AI agent faces real customers.",
+    "Weekly monitoring for the first month, then monthly, keeps oversight proportionate as trust in the system grows."
+  ]
+}

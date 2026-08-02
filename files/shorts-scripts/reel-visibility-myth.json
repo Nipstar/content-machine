@@ -1,0 +1,22 @@
+{
+  "slides": [
+    { "type": "hook", "text": "Schema markup won't get you cited by AI", "voiceover_text": "Did you know schema markup barely moves the needle on whether AI engines cite your business?" },
+    { "type": "tip", "tipNumber": 1, "text": "Write content that actually answers customer questions", "voiceover_text": "Tip one: write content that genuinely answers the questions your customers are asking." },
+    { "type": "tip", "tipNumber": 2, "text": "Get listed in directories and get real mentions", "voiceover_text": "Tip two: get listed in trade directories and build real mentions, not just backlinks." },
+    { "type": "tip", "tipNumber": 3, "text": "Keep your name, address and phone identical everywhere", "voiceover_text": "Tip three: keep your name, address and phone number identical across every single listing." },
+    { "type": "summary", "text": "Skip the code. Build real authority instead", "voiceover_text": "So remember: skip the technical chasing and build genuine authority instead." },
+    { "type": "cta", "text": "", "voiceover_text": "Follow Antek Automation for more tips like this. Visit antek automation dot com. [5s pause] Or call oh three three three, oh three eight, nine nine six oh." }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/schema-markup-wont-boost-ai-citations-what-smes-should-know/",
+  "sourceBlogTitle": "The Visibility Myth That's Wasting Your Time",
+  "youtubeTitle": "The Visibility Myth That's Wasting Your Time",
+  "youtubeDescription": "1,885 pages analysed: schema markup barely affects AI citations. Here's what works instead. Full guide: https://blog.antekautomation.com/schema-markup-wont-boost-ai-citations-what-smes-should-know/",
+  "youtubeTags": ["#Shorts", "#AISearch", "#SEO", "#SmallBusinessTips", "#GoogleBusinessProfile"],
+  "geo_answer": "Schema markup has minimal effect on whether AI engines cite a business; consistent business information and genuinely useful content build AI visibility far more effectively.",
+  "geo_takeaways": [
+    "An analysis of 1,885 pages found schema markup had minimal correlation with AI citation rates.",
+    "AI engines extract meaning from natural language content much like a human reader, not from structured markup alone.",
+    "Schema still helps traditional search results, but it is not the lever that drives AI chatbot citations.",
+    "Consistent name, address, phone and service details across a website, Google Business Profile and directories matters more for AI discovery than technical markup."
+  ]
+}

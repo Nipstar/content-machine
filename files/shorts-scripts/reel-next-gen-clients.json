@@ -1,0 +1,22 @@
+{
+  "slides": [
+    { "type": "hook", "text": "Your team wastes a fifth of the day just searching", "voiceover_text": "Did you know knowledge workers lose nearly a fifth of their day just searching for information?" },
+    { "type": "tip", "tipNumber": 1, "text": "Calculate what searching actually costs your team", "voiceover_text": "Tip one: work out what searching costs. Minutes lost daily, multiplied by wages, adds up fast." },
+    { "type": "tip", "tipNumber": 2, "text": "Trial one AI search tool free for two weeks", "voiceover_text": "Tip two: trial one AI search tool free for two weeks before you commit to anything." },
+    { "type": "tip", "tipNumber": 3, "text": "Faster answers inside mean faster replies to clients", "voiceover_text": "Tip three: faster answers inside your business mean faster, sharper replies to the clients waiting on you." },
+    { "type": "summary", "text": "Search fixes usually pay for themselves in months", "voiceover_text": "So remember: a proper search tool typically pays for itself within two to four months." },
+    { "type": "cta", "text": "", "voiceover_text": "Follow Antek Automation for more tips like this. Visit antek automation dot com. [5s pause] Or call oh three three three, oh three eight, nine nine six oh." }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/ai-powered-search-for-small-businesses-what-uk-smes-need-to-know/",
+  "sourceBlogTitle": "Where The Next Generation Of Clients Will Find You",
+  "youtubeTitle": "Where The Next Generation Of Clients Will Find You",
+  "youtubeDescription": "Knowledge workers lose 20% of the day searching. Fix that, replies to clients get faster. Full guide: https://blog.antekautomation.com/ai-powered-search-for-small-businesses-what-uk-smes-need-to-know/",
+  "youtubeTags": ["#Shorts", "#AISearch", "#SmallBusinessTips", "#Productivity", "#ServiceBusiness"],
+  "geo_answer": "UK service businesses lose significant productivity to poor internal search, and AI-powered search tools that understand context typically pay for themselves within two to four months.",
+  "geo_takeaways": [
+    "Knowledge workers spend close to 20% of their time searching for information or the right colleague.",
+    "For a 5-person team, that lost time equals roughly one full-time employee's productivity.",
+    "AI search tools that understand context, not just keywords, typically break even within 2-4 months.",
+    "Faster internal information retrieval translates directly into faster, better-informed replies to clients and prospects."
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "note": "6 reels for podcast episodes 23-28, 2026-08-12 to 2026-08-29. YouTube + IG + FB + LinkedIn (personal, accountId 14687). 17:00 UK to match the existing reel convention.",
+  "platforms": [
+    "youtube",
+    "instagram",
+    "facebook",
+    "linkedin"
+  ],
+  "reels": [
+    {
+      "reel": 101,
+      "script_file": "reel-risk-conversation.json",
+      "date": "2026-08-12",
+      "time_uk": "17:00",
+      "utc": "2026-08-12T16:00:00.000Z",
+      "status": "pending",
+      "source_url": "https://blog.antekautomation.com/how-to-deploy-ai-agents-safely-in-your-service-business/"
+    },
+    {
+      "reel": 102,
+      "script_file": "reel-next-gen-clients.json",
+      "date": "2026-08-15",
+      "time_uk": "17:00",
+      "utc": "2026-08-15T16:00:00.000Z",
+      "status": "pending",
+      "source_url": "https://blog.antekautomation.com/ai-powered-search-for-small-businesses-what-uk-smes-need-to-know/"
+    },
+    {
+      "reel": 103,
+      "script_file": "reel-follow-ups-happen.json",
+      "date": "2026-08-19",
+      "time_uk": "17:00",
+      "utc": "2026-08-19T16:00:00.000Z",
+      "status": "pending",
+      "source_url": "https://blog.antekautomation.com/agentic-ai-for-marketing-what-uk-smes-need-to-know-in-2025/"
+    },
+    {
+      "reel": 104,
+      "script_file": "reel-answering-every-caller.json",
+      "date": "2026-08-22",
+      "time_uk": "17:00",
+      "utc": "2026-08-22T16:00:00.000Z",
+      "status": "pending",
+      "source_url": "https://blog.antekautomation.com/ai-agents-for-customer-service-what-uk-smes-need-to-know/"
+    },
+    {
+      "reel": 105,
+      "script_file": "reel-visibility-myth.json",
+      "date": "2026-08-26",
+      "time_uk": "17:00",
+      "utc": "2026-08-26T16:00:00.000Z",
+      "status": "pending",
+      "source_url": "https://blog.antekautomation.com/schema-markup-wont-boost-ai-citations-what-smes-should-know/"
+    },
+    {
+      "reel": 106,
+      "script_file": "reel-hidden-hours.json",
+      "date": "2026-08-29",
+      "time_uk": "17:00",
+      "utc": "2026-08-29T16:00:00.000Z",
+      "status": "pending",
+      "source_url": "https://blog.antekautomation.com/ai-workplace-assistants-for-uk-smes-what-you-need-to-know/"
+    }
+  ]
+}

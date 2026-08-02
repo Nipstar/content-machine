@@ -169,12 +169,13 @@ async function main() {
       const r2Url = await uploadVideoToR2(videoOutPath, r2Filename);
       console.log(`  ✅  R2: ${r2Url}`);
 
-      // Only youtube/instagram/facebook are valid in shorts_queue table per current schema
-      // linkedin + twitter still get manifest entries for Blotato but don't write to DB
-      const dbMetas = platformMetas.filter((m) => ["youtube", "instagram", "facebook"].includes(m.platform));
+      // youtube/instagram/facebook/linkedin all get shorts_queue rows (platform is a
+      // free-text column, no DB constraint). twitter still gets a manifest entry for
+      // Blotato but is excluded from DB tracking here (not part of this pipeline's targets).
+      const dbMetas = platformMetas.filter((m) => ["youtube", "instagram", "facebook", "linkedin"].includes(m.platform));
       console.log(`  🗄   Queuing to DB (${dbMetas.length} rows)...`);
       const dbIds = await queueShort(
-        { video_path: videoOutPath, blog_source_url: reel.source_url },
+        { video_path: videoOutPath, blog_source_url: reel.source_url, r2_url: r2Url, scheduled_at: reel.utc },
         dbMetas
       );
       console.log(`  ✅  DB rows: ${dbIds.length}`);
