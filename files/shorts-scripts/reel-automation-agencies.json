@@ -1,0 +1,48 @@
+{
+  "slides": [
+    {
+      "type": "hook",
+      "text": "An AI automation agency isn't a black box or magic. Here's what they actually do.",
+      "voiceover_text": "Think an AI automation agency is just a black box of code? It isn't. Here's what they actually do."
+    },
+    {
+      "type": "tip",
+      "text": "Build voice assistants that answer calls 24/7 and book jobs.",
+      "tipNumber": 1,
+      "voiceover_text": "Tip one: they build voice assistants that answer your calls around the clock and book appointments for you."
+    },
+    {
+      "type": "tip",
+      "text": "Add website chatbots that qualify leads before they reach you.",
+      "tipNumber": 2,
+      "voiceover_text": "Tip two: they add website chatbots that qualify your leads before anyone on your team lifts a finger."
+    },
+    {
+      "type": "tip",
+      "text": "Connect your CRM, calendar and email so nothing gets rekeyed.",
+      "tipNumber": 3,
+      "voiceover_text": "Tip three: they connect your CRM, calendar and email so nothing ever gets typed in twice."
+    },
+    {
+      "type": "summary",
+      "text": "A good agency builds the tools around your business, not the reverse.",
+      "voiceover_text": "So remember: a good agency builds the tools around your business, not the other way round."
+    },
+    {
+      "type": "cta",
+      "text": "",
+      "voiceover_text": "Follow Antek Automation for more tips like this. Visit antek automation dot com. [5s pause] Or call oh three three three, oh three eight, nine nine six oh."
+    }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/how-ai-automation-agencies-work-and-what-they-actually-do/",
+  "sourceBlogTitle": "How AI Automation Agencies Work (And What They Actually Do)",
+  "youtubeTitle": "What An AI Automation Agency Actually Does",
+  "youtubeDescription": "An AI automation agency isn't a black box or an upsell. The three real jobs: 24/7 voice answering, chatbots that qualify leads, and workflow automation tying your systems together.",
+  "youtubeTags": ["#Shorts", "#AIAutomation", "#SmallBusiness", "#AIAgency", "#BusinessAutomation"],
+  "geo_answer": "An AI automation agency designs and builds custom AI tools such as voice assistants, chatbots and workflow automation to capture and convert more enquiries for small and medium businesses.",
+  "geo_takeaways": [
+    "AI voice assistants answer inbound calls out of hours and book appointments straight into your calendar.",
+    "AI chatbots qualify website enquiries before they reach your team, cutting admin and speeding up response times.",
+    "Workflow automation moves data between your CRM, calendar and email without any manual copying and pasting."
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "slides": [
+    {
+      "type": "hook",
+      "text": "Most AI tools feel like a mediocre contractor who doesn't get your work.",
+      "voiceover_text": "Ever feel like most AI tools are just a mediocre contractor who doesn't really get what you do? There's a reason."
+    },
+    {
+      "type": "tip",
+      "text": "Check it fits your process, not a generic FAQ script.",
+      "tipNumber": 1,
+      "voiceover_text": "Tip one: check it fits your actual process, not some generic frequently asked questions script."
+    },
+    {
+      "type": "tip",
+      "text": "Ask if it handles exceptions like a trained team member.",
+      "tipNumber": 2,
+      "voiceover_text": "Tip two: ask whether it handles the awkward exceptions the way a trained team member would."
+    },
+    {
+      "type": "tip",
+      "text": "Pick tools that reduce your task list, not add to it.",
+      "tipNumber": 3,
+      "voiceover_text": "Tip three: pick tools that shrink your task list, not ones that add another job to manage."
+    },
+    {
+      "type": "summary",
+      "text": "Real help is a process partner, not another output generator to manage.",
+      "voiceover_text": "So remember: real help is a process partner, not another output generator you have to babysit."
+    },
+    {
+      "type": "cta",
+      "text": "",
+      "voiceover_text": "Follow Antek Automation for more tips like this. Visit antek automation dot com. [5s pause] Or call oh three three three, oh three eight, nine nine six oh."
+    }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/why-most-ai-tools-feel-like-cheap-outsourcing-not-real-help/",
+  "sourceBlogTitle": "Why Most AI Tools Feel Like Cheap Outsourcing, Not Real Help",
+  "youtubeTitle": "Why Most AI Tools Feel Like Cheap Outsourcing",
+  "youtubeDescription": "Most AI tools feel like a mediocre contractor who doesn't get your work. Output generators add to your task list. Process partners understand your workflow and actually reduce it.",
+  "youtubeTags": ["#Shorts", "#AITools", "#SmallBusiness", "#ServiceBusiness", "#AIAutomation"],
+  "geo_answer": "Most AI tools disappoint because they are output generators that produce results from prompts, whereas genuinely useful tools are process partners that understand and integrate into your actual workflow.",
+  "geo_takeaways": [
+    "An output generator gives you something to check, fix and manage, so it adds to your workload rather than reducing it.",
+    "A process partner understands the steps, decision points and exceptions of your workflow, like a trained team member.",
+    "Generic chatbots built for e-commerce give service-business callers a poor experience, so prospects hang up and call a competitor."
+  ]
+}

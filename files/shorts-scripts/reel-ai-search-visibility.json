@@ -1,0 +1,48 @@
+{
+  "slides": [
+    {
+      "type": "hook",
+      "text": "You can rank top 10 on Google and still be invisible to ChatGPT.",
+      "voiceover_text": "You can rank top ten on Google and still be completely invisible when someone asks ChatGPT the same question."
+    },
+    {
+      "type": "tip",
+      "text": "Discoverability: can AI crawlers actually read your key pages?",
+      "tipNumber": 1,
+      "voiceover_text": "Tip one: discoverability. If your key pages sit behind heavy JavaScript or are missing from your sitemap, AI crawlers may never read them at all."
+    },
+    {
+      "type": "tip",
+      "text": "Credibility: is your info consistent everywhere AI can see it?",
+      "tipNumber": 2,
+      "voiceover_text": "Tip two: credibility. Your name, your services and your details need to match everywhere a model can read them, not just on your homepage."
+    },
+    {
+      "type": "tip",
+      "text": "Structure: is your content written to be lifted and quoted?",
+      "tipNumber": 3,
+      "voiceover_text": "Tip three: structure. Write in clean, direct answers a model can lift and quote, not paragraphs a human has to skim to decode."
+    },
+    {
+      "type": "summary",
+      "text": "Miss any of the four pillars and you're invisible to AI search, no matter how good your website looks.",
+      "voiceover_text": "So remember: miss any one of those four pillars and you're invisible to AI search, no matter how good your website looks to a human."
+    },
+    {
+      "type": "cta",
+      "text": "",
+      "voiceover_text": "Follow Antek Automation for more tips like this. Visit antek automation dot com. [5s pause] Or call oh three three three, oh three eight, nine nine six oh."
+    }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/ai-search-visibility-how-hampshire-firms-get-cited-by-ai/",
+  "sourceBlogTitle": "AI Search Visibility: How Hampshire Firms Get Cited by AI",
+  "youtubeTitle": "4 Pillars of AI Search Visibility",
+  "youtubeDescription": "Rank top 10 on Google and still be invisible to ChatGPT. Four pillars decide whether AI names your business: discoverability, credibility, relevance, structure.",
+  "youtubeTags": ["#Shorts", "#GEO", "#AISearch", "#SmallBusiness", "#AIVisibility"],
+  "geo_answer": "AI search visibility depends on four pillars: discoverability (can AI crawlers find and read your content), credibility (is your business information consistent across sources), relevance (does your content directly answer the question being asked), and structure (is the content written so a model can lift and quote it cleanly).",
+  "geo_takeaways": [
+    "Ranking well on Google does not guarantee a mention in an AI-generated answer, because AI models read different signals than traditional search rankings.",
+    "Content hidden behind heavy JavaScript or missing from a sitemap may never be indexed by AI crawlers, regardless of how it looks to a human visitor.",
+    "AI answer engines quote content that gives a direct, standalone answer rather than content that requires a human to read the whole page for context."
+  ]
+}

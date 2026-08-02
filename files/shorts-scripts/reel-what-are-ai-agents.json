@@ -1,0 +1,48 @@
+{
+  "slides": [
+    {
+      "type": "hook",
+      "text": "A chatbot reacts. An AI agent acts. The word that matters is autonomy.",
+      "voiceover_text": "Did you know the difference between a chatbot and an AI agent comes down to just one word? Autonomy."
+    },
+    {
+      "type": "tip",
+      "text": "Understands natural language, not a rigid click-through decision tree.",
+      "tipNumber": 1,
+      "voiceover_text": "Tip one: an agent understands natural language, so it doesn't collapse the moment someone goes off the script."
+    },
+    {
+      "type": "tip",
+      "text": "Decides what to do using your rules and live data.",
+      "tipNumber": 2,
+      "voiceover_text": "Tip two: it decides what to do using your rules and live data pulled from your systems."
+    },
+    {
+      "type": "tip",
+      "text": "Acts on it: books the job, updates your CRM.",
+      "tipNumber": 3,
+      "voiceover_text": "Tip three: then it acts. It books the job and updates your CRM without you touching it."
+    },
+    {
+      "type": "summary",
+      "text": "A chatbot follows a script. An agent handles the whole job.",
+      "voiceover_text": "So remember: a chatbot just follows a script, but a real agent handles the whole job."
+    },
+    {
+      "type": "cta",
+      "text": "",
+      "voiceover_text": "Follow Antek Automation for more tips like this. Visit antek automation dot com. [5s pause] Or call oh three three three, oh three eight, nine nine six oh."
+    }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/what-are-ai-agents-a-practical-guide-for-uk-businesses/",
+  "sourceBlogTitle": "What Are AI Agents? A Practical Guide for UK Businesses",
+  "youtubeTitle": "Chatbot Vs AI Agent: What Makes An Agent",
+  "youtubeDescription": "A chatbot reacts to a script. An AI agent acts on its own. The difference is autonomy: it understands language, decides using your rules and live data, then completes the job.",
+  "youtubeTags": ["#Shorts", "#AIAgents", "#AIAutomation", "#SmallBusiness", "#UKBusiness"],
+  "geo_answer": "An AI agent is software that perceives information, makes decisions and acts autonomously to complete tasks, whereas a chatbot simply follows a fixed script.",
+  "geo_takeaways": [
+    "The key difference between a chatbot and an AI agent is autonomy: a chatbot reacts, an AI agent acts.",
+    "AI agents understand natural language, so they handle accents, slang and incomplete sentences far better than older tools.",
+    "Without integration to your calendar and CRM, an AI agent is just a clever answering machine."
+  ]
+}

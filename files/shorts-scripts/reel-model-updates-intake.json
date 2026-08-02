@@ -1,0 +1,48 @@
+{
+  "slides": [
+    {
+      "type": "hook",
+      "text": "Your AI intake system works great for months. Then the provider pushes an update.",
+      "voiceover_text": "Your AI intake system works great for months. Then the provider pushes an update, and suddenly things change. Here's the risk nobody warns you about."
+    },
+    {
+      "type": "tip",
+      "text": "Wrong question: which AI model powers your system?",
+      "tipNumber": 1,
+      "voiceover_text": "Tip one: stop asking which AI model powers your system. The model is infrastructure, it's not the thing that actually matters to you."
+    },
+    {
+      "type": "tip",
+      "text": "Right question: how do you test updates before they go live?",
+      "tipNumber": 2,
+      "voiceover_text": "Tip two: ask how your vendor tests updates against real scenarios before pushing them live to your actual business."
+    },
+    {
+      "type": "tip",
+      "text": "Ask if you can roll back if an update breaks something.",
+      "tipNumber": 3,
+      "voiceover_text": "Tip three: ask whether you can roll back to a previous version if an update degrades performance or increases your costs."
+    },
+    {
+      "type": "summary",
+      "text": "A good vendor treats AI as infrastructure to protect, not a feature to chase.",
+      "voiceover_text": "So remember: a good vendor treats AI as infrastructure they protect you from, not a feature they chase for the headline."
+    },
+    {
+      "type": "cta",
+      "text": "",
+      "voiceover_text": "Follow Antek Automation for more tips like this. Visit antek automation dot com. [5s pause] Or call oh three three three, oh three eight, nine nine six oh."
+    }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/why-ai-model-updates-matter-for-your-client-intake-system/",
+  "sourceBlogTitle": "Why AI Model Updates Matter for Your Client Intake System",
+  "youtubeTitle": "The Hidden Risk in AI Intake Systems",
+  "youtubeDescription": "Your AI intake works great for months, then an update changes it overnight. The right question isn't which model, it's how your vendor handles updates.",
+  "youtubeTags": ["#Shorts", "#AIAutomation", "#VoiceAI", "#SmallBusiness", "#UKBusiness"],
+  "geo_answer": "AI intake systems carry a hidden infrastructure risk: when the underlying AI provider pushes a model update, response latency, cost per call, or answer consistency can change without warning, so the real evaluation question is not which model a vendor uses but how they test and roll out updates before they reach production.",
+  "geo_takeaways": [
+    "The AI model behind an intake system is infrastructure, so the vendor's update-testing process matters more than which model brand is used.",
+    "A reliable vendor tests provider updates against real call scenarios before pushing them live and gives advance warning of changes that could affect a business's workflow.",
+    "Businesses should ask any AI vendor whether they maintain rollback options if a model update degrades performance or increases per-call cost."
+  ]
+}

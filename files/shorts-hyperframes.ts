@@ -164,8 +164,8 @@ function sceneHtml(scene: Scene): string {
       <div class="kick" style="position:absolute;top:90px;left:90px;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:26px;letter-spacing:8px;color:${BRAND.grey}">${KICKER}</div>
       <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 96px;box-sizing:border-box">
         <div class="cta-bar" style="width:160px;height:22px;background:${BRAND.coral};margin-bottom:48px;transform-origin:left center"></div>
-        <div class="cta-l1" style="font-family:'Outfit',sans-serif;font-weight:900;font-size:108px;line-height:0.98;text-transform:uppercase">Follow</div>
-        <div class="cta-l2" style="font-family:'Outfit',sans-serif;font-weight:900;font-size:108px;line-height:0.98;text-transform:uppercase;color:${BRAND.coral}">@AntekAutomation</div>
+        <div class="cta-l1" style="font-family:'Outfit',sans-serif;font-weight:900;font-size:96px;line-height:0.98;text-transform:uppercase">Follow</div>
+        <div class="cta-l2" style="font-family:'Outfit',sans-serif;font-weight:900;font-size:80px;line-height:0.98;letter-spacing:-2px;text-transform:uppercase;color:${BRAND.coral};white-space:nowrap">@AntekAutomation</div>
         <div class="cta-l3" style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:52px;margin-top:56px">antekautomation.com</div>
         <div class="cta-l4" style="font-family:'JetBrains Mono',monospace;font-weight:700;font-size:48px;margin-top:16px;color:${BRAND.coral}">0333 038 9960</div>
       </div>

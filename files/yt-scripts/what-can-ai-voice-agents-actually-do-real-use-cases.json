@@ -1,0 +1,65 @@
+{
+  "slides": [
+    {
+      "type": "intro",
+      "text": "What AI voice agents actually do well, and where they don't fit",
+      "voiceover_text": "Right, let's clear something up. AI voice agents get sold as the answer to every business problem, and they're not. But used in the right place, they're genuinely useful. Today I'll show you what they actually do well, and where they fall flat."
+    },
+    {
+      "type": "context",
+      "text": "Voice agents get sold as the fix for everything. They're not. But for high-volume, predictable calls, they capture leads you'd otherwise lose.",
+      "voiceover_text": "Here's the situation I see all the time. You're running a property or trades business, dozens of calls coming in every week, viewing requests, applicant enquiries, emergency callouts. You can't answer them all, and the ones you miss walk straight to a competitor. A voice agent shines on those high-volume, predictable calls."
+    },
+    {
+      "type": "point",
+      "pointNumber": 1,
+      "text": "Answer every call 24/7 and book appointments directly. One Winchester lettings agency captured thirty percent more leads.",
+      "voiceover_text": "The first thing they do brilliantly is answer every call, day or night, and book the appointment there and then. A lettings agency in Winchester started answering after six in the evening and at weekends, and they captured thirty percent more leads without adding a single hour of staff time."
+    },
+    {
+      "type": "point",
+      "pointNumber": 2,
+      "text": "Handle repeat FAQs from your knowledge base. Is it available, what's the fee, when can I view. No human needed.",
+      "voiceover_text": "Second, they handle the questions you've answered a hundred times. Is the property still available, what's the fee, when can I view. The agent pulls the answer from your knowledge base, sends a follow-up text, and nobody on your team ever touches it."
+    },
+    {
+      "type": "point",
+      "pointNumber": 3,
+      "text": "Qualify and route urgent calls. A Basingstoke heating firm dispatches emergency boiler jobs and saves ten hours a week.",
+      "voiceover_text": "Third, and this is the most useful one, they qualify and route the urgent stuff. A heating firm in Basingstoke uses one for emergency boiler callouts. It captures the details, confirms the fee, and dispatches the engineer. The owner reckons it saves ten hours a week in admin."
+    },
+    {
+      "type": "point",
+      "pointNumber": 4,
+      "text": "Follow up instantly. The agent texts a booking link two minutes after the call, before the lead drifts elsewhere.",
+      "voiceover_text": "Fourth, the follow-up. The agent can text a booking link two minutes after the call, whilst you're still front of mind. That immediate response is often the difference between winning the job and losing it to whoever rang back first."
+    },
+    {
+      "type": "point",
+      "pointNumber": 5,
+      "text": "Know the limits. Negotiations, objection handling and sensitive calls still need a human. Automate the process, not the judgement.",
+      "voiceover_text": "And the fifth thing, know where they don't fit. Negotiations, handling objections, sensitive conversations that need real empathy, those still need a person. The trick is to automate the process, not the judgement. Get that wrong and you'll just frustrate callers."
+    },
+    {
+      "type": "takeaway",
+      "text": "Losing calls you can't answer? Test a voice agent on your predictable calls. Keep humans for the conversations that matter.",
+      "voiceover_text": "So here's what I want you to take away. If you're handling dozens of calls a week and losing leads because you can't get to them all, a voice agent is worth testing on your predictable calls. Keep your people for the conversations that actually need them."
+    },
+    {
+      "type": "cta",
+      "text": "",
+      "voiceover_text": "If you found this useful, please subscribe and hit the notification bell. Visit antek automation dot com for more guides like this, or call oh three three three, oh three eight, nine nine six oh."
+    }
+  ],
+  "sourceBlogUrl": "https://blog.antekautomation.com/what-can-ai-voice-agents-actually-do-real-use-cases/",
+  "sourceBlogTitle": "What Can AI Voice Agents Do? Real Use Cases for Property",
+  "youtubeTitle": "What AI Voice Agents Actually Do (Real Use Cases)",
+  "youtubeDescription": "AI voice agents get sold as the fix for everything. They're not. Here are the real use cases where they actually earn their keep: answering every call 24/7, booking appointments, handling FAQs, and routing urgent jobs, plus where they fall short. Real examples from property and trades businesses across Hampshire. Full article: https://blog.antekautomation.com/what-can-ai-voice-agents-actually-do-real-use-cases/",
+  "youtubeTags": ["#UKSmallBusiness", "#AIAutomation", "#AIVoiceAgents", "#VoiceAI", "#PropertyManagement", "#EstateAgents", "#LeadGeneration", "#MissedCalls", "#Hampshire", "#SmallBusinessTips"],
+  "geo_answer": "AI voice agents work best for high-volume, predictable calls such as answering every enquiry 24/7, booking appointments, handling FAQs and routing urgent jobs, but negotiations and emotionally sensitive conversations still need a human.",
+  "geo_takeaways": [
+    "AI voice agents excel at high-volume, predictable calls: answering 24/7, booking appointments, handling FAQs and routing urgent enquiries.",
+    "A Winchester lettings agency captured thirty percent more leads by using a voice agent to answer after-hours and weekend calls.",
+    "Voice agents cannot handle negotiations, objection handling or emotionally sensitive conversations, which still require a human."
+  ]
+}

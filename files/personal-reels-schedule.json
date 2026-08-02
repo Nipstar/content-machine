@@ -1,0 +1,42 @@
+{
+  "note": "4 reels for the 14-day GEO/AI-SEO personal batch, 2026-07-30 to 2026-08-11. YouTube + IG + FB. 17:00 UK to separate from the 08:00/12:00 text+caption posts.",
+  "platforms": ["youtube", "instagram", "facebook"],
+  "reels": [
+    {
+      "reel": 1,
+      "script_file": "reel-ai-search-visibility.json",
+      "date": "2026-07-30",
+      "time_uk": "17:00",
+      "utc": "2026-07-30T16:00:00.000Z",
+      "status": "pending",
+      "source_url": "https://blog.antekautomation.com/ai-search-visibility-how-hampshire-firms-get-cited-by-ai/"
+    },
+    {
+      "reel": 2,
+      "script_file": "reel-voice-agent-transform.json",
+      "date": "2026-08-03",
+      "time_uk": "17:00",
+      "utc": "2026-08-03T16:00:00.000Z",
+      "status": "pending",
+      "source_url": "https://blog.antekautomation.com/how-ai-voice-agents-are-transforming-business-communication/"
+    },
+    {
+      "reel": 3,
+      "script_file": "reel-close-at-five.json",
+      "date": "2026-08-07",
+      "time_uk": "17:00",
+      "utc": "2026-08-07T16:00:00.000Z",
+      "status": "pending",
+      "source_url": "https://blog.antekautomation.com/how-ai-voice-agents-handle-after-hours-calls-for-uk-businesses/"
+    },
+    {
+      "reel": 4,
+      "script_file": "reel-model-updates-intake.json",
+      "date": "2026-08-11",
+      "time_uk": "17:00",
+      "utc": "2026-08-11T16:00:00.000Z",
+      "status": "pending",
+      "source_url": "https://blog.antekautomation.com/why-ai-model-updates-matter-for-your-client-intake-system/"
+    }
+  ]
+}

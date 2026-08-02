@@ -53,7 +53,8 @@ const DEFAULT_SLIDE_DURATION = 5;  // seconds per slide in silent mode
 function buildFilterComplex(
   durations: number[],
   voiceAudioStartIndex: number | null,
-  musicInputIndex: number | null
+  musicInputIndex: number | null,
+  frameSize: string = "1080x1920" // reels vertical; YouTube passes "1920x1080"
 ): string {
   const n = durations.length;
   const parts: string[] = [];
@@ -74,7 +75,7 @@ function buildFilterComplex(
         `x='iw/2-(iw/zoom/2)':` +
         `y='ih/2-(ih/zoom/2)':` +
         `d=${frames}:` +
-        `s=1080x1920:` +
+        `s=${frameSize}:` +
         `fps=${FPS}` +
         `[z${i}]`
     );
@@ -113,7 +114,13 @@ function buildFilterComplex(
     parts.push(
       `${audioInputs}concat=n=${n}:v=0:a=1,` +
         `atrim=duration=${totalVideoDuration.toFixed(4)},` +
-        `asetpts=PTS-STARTPTS` +
+        `asetpts=PTS-STARTPTS,` +
+        // ponytail: single-pass EBU R128 loudnorm levels segment-to-segment
+        // loudness across the concatenated per-slide clips. Fish S2 Pro's ~8s
+        // cap forces per-slide TTS (not one-take), so voice can drift in level
+        // between slides; this is the cheapest fix. True one-take needs a
+        // long-form TTS. See memory feedback_video_voice_one_take.
+        `loudnorm=I=-16:TP=-1.5:LRA=11` +
         `[concat_audio]`
     );
 
@@ -160,10 +167,17 @@ function findMusicFile(): string | null {
 export async function stitchVideo(
   framePaths: string[],
   outputPath: string,
-  slideAudios?: SlideAudio[]
+  slideAudios?: SlideAudio[],
+  // Reels clamp each slide to 8s (short, punchy). YouTube narration runs longer
+  // per slide, so it passes a higher cap (e.g. Infinity) to keep audio in sync.
+  opts?: { maxSlideSeconds?: number; frameSize?: string }
 ): Promise<string> {
-  if (framePaths.length !== 6) {
-    throw new Error(`stitchVideo expects exactly 6 frames, got ${framePaths.length}`);
+  const maxSlideSeconds = opts?.maxSlideSeconds ?? 8;
+  const frameSize = opts?.frameSize ?? "1080x1920";
+  // Reels are 6 frames; YouTube landscape videos are 9. The filter graph below
+  // is frame-count agnostic (drives off framePaths.length), so accept any N>=2.
+  if (framePaths.length < 2) {
+    throw new Error(`stitchVideo expects at least 2 frames, got ${framePaths.length}`);
   }
 
   mkdirSync(dirname(outputPath), { recursive: true });
@@ -177,7 +191,7 @@ export async function stitchVideo(
     ? slideAudios!.map((a, i) =>
         i === slideAudios!.length - 1
           ? Math.max(3, a.durationSeconds)
-          : Math.max(3, Math.min(8, a.durationSeconds))
+          : Math.max(3, Math.min(maxSlideSeconds, a.durationSeconds))
       )
     : Array(framePaths.length).fill(DEFAULT_SLIDE_DURATION);
 
@@ -186,16 +200,17 @@ export async function stitchVideo(
 
   const musicPath = findMusicFile();
 
-  // Input index layout:
-  //   0–5      PNG frames
-  //   6–11     voiceover MP3s (when hasVoice)
-  //   6 or 12  background music (when present)
-  const voiceAudioStartIndex: number | null = hasVoice ? 6 : null;
+  // Input index layout (N = framePaths.length; reels N=6, YouTube N=9):
+  //   0 .. N-1        PNG frames
+  //   N .. 2N-1       voiceover MP3s (when hasVoice; one per frame)
+  //   N or 2N         background music (when present)
+  const N = framePaths.length;
+  const voiceAudioStartIndex: number | null = hasVoice ? N : null;
   const musicInputIndex: number | null =
-    musicPath !== null ? (hasVoice ? 12 : 6) : null;
+    musicPath !== null ? (hasVoice ? 2 * N : N) : null;
 
   const hasAudio = voiceAudioStartIndex !== null || musicInputIndex !== null;
-  const filterComplex = buildFilterComplex(durations, voiceAudioStartIndex, musicInputIndex);
+  const filterComplex = buildFilterComplex(durations, voiceAudioStartIndex, musicInputIndex, frameSize);
 
   console.log(`\n  Stitching ${framePaths.length} frames into MP4...`);
   console.log(`  Mode: ${hasVoice ? "voiceover" : "silent (5s/slide)"}`);

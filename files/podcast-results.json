@@ -1,198 +1,296 @@
 {
-  "idea_0": {
-    "title": "Why Trade Firms Miss 30-40% of Their Calls",
-    "slug": "missed-calls-trade-firms",
-    "durationMin": 1.77,
-    "scheduled": "2026-06-16T07:00:00.000Z",
+  "ep_0": {
+    "title": "What AI Voice Agents Can Actually Do",
+    "slug": "what-ai-voice-agents-can-do",
+    "durationMin": 4.26,
+    "scheduled": "2026-07-02T07:00:00.000Z",
     "rsscom": {
-      "episode_id": 2917840,
+      "episode_id": 2957789,
       "status": "scheduled",
       "audio_url": null,
-      "audio_upload_id": "7acca07b-bc32-4e51-81ee-568c1ecb3f0c",
-      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2917840/edit",
-      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2917840"
+      "audio_upload_id": "d8a2e469-f254-4d0e-86a9-1de253e7a887",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2957789/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2957789"
     }
   },
-  "idea_1": {
-    "title": "Voice AI for Trade Businesses",
-    "slug": "voice-ai-for-trades",
-    "durationMin": 1.83,
-    "scheduled": "2026-06-17T07:00:00.000Z",
+  "ep_1": {
+    "title": "What Is an AI Receptionist?",
+    "slug": "what-is-an-ai-receptionist",
+    "durationMin": 3.96,
+    "scheduled": "2026-07-04T07:00:00.000Z",
     "rsscom": {
-      "episode_id": 2917844,
+      "episode_id": 2957793,
       "status": "scheduled",
       "audio_url": null,
-      "audio_upload_id": "76893528-9a31-490d-bae6-1d8c2cdb8278",
-      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2917844/edit",
-      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2917844"
+      "audio_upload_id": "f9467a74-e88a-42cf-95a4-9912722c5b4a",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2957793/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2957793"
     }
   },
-  "idea_2": {
-    "title": "Law Firms Don't Need Complex AI to Answer the Phone",
-    "slug": "law-firms-no-complex-ai",
-    "durationMin": 1.92,
-    "scheduled": "2026-06-18T07:00:00.000Z",
+  "ep_2": {
+    "title": "Prompts That Make Voice Agents Work",
+    "slug": "prompts-for-voice-agents",
+    "durationMin": 4.44,
+    "scheduled": "2026-07-06T07:00:00.000Z",
     "rsscom": {
-      "episode_id": 2917846,
+      "episode_id": 2957796,
       "status": "scheduled",
       "audio_url": null,
-      "audio_upload_id": "64b9c192-97f2-42e7-b375-795eb96e185c",
-      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2917846/edit",
-      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2917846"
+      "audio_upload_id": "0774dc75-e49f-455e-8de8-c101b4f3b558",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2957796/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2957796"
     }
   },
-  "idea_3": {
-    "title": "Why Your AI Receptionist Needs Human Oversight",
-    "slug": "ai-receptionist-human-oversight",
-    "durationMin": 1.97,
-    "scheduled": "2026-06-19T07:00:00.000Z",
+  "ep_3": {
+    "title": "What Are AI Agents, Really?",
+    "slug": "what-are-ai-agents",
+    "durationMin": 4,
+    "scheduled": "2026-07-08T07:00:00.000Z",
     "rsscom": {
-      "episode_id": 2917847,
+      "episode_id": 2957801,
       "status": "scheduled",
       "audio_url": null,
-      "audio_upload_id": "a1fc7103-2696-41b4-9596-25dc51e43076",
-      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2917847/edit",
-      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2917847"
+      "audio_upload_id": "0c1189a3-d5f7-444f-b1f3-fcc677eba3b1",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2957801/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2957801"
     }
   },
-  "idea_4": {
-    "title": "Automating Client Intake Without Code",
-    "slug": "automate-intake-no-code",
-    "durationMin": 1.78,
-    "scheduled": "2026-06-20T07:00:00.000Z",
+  "ep_4": {
+    "title": "When Every Call Comes at Once",
+    "slug": "voice-agents-multiple-calls",
+    "durationMin": 4.48,
+    "scheduled": "2026-07-10T07:00:00.000Z",
     "rsscom": {
-      "episode_id": 2917848,
+      "episode_id": 2957810,
       "status": "scheduled",
       "audio_url": null,
-      "audio_upload_id": "98a2703e-332d-424d-8292-9247d1cd3648",
-      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2917848/edit",
-      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2917848"
+      "audio_upload_id": "feb1d101-1e57-4111-bd52-c81f072e12e6",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2957810/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2957810"
     }
   },
-  "idea_5": {
-    "title": "Your Next Client Is Asking ChatGPT, Not Google",
-    "slug": "answer-engine-optimisation",
-    "durationMin": 1.77,
-    "scheduled": "2026-06-21T07:00:00.000Z",
+  "ep_5": {
+    "title": "Can Voice AI Handle Your Local Accent?",
+    "slug": "voice-agents-accents-dialects",
+    "durationMin": 4.24,
+    "scheduled": "2026-07-12T07:00:00.000Z",
     "rsscom": {
-      "episode_id": 2917851,
+      "episode_id": 2957814,
       "status": "scheduled",
       "audio_url": null,
-      "audio_upload_id": "527d6e51-fd09-402d-a0b9-45349b2f9c87",
-      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2917851/edit",
-      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2917851"
+      "audio_upload_id": "8f762453-365e-4ab3-b16a-d796fef97129",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2957814/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2957814"
     }
   },
-  "idea_6": {
-    "title": "Topical Authority and Local Search",
-    "slug": "topical-authority-local-search",
-    "durationMin": 1.88,
-    "scheduled": "2026-06-22T07:00:00.000Z",
+  "ep_6": {
+    "title": "The Leads You Lose After 5pm",
+    "slug": "leads-lost-after-5pm",
+    "durationMin": 3.97,
+    "scheduled": "2026-07-14T07:00:00.000Z",
     "rsscom": {
-      "episode_id": 2917854,
+      "episode_id": 2957819,
       "status": "scheduled",
       "audio_url": null,
-      "audio_upload_id": "7675337f-a63b-48ea-99f2-39cec590f8b1",
-      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2917854/edit",
-      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2917854"
+      "audio_upload_id": "72af3fac-ab4a-4ebb-a827-1c2e05d3ae08",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2957819/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2957819"
     }
   },
-  "idea_7": {
-    "title": "Schema Markup, Explained Simply",
-    "slug": "schema-markup-explained",
-    "durationMin": 1.89,
-    "scheduled": "2026-06-23T07:00:00.000Z",
+  "ep_7": {
+    "title": "Why the AI Headlines Don't Change Your Intake",
+    "slug": "ai-headlines-vs-your-intake",
+    "durationMin": 4.52,
+    "scheduled": "2026-07-16T07:00:00.000Z",
     "rsscom": {
-      "episode_id": 2917855,
+      "episode_id": 2957824,
       "status": "scheduled",
       "audio_url": null,
-      "audio_upload_id": "12d0edf0-bba4-4018-85d4-4977451e7c9c",
-      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2917855/edit",
-      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2917855"
+      "audio_upload_id": "32d2e789-d0b3-4261-9db4-000496cf195d",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2957824/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2957824"
     }
   },
-  "idea_8": {
-    "title": "How AI Overviews Change Where Clients Find You",
-    "slug": "google-ai-overviews",
-    "durationMin": 1.76,
-    "scheduled": "2026-06-24T07:00:00.000Z",
+  "ep_8": {
+    "title": "When a Vendor Pulls a Model, What Then?",
+    "slug": "when-a-vendor-pulls-a-model",
+    "durationMin": 4.22,
+    "scheduled": "2026-07-18T07:00:00.000Z",
     "rsscom": {
-      "episode_id": 2917858,
+      "episode_id": 2957829,
       "status": "scheduled",
       "audio_url": null,
-      "audio_upload_id": "c16b0493-3431-4628-90ae-8784c06911cf",
-      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2917858/edit",
-      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2917858"
+      "audio_upload_id": "479a3d31-6cdd-4bdf-8c24-6e60edfc349f",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2957829/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2957829"
     }
   },
-  "idea_9": {
-    "title": "Why Small Firms Beat Enterprises at AI",
-    "slug": "small-firms-beat-enterprises",
-    "durationMin": 1.78,
-    "scheduled": "2026-06-25T07:00:00.000Z",
+  "ep_9": {
+    "title": "Why Control Matters When a Voice Agent Books",
+    "slug": "control-when-voice-agent-books",
+    "durationMin": 4.04,
+    "scheduled": "2026-07-20T07:00:00.000Z",
     "rsscom": {
-      "episode_id": 2917860,
+      "episode_id": 2957836,
       "status": "scheduled",
       "audio_url": null,
-      "audio_upload_id": "003f5ce6-934e-4afd-b8af-ffbf83ecc933",
-      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2917860/edit",
-      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2917860"
+      "audio_upload_id": "104298fb-673a-4417-a8c9-efd35821992f",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2957836/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2957836"
     }
   },
-  "idea_10": {
-    "title": "Why AI Agents Shouldn't Run Your Intake Yet",
-    "slug": "ai-agents-intake-line",
-    "durationMin": 1.84,
-    "scheduled": "2026-06-26T07:00:00.000Z",
+  "ep_10": {
+    "title": "What Claude's Fable Model Means for You",
+    "slug": "fable-model-for-business",
+    "durationMin": 4.16,
+    "scheduled": "2026-07-22T07:00:00.000Z",
     "rsscom": {
-      "episode_id": 2917861,
+      "episode_id": 2957839,
       "status": "scheduled",
       "audio_url": null,
-      "audio_upload_id": "0f2e3718-2b91-4c7e-bca5-6db84b1bf4b9",
-      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2917861/edit",
-      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2917861"
+      "audio_upload_id": "b51e87d1-ad05-4645-b1d8-028a8935c49c",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2957839/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2957839"
     }
   },
-  "idea_11": {
-    "title": "Why Most AI Tools Feel Like Cheap Outsourcing",
-    "slug": "ai-tools-cheap-outsourcing",
-    "durationMin": 1.89,
-    "scheduled": "2026-06-27T07:00:00.000Z",
+  "ep_11": {
+    "title": "What Nvidia's Physical AI Push Means for You",
+    "slug": "nvidia-physical-ai-for-you",
+    "durationMin": 3.96,
+    "scheduled": "2026-07-24T07:00:00.000Z",
     "rsscom": {
-      "episode_id": 2917863,
+      "episode_id": 2957842,
       "status": "scheduled",
       "audio_url": null,
-      "audio_upload_id": "2e141bd3-6353-4eed-be54-177755501dcf",
-      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2917863/edit",
-      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2917863"
+      "audio_upload_id": "4a0ea368-77b8-40c5-a412-84fc81b6b39f",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2957842/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2957842"
     }
   },
-  "idea_12": {
-    "title": "Content Engineering for Firm Websites",
-    "slug": "content-engineering-websites",
-    "durationMin": 1.71,
-    "scheduled": "2026-06-28T07:00:00.000Z",
+  "ep_12": {
+    "title": "What Anthropic's IPO Means for Voice Agents",
+    "slug": "anthropic-ipo-voice-agents",
+    "durationMin": 3.95,
+    "scheduled": "2026-07-26T07:00:00.000Z",
     "rsscom": {
-      "episode_id": 2917864,
+      "episode_id": 2957845,
       "status": "scheduled",
       "audio_url": null,
-      "audio_upload_id": "1238bc32-726d-4a34-a27b-2b8dd4d07047",
-      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2917864/edit",
-      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2917864"
+      "audio_upload_id": "0bad97c8-eeb5-4ee3-82d6-fadc2738547f",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2957845/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2957845"
     }
   },
-  "idea_13": {
-    "title": "Phone AI Works Now",
-    "slug": "phone-ai-works-now",
-    "durationMin": 1.72,
-    "scheduled": "2026-06-29T07:00:00.000Z",
+  "ep_13": {
+    "title": "What Alphabet's $80B AI Bet Means for You",
+    "slug": "alphabet-80b-ai-bet",
+    "durationMin": 3.91,
+    "scheduled": "2026-07-28T07:00:00.000Z",
     "rsscom": {
-      "episode_id": 2917866,
+      "episode_id": 2957849,
       "status": "scheduled",
       "audio_url": null,
-      "audio_upload_id": "77a7398e-b0ce-4518-bfec-d73e0d88eb97",
-      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2917866/edit",
-      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2917866"
+      "audio_upload_id": "932dc19d-2d87-45af-b166-21dbb88d6ea9",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/2957849/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/2957849"
+    }
+  },
+  "ep_14": {
+    "title": "Do You Need an LLMs.txt File?",
+    "slug": "do-you-need-an-llms-txt-file",
+    "durationMin": 2.77,
+    "scheduled": "2026-07-30T07:00:00.000Z",
+    "rsscom": {
+      "episode_id": 3023297,
+      "status": "scheduled",
+      "audio_url": null,
+      "audio_upload_id": "c80d7227-7612-4e22-babe-5d389147b328",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/3023297/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/3023297"
+    }
+  },
+  "ep_15": {
+    "title": "How Hampshire Firms Get Cited by AI",
+    "slug": "ai-search-visibility-four-pillars",
+    "durationMin": 2.85,
+    "scheduled": "2026-08-01T07:00:00.000Z",
+    "rsscom": {
+      "episode_id": 3023299,
+      "status": "scheduled",
+      "audio_url": null,
+      "audio_upload_id": "a541fcd0-9655-49c2-acf7-23b5ee9eed4f",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/3023299/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/3023299"
+    }
+  },
+  "ep_16": {
+    "title": "AI SEO vs GEO: What's the Difference?",
+    "slug": "ai-seo-vs-geo-difference",
+    "durationMin": 2.93,
+    "scheduled": "2026-08-03T07:00:00.000Z",
+    "rsscom": {
+      "episode_id": 3023303,
+      "status": "scheduled",
+      "audio_url": null,
+      "audio_upload_id": "9c3a6b75-4d24-4c8e-b54f-9dc9b96cd6ea",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/3023303/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/3023303"
+    }
+  },
+  "ep_17": {
+    "title": "What a Missed Call Actually Costs You",
+    "slug": "what-a-missed-call-actually-costs",
+    "durationMin": 2.63,
+    "scheduled": "2026-08-05T07:00:00.000Z",
+    "rsscom": {
+      "episode_id": 3023305,
+      "status": "scheduled",
+      "audio_url": null,
+      "audio_upload_id": "3756e920-58ed-46cc-aaec-f0e20e787708",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/3023305/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/3023305"
+    }
+  },
+  "ep_18": {
+    "title": "The Five Steps Behind a Proper Custom AI Build",
+    "slug": "the-five-step-custom-ai-build",
+    "durationMin": 2.54,
+    "scheduled": "2026-08-07T07:00:00.000Z",
+    "rsscom": {
+      "episode_id": 3023306,
+      "status": "scheduled",
+      "audio_url": null,
+      "audio_upload_id": "e683be14-9bb9-47a4-94d0-33b7a3114822",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/3023306/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/3023306"
+    }
+  },
+  "ep_19": {
+    "title": "Automated SEO: What Actually Works in 2026",
+    "slug": "automated-seo-what-actually-works",
+    "durationMin": 2.86,
+    "scheduled": "2026-08-09T07:00:00.000Z",
+    "rsscom": {
+      "episode_id": 3023307,
+      "status": "scheduled",
+      "audio_url": null,
+      "audio_upload_id": "2452d4cb-3a71-4621-a861-cca0fead4256",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/3023307/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/3023307"
+    }
+  },
+  "ep_20": {
+    "title": "What Anthropic's IPO Means for Your Business",
+    "slug": "what-anthropics-ipo-means-for-you",
+    "durationMin": 2.63,
+    "scheduled": "2026-08-11T07:00:00.000Z",
+    "rsscom": {
+      "episode_id": 3023308,
+      "status": "scheduled",
+      "audio_url": null,
+      "audio_upload_id": "52e5500b-cf21-43f2-b167-1c63a8570e21",
+      "dashboard_url": "https://dashboard.rss.com/podcasts/antek-automation-quick-tips/episodes/3023308/edit",
+      "website_url": "https://rss.com/podcasts/antek-automation-quick-tips/3023308"
     }
   }
 }

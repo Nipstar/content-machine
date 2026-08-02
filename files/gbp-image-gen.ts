@@ -43,18 +43,18 @@ function escapeHtml(text: string): string {
 function statCardHtml(data: StatImageData): string {
   return `<div style="width:1200px;height:900px;background:${SAGE};position:relative;font-family:'Inter',system-ui,sans-serif;overflow:hidden">
   <!-- Offset shadow -->
-  <div style="position:absolute;left:88px;top:88px;width:960px;height:560px;background:${CHARCOAL}"></div>
+  <div style="position:absolute;left:88px;top:88px;width:1040px;height:700px;background:${CHARCOAL}"></div>
   <!-- Main card -->
-  <div style="position:absolute;left:72px;top:72px;width:960px;height:560px;background:${CREAM};border:3px solid ${CHARCOAL}">
+  <div style="position:absolute;left:72px;top:72px;width:1040px;height:700px;background:${CREAM};border:3px solid ${CHARCOAL}">
     <!-- Coral top bar -->
     <div style="height:12px;background:${CORAL}"></div>
     <!-- Content -->
-    <div style="padding:40px 60px">
-      <div style="font-size:130px;font-weight:900;color:${CORAL};letter-spacing:-6px;line-height:1">${escapeHtml(data.stat_number)}</div>
-      <div style="font-size:30px;font-weight:700;color:${CHARCOAL};margin-top:10px">${escapeHtml(data.stat_context)}</div>
-      <div style="width:400px;height:4px;background:${CORAL};margin:30px 0"></div>
-      <div style="font-size:22px;font-weight:500;color:${CHARCOAL}">${escapeHtml(data.supporting_line_1)}</div>
-      <div style="font-size:22px;font-weight:500;color:${CHARCOAL};margin-top:8px">${escapeHtml(data.supporting_line_2)}</div>
+    <div style="padding:56px 64px">
+      <div style="font-size:180px;font-weight:900;color:${CORAL};letter-spacing:-8px;line-height:0.95">${escapeHtml(data.stat_number)}</div>
+      <div style="font-size:52px;font-weight:800;color:${CHARCOAL};margin-top:20px;line-height:1.15">${escapeHtml(data.stat_context)}</div>
+      <div style="width:440px;height:6px;background:${CORAL};margin:38px 0"></div>
+      <div style="font-size:38px;font-weight:600;color:${CHARCOAL};line-height:1.25">${escapeHtml(data.supporting_line_1)}</div>
+      <div style="font-size:38px;font-weight:600;color:${CHARCOAL};margin-top:10px;line-height:1.25">${escapeHtml(data.supporting_line_2)}</div>
     </div>
     <!-- Coral triangle accent -->
     <div style="position:absolute;bottom:0;right:0;width:0;height:0;border-bottom:140px solid ${CORAL};border-left:140px solid transparent;opacity:0.3"></div>
@@ -75,14 +75,14 @@ function tipCardHtml(data: TipImageData): string {
     <div style="font-size:56px;font-weight:900;color:${CREAM};letter-spacing:10px">TIP</div>
   </div>
   <!-- Card offset shadow -->
-  <div style="position:absolute;left:88px;top:228px;width:960px;height:420px;background:${CHARCOAL};border:4px solid ${CORAL}"></div>
+  <div style="position:absolute;left:88px;top:228px;width:1040px;height:540px;background:${CHARCOAL};border:4px solid ${CORAL}"></div>
   <!-- Main card -->
-  <div style="position:absolute;left:72px;top:212px;width:960px;height:420px;background:${CREAM};border:4px solid ${CORAL}">
-    <div style="padding:50px 70px">
-      <div style="font-size:38px;font-weight:800;color:${CHARCOAL};line-height:1.3">${escapeHtml(data.tip_headline)}</div>
-      <div style="font-size:24px;font-weight:500;color:${CHARCOAL};opacity:0.7;margin-top:30px">${escapeHtml(data.tip_detail_1)}</div>
-      <div style="font-size:24px;font-weight:500;color:${CHARCOAL};opacity:0.7;margin-top:8px">${escapeHtml(data.tip_detail_2)}</div>
-      <div style="width:360px;height:6px;background:${CORAL};margin-top:30px"></div>
+  <div style="position:absolute;left:72px;top:212px;width:1040px;height:540px;background:${CREAM};border:4px solid ${CORAL}">
+    <div style="padding:56px 72px">
+      <div style="font-size:62px;font-weight:900;color:${CHARCOAL};line-height:1.15">${escapeHtml(data.tip_headline)}</div>
+      <div style="font-size:36px;font-weight:600;color:${CHARCOAL};opacity:0.75;margin-top:40px;line-height:1.3">${escapeHtml(data.tip_detail_1)}</div>
+      <div style="font-size:36px;font-weight:600;color:${CHARCOAL};opacity:0.75;margin-top:12px;line-height:1.3">${escapeHtml(data.tip_detail_2)}</div>
+      <div style="width:360px;height:6px;background:${CORAL};margin-top:40px"></div>
     </div>
   </div>
   <!-- Sage geometric accents bottom-right -->
@@ -104,18 +104,18 @@ function quoteCardHtml(data: QuoteImageData): string {
   <!-- Charcoal header bar -->
   <div style="position:absolute;left:36px;top:0;right:0;height:90px;background:${CHARCOAL}"></div>
   <!-- Giant quote mark -->
-  <div style="position:absolute;left:100px;top:100px;font-family:Georgia,serif;font-size:280px;font-weight:700;color:${CORAL};opacity:0.15;line-height:1">&ldquo;</div>
+  <div style="position:absolute;left:90px;top:70px;font-family:Georgia,serif;font-size:360px;font-weight:700;color:${CORAL};opacity:0.15;line-height:1">&ldquo;</div>
   <!-- Quote text -->
-  <div style="position:absolute;left:140px;top:220px;right:200px">
-    <div style="font-size:40px;font-weight:800;color:${CHARCOAL};line-height:1.25">${escapeHtml(data.quote_line_1)}</div>
-    <div style="font-size:40px;font-weight:800;color:${CHARCOAL};line-height:1.25">${escapeHtml(data.quote_line_2)}</div>
-    <div style="font-size:40px;font-weight:800;color:${CHARCOAL};line-height:1.25">${escapeHtml(data.quote_line_3)}</div>
-    <div style="width:100px;height:6px;background:${CORAL};margin:30px 0"></div>
-    <div style="font-size:24px;font-weight:500;color:${CHARCOAL};opacity:0.7">${escapeHtml(data.continuation_1)}</div>
-    <div style="font-size:24px;font-weight:500;color:${CHARCOAL};opacity:0.7;margin-top:8px">${escapeHtml(data.continuation_2)}</div>
-    <div style="margin-top:35px">
-      <div style="font-size:22px;font-weight:700;color:${CORAL}">&mdash; Andy Norman</div>
-      <div style="font-size:18px;font-weight:500;color:${CHARCOAL};opacity:0.6;margin-top:4px">Founder, Antek Automation</div>
+  <div style="position:absolute;left:140px;top:210px;right:160px">
+    <div style="font-size:60px;font-weight:900;color:${CHARCOAL};line-height:1.18">${escapeHtml(data.quote_line_1)}</div>
+    <div style="font-size:60px;font-weight:900;color:${CHARCOAL};line-height:1.18">${escapeHtml(data.quote_line_2)}</div>
+    <div style="font-size:60px;font-weight:900;color:${CORAL};line-height:1.18">${escapeHtml(data.quote_line_3)}</div>
+    <div style="width:120px;height:6px;background:${CORAL};margin:36px 0"></div>
+    <div style="font-size:36px;font-weight:600;color:${CHARCOAL};opacity:0.75;line-height:1.3">${escapeHtml(data.continuation_1)}</div>
+    <div style="font-size:36px;font-weight:600;color:${CHARCOAL};opacity:0.75;margin-top:10px;line-height:1.3">${escapeHtml(data.continuation_2)}</div>
+    <div style="margin-top:44px">
+      <div style="font-size:30px;font-weight:700;color:${CORAL}">&mdash; Andy Norman</div>
+      <div style="font-size:22px;font-weight:500;color:${CHARCOAL};opacity:0.6;margin-top:6px">Founder, Antek Automation</div>
     </div>
   </div>
   <!-- Geometric blocks bottom-right -->
@@ -135,13 +135,13 @@ function questionCardHtml(data: QuestionImageData): string {
     <div style="position:absolute;top:10px;right:30px;font-family:Georgia,serif;font-size:260px;font-weight:700;color:${CREAM};opacity:0.25;line-height:1">?</div>
   </div>
   <!-- Question text -->
-  <div style="position:absolute;left:90px;top:260px;right:100px">
-    <div style="font-size:52px;font-weight:900;color:${CREAM};line-height:1.2">${escapeHtml(data.question_line_1)}</div>
-    <div style="font-size:52px;font-weight:900;color:${CREAM};line-height:1.2">${escapeHtml(data.question_line_2)}</div>
-    <div style="font-size:52px;font-weight:900;color:${CORAL};line-height:1.2">${escapeHtml(data.question_line_3)}</div>
-    <div style="width:420px;height:6px;background:${CORAL};margin:25px 0"></div>
-    <div style="font-size:24px;font-weight:400;color:${SAGE};margin-top:15px">${escapeHtml(data.supporting_line_1)}</div>
-    <div style="font-size:24px;font-weight:400;color:${SAGE};margin-top:8px">${escapeHtml(data.supporting_line_2)}</div>
+  <div style="position:absolute;left:90px;top:230px;right:90px">
+    <div style="font-size:78px;font-weight:900;color:${CREAM};line-height:1.12">${escapeHtml(data.question_line_1)}</div>
+    <div style="font-size:78px;font-weight:900;color:${CREAM};line-height:1.12">${escapeHtml(data.question_line_2)}</div>
+    <div style="font-size:78px;font-weight:900;color:${CORAL};line-height:1.12">${escapeHtml(data.question_line_3)}</div>
+    <div style="width:460px;height:6px;background:${CORAL};margin:34px 0"></div>
+    <div style="font-size:36px;font-weight:500;color:${CREAM};opacity:0.85;margin-top:18px;line-height:1.25">${escapeHtml(data.supporting_line_1)}</div>
+    <div style="font-size:36px;font-weight:500;color:${CREAM};opacity:0.85;margin-top:10px;line-height:1.25">${escapeHtml(data.supporting_line_2)}</div>
   </div>
   <!-- Sage bar bottom -->
   <div style="position:absolute;bottom:0;left:0;right:0;height:130px;background:${SAGE}"></div>

@@ -133,7 +133,7 @@ function takeawayTemplate(slide: YTSlide): string {
   <div style="position:absolute;top:40px;right:100px;width:80px;height:80px;background:${SAGE};opacity:0.1"></div>
   <!-- Bottom strip -->
   <div style="position:absolute;bottom:0;left:0;right:0;height:80px;background:${CORAL};display:flex;align-items:center;padding:0 80px">
-    <div style="font-size:20px;font-weight:900;color:${CREAM}">Andy Norman — Antek Automation</div>
+    <div style="font-size:20px;font-weight:900;color:${CREAM}">Andy Norman · Antek Automation</div>
   </div>
 </div>`;
 }
@@ -164,7 +164,7 @@ function ctaTemplate(): string {
   </div>
   <!-- Bottom bar -->
   <div style="position:absolute;bottom:0;left:0;right:0;height:80px;background:${CREAM};display:flex;align-items:center;padding:0 80px">
-    <div style="font-size:20px;font-weight:900;color:${CHARCOAL}">AI Automation for UK Service Businesses — Andover, Hampshire</div>
+    <div style="font-size:20px;font-weight:900;color:${CHARCOAL}">AI Automation for UK Service Businesses · Andover, Hampshire</div>
   </div>
 </div>`;
 }

@@ -2,29 +2,29 @@
   "reels": [
     {
       "reel": 1,
-      "date": "Wed 13 May",
-      "utc": "2026-05-13T06:30:00.000Z",
-      "source_url": "https://blog.antekautomation.com/schema-markup-for-uk-service-businesses-a-practical-guide/",
-      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-01-1778618405607.mp4",
+      "date": "2026-07-30",
+      "utc": "2026-07-30T16:00:00.000Z",
+      "source_url": "https://blog.antekautomation.com/ai-search-visibility-how-hampshire-firms-get-cited-by-ai/",
+      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-01-1785080611117.mp4",
       "video_local_path": "/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/GEO/Claude Content Machine/files/output/shorts-batch/reel-01.mp4",
       "duration_seconds": 0,
       "has_voiceover": true,
       "db_ids": [
-        "0d1ce289-2584-4055-9e57-086966cda873",
-        "3f73e60c-4eec-4046-b4d1-987d121229b3",
-        "55e98ce4-b70a-43f9-8de9-e20a5fbb7c87"
+        "22c7846b-1f7a-45a9-8a60-d5467e1db9ac",
+        "6e5d2226-928c-4dd2-8de0-e471edfac0d6",
+        "896b3a17-0ad7-4a30-8c46-b86ed792a283"
       ],
       "platform_meta": {
         "youtube": {
           "platform": "youtube",
-          "title": "Why Local Customers Can't Find Your Firm Online",
-          "description": "https://blog.antekautomation.com/schema-markup-for-uk-service-businesses-a-practical-guide/\n\nThree boring fixes to your Google profile that pull more inbound calls every week. Full guide: https://blog.antekautomation.com/schema-markup-for-uk-service-businesses-a-practical-guide/",
+          "title": "4 Pillars of AI Search Visibility",
+          "description": "https://blog.antekautomation.com/ai-search-visibility-how-hampshire-firms-get-cited-by-ai/\n\nRank top 10 on Google and still be invisible to ChatGPT. Four pillars decide whether AI names your business: discoverability, credibility, relevance, structure.\n\nThe quick version: AI search visibility depends on four pillars: discoverability (can AI crawlers find and read your content), credibility (is your business information consistent across sources), relevance (does your content directly answer the question being asked), and structure (is the content written so a model can lift and quote it cleanly).\n\nKey takeaways:\n- Ranking well on Google does not guarantee a mention in an AI-generated answer, because AI models read different signals than traditional search rankings.\n- Content hidden behind heavy JavaScript or missing from a sitemap may never be indexed by AI crawlers, regardless of how it looks to a human visitor.\n- AI answer engines quote content that gives a direct, standalone answer rather than content that requires a human to read the whole page for context.\n\nAntek Automation — a UK AI automation agency — produced this. antekautomation.com.",
           "hashtags": [
             "#Shorts",
-            "#LocalSearch",
-            "#SmallBusinessTips",
-            "#ServiceBusiness",
-            "#GoogleBusinessProfile"
+            "#GEO",
+            "#AISearch",
+            "#SmallBusiness",
+            "#AIVisibility"
           ],
           "caption": ""
         },
@@ -35,11 +35,11 @@
           "hashtags": [
             "#SmallBusinessTips",
             "#ServiceBusiness",
-            "#LocalBusiness",
             "#BusinessOwner",
-            "#Reels"
+            "#Reels",
+            "#LocalBusiness"
           ],
-          "caption": "Why nobody local is finding your firm\n\n→ Complete every field on your Google profile\n→ Ask clients to mention the town in reviews\n→ Same name, address, phone everywhere online\n\nThree boring fixes. More inbound calls.\n\nFollow @AntekAutomation for practical tips built for small service firms and small law practices.\nMore at antekautomation.com\n\n#SmallBusinessTips #ServiceBusiness #LocalBusiness #BusinessOwner #Reels"
+          "caption": "You can rank top 10 on Google and still be invisible to ChatGPT.\n\n→ Discoverability: can AI crawlers actually read your key pages?\n→ Credibility: is your info consistent everywhere AI can see it?\n→ Structure: is your content written to be lifted and quoted?\n\nMiss any of the four pillars and you're invisible to AI search, no matter how good your website looks.\n\nFollow @AntekAutomation for practical tips built for small business owners.\nMore at antekautomation.com\n\n#SmallBusinessTips #ServiceBusiness #BusinessOwner #Reels #LocalBusiness"
         },
         "facebook": {
           "platform": "facebook",
@@ -51,54 +51,35 @@
             "#UKBusiness",
             "#BusinessTips"
           ],
-          "caption": "Why nobody local is finding your firm — sound familiar?\n\nComplete every field on your Google profile.\nAsk clients to mention the town in reviews.\nThree boring fixes. More inbound calls.\n\nWe help small service firms and small law practices catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
-        },
-        "linkedin": {
-          "platform": "linkedin",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#BusinessOwner",
-            "#Productivity"
-          ],
-          "caption": "Why nobody local is finding your firm\n\n1. Complete every field on your Google profile.\n2. Ask clients to mention the town in reviews.\n3. Same name, address, phone everywhere online.\n\nThree boring fixes. More inbound calls.\n\nMore practical guides for small service firms and small law practices at antekautomation.com.\n\n#SmallBusiness #ServiceBusiness #BusinessOwner #Productivity"
-        },
-        "twitter": {
-          "platform": "twitter",
-          "title": "",
-          "description": "",
-          "hashtags": [],
-          "caption": "Why nobody local is finding your firm\n\nhttps://blog.antekautomation.com/schema-markup-for-uk-service-businesses-a-practical-guide/"
+          "caption": "You can rank top 10 on Google and still be invisible to ChatGPT. — sound familiar?\n\nDiscoverability: can AI crawlers actually read your key pages?.\nCredibility: is your info consistent everywhere AI can see it?.\nMiss any of the four pillars and you're invisible to AI search, no matter how good your website looks.\n\nWe help small business owners catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
         }
       }
     },
     {
       "reel": 2,
-      "date": "Thu 14 May",
-      "utc": "2026-05-14T11:30:00.000Z",
-      "source_url": "https://blog.antekautomation.com/schema-markup-wont-boost-ai-citations-what-smes-should-know/",
-      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-02-1778618464157.mp4",
+      "date": "2026-08-03",
+      "utc": "2026-08-03T16:00:00.000Z",
+      "source_url": "https://blog.antekautomation.com/how-ai-voice-agents-are-transforming-business-communication/",
+      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-02-1785080665798.mp4",
       "video_local_path": "/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/GEO/Claude Content Machine/files/output/shorts-batch/reel-02.mp4",
       "duration_seconds": 0,
       "has_voiceover": true,
       "db_ids": [
-        "4d37b2bc-0a4b-42a7-8e8b-24e778670b8e",
-        "0e391905-3f36-4a5e-b8b1-a2ca207b1d72",
-        "d374637f-5fe2-42b1-bb71-183b59750498"
+        "592a1462-6a1f-4873-b7eb-d1089da6c4ff",
+        "ff31e046-2f32-446b-b217-c8b69d2fb13a",
+        "6fb22e8f-d7a0-4963-9b15-5cc0b99ac236"
       ],
       "platform_meta": {
         "youtube": {
           "platform": "youtube",
-          "title": "Stop Wasting Time On Online Visibility Tricks",
-          "description": "https://blog.antekautomation.com/schema-markup-wont-boost-ai-citations-what-smes-should-know/\n\nThree things that actually move the needle for small firm visibility. Skip the rest. Full guide: https://blog.antekautomation.com/schema-markup-wont-boost-ai-citations-what-smes-should-know/",
+          "title": "How an AI Voice Agent Actually Works | Stockbridge",
+          "description": "https://blog.antekautomation.com/how-ai-voice-agents-are-transforming-business-communication/\n\nIf you run a business in Stockbridge, this one's for you.\nSpeech recognition, natural language processing, integration logic. Three linked systems, not a script reader or an IVR menu.\n\nShort answer: An AI voice agent works using three linked systems: speech recognition to convert spoken words into text, natural language processing to determine the caller's intent, and integration logic that connects to a calendar, CRM or job management system to act on the request in real time.\n\nKey takeaways:\n- AI voice agents differ from traditional answering services and IVR menus because they interpret intent rather than routing calls or matching pre-recorded options.\n- Integration into a business's actual calendar and CRM is what allows an AI voice agent to book appointments and log enquiries without human involvement.\n- A call handled by an AI voice agent is transcribed and actioned in real time, so a caller can get a booking confirmed in the same conversation rather than waiting for a callback.\n\nThis comes from Antek Automation, a UK AI automation agency based in Stockbridge — antekautomation.com.",
           "hashtags": [
             "#Shorts",
-            "#SmallBusinessTips",
-            "#LocalMarketing",
-            "#ServiceBusiness",
-            "#OnlineVisibility"
+            "#TestValley",
+            "#VoiceAI",
+            "#AIAutomation",
+            "#UKBusiness"
           ],
           "caption": ""
         },
@@ -107,72 +88,54 @@
           "title": "",
           "description": "",
           "hashtags": [
+            "#TestValley",
+            "#Hampshire",
             "#SmallBusinessTips",
             "#ServiceBusiness",
-            "#LocalBusiness",
-            "#BusinessOwner",
-            "#Reels"
+            "#BusinessOwner"
           ],
-          "caption": "Most online visibility advice is wasting your time\n\n→ Substance on the page beats clever tagging\n→ Recent specific reviews move you up the list\n→ One credible local mention beats fifty directory listings\n\nStop chasing noise. Do the three real things.\n\nFollow @AntekAutomation for practical tips built for small service firms and small law practices.\nMore at antekautomation.com\n\n#SmallBusinessTips #ServiceBusiness #LocalBusiness #BusinessOwner #Reels"
+          "caption": "Ever wondered what's actually happening when an AI voice agent answers your call?\n\n→ Speech recognition turns the caller's words into text.\n→ Natural language processing works out what they actually want.\n→ Integration logic checks your calendar or CRM and acts on it.\n\nNot a script reader. Not an IVR menu. Real understanding, acting in real time.\n\nTalked this through with a few Stockbridge owners lately.\n\nFollow @AntekAutomation for practical tips built for letting and estate agents.\nMore at antekautomation.com\n\n#TestValley #Hampshire #SmallBusinessTips #ServiceBusiness #BusinessOwner"
         },
         "facebook": {
           "platform": "facebook",
           "title": "",
           "description": "",
           "hashtags": [
+            "#TestValley",
             "#SmallBusiness",
             "#ServiceBusiness",
             "#UKBusiness",
             "#BusinessTips"
           ],
-          "caption": "Most online visibility advice is wasting your time — sound familiar?\n\nSubstance on the page beats clever tagging.\nRecent specific reviews move you up the list.\nStop chasing noise. Do the three real things.\n\nWe help small service firms and small law practices catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
-        },
-        "linkedin": {
-          "platform": "linkedin",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#BusinessOwner",
-            "#Productivity"
-          ],
-          "caption": "Most online visibility advice is wasting your time\n\n1. Substance on the page beats clever tagging.\n2. Recent specific reviews move you up the list.\n3. One credible local mention beats fifty directory listings.\n\nStop chasing noise. Do the three real things.\n\nMore practical guides for small service firms and small law practices at antekautomation.com.\n\n#SmallBusiness #ServiceBusiness #BusinessOwner #Productivity"
-        },
-        "twitter": {
-          "platform": "twitter",
-          "title": "",
-          "description": "",
-          "hashtags": [],
-          "caption": "Most online visibility advice is wasting your time\n\nhttps://blog.antekautomation.com/schema-markup-wont-boost-ai-citations-what-smes-should-know/"
+          "caption": "Ever wondered what's actually happening when an AI voice agent answers your call?\n\nSpeech recognition turns the caller's words into text..\nNatural language processing works out what they actually want..\nNot a script reader. Not an IVR menu. Real understanding, acting in real time.\n\nTalked this through with a few Stockbridge owners lately.\n\nWe help letting and estate agents catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#TestValley #SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
         }
       }
     },
     {
       "reel": 3,
-      "date": "Fri 15 May",
-      "utc": "2026-05-15T16:00:00.000Z",
-      "source_url": "https://blog.antekautomation.com/ai-search-optimisation-for-uk-service-businesses-4-frameworks/",
-      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-03-1778618528751.mp4",
+      "date": "2026-08-07",
+      "utc": "2026-08-07T16:00:00.000Z",
+      "source_url": "https://blog.antekautomation.com/how-ai-voice-agents-handle-after-hours-calls-for-uk-businesses/",
+      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-03-1785080719350.mp4",
       "video_local_path": "/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/GEO/Claude Content Machine/files/output/shorts-batch/reel-03.mp4",
       "duration_seconds": 0,
       "has_voiceover": true,
       "db_ids": [
-        "c43dbfed-7186-405f-a996-dd3aaa9dbec2",
-        "0d8d93b7-7105-4466-a666-67e2f8f7b186",
-        "64e83601-0287-4141-bb65-0617d0bc81fa"
+        "75b00b52-4b00-4abf-9b2d-c716c9dad72d",
+        "8346f14b-f22c-4200-b77c-e2744dc55df9",
+        "472a85f8-414c-4fee-8606-7c0dadc9f118"
       ],
       "platform_meta": {
         "youtube": {
           "platform": "youtube",
-          "title": "Be The Firm Their Phone Recommends",
-          "description": "https://blog.antekautomation.com/ai-search-optimisation-for-uk-service-businesses-4-frameworks/\n\nThree moves so your firm shows up when someone asks their phone for a recommendation. Full guide: https://blog.antekautomation.com/ai-search-optimisation-for-uk-service-businesses-4-frameworks/",
+          "title": "Most Businesses Close At 5. Enquiries Don't",
+          "description": "https://blog.antekautomation.com/how-ai-voice-agents-handle-after-hours-calls-for-uk-businesses/\n\nBuilt with Southampton businesses in mind.\nProperty viewings at 7pm. Emergencies outside 9 to 5. High-ticket enquiries on weekends. The gap between demand and availability is where revenue leaks.\n\nThe quick version: UK businesses lose revenue outside office hours because customer demand does not follow a 9-to-5 schedule: property viewing requests peak in the evening, trade emergency callouts happen at any hour, and high-ticket professional services enquiries commonly arrive on weekends when prospects have time to research.\n\nKey takeaways:\n- Saturday afternoon and Sunday morning generate the highest volume of property viewing requests, so missed weekend calls directly cost agents instructions.\n- Emergency trade callouts outside 9 to 5 often convert at higher margins because urgency overrides price comparison for the caller.\n- A missed call outside office hours signals poor responsiveness to a prospect before a business has even had the chance to quote.\n\nAntek Automation — a UK AI automation agency serving Southampton — produced this. antekautomation.com.",
           "hashtags": [
             "#Shorts",
-            "#LocalSearch",
-            "#ServiceBusiness",
-            "#SmallBusinessMarketing",
-            "#FindMyBusiness"
+            "#Southampton",
+            "#VoiceAI",
+            "#AfterHours",
+            "#SmallBusiness"
           ],
           "caption": ""
         },
@@ -181,72 +144,54 @@
           "title": "",
           "description": "",
           "hashtags": [
+            "#Southampton",
+            "#Basingstoke",
             "#SmallBusinessTips",
             "#ServiceBusiness",
-            "#LocalBusiness",
-            "#BusinessOwner",
-            "#Reels"
+            "#BusinessOwner"
           ],
-          "caption": "People ask their phone who to call. Are you the answer?\n\n→ Write service pages like a real answer, not a brochure\n→ Name the towns you cover, exactly\n→ Add an FAQ with the questions clients really ask\n\nPlain answers. Real places. Real questions.\n\nFollow @AntekAutomation for practical tips built for small service firms and small law practices.\nMore at antekautomation.com\n\n#SmallBusinessTips #ServiceBusiness #LocalBusiness #BusinessOwner #Reels"
+          "caption": "Most UK businesses close at five. Most enquiries don't.\n\n→ Property viewings get requested at seven in the evening.\n→ Emergency callouts spike outside nine to five, every trade.\n→ High-ticket enquiries come in on weekends, when people finally have time.\n\nThe gap between demand and availability is where the money leaks.\n\nCommon one for Southampton businesses right now.\n\nFollow @AntekAutomation for practical tips built for MSPs and IT support firms.\nMore at antekautomation.com\n\n#Southampton #Basingstoke #SmallBusinessTips #ServiceBusiness #BusinessOwner"
         },
         "facebook": {
           "platform": "facebook",
           "title": "",
           "description": "",
           "hashtags": [
+            "#Southampton",
             "#SmallBusiness",
             "#ServiceBusiness",
             "#UKBusiness",
             "#BusinessTips"
           ],
-          "caption": "People ask their phone who to call. Are you the answer?\n\nWrite service pages like a real answer, not a brochure.\nName the towns you cover, exactly.\nPlain answers. Real places. Real questions.\n\nWe help small service firms and small law practices catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
-        },
-        "linkedin": {
-          "platform": "linkedin",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#BusinessOwner",
-            "#Productivity"
-          ],
-          "caption": "People ask their phone who to call. Are you the answer?\n\n1. Write service pages like a real answer, not a brochure.\n2. Name the towns you cover, exactly.\n3. Add an FAQ with the questions clients really ask.\n\nPlain answers. Real places. Real questions.\n\nMore practical guides for small service firms and small law practices at antekautomation.com.\n\n#SmallBusiness #ServiceBusiness #BusinessOwner #Productivity"
-        },
-        "twitter": {
-          "platform": "twitter",
-          "title": "",
-          "description": "",
-          "hashtags": [],
-          "caption": "People ask their phone who to call. Are you the answer?\n\nhttps://blog.antekautomation.com/ai-search-optimisation-for-uk-service-businesses-4-frameworks/"
+          "caption": "Most UK businesses close at five. Most enquiries don't. — sound familiar?\n\nProperty viewings get requested at seven in the evening..\nEmergency callouts spike outside nine to five, every trade..\nThe gap between demand and availability is where the money leaks.\n\nCommon one for Southampton businesses right now.\n\nWe help MSPs and IT support firms catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#Southampton #SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
         }
       }
     },
     {
       "reel": 4,
-      "date": "Sat 16 May",
-      "utc": "2026-05-16T10:00:00.000Z",
-      "source_url": "https://blog.antekautomation.com/claude-skills-for-uk-service-businesses-a-practical-guide/",
-      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-04-1778618600108.mp4",
+      "date": "2026-08-11",
+      "utc": "2026-08-11T16:00:00.000Z",
+      "source_url": "https://blog.antekautomation.com/why-ai-model-updates-matter-for-your-client-intake-system/",
+      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-04-1785080772416.mp4",
       "video_local_path": "/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/GEO/Claude Content Machine/files/output/shorts-batch/reel-04.mp4",
       "duration_seconds": 0,
       "has_voiceover": true,
       "db_ids": [
-        "9d59fe78-6491-43ca-9d6a-67c0c8efc2c6",
-        "46ecc502-c7d9-404f-ab07-282c5a991e19",
-        "67b8270b-d960-4252-8084-b0c1a008af04"
+        "e3985661-0a44-4cde-89a1-2eef7bf3c911",
+        "021e6d68-01ef-4d04-a04a-67efc99b8204",
+        "b77e0ecb-9ae0-40e6-af82-7d117e1e212a"
       ],
       "platform_meta": {
         "youtube": {
           "platform": "youtube",
-          "title": "Four Hours A Week Back From Admin",
-          "description": "https://blog.antekautomation.com/claude-skills-for-uk-service-businesses-a-practical-guide/\n\nWhere small firms lose 4 hours a week — and 3 fixes. Full guide: https://blog.antekautomation.com/claude-skills-for-uk-service-businesses-a-practical-guide/",
+          "title": "The Hidden Risk in AI Intake Systems",
+          "description": "https://blog.antekautomation.com/why-ai-model-updates-matter-for-your-client-intake-system/\n\nYour AI intake works great for months, then an update changes it overnight. The right question isn't which model, it's how your vendor handles updates.\n\nIn one line: AI intake systems carry a hidden infrastructure risk: when the underlying AI provider pushes a model update, response latency, cost per call, or answer consistency can change without warning, so the real evaluation question is not which model a vendor uses but how they test and roll out updates before they reach production.\n\nKey takeaways:\n- The AI model behind an intake system is infrastructure, so the vendor's update-testing process matters more than which model brand is used.\n- A reliable vendor tests provider updates against real call scenarios before pushing them live and gives advance warning of changes that could affect a business's workflow.\n- Businesses should ask any AI vendor whether they maintain rollback options if a model update degrades performance or increases per-call cost.\n\nAntek Automation is a UK AI automation agency. More at antekautomation.com.",
           "hashtags": [
             "#Shorts",
-            "#Productivity",
-            "#SmallBusinessTips",
-            "#ServiceBusiness",
-            "#TimeManagement"
+            "#AIAutomation",
+            "#VoiceAI",
+            "#SmallBusiness",
+            "#UKBusiness"
           ],
           "caption": ""
         },
@@ -257,85 +202,11 @@
           "hashtags": [
             "#SmallBusinessTips",
             "#ServiceBusiness",
-            "#LocalBusiness",
             "#BusinessOwner",
-            "#Reels"
-          ],
-          "caption": "Where four hours a week quietly disappears\n\n→ List your top ten repeated tasks. Build a template for each\n→ Use a writing assistant for first drafts only\n→ One library. Every reusable answer lives there\n\nTemplates. Drafts. A library. Four hours back.\n\nFollow @AntekAutomation for practical tips built for small service firms and small law practices.\nMore at antekautomation.com\n\n#SmallBusinessTips #ServiceBusiness #LocalBusiness #BusinessOwner #Reels"
-        },
-        "facebook": {
-          "platform": "facebook",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#UKBusiness",
-            "#BusinessTips"
-          ],
-          "caption": "Where four hours a week quietly disappears — sound familiar?\n\nList your top ten repeated tasks. Build a template for each.\nUse a writing assistant for first drafts only.\nTemplates. Drafts. A library. Four hours back.\n\nWe help small service firms and small law practices catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
-        },
-        "linkedin": {
-          "platform": "linkedin",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#BusinessOwner",
-            "#Productivity"
-          ],
-          "caption": "Where four hours a week quietly disappears\n\n1. List your top ten repeated tasks. Build a template for each.\n2. Use a writing assistant for first drafts only.\n3. One library. Every reusable answer lives there.\n\nTemplates. Drafts. A library. Four hours back.\n\nMore practical guides for small service firms and small law practices at antekautomation.com.\n\n#SmallBusiness #ServiceBusiness #BusinessOwner #Productivity"
-        },
-        "twitter": {
-          "platform": "twitter",
-          "title": "",
-          "description": "",
-          "hashtags": [],
-          "caption": "Where four hours a week quietly disappears\n\nhttps://blog.antekautomation.com/claude-skills-for-uk-service-businesses-a-practical-guide/"
-        }
-      }
-    },
-    {
-      "reel": 5,
-      "date": "Sun 17 May",
-      "utc": "2026-05-17T18:30:00.000Z",
-      "source_url": "https://blog.antekautomation.com/how-ai-gets-information-a-guide-for-uk-service-businesses/",
-      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-05-1778618669864.mp4",
-      "video_local_path": "/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/GEO/Claude Content Machine/files/output/shorts-batch/reel-05.mp4",
-      "duration_seconds": 0,
-      "has_voiceover": true,
-      "db_ids": [
-        "2e297e72-e2d1-4132-9489-3ab3b499c670",
-        "185b50ed-c024-45ff-8eda-c6c2161d4381",
-        "68193501-5632-4eeb-83c6-891365a88e12"
-      ],
-      "platform_meta": {
-        "youtube": {
-          "platform": "youtube",
-          "title": "Why Some Firms Get Recommended And Others Don't",
-          "description": "https://blog.antekautomation.com/how-ai-gets-information-a-guide-for-uk-service-businesses/\n\nSame town. Same service. One firm gets recommended five times a week. Three reasons why. Full guide: https://blog.antekautomation.com/how-ai-gets-information-a-guide-for-uk-service-businesses/",
-          "hashtags": [
-            "#Shorts",
-            "#SmallBusinessMarketing",
-            "#ServiceBusiness",
-            "#WordOfMouth",
+            "#Reels",
             "#LocalBusiness"
           ],
-          "caption": ""
-        },
-        "instagram": {
-          "platform": "instagram",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusinessTips",
-            "#ServiceBusiness",
-            "#LocalBusiness",
-            "#BusinessOwner",
-            "#Reels"
-          ],
-          "caption": "Same town. Same service. One firm gets five recommendations a week.\n\n→ One clear paragraph. Same one everywhere\n→ Every service listed explicitly. No guessing\n→ Reviews that mention the actual work and the actual town\n\nOne paragraph. Full list. Specific reviews.\n\nFollow @AntekAutomation for practical tips built for small service firms and small law practices.\nMore at antekautomation.com\n\n#SmallBusinessTips #ServiceBusiness #LocalBusiness #BusinessOwner #Reels"
+          "caption": "Your AI intake system works great for months. Then the provider pushes an update.\n\n→ Wrong question: which AI model powers your system?\n→ Right question: how do you test updates before they go live?\n→ Ask if you can roll back if an update breaks something.\n\nA good vendor treats AI as infrastructure to protect, not a feature to chase.\n\nFollow @AntekAutomation for practical tips built for criminal defense, DUI, immigration and PI firms.\nMore at antekautomation.com\n\n#SmallBusinessTips #ServiceBusiness #BusinessOwner #Reels #LocalBusiness"
         },
         "facebook": {
           "platform": "facebook",
@@ -347,692 +218,7 @@
             "#UKBusiness",
             "#BusinessTips"
           ],
-          "caption": "Same town. Same service. One firm gets five recommendations a week. — sound familiar?\n\nOne clear paragraph. Same one everywhere.\nEvery service listed explicitly. No guessing.\nOne paragraph. Full list. Specific reviews.\n\nWe help small service firms and small law practices catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
-        },
-        "linkedin": {
-          "platform": "linkedin",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#BusinessOwner",
-            "#Productivity"
-          ],
-          "caption": "Same town. Same service. One firm gets five recommendations a week.\n\n1. One clear paragraph. Same one everywhere.\n2. Every service listed explicitly. No guessing.\n3. Reviews that mention the actual work and the actual town.\n\nOne paragraph. Full list. Specific reviews.\n\nMore practical guides for small service firms and small law practices at antekautomation.com.\n\n#SmallBusiness #ServiceBusiness #BusinessOwner #Productivity"
-        },
-        "twitter": {
-          "platform": "twitter",
-          "title": "",
-          "description": "",
-          "hashtags": [],
-          "caption": "Same town. Same service. One firm gets five recommendations a week.\n\nhttps://blog.antekautomation.com/how-ai-gets-information-a-guide-for-uk-service-businesses/"
-        }
-      }
-    },
-    {
-      "reel": 6,
-      "date": "Mon 18 May",
-      "utc": "2026-05-18T07:00:00.000Z",
-      "source_url": "https://blog.antekautomation.com/agentic-ai-vs-generative-ai-what-uk-smes-need-to-know/",
-      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-06-1778618735429.mp4",
-      "video_local_path": "/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/GEO/Claude Content Machine/files/output/shorts-batch/reel-06.mp4",
-      "duration_seconds": 0,
-      "has_voiceover": true,
-      "db_ids": [
-        "2ac0fec7-a56e-44aa-86ae-95b3b478414d",
-        "59b14880-b29c-4ad7-9882-249359e7ea73",
-        "50ebec4c-1904-4087-80de-5dcd46f540b7"
-      ],
-      "platform_meta": {
-        "youtube": {
-          "platform": "youtube",
-          "title": "Stop Picking Tools By The Buzzword",
-          "description": "https://blog.antekautomation.com/agentic-ai-vs-generative-ai-what-uk-smes-need-to-know/\n\nThree questions before buying any tool. Skip the buzzword. Full guide: https://blog.antekautomation.com/agentic-ai-vs-generative-ai-what-uk-smes-need-to-know/",
-          "hashtags": [
-            "#Shorts",
-            "#SmallBusinessTips",
-            "#BusinessDecisions",
-            "#ToolSelection",
-            "#ServiceBusiness"
-          ],
-          "caption": ""
-        },
-        "instagram": {
-          "platform": "instagram",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusinessTips",
-            "#ServiceBusiness",
-            "#LocalBusiness",
-            "#BusinessOwner",
-            "#Reels"
-          ],
-          "caption": "Pick the tool by the job. Not the buzzword.\n\n→ Name the exact task. The hour you want back\n→ Test it on your real cases, not a demo\n→ Measure whether your team will actually use it\n\nJob first. Test second. Adoption third.\n\nFollow @AntekAutomation for practical tips built for small service firms and small law practices.\nMore at antekautomation.com\n\n#SmallBusinessTips #ServiceBusiness #LocalBusiness #BusinessOwner #Reels"
-        },
-        "facebook": {
-          "platform": "facebook",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#UKBusiness",
-            "#BusinessTips"
-          ],
-          "caption": "Pick the tool by the job. Not the buzzword. — sound familiar?\n\nName the exact task. The hour you want back.\nTest it on your real cases, not a demo.\nJob first. Test second. Adoption third.\n\nWe help small service firms and small law practices catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
-        },
-        "linkedin": {
-          "platform": "linkedin",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#BusinessOwner",
-            "#Productivity"
-          ],
-          "caption": "Pick the tool by the job. Not the buzzword.\n\n1. Name the exact task. The hour you want back.\n2. Test it on your real cases, not a demo.\n3. Measure whether your team will actually use it.\n\nJob first. Test second. Adoption third.\n\nMore practical guides for small service firms and small law practices at antekautomation.com.\n\n#SmallBusiness #ServiceBusiness #BusinessOwner #Productivity"
-        },
-        "twitter": {
-          "platform": "twitter",
-          "title": "",
-          "description": "",
-          "hashtags": [],
-          "caption": "Pick the tool by the job. Not the buzzword.\n\nhttps://blog.antekautomation.com/agentic-ai-vs-generative-ai-what-uk-smes-need-to-know/"
-        }
-      }
-    },
-    {
-      "reel": 7,
-      "date": "Tue 19 May",
-      "utc": "2026-05-19T12:00:00.000Z",
-      "source_url": "https://blog.antekautomation.com/how-to-deploy-ai-agents-safely-in-your-service-business/",
-      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-07-1778618807464.mp4",
-      "video_local_path": "/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/GEO/Claude Content Machine/files/output/shorts-batch/reel-07.mp4",
-      "duration_seconds": 0,
-      "has_voiceover": true,
-      "db_ids": [
-        "d534972e-b564-431e-a8fb-d9683c3246f5",
-        "ddc89d0c-9136-45b4-9ac5-9d1315d358f3",
-        "0bdb5abb-1485-452d-9c9c-7fa8933ee43d"
-      ],
-      "platform_meta": {
-        "youtube": {
-          "platform": "youtube",
-          "title": "Five Risk Questions Every Firm Owner Should Ask",
-          "description": "https://blog.antekautomation.com/how-to-deploy-ai-agents-safely-in-your-service-business/\n\nBefore any tool speaks to clients on your behalf. Three questions you must ask. Full guide: https://blog.antekautomation.com/how-to-deploy-ai-agents-safely-in-your-service-business/",
-          "hashtags": [
-            "#Shorts",
-            "#SmallBusinessTips",
-            "#RiskManagement",
-            "#ServiceBusiness",
-            "#BusinessOwner"
-          ],
-          "caption": ""
-        },
-        "instagram": {
-          "platform": "instagram",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusinessTips",
-            "#ServiceBusiness",
-            "#LocalBusiness",
-            "#BusinessOwner",
-            "#Reels"
-          ],
-          "caption": "Five questions before any tool talks to your clients\n\n→ Where does client data go? Get it in writing\n→ What can't it say? Write the no-go list\n→ Where's the kill switch and who flips it?\n\nData. Boundaries. Kill switch. In writing.\n\nFollow @AntekAutomation for practical tips built for small service firms and small law practices.\nMore at antekautomation.com\n\n#SmallBusinessTips #ServiceBusiness #LocalBusiness #BusinessOwner #Reels"
-        },
-        "facebook": {
-          "platform": "facebook",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#UKBusiness",
-            "#BusinessTips"
-          ],
-          "caption": "Five questions before any tool talks to your clients — sound familiar?\n\nWhere does client data go? Get it in writing.\nWhat can't it say? Write the no-go list.\nData. Boundaries. Kill switch. In writing.\n\nWe help small service firms and small law practices catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
-        },
-        "linkedin": {
-          "platform": "linkedin",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#BusinessOwner",
-            "#Productivity"
-          ],
-          "caption": "Five questions before any tool talks to your clients\n\n1. Where does client data go? Get it in writing.\n2. What can't it say? Write the no-go list.\n3. Where's the kill switch and who flips it?.\n\nData. Boundaries. Kill switch. In writing.\n\nMore practical guides for small service firms and small law practices at antekautomation.com.\n\n#SmallBusiness #ServiceBusiness #BusinessOwner #Productivity"
-        },
-        "twitter": {
-          "platform": "twitter",
-          "title": "",
-          "description": "",
-          "hashtags": [],
-          "caption": "Five questions before any tool talks to your clients\n\nhttps://blog.antekautomation.com/how-to-deploy-ai-agents-safely-in-your-service-business/"
-        }
-      }
-    },
-    {
-      "reel": 8,
-      "date": "Wed 20 May",
-      "utc": "2026-05-20T17:00:00.000Z",
-      "source_url": "https://blog.antekautomation.com/what-gms-ai-rollout-teaches-uk-service-businesses-about-adoption/",
-      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-08-1778787273972.mp4",
-      "video_local_path": "/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/GEO/Claude Content Machine/files/output/shorts-batch/reel-08.mp4",
-      "duration_seconds": 0,
-      "has_voiceover": true,
-      "db_ids": [
-        "28adc0c2-f7b3-46a4-b036-0b62113492c2",
-        "e236f4eb-96bd-4176-a634-2ed21e7abaea",
-        "28dabe49-9fbc-4544-8f0a-dee00d3d3ed4"
-      ],
-      "platform_meta": {
-        "youtube": {
-          "platform": "youtube",
-          "title": "How Small Firms Should Test Tools Before Signing",
-          "description": "https://blog.antekautomation.com/what-gms-ai-rollout-teaches-uk-service-businesses-about-adoption/\n\nGM took 2 years to test. Small firms sign annual after 30 mins. 3-step fix: https://blog.antekautomation.com/what-gms-ai-rollout-teaches-uk-service-businesses-about-adoption/",
-          "hashtags": [
-            "#Shorts",
-            "#SmallBusinessTips",
-            "#BusinessDecisions",
-            "#UKBusiness",
-            "#ServiceBusiness"
-          ],
-          "caption": ""
-        },
-        "instagram": {
-          "platform": "instagram",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusinessTips",
-            "#ServiceBusiness",
-            "#LocalBusiness",
-            "#BusinessOwner",
-            "#Reels"
-          ],
-          "caption": "GM just spent two years testing one rollout. You should too.\n\n→ Define success in hours saved on a real task\n→ Test with real work, not the polished demo\n→ Smallest contract possible. Month-to-month wins\n\nDefine success. Test real. Stay short.\n\nFollow @AntekAutomation for practical tips built for small service firms and small law practices.\nMore at antekautomation.com\n\n#SmallBusinessTips #ServiceBusiness #LocalBusiness #BusinessOwner #Reels"
-        },
-        "facebook": {
-          "platform": "facebook",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#UKBusiness",
-            "#BusinessTips"
-          ],
-          "caption": "GM just spent two years testing one rollout. You should too. — sound familiar?\n\nDefine success in hours saved on a real task.\nTest with real work, not the polished demo.\nDefine success. Test real. Stay short.\n\nWe help small service firms and small law practices catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
-        },
-        "linkedin": {
-          "platform": "linkedin",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#BusinessOwner",
-            "#Productivity"
-          ],
-          "caption": "GM just spent two years testing one rollout. You should too.\n\n1. Define success in hours saved on a real task.\n2. Test with real work, not the polished demo.\n3. Smallest contract possible. Month-to-month wins.\n\nDefine success. Test real. Stay short.\n\nMore practical guides for small service firms and small law practices at antekautomation.com.\n\n#SmallBusiness #ServiceBusiness #BusinessOwner #Productivity"
-        },
-        "twitter": {
-          "platform": "twitter",
-          "title": "",
-          "description": "",
-          "hashtags": [],
-          "caption": "GM just spent two years testing one rollout. You should too.\n\nhttps://blog.antekautomation.com/what-gms-ai-rollout-teaches-uk-service-businesses-about-adoption/"
-        }
-      }
-    },
-    {
-      "reel": 9,
-      "date": "Thu 21 May",
-      "utc": "2026-05-21T08:15:00.000Z",
-      "source_url": "https://blog.antekautomation.com/ai-agents-are-coming-for-service-businesses-what-uk-smes-need/",
-      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-09-1778786798865.mp4",
-      "video_local_path": "/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/GEO/Claude Content Machine/files/output/shorts-batch/reel-09.mp4",
-      "duration_seconds": 0,
-      "has_voiceover": true,
-      "db_ids": [
-        "54d660ed-d650-498f-9bf7-b66858cebbb1",
-        "cae005f2-d157-4241-90be-420e6b9f7d63",
-        "a06b485d-1cc4-445b-ac6b-25435f24ab30"
-      ],
-      "platform_meta": {
-        "youtube": {
-          "platform": "youtube",
-          "title": "Your Competitors Are Catching The Calls You Miss",
-          "description": "https://blog.antekautomation.com/ai-agents-are-coming-for-service-businesses-what-uk-smes-need/\n\nWhere every small firm leaks revenue after hours — and what to do about it. Full guide: https://blog.antekautomation.com/ai-agents-are-coming-for-service-businesses-what-uk-smes-need/",
-          "hashtags": [
-            "#Shorts",
-            "#SmallBusinessTips",
-            "#MissedCalls",
-            "#ServiceBusiness",
-            "#BusinessGrowth"
-          ],
-          "caption": ""
-        },
-        "instagram": {
-          "platform": "instagram",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusinessTips",
-            "#ServiceBusiness",
-            "#LocalBusiness",
-            "#BusinessOwner",
-            "#Reels"
-          ],
-          "caption": "Your competitors are already catching the calls you're missing\n\n→ Most enquiries arrive outside office hours\n→ Voicemail isn't an answer anymore\n→ Capture plus speed beats capture alone\n\nCover the gap. Or fund your competitors.\n\nFollow @AntekAutomation for practical tips built for small service firms and small law practices.\nMore at antekautomation.com\n\n#SmallBusinessTips #ServiceBusiness #LocalBusiness #BusinessOwner #Reels"
-        },
-        "facebook": {
-          "platform": "facebook",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#UKBusiness",
-            "#BusinessTips"
-          ],
-          "caption": "Your competitors are already catching the calls you're missing — sound familiar?\n\nMost enquiries arrive outside office hours.\nVoicemail isn't an answer anymore.\nCover the gap. Or fund your competitors.\n\nWe help small service firms and small law practices catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
-        },
-        "linkedin": {
-          "platform": "linkedin",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#BusinessOwner",
-            "#Productivity"
-          ],
-          "caption": "Your competitors are already catching the calls you're missing\n\n1. Most enquiries arrive outside office hours.\n2. Voicemail isn't an answer anymore.\n3. Capture plus speed beats capture alone.\n\nCover the gap. Or fund your competitors.\n\nMore practical guides for small service firms and small law practices at antekautomation.com.\n\n#SmallBusiness #ServiceBusiness #BusinessOwner #Productivity"
-        },
-        "twitter": {
-          "platform": "twitter",
-          "title": "",
-          "description": "",
-          "hashtags": [],
-          "caption": "Your competitors are already catching the calls you're missing\n\nhttps://blog.antekautomation.com/ai-agents-are-coming-for-service-businesses-what-uk-smes-need/"
-        }
-      }
-    },
-    {
-      "reel": 10,
-      "date": "Fri 22 May",
-      "utc": "2026-05-22T11:30:00.000Z",
-      "source_url": "https://blog.antekautomation.com/claude-security-for-uk-businesses-what-smes-need-to-know/",
-      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-10-1778786880267.mp4",
-      "video_local_path": "/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/GEO/Claude Content Machine/files/output/shorts-batch/reel-10.mp4",
-      "duration_seconds": 0,
-      "has_voiceover": true,
-      "db_ids": [
-        "c6502244-64b6-4277-a66f-5e9b115314ef",
-        "326a793c-5938-4853-b91b-d90563ac7393",
-        "5f8e33dd-1d8f-47ad-9fd4-a7f4e5e38692"
-      ],
-      "platform_meta": {
-        "youtube": {
-          "platform": "youtube",
-          "title": "3 Questions Before Any Vendor Touches Client Data",
-          "description": "https://blog.antekautomation.com/claude-security-for-uk-businesses-what-smes-need-to-know/\n\nThe three questions every small firm owner should get answered in writing before signing. Full guide: https://blog.antekautomation.com/claude-security-for-uk-businesses-what-smes-need-to-know/",
-          "hashtags": [
-            "#Shorts",
-            "#SmallBusinessTips",
-            "#DataPrivacy",
-            "#BusinessOwner",
-            "#VendorRisk"
-          ],
-          "caption": ""
-        },
-        "instagram": {
-          "platform": "instagram",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusinessTips",
-            "#ServiceBusiness",
-            "#LocalBusiness",
-            "#BusinessOwner",
-            "#Reels"
-          ],
-          "caption": "Three questions before any vendor touches client data\n\n→ Where is the data stored and who can access it?\n→ Is it used to train any model? Get a yes or no\n→ How fast can you cancel and pull your data out?\n\nStorage. Training use. Exit. All in writing.\n\nFollow @AntekAutomation for practical tips built for small service firms and small law practices.\nMore at antekautomation.com\n\n#SmallBusinessTips #ServiceBusiness #LocalBusiness #BusinessOwner #Reels"
-        },
-        "facebook": {
-          "platform": "facebook",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#UKBusiness",
-            "#BusinessTips"
-          ],
-          "caption": "Three questions before any vendor touches client data — sound familiar?\n\nWhere is the data stored and who can access it?.\nIs it used to train any model? Get a yes or no.\nStorage. Training use. Exit. All in writing.\n\nWe help small service firms and small law practices catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
-        },
-        "linkedin": {
-          "platform": "linkedin",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#BusinessOwner",
-            "#Productivity"
-          ],
-          "caption": "Three questions before any vendor touches client data\n\n1. Where is the data stored and who can access it?.\n2. Is it used to train any model? Get a yes or no.\n3. How fast can you cancel and pull your data out?.\n\nStorage. Training use. Exit. All in writing.\n\nMore practical guides for small service firms and small law practices at antekautomation.com.\n\n#SmallBusiness #ServiceBusiness #BusinessOwner #Productivity"
-        },
-        "twitter": {
-          "platform": "twitter",
-          "title": "",
-          "description": "",
-          "hashtags": [],
-          "caption": "Three questions before any vendor touches client data\n\nhttps://blog.antekautomation.com/claude-security-for-uk-businesses-what-smes-need-to-know/"
-        }
-      }
-    },
-    {
-      "reel": 11,
-      "date": "Sat 23 May",
-      "utc": "2026-05-23T16:30:00.000Z",
-      "source_url": "https://blog.antekautomation.com/self-learning-ai-agents-what-uk-service-businesses-need-to-know/",
-      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-11-1778786947616.mp4",
-      "video_local_path": "/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/GEO/Claude Content Machine/files/output/shorts-batch/reel-11.mp4",
-      "duration_seconds": 0,
-      "has_voiceover": true,
-      "db_ids": [
-        "92a80fb8-7e9e-4ad1-8646-ea19d99b9058",
-        "f61f3164-32d0-4141-9c02-5617a7ef6110",
-        "9b751af7-8a4f-4417-90e5-946ecc099465"
-      ],
-      "platform_meta": {
-        "youtube": {
-          "platform": "youtube",
-          "title": "When 'Learns On Your Data' Is A Liability",
-          "description": "https://blog.antekautomation.com/self-learning-ai-agents-what-uk-service-businesses-need-to-know/\n\nThree checks before letting any tool learn from your firm's data. Full guide: https://blog.antekautomation.com/self-learning-ai-agents-what-uk-service-businesses-need-to-know/",
-          "hashtags": [
-            "#Shorts",
-            "#SmallBusinessTips",
-            "#DataPrivacy",
-            "#BusinessRisk",
-            "#ServiceBusiness"
-          ],
-          "caption": ""
-        },
-        "instagram": {
-          "platform": "instagram",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusinessTips",
-            "#ServiceBusiness",
-            "#LocalBusiness",
-            "#BusinessOwner",
-            "#Reels"
-          ],
-          "caption": "Tools that learn on your data — useful or a liability?\n\n→ Does the learning stay inside your firm?\n→ Can you delete what it learned, on demand?\n→ Audit log of every decision it makes\n\nPrivate. Deletable. Auditable.\n\nFollow @AntekAutomation for practical tips built for small service firms and small law practices.\nMore at antekautomation.com\n\n#SmallBusinessTips #ServiceBusiness #LocalBusiness #BusinessOwner #Reels"
-        },
-        "facebook": {
-          "platform": "facebook",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#UKBusiness",
-            "#BusinessTips"
-          ],
-          "caption": "Tools that learn on your data — useful or a liability?\n\nDoes the learning stay inside your firm?.\nCan you delete what it learned, on demand?.\nPrivate. Deletable. Auditable.\n\nWe help small service firms and small law practices catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
-        },
-        "linkedin": {
-          "platform": "linkedin",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#BusinessOwner",
-            "#Productivity"
-          ],
-          "caption": "Tools that learn on your data — useful or a liability?\n\n1. Does the learning stay inside your firm?.\n2. Can you delete what it learned, on demand?.\n3. Audit log of every decision it makes.\n\nPrivate. Deletable. Auditable.\n\nMore practical guides for small service firms and small law practices at antekautomation.com.\n\n#SmallBusiness #ServiceBusiness #BusinessOwner #Productivity"
-        },
-        "twitter": {
-          "platform": "twitter",
-          "title": "",
-          "description": "",
-          "hashtags": [],
-          "caption": "Tools that learn on your data — useful or a liability?\n\nhttps://blog.antekautomation.com/self-learning-ai-agents-what-uk-service-businesses-need-to-know/"
-        }
-      }
-    },
-    {
-      "reel": 12,
-      "date": "Sun 24 May",
-      "utc": "2026-05-24T10:00:00.000Z",
-      "source_url": "https://blog.antekautomation.com/chatgpts-new-model-cuts-errors-by-half-what-uk-smes-need-to-know/",
-      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-12-1778787022924.mp4",
-      "video_local_path": "/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/GEO/Claude Content Machine/files/output/shorts-batch/reel-12.mp4",
-      "duration_seconds": 0,
-      "has_voiceover": true,
-      "db_ids": [
-        "6f22bfcb-9274-47ec-b201-a651975f9a56",
-        "6e6ad783-f0af-47e8-a8c6-73fc93ec0da4",
-        "f5f3d37f-42ba-41e7-b879-be5626cf1fe1"
-      ],
-      "platform_meta": {
-        "youtube": {
-          "platform": "youtube",
-          "title": "The 20-Minute Test Before Any Tool Faces Clients",
-          "description": "https://blog.antekautomation.com/chatgpts-new-model-cuts-errors-by-half-what-uk-smes-need-to-know/\n\nHow to spot a tool that'll embarrass you in front of clients — before it goes live. Full guide: https://blog.antekautomation.com/chatgpts-new-model-cuts-errors-by-half-what-uk-smes-need-to-know/",
-          "hashtags": [
-            "#Shorts",
-            "#SmallBusinessTips",
-            "#BusinessDecisions",
-            "#ServiceBusiness",
-            "#QualityControl"
-          ],
-          "caption": ""
-        },
-        "instagram": {
-          "platform": "instagram",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusinessTips",
-            "#ServiceBusiness",
-            "#LocalBusiness",
-            "#BusinessOwner",
-            "#Reels"
-          ],
-          "caption": "Never let anything talk to clients without this test\n\n→ Write twenty real questions clients actually ask\n→ Ask each one three different ways. Look for drift\n→ Throw in the ambiguous and incomplete ones\n\nReal questions. Three ways. Edge cases.\n\nFollow @AntekAutomation for practical tips built for small service firms and small law practices.\nMore at antekautomation.com\n\n#SmallBusinessTips #ServiceBusiness #LocalBusiness #BusinessOwner #Reels"
-        },
-        "facebook": {
-          "platform": "facebook",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#UKBusiness",
-            "#BusinessTips"
-          ],
-          "caption": "Never let anything talk to clients without this test — sound familiar?\n\nWrite twenty real questions clients actually ask.\nAsk each one three different ways. Look for drift.\nReal questions. Three ways. Edge cases.\n\nWe help small service firms and small law practices catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
-        },
-        "linkedin": {
-          "platform": "linkedin",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#BusinessOwner",
-            "#Productivity"
-          ],
-          "caption": "Never let anything talk to clients without this test\n\n1. Write twenty real questions clients actually ask.\n2. Ask each one three different ways. Look for drift.\n3. Throw in the ambiguous and incomplete ones.\n\nReal questions. Three ways. Edge cases.\n\nMore practical guides for small service firms and small law practices at antekautomation.com.\n\n#SmallBusiness #ServiceBusiness #BusinessOwner #Productivity"
-        },
-        "twitter": {
-          "platform": "twitter",
-          "title": "",
-          "description": "",
-          "hashtags": [],
-          "caption": "Never let anything talk to clients without this test\n\nhttps://blog.antekautomation.com/chatgpts-new-model-cuts-errors-by-half-what-uk-smes-need-to-know/"
-        }
-      }
-    },
-    {
-      "reel": 13,
-      "date": "Mon 25 May",
-      "utc": "2026-05-25T07:00:00.000Z",
-      "source_url": "https://blog.antekautomation.com/ai-for-small-businesses-why-infrastructure-matters-more-than-hype/",
-      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-13-1778787099049.mp4",
-      "video_local_path": "/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/GEO/Claude Content Machine/files/output/shorts-batch/reel-13.mp4",
-      "duration_seconds": 0,
-      "has_voiceover": true,
-      "db_ids": [
-        "deada0e4-2778-4db1-8f83-e2f228551d3a",
-        "78db30d2-1161-4536-add4-db2ae5a72437",
-        "3c4e1f39-7219-4f17-b0f2-e855a15ae1b0"
-      ],
-      "platform_meta": {
-        "youtube": {
-          "platform": "youtube",
-          "title": "Boring Fundamentals Beat Shiny Tools",
-          "description": "https://blog.antekautomation.com/ai-for-small-businesses-why-infrastructure-matters-more-than-hype/\n\nThree boring fundamentals every small firm should fix before buying any tool. Full guide: https://blog.antekautomation.com/ai-for-small-businesses-why-infrastructure-matters-more-than-hype/",
-          "hashtags": [
-            "#Shorts",
-            "#SmallBusinessTips",
-            "#BusinessGrowth",
-            "#ServiceBusiness",
-            "#BusinessOwner"
-          ],
-          "caption": ""
-        },
-        "instagram": {
-          "platform": "instagram",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusinessTips",
-            "#ServiceBusiness",
-            "#LocalBusiness",
-            "#BusinessOwner",
-            "#Reels"
-          ],
-          "caption": "Substance beats shiny tools every single time\n\n→ Pipeline before tools. Where do enquiries come from?\n→ First-response time. Measure it for a week\n→ Follow up three times, not once\n\nPipeline. Speed. Follow-up. Then maybe a tool.\n\nFollow @AntekAutomation for practical tips built for small service firms and small law practices.\nMore at antekautomation.com\n\n#SmallBusinessTips #ServiceBusiness #LocalBusiness #BusinessOwner #Reels"
-        },
-        "facebook": {
-          "platform": "facebook",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#UKBusiness",
-            "#BusinessTips"
-          ],
-          "caption": "Substance beats shiny tools every single time — sound familiar?\n\nPipeline before tools. Where do enquiries come from?.\nFirst-response time. Measure it for a week.\nPipeline. Speed. Follow-up. Then maybe a tool.\n\nWe help small service firms and small law practices catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
-        },
-        "linkedin": {
-          "platform": "linkedin",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#BusinessOwner",
-            "#Productivity"
-          ],
-          "caption": "Substance beats shiny tools every single time\n\n1. Pipeline before tools. Where do enquiries come from?.\n2. First-response time. Measure it for a week.\n3. Follow up three times, not once.\n\nPipeline. Speed. Follow-up. Then maybe a tool.\n\nMore practical guides for small service firms and small law practices at antekautomation.com.\n\n#SmallBusiness #ServiceBusiness #BusinessOwner #Productivity"
-        },
-        "twitter": {
-          "platform": "twitter",
-          "title": "",
-          "description": "",
-          "hashtags": [],
-          "caption": "Substance beats shiny tools every single time\n\nhttps://blog.antekautomation.com/ai-for-small-businesses-why-infrastructure-matters-more-than-hype/"
-        }
-      }
-    },
-    {
-      "reel": 14,
-      "date": "Tue 26 May",
-      "utc": "2026-05-26T18:00:00.000Z",
-      "source_url": "https://blog.antekautomation.com/ai-content-creation-for-uk-service-businesses-a-practical-guide/",
-      "r2_url": "https://pub-22b846848612446da578c84b810477f6.r2.dev/shorts/reel-14-1778787175416.mp4",
-      "video_local_path": "/Users/andrewnorman/Library/Mobile Documents/com~apple~CloudDocs/GEO/Claude Content Machine/files/output/shorts-batch/reel-14.mp4",
-      "duration_seconds": 0,
-      "has_voiceover": true,
-      "db_ids": [
-        "9c31e687-2822-43f6-8a90-24192ad891f0",
-        "de6ef4d8-9a34-4972-9b09-7fdc9d86406c",
-        "1255f2e1-91c1-4294-883d-42e9b1edfef4"
-      ],
-      "platform_meta": {
-        "youtube": {
-          "platform": "youtube",
-          "title": "Marketing That Runs While You're With Clients",
-          "description": "https://blog.antekautomation.com/ai-content-creation-for-uk-service-businesses-a-practical-guide/\n\nA weekly marketing rhythm that survives every busy month. Three small habits. No agency. Full guide: https://blog.antekautomation.com/ai-content-creation-for-uk-service-businesses-a-practical-guide/",
-          "hashtags": [
-            "#Shorts",
-            "#SmallBusinessMarketing",
-            "#ContentMarketing",
-            "#ServiceBusiness",
-            "#SmallBusinessTips"
-          ],
-          "caption": ""
-        },
-        "instagram": {
-          "platform": "instagram",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusinessTips",
-            "#ServiceBusiness",
-            "#LocalBusiness",
-            "#BusinessOwner",
-            "#Reels"
-          ],
-          "caption": "Marketing that runs while you're with clients\n\n→ One channel. Same day every week\n→ Keep a running list of post ideas from real questions\n→ Use a writing assistant for first drafts. Keep your voice\n\nOne channel. Same day. Real questions. Your voice.\n\nFollow @AntekAutomation for practical tips built for small service firms and small law practices.\nMore at antekautomation.com\n\n#SmallBusinessTips #ServiceBusiness #LocalBusiness #BusinessOwner #Reels"
-        },
-        "facebook": {
-          "platform": "facebook",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#UKBusiness",
-            "#BusinessTips"
-          ],
-          "caption": "Marketing that runs while you're with clients — sound familiar?\n\nOne channel. Same day every week.\nKeep a running list of post ideas from real questions.\nOne channel. Same day. Real questions. Your voice.\n\nWe help small service firms and small law practices catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
-        },
-        "linkedin": {
-          "platform": "linkedin",
-          "title": "",
-          "description": "",
-          "hashtags": [
-            "#SmallBusiness",
-            "#ServiceBusiness",
-            "#BusinessOwner",
-            "#Productivity"
-          ],
-          "caption": "Marketing that runs while you're with clients\n\n1. One channel. Same day every week.\n2. Keep a running list of post ideas from real questions.\n3. Use a writing assistant for first drafts. Keep your voice.\n\nOne channel. Same day. Real questions. Your voice.\n\nMore practical guides for small service firms and small law practices at antekautomation.com.\n\n#SmallBusiness #ServiceBusiness #BusinessOwner #Productivity"
-        },
-        "twitter": {
-          "platform": "twitter",
-          "title": "",
-          "description": "",
-          "hashtags": [],
-          "caption": "Marketing that runs while you're with clients\n\nhttps://blog.antekautomation.com/ai-content-creation-for-uk-service-businesses-a-practical-guide/"
+          "caption": "Your AI intake system works great for months. Then the provider pushes an update. — sound familiar?\n\nWrong question: which AI model powers your system?.\nRight question: how do you test updates before they go live?.\nA good vendor treats AI as infrastructure to protect, not a feature to chase.\n\nWe help criminal defense, DUI, immigration and PI firms catch what they're missing. antekautomation.com\n\nWhat's costing your firm the most time right now?\n\n#SmallBusiness #ServiceBusiness #UKBusiness #BusinessTips"
         }
       }
     }
