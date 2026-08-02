@@ -109,6 +109,25 @@ export async function markShortScheduled(id: string, blotatoPostId: string): Pro
   }
 }
 
+/**
+ * Reassigns a shorts_queue row's scheduled_at + blotato_post_id after a
+ * delete-old-schedule/create-new-schedule reschedule on Blotato's side
+ * (Blotato has no PATCH /schedules endpoint, so a reschedule is always a
+ * delete + recreate, which mints a new postSubmissionId).
+ */
+export async function rescheduleShort(id: string, scheduledAt: string, blotatoPostId: string): Promise<void> {
+  const client = createClient();
+  try {
+    await client.connect();
+    await client.query(
+      `UPDATE shorts_queue SET scheduled_at = $1, blotato_post_id = $2, status = 'scheduled' WHERE id = $3`,
+      [scheduledAt, blotatoPostId, id]
+    );
+  } finally {
+    await client.end();
+  }
+}
+
 /** Marks a row as failed with an error message after a failed Blotato call. */
 export async function markShortErrored(id: string, error: string): Promise<void> {
   const client = createClient();

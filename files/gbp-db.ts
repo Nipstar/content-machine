@@ -141,6 +141,20 @@ export async function markAsPosted(id: string, gbpPostId: string): Promise<void>
   }
 }
 
+/** Updates scheduled_date on a still-queued (not yet posted) row — e.g. to fix a scheduling mistake. */
+export async function rescheduleGBPPost(id: string, scheduledDate: string): Promise<void> {
+  const client = createClient();
+  try {
+    await client.connect();
+    await client.query(
+      `UPDATE gbp_post_queue SET scheduled_date = $1 WHERE id = $2`,
+      [scheduledDate, id]
+    );
+  } finally {
+    await client.end();
+  }
+}
+
 export async function markAsFailed(id: string, error: string): Promise<void> {
   const client = createClient();
   try {
