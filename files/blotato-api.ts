@@ -70,9 +70,13 @@ export interface FlatPost {
   privacyStatus?: string; // youtube: public | private | unlisted
   shouldNotifySubscribers?: boolean; // youtube
   boardId?: string; // pinterest
+  firstComment?: string; // facebook/instagram
+  link?: string; // facebook/pinterest
+  altText?: string; // instagram/pinterest
 }
 
 // Keys that belong inside `target` (everything else platform-specific stays out of content).
+// Mirrors the per-platform target fields in the Blotato API reference.
 const TARGET_KEYS = [
   "pageId",
   "mediaType",
@@ -80,6 +84,9 @@ const TARGET_KEYS = [
   "privacyStatus",
   "shouldNotifySubscribers",
   "boardId",
+  "firstComment",
+  "link",
+  "altText",
 ] as const;
 
 /** Build the nested REST body from flat params. */
@@ -133,4 +140,24 @@ export async function getCredits(): Promise<{ creditsRemaining: number; accountE
 /** Authenticated user profile. */
 export async function getUser(): Promise<any> {
   return req("GET", "/users/me");
+}
+
+/** List connected social accounts: items[].{id, platform, fullname, username}. */
+export async function listAccounts(): Promise<{ items: any[] }> {
+  return req("GET", "/users/me/accounts");
+}
+
+/** List Facebook/LinkedIn sub-accounts (pages). items[].id → use as target.pageId. */
+export async function listSubaccounts(accountId: string): Promise<{ items: any[] }> {
+  return req("GET", `/users/me/accounts/${accountId}/subaccounts`);
+}
+
+/**
+ * Upload media from a PUBLIC url into Blotato hosting → returns { url }.
+ * Only needed when a platform rejects the raw source URL; public R2 URLs can
+ * usually be passed straight into content.mediaUrls without this step.
+ * (POST /media, 30 req/min)
+ */
+export async function uploadMediaFromUrl(url: string): Promise<{ url: string }> {
+  return req("POST", "/media", { url });
 }

@@ -77,7 +77,12 @@ async function main() {
   let ok = 0;
   const fails: string[] = [];
 
-  for (const e of toRun) {
+  // POST /posts is rate-limited to 30 req/min → space calls ~2.1s apart.
+  const THROTTLE_MS = 2100;
+  const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+  for (let i = 0; i < toRun.length; i++) {
+    const e = toRun[i];
     const label = `${e.idea ?? "?"}:${e.platform}`;
     const when = e.params.scheduledTime ?? "NOW";
     if (dryRun) {
@@ -92,6 +97,7 @@ async function main() {
       console.log(`  ❌ ${label} — ${err.message}`);
       fails.push(label);
     }
+    if (i < toRun.length - 1) await sleep(THROTTLE_MS);
   }
 
   if (!dryRun) {
